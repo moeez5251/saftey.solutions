@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { RouterProvider , createBrowserRouter} from 'react-router-dom'
 import { path } from 'framer-motion/client'
-import Layout from './layout/Layout.jsx'
+
 import Home from './home/Home.jsx'
 import About from './about-us/About.jsx'
 import Service from './services/Service.jsx'
