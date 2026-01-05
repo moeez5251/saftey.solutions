@@ -84,7 +84,7 @@ function Nav() {
 
               <span className="font-extrabold tracking-tight text-gray-900 text-center lg:text-left">
                 <span className="block text-xl lg:text-2xl">
-                  <span className="text-orange-600">S.S</span>SAFETY
+                  <span className="text-orange-600">S.S-</span>SAFETY
                 </span>
                 <span className="block text-xl lg:hidden">SOLUTIONS</span>
                 <span className="hidden lg:inline lg:ml-1 text-2xl">
@@ -134,7 +134,7 @@ function Nav() {
       {/* Mobile Menu – Now properly column-wise with full-width tappable links */}
       {isOpen && (
         <div className="lg:hidden bg-white border-t border-gray-200 ">
-          <div className="px-2 pt-2 pb-4 space-y-1 z-1000">
+          <div className="px-2 pt-2 pb-4 space-y-1 z-1000000">
             <NavLink to="/" end className={mobileLinkClass}>Home</NavLink>
             <NavLink to="/products" className={mobileLinkClass}>Products</NavLink>
             <NavLink to="/services" className={mobileLinkClass}>Services</NavLink>
