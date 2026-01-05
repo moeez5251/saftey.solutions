@@ -1,19 +1,19 @@
 import React from 'react'
-import Nav from '../utility/nav'
-import Fotter from '../utility/fotter'
+import Nav from '../utility/Nav'
+import Fotter from '../utility/Fotter'
 import { Outlet } from 'react-router-dom'
 
 
 function Layout() {
-  return (
+    return (
 
-    <>
-      <Nav />
-      <Outlet />
-    <Fotter />
+        <>
+            <Nav />
+            <Outlet />
+            <Fotter />
 
-    </>
-  )
+        </>
+    )
 }
 
 export default Layout
