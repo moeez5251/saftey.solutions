@@ -7,6 +7,8 @@ import { Pagination } from "swiper/modules";
 import { productsData, categories } from '../cat/ALL'; // Make sure this path is correct
 import "swiper/css";
 import "swiper/css/pagination";
+import { useCart } from '../context/CartContext';
+import toast from 'react-hot-toast';
 
 function Products() {
     const [activeCategory, setActiveCategory] = useState(categories[0]);
@@ -14,7 +16,21 @@ function Products() {
     const tabRefs = useRef({});
     const tabsContainerRef = useRef(null);
     const stickyRef = useRef(null);
+    const { addToCart } = useCart(); // ← Get the function
 
+  const handleAddToCart = (product, e) => {
+    e.preventDefault();
+    e.stopPropagation(); // Prevents going to product detail
+
+    addToCart({
+      id: product.id,
+      title: product.title,
+      price: typeof product.price === "number" ? product.price : null,
+      image: product.image,
+      
+    });
+    toast.success(`${product.title} added to cart!`);
+  };
     useEffect(() => {
         let rafId = null;
         let scrolling = false;
@@ -92,7 +108,8 @@ function Products() {
         <div className="min-h-screen bg-gray-50">
 
             {/* Sticky Category Tabs */}
-            <div ref={stickyRef} className="sticky top-[100px] md:top-[80px] z-50 bg-white border-b border-gray-200">
+            <div ref={stickyRef} className="sticky top-[100px] md:top-[80px] z-20 bg-white border-b border-gray-200"
+>
                 <div
                     ref={tabsContainerRef}
                     className="overflow-x-auto whitespace-nowrap scrollbar-hide px-3"
@@ -200,7 +217,7 @@ function Products() {
 
                                                             <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
                                                                 <span>{product.sold || "50+"} sold</span>
-                                                                <ShoppingCart size={28} />
+                                                                <ShoppingCart size={28}  onClick={(e) => handleAddToCart(product, e)}/>
                                                             </div>
 
                                                             <div className="flex items-center">

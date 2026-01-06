@@ -2,8 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { RouterProvider , createBrowserRouter} from 'react-router-dom'
-import { path } from 'framer-motion/client'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from './layout/Layout.jsx'
 import Home from './home/Home.jsx'
 import About from './about-us/About.jsx'
@@ -15,47 +14,33 @@ import { Toaster } from 'react-hot-toast'
 import Products from './products/Products.jsx'
 import ProductDetails from './Details/Details.jsx'
 
-const router = createBrowserRouter ([
+// ← ADD THIS IMPORT (Step 1 done already?)
+import { CartProvider } from './context/CartContext.jsx'   // ← New line
+
+const router = createBrowserRouter([
   {
-    
-        path: "/",
-        element: <Layout/>,
-        children:[
-          {
-            path: "/",
-            element: <Home/>
-          },{
-            path:"/about-us",
-            element: <About/>
-          },{
-            path:"/services",
-            element: <Service/>
-          },{
-            path:"/contact",
-            element: <Contact/>
-          },{
-            path:"/products",
-            element:<Products/>
-          },{
-  path: "/products/:id",
-  element: <ProductDetails />
-}
-          
-        ]
-      }
-      ,{
-          path:"/signup",
-          element: <Signup/>
-        },{
-          path:"/login",
-          element: <Login/>
-        }
-    
+    path: "/",
+    element: <Layout/>,
+    children: [
+      { path: "/", element: <Home/> },
+      { path: "/about-us", element: <About/> },
+      { path: "/services", element: <Service/> },
+      { path: "/contact", element: <Contact/> },
+      { path: "/products", element: <Products/> },
+      { path: "/products/:id", element: <ProductDetails /> }
+    ]
+  },
+  { path: "/signup", element: <Signup/> },
+  { path: "/login", element: <Login/> }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Toaster position="top-right" reverseOrder={false} /> 
-   <RouterProvider router={router}/>
-  </StrictMode>,
+    {/* ← WRAP EVERYTHING WITH CartProvider */}
+    <CartProvider>
+      <Toaster position="top-right" reverseOrder={false} />
+      <RouterProvider router={router} />
+    </CartProvider>
+    {/* ← End of wrap */}
+  </StrictMode>
 )
