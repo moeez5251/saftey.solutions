@@ -22,13 +22,12 @@ function Products() {
     e.preventDefault();
     e.stopPropagation(); // Prevents going to product detail
 
-    addToCart({
-      id: product.id,
-      title: product.title,
-      price: typeof product.price === "number" ? product.price : null,
-      image: product.image,
-      
-    });
+   addToCart({
+  id: product.id,
+  title: product.title,
+  price: product.price,  // ← JUST THIS — pass exactly what comes from product
+  image: product.image,
+});
     toast.success(`${product.title} added to cart!`);
   };
     useEffect(() => {

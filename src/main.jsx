@@ -14,8 +14,11 @@ import { Toaster } from 'react-hot-toast'
 import Products from './products/Products.jsx'
 import ProductDetails from './Details/Details.jsx'
 
+
 // ← ADD THIS IMPORT (Step 1 done already?)
 import { CartProvider } from './context/CartContext.jsx'   // ← New line
+import Checkout from './Checkout/Checkout.jsx'
+import Placeorder from './final-order/Placeorder.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,7 +30,10 @@ const router = createBrowserRouter([
       { path: "/services", element: <Service/> },
       { path: "/contact", element: <Contact/> },
       { path: "/products", element: <Products/> },
-      { path: "/products/:id", element: <ProductDetails /> }
+      { path: "/products/:id", element: <ProductDetails /> },
+      {path:"/checkout",element :<Checkout/>},
+      {path:"/placeorder",element :<Placeorder/>}
+
     ]
   },
   { path: "/signup", element: <Signup/> },

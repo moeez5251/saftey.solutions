@@ -7,37 +7,33 @@ export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false); // New: track if loaded
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  // LOAD CART - runs once
+  // LOAD CART
   useEffect(() => {
     console.log("🔄 Loading cart from localStorage...");
     try {
-      const saved = localStorage.getItem("ssSafetyCart_v2"); // New unique key
+      const saved = localStorage.getItem("ssSafetyCart_v2");
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed)) {
           setCartItems(parsed);
           console.log("✅ LOADED CART:", parsed);
         } else {
-          console.log("❌ Invalid data, starting empty");
           setCartItems([]);
         }
-      } else {
-        console.log("ℹ️ No saved cart, starting empty");
-        setCartItems([]);
       }
     } catch (error) {
       console.error("🔥 LOAD ERROR:", error);
       setCartItems([]);
     } finally {
-      setIsLoaded(true); // Mark as loaded
+      setIsLoaded(true);
     }
   }, []);
 
-  // SAVE CART - runs every time cartItems change
+  // SAVE CART
   useEffect(() => {
-    if (!isLoaded) return; // Don't save before load complete
+    if (!isLoaded) return;
 
     console.log("💾 Saving cart:", cartItems);
     try {
@@ -51,37 +47,52 @@ export const CartProvider = ({ children }) => {
   const addToCart = (product, quantity = 1) => {
     setCartItems((current) => {
       const existing = current.find((item) => item.id === product.id);
-      let newItems;
       if (existing) {
-        newItems = current.map((item) =>
+        // Increase quantity if already in cart
+        return current.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       } else {
-        newItems = [...current, { ...product, quantity }];
+        // Add new item with the selected quantity
+        return [...current, { ...product, quantity }];
       }
-      console.log("🛒 ADDED TO CART - New state:", newItems);
-      return newItems;
     });
   };
 
   const removeFromCart = (id) => {
-    setCartItems((current) => {
-      const newItems = current.filter((item) => item.id !== id);
-      console.log("🗑️ REMOVED - New state:", newItems);
-      return newItems;
-    });
+    setCartItems((current) => current.filter((item) => item.id !== id));
+  };
+
+  const updateQuantity = (id, delta) => {
+    setCartItems((current) =>
+      current
+        .map((item) => {
+          if (item.id === id) {
+            const newQty = item.quantity + delta;
+            return newQty > 0 ? { ...item, quantity: newQty } : null;
+          }
+          return item;
+        })
+        .filter(Boolean)
+    );
   };
 
   const clearCart = () => {
     setCartItems([]);
     localStorage.removeItem("ssSafetyCart_v2");
-    console.log("🧹 CART CLEARED");
   };
 
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-  const totalAmount = cartItems.reduce((sum, item) => sum + (item.price || 0) * item.quantity, 0);
+
+  // FIXED TOTAL: Only calculate numeric prices
+  const totalAmount = cartItems.reduce((sum, item) => {
+    if (typeof item.price === "number") {
+      return sum + item.price * item.quantity;
+    }
+    return sum; // Skip "Call for Price" items
+  }, 0);
 
   return (
     <CartContext.Provider
@@ -89,6 +100,7 @@ export const CartProvider = ({ children }) => {
         cartItems,
         addToCart,
         removeFromCart,
+        updateQuantity,
         clearCart,
         totalItems,
         totalAmount,
