@@ -71,12 +71,12 @@ function Service() {
       img: "https://assets.production.denios.io/article/327073_20220809-092005.jpg",
     },
     {
-      title: "Spill Prevention Containment & Control",
+      title: "Spill Prevention Containment and Control",
       desc: "Spill kits, absorbents & containment systems for emergency response.",
       img: "https://www.absorbentsonline.com/spill-containment-blog/wp-content/plugins/phastpress/phast.php/c2VydmljZT1pbWFnZXMmc3J/jPWh0dHBzJTNBJTJGJTJGd3d3LmFic29yYmVudHNvbmxpbmUuY29tJTJGc3BpbGwtY29udGFpbm1lbnQtYmxvZyUyRndwLWNvbnRlbnQlMkZ1cGxvYWRzJTJGMjAyMiUyRjA0JTJGV2hhdC1Jcy1BLVNwaWxsLUtpdC0xMDI0eDY4My5qcGcmY2FjaGVNYXJrZXI9MTY0OTE2MzIzNi00NDgwNyZ0b2tlbj0xY2E2YmU1NWQ5ZGU5YmRk.q.jpg",
     },
     {
-      title: "Industrial Tools & Machinery",
+      title: "Industrial Tools",
       desc: "Heavy-duty machinery & equipment for industrial applications.",
       img: "https://media.istockphoto.com/id/1157027831/photo/industrial-factory-interior-with-equipment-conveyor-line-and-steel-tools-industry-background.jpg?s=612x612&w=0&k=20&c=YsNqcfwIgc8V_FU--eztNOQrZB1PWRFruUVS0M1w36U=",
     },

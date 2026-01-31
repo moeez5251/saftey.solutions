@@ -144,12 +144,12 @@ function Home() {
       img: "https://assets.production.denios.io/article/327073_20220809-092005.jpg",
     },
     {
-      title: "Spill Prevention Containment & Control",
+      title: "Spill Prevention Containment and Control",
       desc: "Spill kits, absorbents & containment systems for emergency response.",
       img: "https://www.absorbentsonline.com/spill-containment-blog/wp-content/plugins/phastpress/phast.php/c2VydmljZT1pbWFnZXMmc3J/jPWh0dHBzJTNBJTJGJTJGd3d3LmFic29yYmVudHNvbmxpbmUuY29tJTJGc3BpbGwtY29udGFpbm1lbnQtYmxvZyUyRndwLWNvbnRlbnQlMkZ1cGxvYWRzJTJGMjAyMiUyRjA0JTJGV2hhdC1Jcy1BLVNwaWxsLUtpdC0xMDI0eDY4My5qcGcmY2FjaGVNYXJrZXI9MTY0OTE2MzIzNi00NDgwNyZ0b2tlbj0xY2E2YmU1NWQ5ZGU5YmRk.q.jpg",
     },
     {
-      title: "Industrial Tools & Machinery",
+      title: "Industrial Tools",
       desc: "Heavy-duty machinery & equipment for industrial applications.",
       img: "https://media.istockphoto.com/id/1157027831/photo/industrial-factory-interior-with-equipment-conveyor-line-and-steel-tools-industry-background.jpg?s=612x612&w=0&k=20&c=YsNqcfwIgc8V_FU--eztNOQrZB1PWRFruUVS0M1w36U=",
     },
@@ -266,7 +266,7 @@ function Home() {
                   <p className="text-gray-600 text-base leading-relaxed mb-6">
                     {item.desc}
                   </p>
-                  <Link to={`/products#${hashId}`}>
+                  <Link to={`/products?id=${item.title}`}>
                     <button className="inline-flex items-center gap-2 bg-red-700 text-white px-6 py-3 rounded-full font-semibold text-base hover:bg-red-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                       Explore <ArrowRight className="w-5 h-5" />
                     </button>
@@ -438,7 +438,7 @@ function Home() {
               <div className="text-gray-700 space-y-8 order-last lg:order-last">
                 <div className="bg-white rounded-3xl p-8 md:p-10 lg:p-12 shadow-lg border border-gray-100">
                   <p className="text-lg md:text-xl leading-relaxed text-justify">
-                    At <span className="font-bold text-orange-600">SS.SAFETY SOLUTIONS</span>, we believe safety is the foundation of progress. 
+                    At <span className="font-bold text-orange-600">S.S SAFETY SOLUTIONS</span>, we believe safety is the foundation of progress. 
                     We are dedicated to providing <span className="font-semibold text-red-700">world-class, certified safety equipment</span> 
                     that protects lives and empowers industries, workplaces, and families across the nation.
                   </p>

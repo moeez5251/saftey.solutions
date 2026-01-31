@@ -96,8 +96,8 @@ function Fotter() {
                 "Personal Protective Equipments",
                 "Laboratory safety System",
                 "Safety Containment System",
-                "Spill Prevention Containment & Control",
-                "Industrial Tools & Machinery",
+                "Spill Prevention Containment and Control",
+                "Industrial Tools",
                 "Hand tools",
                 "Power Tools",
               ].map((item) => {
