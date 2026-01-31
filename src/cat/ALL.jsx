@@ -15,10 +15,11 @@ export const categories = [
     'Personal Protective Equipments',
     'Laboratory safety System',
     'Safety Containment System',
-    'Spill Prevention Containment & Control',
-    'Industrial Tools & Machinery',
+    'Spill Prevention Containment and Control',
+    'Industrial Tools',
     'Hand tools',
     'Power Tools',
+    
 ];
 
 
@@ -511,7 +512,7 @@ export const productsData = {
         { id: 'cont-009', title: 'SYSBEL Gas Cylinder Storage Cages CE approved', price: 'Contact Us For A Quote', originalPrice: null, image: 'https://safetyware.com/wp-content/uploads/2020/08/SYSBEL-WA740101-Gas-Cylinder-Cabinet-Horizontal.jpg', desc: 'Secure CE approved cage for safe storage and handling of gas cylinders.', rating: 4.8, reviews: 55, sold: '180+' },
         { id: 'cont-010', title: 'Cigarette Butts Receptacle SYSBELL', price: 'Contact Us For A Quote', originalPrice: null, image: 'https://www.sysbelglobal.com/upload/images/product/20230721/WA930101.jpg', desc: 'Fire-safe cigarette butt receptacle to prevent fire hazards from discarded butts.', rating: 4.6, reviews: 120, sold: '600+' }
     ],
-    'Spill Prevention Containment & Control': [
+    'Spill Prevention Containment and Control': [
         { id: 'spill-001', title: 'Polyethylene Spill Containment Pallet For 4 Drum CE Certificate', price: 'Contact Us For A Quote', originalPrice: null, image: 'https://www.sysbelglobal.com/upload/images/product/20230614/SPP104-2.jpg', desc: 'CE certified polyethylene spill pallet for 4 drums with high sump capacity to prevent leaks.', rating: 4.8, reviews: 85, sold: '350+' },
         { id: 'spill-002', title: 'Polyethylene Spill Containment Deck For 1 Drum CE Certificate', price: 'Contact Us For A Quote', originalPrice: null, image: 'https://www.sysbelglobal.com/upload/images/product/20230619/SPP401.jpg', desc: 'Compact 1-drum polyethylene spill containment deck for safe chemical storage.', rating: 4.6, reviews: 70, sold: '300+' },
         { id: 'spill-003', title: 'Polyethylene Spill Containment Pallet For 2 Drum CE Certificate', price: 'Contact Us For A Quote', originalPrice: null, image: 'https://www.sysbelglobal.com/upload/images/product/20230613/SPP102.jpg', desc: '2-drum polyethylene spill pallet with removable grates for easy cleaning.', rating: 4.7, reviews: 90, sold: '400+' },
@@ -535,7 +536,7 @@ export const productsData = {
         { id: 'spill-021', title: 'Sysbel Steel Spill Containment Pallet (2 Drum)', price: 'Contact Us For A Quote', originalPrice: null, image: 'https://www.sysbelglobal.com/upload/images/product/20230624/SPM202.jpg', desc: 'Heavy-duty steel 2-drum spill pallet for industrial applications.', rating: 4.8, reviews: 55, sold: '180+' },
         { id: 'spill-022', title: 'Sysbel FM CE 36L Single Drum Oil Drum Tray Leash', price: 'Contact Us For A Quote', originalPrice: null, image: 'https://www.sysbelglobal.com/upload/images/product/20230625/SPP106-2.jpg', desc: 'Single drum tray with 36L capacity for oil and chemical containment.', rating: 4.6, reviews: 65, sold: '220+' }
     ],
-    'Industrial Tools & Machinery': [
+    'Industrial Tools': [
         { id: 'ind-001', title: 'DJ-105A DAJING', price: '500', originalPrice: null, image: 'https://www.dajingtools.com/upload/images/product/20230610/small-pvc-pipe-cutter.jpg', desc: 'Compact DJ-105A DAJING pipe cutter for small diameter PVC and plastic pipes.', rating: 4.6, reviews: 80, sold: '400+' },
         { id: 'ind-002', title: 'DJ-108B DAJING', price: '560', originalPrice: null, image: 'https://www.alibaba.com/product-detail/wholesale-cheap-portable-pvc-pipe-cutter_60836507743.html', desc: 'DJ-108B DAJING heavy-duty cutter for medium-sized pipes with ergonomic design.', rating: 4.7, reviews: 90, sold: '450+' },
         { id: 'ind-003', title: 'DJ-112 DAJING', price: '370', originalPrice: null, image: 'https://cnssgj.en.alibaba.com/product/60696633703-805474814/DAJING_Factory_hot_sales_42mm_vinyl_pipe_cutter_cutting_tools_heavy_plastic_pipe_scissors_Automatic_ratchet_easy_cutting.html', desc: 'DJ-112 DAJING quick-adjust ratchet pipe cutter for efficient cutting.', rating: 4.5, reviews: 100, sold: '500+' },

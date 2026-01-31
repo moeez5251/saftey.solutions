@@ -11,14 +11,12 @@ export const CartProvider = ({ children }) => {
 
   // LOAD CART
   useEffect(() => {
-    console.log("🔄 Loading cart from localStorage...");
     try {
       const saved = localStorage.getItem("ssSafetyCart_v2");
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed)) {
           setCartItems(parsed);
-          console.log("✅ LOADED CART:", parsed);
         } else {
           setCartItems([]);
         }
@@ -35,12 +33,9 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     if (!isLoaded) return;
 
-    console.log("💾 Saving cart:", cartItems);
     try {
       localStorage.setItem("ssSafetyCart_v2", JSON.stringify(cartItems));
-      console.log("✅ SAVED SUCCESSFULLY");
     } catch (error) {
-      console.error("🔥 SAVE ERROR:", error);
     }
   }, [cartItems, isLoaded]);
 

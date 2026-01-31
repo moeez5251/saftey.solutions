@@ -23,7 +23,6 @@ function Signup() {
       });
 
       if (userAccount) {
-        console.log("User signed up successfully:", userAccount);
 
         const done = await auths.login({
           email: data.email,

@@ -1,7 +1,7 @@
 import { ShoppingCart } from 'lucide-react';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { productsData, categories } from '../cat/ALL';
@@ -12,13 +12,16 @@ import toast from 'react-hot-toast';
 
 function Products() {
     const [activeCategory, setActiveCategory] = useState(categories[0]);
+
     const categoryRefs = useRef({});
     const tabRefs = useRef({});
     const tabsContainerRef = useRef(null);
     const stickyRef = useRef(null);
+    const isProgrammaticScroll = useRef(false);
+
     const location = useLocation();
     const { addToCart } = useCart();
-
+    const [searchParams] = useSearchParams()
     const handleAddToCart = (product, e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -30,80 +33,43 @@ function Products() {
             image: product.image,
             quantity: 1,
         });
+
         toast.success(`${product.title} added to cart!`);
     };
 
-    // ROBUST HASH SCROLLING - Multiple attempts with offset for sticky header
     useEffect(() => {
-        if (location.hash) {
-            const id = location.hash.slice(1);
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (isProgrammaticScroll.current) return;
 
-            const tryScroll = () => {
-                const element = document.getElementById(id);
-                if (element) {
-                    const yOffset = -140; // Covers both mobile (100px) and desktop (80px) sticky header + padding
-                    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
+                const visible = entries
+                    .filter(e => e.isIntersecting)
+                    .sort(
+                        (a, b) =>
+                            a.boundingClientRect.top -
+                            b.boundingClientRect.top
+                    );
 
-                    // Update active tab
-                    const matchedCat = categories.find(cat => getHashId(cat) === id);
-                    if (matchedCat) {
-                        setActiveCategory(matchedCat);
-                    }
+                if (visible.length > 0) {
+                    const cat = visible[0].target.dataset.category;
+                    setActiveCategory(cat);
                 }
-            };
-
-            // Try multiple times to ensure DOM is fully rendered
-            setTimeout(tryScroll, 300);
-            setTimeout(tryScroll, 700);
-            setTimeout(tryScroll, 1200);
-        }
-    }, [location]);
-
-    useEffect(() => {
-        let rafId = null;
-        let scrolling = false;
-
-        const updateActiveCategory = () => {
-            const stickyRect = stickyRef.current?.getBoundingClientRect();
-            const triggerY = stickyRect ? stickyRect.bottom : 120;
-
-            let newActive = activeCategory;
-
-            categories.forEach((cat) => {
-                const headerEl = categoryRefs.current[cat];
-                if (headerEl) {
-                    const top = headerEl.getBoundingClientRect().top;
-                    if (top <= triggerY + 30) {
-                        newActive = cat;
-                    }
-                }
-            });
-
-            if (newActive !== activeCategory) {
-                setActiveCategory(newActive);
+            },
+            {
+                rootMargin: "-120px 0px -60% 0px",
+                threshold: 0,
             }
+        );
 
-            scrolling = false;
-            rafId = null;
-        };
+        categories.forEach((cat) => {
+            const el = categoryRefs.current[cat];
+            if (el) observer.observe(el);
+        });
 
-        const onScroll = () => {
-            if (!scrolling) {
-                scrolling = true;
-                rafId = requestAnimationFrame(updateActiveCategory);
-            }
-        };
+        return () => observer.disconnect();
+    }, []);
 
-        window.addEventListener('scroll', onScroll, { passive: true });
-        updateActiveCategory();
-
-        return () => {
-            window.removeEventListener('scroll', onScroll);
-            if (rafId) cancelAnimationFrame(rafId);
-        };
-    }, [activeCategory]);
-
+    /* ---------------- CENTER ACTIVE TAB ---------------- */
     useEffect(() => {
         const tabEl = tabRefs.current[activeCategory];
         if (tabEl && tabsContainerRef.current) {
@@ -115,15 +81,23 @@ function Products() {
         }
     }, [activeCategory]);
 
+    /* ---------------- TAB CLICK SCROLL ---------------- */
     const scrollToCategory = (cat) => {
+        console.log(cat);
+        isProgrammaticScroll.current = true;
         setActiveCategory(cat);
-
         const headerEl = categoryRefs.current[cat];
         if (headerEl) {
             const stickyRect = stickyRef.current?.getBoundingClientRect();
-            const stickyHeight = stickyRect ? stickyRect.height : (window.innerWidth >= 768 ? 80 : 110);
+            const stickyHeight = stickyRect
+                ? stickyRect.height
+                : window.innerWidth >= 768
+                    ? 80
+                    : 110;
 
-            const headerTop = headerEl.getBoundingClientRect().top + window.pageYOffset;
+            const headerTop =
+                headerEl.getBoundingClientRect().top + window.pageYOffset;
+
             const targetY = headerTop - stickyHeight - 16;
 
             window.scrollTo({
@@ -131,21 +105,37 @@ function Products() {
                 behavior: "smooth",
             });
         }
+
+        setTimeout(() => {
+            isProgrammaticScroll.current = false;
+        }, 500);
     };
 
-    // Improved hash ID: handles plurals (removes trailing 's') and case/spaces
-    const getHashId = (title) => {
-        return title.toLowerCase()
+    /* ---------------- HASH ID ---------------- */
+    const getHashId = (title) =>
+        title
+            .toLowerCase()
             .replace(/\s+/g, '-')
             .replace(/&/g, 'and')
-            .replace(/s$/g, ''); // e.g., "vehicles" → "vehicle", "systems" → "system"
-    };
+            .replace(/s$/g, '');
+
+    /* ---------------- HASH SCROLL ---------------- */
+    useEffect(() => {
+        scrollToCategory(searchParams.get("id"))
+
+        return () => {
+
+        }
+    }, [])
+
 
     return (
         <div className="min-h-screen bg-gray-50">
-
             {/* Sticky Category Tabs */}
-            <div ref={stickyRef} className="sticky top-[100px] md:top-[80px] z-20 bg-white border-b border-gray-200">
+            <div
+                ref={stickyRef}
+                className="sticky top-[100px] md:top-[80px] z-20 bg-white border-b border-gray-200"
+            >
                 <div
                     ref={tabsContainerRef}
                     className="overflow-x-auto whitespace-nowrap scrollbar-hide px-3"
@@ -182,10 +172,15 @@ function Products() {
                         <section key={cat} id={hashId} className="mb-16">
                             <div
                                 ref={(el) => (categoryRefs.current[cat] = el)}
+                                data-category={cat}
                                 className="flex items-center mb-6 px-2"
                             >
-                                <h2 className="text-4xl md:text-5xl font-bold text-orange-600 flex-1">{cat}</h2>
-                                <span className="text-lg md:text-xl text-red-700">{products.length} products</span>
+                                <h2 className="text-4xl md:text-5xl font-bold text-orange-600 flex-1">
+                                    {cat}
+                                </h2>
+                                <span className="text-lg md:text-xl text-red-700">
+                                    {products.length} products
+                                </span>
                             </div>
 
                             {products.length > 0 ? (
@@ -193,7 +188,8 @@ function Products() {
                                     modules={[Pagination]}
                                     pagination={{
                                         clickable: true,
-                                        renderBullet: (index, className) => `<span class="${className}">${index + 1}</span>`,
+                                        renderBullet: (i, c) =>
+                                            `<span class="${c}">${i + 1}</span>`,
                                     }}
                                     className="product-swiper"
                                 >
@@ -222,7 +218,7 @@ function Products() {
                                                                     src={product.image || "https://via.placeholder.com/300"}
                                                                     alt={product.title}
                                                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                                                    onError={(e) => e.target.src = "https://via.placeholder.com/300"}
+                                                                    loading="lazy"
                                                                 />
                                                                 <div className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
                                                                     CALL
@@ -234,42 +230,21 @@ function Products() {
                                                                     {product.title}
                                                                 </h3>
 
-                                                                {product.desc && (
-                                                                    <p className="text-xs text-gray-500 line-clamp-2 mb-2">
-                                                                        {product.desc}
-                                                                    </p>
-                                                                )}
-
                                                                 <div className="mb-2">
                                                                     <span className="text-lg font-bold text-red-600">
                                                                         {typeof product.price === "number"
                                                                             ? `Rs. ${product.price.toLocaleString("en-IN")}`
                                                                             : product.price}
                                                                     </span>
-                                                                    {product.originalPrice && (
-                                                                        <span className="text-xs text-gray-500 line-through ml-2">
-                                                                            Rs. {product.originalPrice.toLocaleString("en-IN")}
-                                                                        </span>
-                                                                    )}
                                                                 </div>
 
                                                                 <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
                                                                     <span>{product.sold || "50+"} sold</span>
-                                                                    <ShoppingCart 
-                                                                        size={28}  
+                                                                    <ShoppingCart
+                                                                        size={28}
                                                                         className="cursor-pointer hover:text-orange-600 transition"
                                                                         onClick={(e) => handleAddToCart(product, e)}
                                                                     />
-                                                                </div>
-
-                                                                <div className="flex items-center">
-                                                                    <div className="flex text-black text-sm">
-                                                                        {"★★★★★".slice(0, Math.floor(product.rating || 4.6))}
-                                                                        {"☆☆☆☆☆".slice(0, 5 - Math.floor(product.rating || 4.6))}
-                                                                    </div>
-                                                                    <span className="text-xs text-gray-500 ml-1">
-                                                                        ({product.reviews || "100+"})
-                                                                    </span>
                                                                 </div>
                                                             </div>
                                                         </motion.div>
@@ -281,7 +256,9 @@ function Products() {
                                 </Swiper>
                             ) : (
                                 <div className="text-center py-24 text-gray-500">
-                                    <p className="text-2xl font-medium mb-4">No products available yet</p>
+                                    <p className="text-2xl font-medium mb-4">
+                                        No products available yet
+                                    </p>
                                     <p className="text-lg">Coming soon!</p>
                                 </div>
                             )}
