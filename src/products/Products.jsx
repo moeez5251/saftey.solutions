@@ -22,6 +22,7 @@ function Products() {
     const location = useLocation();
     const { addToCart } = useCart();
     const [searchParams] = useSearchParams()
+
     const handleAddToCart = (product, e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -128,6 +129,39 @@ function Products() {
         }
     }, [])
 
+    // ── NEW: Highlight product when arrived via search hash (#product-id) ──
+    useEffect(() => {
+        if (!location.hash) return;
+
+        const productId = location.hash.substring(1);
+        if (!productId) return;
+
+        const element = document.getElementById(productId);
+        if (!element) return;
+
+        // Scroll to product
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        // Apply orange border + light background highlight
+        element.classList.add(
+            'border-orange-600',
+            'border-4',
+            'bg-orange-50/70',
+            'shadow-lg'
+        );
+
+        // Remove highlight after 5 seconds
+        const timer = setTimeout(() => {
+            element.classList.remove(
+                'border-orange-600',
+                'border-4',
+                'bg-orange-50/70',
+                'shadow-lg'
+            );
+        }, 5000);
+
+        return () => clearTimeout(timer);
+    }, [location.hash]);
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -212,6 +246,7 @@ function Products() {
                                                             viewport={{ once: true, margin: "-50px" }}
                                                             transition={{ duration: 0.5, delay: page.indexOf(product) * 0.05 }}
                                                             className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group"
+                                                            id={product.id}
                                                         >
                                                             <div className="aspect-square bg-gray-100 relative overflow-hidden">
                                                                 <img

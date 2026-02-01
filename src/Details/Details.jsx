@@ -15,6 +15,8 @@ import {
   RefreshCw,
   ArrowLeft,
   Star,
+  ZoomIn,
+  X,
 } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -79,6 +81,7 @@ const ProductDetails = () => {
   }
 
   const [quantity, setQuantity] = useState(1);
+  const [showZoomModal, setShowZoomModal] = useState(false);
 
   const isContactPrice =
     typeof product.price === "string" && product.price.toLowerCase().includes("contact");
@@ -111,7 +114,7 @@ const ProductDetails = () => {
             transition={{ duration: 0.6 }}
             className="bg-white rounded-2xl shadow-lg overflow-hidden"
           >
-            <div className="aspect-square">
+            <div className="aspect-square relative">
               <img
                 src={product.image || "https://via.placeholder.com/800"}
                 alt={product.title}
@@ -120,6 +123,15 @@ const ProductDetails = () => {
                   e.target.src = "https://via.placeholder.com/800?text=Image+Not+Found";
                 }}
               />
+
+              {/* Zoom Icon (top-right corner) */}
+              <button
+                onClick={() => setShowZoomModal(true)}
+                className="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur-sm hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
+                aria-label="Zoom in on product image"
+              >
+                <ZoomIn size={28} className="text-gray-800" />
+              </button>
             </div>
           </motion.div>
 
@@ -247,6 +259,35 @@ const ProductDetails = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Zoom Modal (full-screen image zoom on click) */}
+        {showZoomModal && (
+          <div
+            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 cursor-zoom-out"
+            onClick={() => setShowZoomModal(false)}
+          >
+            <div className="relative max-w-6xl w-full max-h-full">
+              <img
+                src={product.image || "https://via.placeholder.com/800"}
+                alt={product.title}
+                className="max-w-full max-h-full object-contain"
+                onClick={(e) => e.stopPropagation()} // Prevent close when clicking image
+                onError={(e) => {
+                  e.target.src = "https://via.placeholder.com/800?text=Image+Not+Found";
+                }}
+              />
+
+              {/* Close button */}
+              <button
+                onClick={() => setShowZoomModal(false)}
+                className="absolute top-4 right-4 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
+                aria-label="Close zoomed image"
+              >
+                <X size={32} className="text-gray-800" />
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Related Products */}
         {relatedProducts.length > 0 && (

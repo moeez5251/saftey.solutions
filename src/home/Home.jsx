@@ -191,7 +191,7 @@ function Home() {
                 className="h-20 w-20 mx-auto mb-4"
               />
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-2xl">
-                <span className="text-orange-500">SS</span>.SAFETY SOLUTIONS
+                <span className="text-orange-500">S.S</span> SAFETY SOLUTIONS
               </h1>
             </div>
 
@@ -419,7 +419,7 @@ function Home() {
                   
                   <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 md:border-12 border-white">
                     <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdwNykcGgRL1r-sexfy1CJJ7GeHXNolyS2w&s"
+                      src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMHBhISBwgPFhUXFRUXExcSFhcVGBcXFxEWFhYXFRcYHSggGBolHxUWITEhJSkrMS4uFx8zODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYCAwQBB//EADcQAQABAgIHBQUGBwAAAAAAAAABAgMEEQUSIUFRYXETMZGh0SIygbHhIzM0UqLBFEJDcrLw8f/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD6IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM7dqq7P2duZ6Rm6KdGXao+68ZgHIOydGXY/p+Ew57tiq195bqjrGzxBrAAAAAAAAAAAAAAAAAAAAAAB7bom5XEURnM9wPbVubtcRbpzlM4TRVNEZ3/anhuj1dOBwkYW1lHfvnj9HSDymmKYypjLo9AB5MZxtegODFaMpvbbcas8u74whcRYqw9zK7T9ei0tOKw8Ym1q3I6cp4wCsDZiLM4e7NNz/scWsAAAAAAAAAAAAAAAAAABMaEw2VM11R37I6b/8AeSHiM52LVZt9laimN0RAMwAAAAAAAR+l8N2uH1qY207fhv8AVBLZMZxtVa/b7K9VTwmY8wYAAAAAAAAAAAAAAAAAA24SNbFUZ/mp+a0KthqtXE0TO6qPmtIAAAAAAAACu6VjLH1Zcv8AGFiVzSlWtj68uUeEQDlAAAAAAAAAAAAAAAAAB4tOFu9vh6auMee9V0noXE6lU0Vz37aeu+ATQAAAAAAAMblWpRM1d0RnPwVa5X2lyZnfMz4yl9NYnVt6lE7Z7+iGAAAAAAAAAAAAAAAAAAAInKdkgCe0dj4xFOrcn2vnzh3qlE5TslJ4TS00RliIz5x3/HiCaGmziqL8fZXInlv8G4AGq7iKbMfa3Ijr6A2uTHY2MLRxq3R+88nHitL7MsNT8Z/aPVFV1TXVnXOc7wLlc3K5muc5nveAAAAAAAAAAAAAAAAAAAAAADO1ZqvT9lbmenqDW2U3qqI9m7VHSZdlvRFdXvzTHn8m+nQv5r/6fqCNqv11e9er8Za0tOheF/8AT9Wm5oiun3KqZ8gR423sNXZ+9tTHy8WoAAAAAAAAAAAAAAAAAAAABtw+GqxNWVqnrO6Pi68Bo2b+VV7OKd0b59ITduiLdGVFOUA4cLoqm3tve1Pl4b3fTTFMZUxl0egAAAAExnG1w4nRlF7bRGrPLu8HcArWKwdWGn26dnGO76OdbKo1oyqhD4/RernVho60+noCLAAAAAAAAAAAAAAAASei9H9plXfjZ/LHHnPJp0Xg/wCJu51x7Mec8E/EZRsB6AAAAAAAAAAACL0no/XzrsRt3xx5xzQy2oTS+D7OrXtxsn3o4TxBGgAAAAAAAAAAAMrVubtyKaI2zOTFK6DsZzNdUco/cEph7MWLMU0bmwAAAAAAAAAAAAAGNdEXKJiqNk97IBV8XYnDX5pn4c43NSb01Y17MVx3x39JQgAAAAAAAAAACzYG12OFpjLdt6ztlXMPR2l+mONUR5rVAAAAAAAAAAAAAAAAAMLtuLtuYq3xMKtVTq1TE7ti2K3pKjUx1fXPxiJBzAAAAAAAAAA34D8bR/dCzAAAAAAAAAAAAAAAAAAr+mPx09I+QA4gAAAAAf/Z"
                       alt="Mr. Sanjay Kumar - CEO"
                       className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105 bg-black"
                     />
@@ -456,7 +456,7 @@ function Home() {
                       Founder & Chief Executive Officer
                     </p>
                     <p className="text-base text-gray-600">
-                      SS.SAFETY SOLUTIONS
+                      S.S SAFETY SOLUTIONS
                     </p>
                   </div>
                 </div>

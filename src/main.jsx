@@ -42,7 +42,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* ← WRAP EVERYTHING WITH CartProvider */}
+    {/* ← Wrap the app with CartProvider */}
     <CartProvider>
       <Toaster position="top-right" reverseOrder={false} />
       <RouterProvider router={router} />
