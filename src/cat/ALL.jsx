@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+ 
 export const categories = [
     'Security Equipment',
     'Rescue Equipment',
