@@ -177,7 +177,7 @@ function Service() {
                     <p className="text-gray-600 text-base leading-relaxed mb-6">
                       {service.desc}
                     </p>
-                    <Link to={`/products#${hashId}`}>
+                    <Link to={`/products?id=${service.title}`}>
                       <button className="inline-flex items-center gap-3 bg-red-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-800 transition-all duration-400 shadow-lg hover:shadow-xl transform group-hover:translate-x-2">
                         Explore <ArrowRight className="w-6 h-6" />
                       </button>

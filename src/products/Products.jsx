@@ -84,6 +84,7 @@ function Products() {
 
     /* ---------------- TAB CLICK SCROLL ---------------- */
     const scrollToCategory = (cat) => {
+        window.scrollTo(0,0)
         console.log(cat);
         isProgrammaticScroll.current = true;
         setActiveCategory(cat);

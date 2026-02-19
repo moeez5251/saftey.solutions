@@ -109,7 +109,7 @@ function Fotter() {
                 return (
                   <li key={item} className="mb-4 break-inside-avoid">
                     <Link
-                     to={`/products?id=${item.title}`}
+                     to={`/products?id=${item}`}
                       className="text-gray-400 hover:text-red-500 transition-colors duration-300 text-lg block"
                     >
                       {item}
