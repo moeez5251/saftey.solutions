@@ -29,7 +29,6 @@ import toast from "react-hot-toast";
 const ProductDetails = () => {
   const { id } = useParams();
   const productId = id;
-
   const { addToCart } = useCart();
 
   // CORRECTED: handleAddToCart now uses the current quantity state
