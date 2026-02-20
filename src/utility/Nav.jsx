@@ -21,6 +21,7 @@ function Nav() {
   const [query, setQuery] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const searchRef = useRef(null);
+  const mobileSearchRef = useRef(null);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -46,6 +47,16 @@ function Nav() {
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (searchRef.current && !searchRef.current.contains(e.target)) {
+        setShowDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (mobileSearchRef.current && !mobileSearchRef.current.contains(e.target)) {
         setShowDropdown(false);
       }
     };
@@ -123,7 +134,7 @@ const handleProductSelect = (product) => {
                 onClick={() => setIsOpen(!isOpen)}
                 className="p-2 rounded-md text-gray-700 hover:text-orange-600 hover:bg-gray-100 transition"
               >
-                {isOpen ? <X size={28} /> : <Menu size={28} />}
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
 
@@ -215,14 +226,14 @@ const handleProductSelect = (product) => {
                   onClick={() => setShowLogout(true)}
                   className="p-2 rounded-full hover:bg-gray-100 transition text-orange-600"
                 >
-                  <UserCheck size={24} />
+                  <UserCheck size={20} />
                 </button>
               ) : (
                 <Link
                   to="/signup"
                   className="p-2 rounded-full hover:bg-gray-100 transition text-gray-700 hover:text-orange-600"
                 >
-                  <User size={24} />
+                  <User size={20} />
                 </Link>
               )}
 
@@ -231,7 +242,7 @@ const handleProductSelect = (product) => {
                 onClick={() => setShowCart(true)}
                 className="relative text-gray-700 hover:text-orange-600 p-2 rounded-full hover:bg-gray-100 transition"
               >
-                <ShoppingCart size={24} />
+                <ShoppingCart size={20} />
                 {totalItems > 0 && (
                   <span className="absolute -top-1 -right-1 bg-orange-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                     {totalItems}
@@ -246,6 +257,54 @@ const handleProductSelect = (product) => {
         {isOpen && (
           <div className="lg:hidden bg-white border-t border-gray-200 ">
             <div className="px-2 pt-2 pb-4 space-y-1 z-1000000">
+              <div className="mb-4">
+                <div className="relative" ref={mobileSearchRef}>
+                  <div className="flex items-center bg-gray-100 rounded-full px-4 py-2 transition-shadow focus-within:ring-2 focus-within:ring-orange-600">
+                    <input
+                      type="text"
+                      value={query}
+                      onChange={(e) => {
+                        setQuery(e.target.value);
+                        setShowDropdown(true);
+                      }}
+                      onFocus={() => setShowDropdown(true)}
+                      placeholder="Search products..."
+                      className="bg-transparent outline-none flex-1 text-gray-700 placeholder-gray-500"
+                    />
+                    <Search size={20} className="text-gray-500 ml-2" />
+                  </div>
+
+                  {/* Dropdown suggestions – same layout as your screenshot (image + title + desc) */}
+                  {showDropdown && query.trim() && (
+                    <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 max-h-96 overflow-y-auto z-50">
+                      {filteredProducts.length === 0 ? (
+                        <div className="px-4 py-3 text-gray-500 text-center">No products found</div>
+                      ) : (
+                        filteredProducts.map((product) => (
+                          <button
+                            key={product.id}
+                            onClick={() => handleProductSelect(product)}
+                            className="flex items-center w-full px-4 py-3 hover:bg-orange-50 transition border-l-4 border-transparent hover:border-l-4 hover:border-orange-600 text-left"
+                          >
+                            <img
+                              src={product.image}
+                              alt={product.title}
+                              className="w-12 h-12 object-cover rounded mr-4 flex-shrink-0 border border-gray-200"
+                              onError={(e) => (e.target.src = "/placeholder.jpg")} // fallback if image fails
+                            />
+                            <div className="flex-1 min-w-0">
+                              <p className="font-medium text-gray-900 truncate">{product.title}</p>
+                              {product.desc && (
+                                <p className="text-sm text-gray-500 truncate mt-1">{product.desc}</p>
+                              )}
+                            </div>
+                          </button>
+                        ))
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
               <NavLink to="/" end className={mobileLinkClass}>Home</NavLink>
               <NavLink to="/products" className={mobileLinkClass}>Products</NavLink>
               <NavLink to="/services" className={mobileLinkClass}>Services</NavLink>
@@ -413,5 +472,3 @@ const handleProductSelect = (product) => {
 }
 
 export default Nav;
-
-

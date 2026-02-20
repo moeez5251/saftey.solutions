@@ -82,12 +82,14 @@ export const CartProvider = ({ children }) => {
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   // FIXED TOTAL: Only calculate numeric prices
-  const totalAmount = cartItems.reduce((sum, item) => {
-    if (typeof item.price === "number") {
-      return sum + item.price * item.quantity;
-    }
-    return sum; // Skip "Call for Price" items
-  }, 0);
+  // const totalAmount = cartItems.reduce((sum, item) => {
+  //   if (typeof item.price === "number") {
+  //     return sum + item.price * item.quantity;
+  //   }
+  //   return sum; // Skip "Call for Price" items
+  // }, 0);
+  const totalAmount = "Call for Price";
+
 
   return (
     <CartContext.Provider

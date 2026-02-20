@@ -14,12 +14,11 @@ import { toast } from 'react-hot-toast';
 
 function Home() {
   
-  const products = [
+ const products = [
     {
       id: 1,
       name: "Premium Safety Boots Pro-X",
-      price: 7000,
-      oldPrice: 10000,
+      price: "Call for Price",
       rating: 4.9,
       badge: "BEST SELLER",
       image: "https://m.media-amazon.com/images/I/71Dn8rcuo7L._AC_UY900_.jpg",
@@ -28,8 +27,7 @@ function Home() {
     {
       id: 2,
       name: "Tactical Ballistic Helmet",
-      price: 4000,
-      oldPrice: 6000,
+      price: "Call for Price",
       rating: 4.8,
       badge: "NEW ARRIVAL",
       image: "https://acelinkarmor.com/wp-content/uploads/2024/08/helmet-category-banner.jpg",
@@ -38,8 +36,7 @@ function Home() {
     {
       id: 3,
       name: "High-Visibility Safety Vest",
-      price: 9000,
-      oldPrice: 12000,
+      price: "Call for Price",
       rating: 4.7,
       badge: null,
       image: "https://cdn.prod.website-files.com/647888ca92d03e3fca3f1ea0/647888ca92d03e3fca3f23a6_Safety%20yellow%20and%20orange%20vests.jpg",
@@ -48,8 +45,7 @@ function Home() {
     {
       id: 4,
       name: "Full-Body Fall Arrest Harness",
-      price: 3500,
-      oldPrice: 5000,
+      price: "Call for Price",
       rating: 5.0,
       badge: "TOP RATED",
       image: "https://sbc-content.s3.amazonaws.com/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/S/a/Safety-Lanyards_1.jpg",
@@ -58,8 +54,7 @@ function Home() {
     {
       id: 5,
       name: "Fire-Resistant Gloves Pro",
-      price: 4000,
-      oldPrice: 7000,
+      price: "Call for Price",
       rating: 4.6,
       badge: "LIMITED STOCK",
       image: "https://cdn11.bigcommerce.com/s-tumf4kk1l4/images/stencil/original/l/apikrtmf9__92534.original.jpg",
@@ -68,14 +63,14 @@ function Home() {
     {
       id: 6,
       name: "Fire-Resistant Gloves Pro",
-      price: 3400,
-      oldPrice: 2500,
+      price: "Call for Price",
       rating: 4.6,
       badge: "LIMITED STOCK",
       image: "https://cdn11.bigcommerce.com/s-tumf4kk1l4/images/stencil/original/l/apikrtmf9__92534.original.jpg",
       description: "Heat-resistant up to 500°C. Dexterity and grip for firefighting and industrial use."
     }
   ];
+
 
   const categories = [
     {
@@ -368,16 +363,25 @@ function Home() {
                         {product.description}
                       </p>
 
-                      <div className="mb-6">
-                        <span className="text-3xl font-extrabold text-red-700">
-                          Rs.{product.price.toFixed()}
-                        </span>
-                        {product.oldPrice && (
-                          <span className="text-lg text-gray-500 line-through ml-3">
-                            Rs.{product.oldPrice.toFixed()}
-                          </span>
-                        )}
-                      </div>
+                   <div className="mb-6">
+  {typeof product.price === "number" ? (
+    <>
+      <span className="text-3xl font-extrabold text-red-700">
+        Rs.{product.price.toFixed()}
+      </span>
+      {product.oldPrice && (
+        <span className="text-lg text-gray-500 line-through ml-3">
+          Rs.{product.oldPrice.toFixed()}
+        </span>
+      )}
+    </>
+  ) : (
+    <span className="text-3xl font-extrabold text-red-700">
+      {product.price}
+    </span>
+  )}
+</div>
+
 
                       <div className="flex items-center justify-center gap-3">
                         <button 

@@ -13,7 +13,7 @@ import Login from './LOGINS/Login.jsx'
 import { Toaster } from 'react-hot-toast'
 import Products from './products/Products.jsx'
 import ProductDetails from './Details/Details.jsx'
-import { HelmetProvider } from 'react-helmet-async'
+
 
 // ← ADD THIS IMPORT (Step 1 done already?)
 import { CartProvider } from './context/CartContext.jsx'   // ← New line
@@ -43,12 +43,12 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* ← Wrap the app with HelmetProvider and CartProvider */}
-    <HelmetProvider>
+   
       <CartProvider>
         <Toaster position="top-right" reverseOrder={false} />
         <RouterProvider router={router} />
       </CartProvider>
-    </HelmetProvider>
+   
     {/* ← End of wrap */}
   </StrictMode>
 )
