@@ -19,6 +19,7 @@ import ProductDetails from './Details/Details.jsx'
 import { CartProvider } from './context/CartContext.jsx'   // ← New line
 import Checkout from './Checkout/Checkout.jsx'
 import Placeorder from './final-order/Placeorder.jsx'
+import { HelmetProvider } from 'react-helmet-async'
 
 const router = createBrowserRouter([
   {
@@ -42,13 +43,11 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* ← Wrap the app with HelmetProvider and CartProvider */}
-   
+    <HelmetProvider>
       <CartProvider>
         <Toaster position="top-right" reverseOrder={false} />
         <RouterProvider router={router} />
       </CartProvider>
-   
-    {/* ← End of wrap */}
+    </HelmetProvider>
   </StrictMode>
 )

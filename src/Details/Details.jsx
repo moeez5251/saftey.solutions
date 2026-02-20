@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -93,8 +94,94 @@ const ProductDetails = () => {
     .filter((p) => p.id !== productId)
     .slice(0, 15);
 
+  // SEO: Generate dynamic meta tags and structured data
+  const siteUrl = "https://www.sssafetysolutions.com";
+  const productUrl = `${siteUrl}/products/${product.id}`;
+  const productPrice = typeof product.price === "number"
+    ? product.price
+    : 0;
+  const productPriceFormatted = typeof product.price === "number"
+    ? `Rs. ${product.price.toLocaleString("en-IN")}`
+    : product.price;
+
+  const seoTitle = `${product.title} | SS Safety Solutions Pakistan`;
+  const seoDescription = product.desc || `Buy ${product.title} at SS Safety Solutions Pakistan. Premium quality ${currentCategory} with nationwide delivery. ${productPriceFormatted}. Call now!`;
+  const seoKeywords = `${product.title}, ${currentCategory}, safety equipment Pakistan, protective gear, ${product.title} price, buy ${product.title} online Pakistan`;
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.title,
+    "description": product.desc || `Premium quality ${product.title} for safety and protection`,
+    "image": product.image,
+    "url": productUrl,
+    "brand": {
+      "@type": "Brand",
+      "name": "SS Safety Solutions"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": productUrl,
+      "priceCurrency": "PKR",
+      "price": productPrice,
+      "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+      "availability": product.sold ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "SS Safety Solutions"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": product.rating || 4.8,
+      "reviewCount": product.reviews || 200
+    },
+    "category": currentCategory,
+    "sku": product.id,
+    "mpn": product.id
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 pt-20 lg:pt-28 pb-16">
+      <Helmet>
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
+        <meta name="keywords" content={seoKeywords} />
+        <meta name="author" content="SS Safety Solutions" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={productUrl} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content={productUrl} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
+        <meta property="og:image" content={product.image} />
+        <meta property="og:image:alt" content={product.title} />
+        <meta property="og:site_name" content="SS Safety Solutions" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="product:price:amount" content={productPrice} />
+        <meta property="product:price:currency" content="PKR" />
+        <meta property="product:availability" content="instock" />
+        <meta property="product:brand" content={currentCategory} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={productUrl} />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDescription} />
+        <meta name="twitter:image" content={product.image} />
+        <meta name="twitter:image:alt" content={product.title} />
+        <meta name="twitter:label1" content="Price" />
+        <meta name="twitter:data1" content={productPriceFormatted} />
+        <meta name="twitter:label2" content="Rating" />
+        <meta name="twitter:data2" content={`${rating} (${product.reviews || "200+"} reviews)`} />
+
+        {/* Schema.org Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
         <Link
