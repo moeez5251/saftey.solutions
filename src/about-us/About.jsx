@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Shield, Award, Truck, Users, Flame, CheckCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Counter = ({ end, suffix = '', duration = 2.5 }) => {
   const ref = useRef(null);
@@ -26,8 +27,38 @@ const Counter = ({ end, suffix = '', duration = 2.5 }) => {
 };
 
 function About() {
+  const siteUrl = "https://www.sssafetysolutions.com";
+  const aboutUrl = `${siteUrl}/about-us`;
+
+  const breadcrumbs = [
+    { name: "Home", url: siteUrl },
+    { name: "About Us", url: aboutUrl }
+  ];
+
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About SS Safety Solutions",
+    "description": "Learn about SS Safety Solutions - your trusted partner in comprehensive safety solutions with over 12 years of excellence.",
+    "url": aboutUrl,
+    "publisher": {
+      "@type": "Organization",
+      "name": "SS Safety Solutions"
+    }
+  };
+
   return (
     <>
+      <SEO
+        title="About SS Safety Solutions | Premium Safety Equipment Provider Pakistan"
+        description="Learn about SS Safety Solutions - your trusted partner in comprehensive safety solutions. We deliver world-class, certified equipment that protects lives across Pakistan."
+        keywords="about SS Safety Solutions, safety equipment company Pakistan, safety gear provider, fire safety equipment, PPE supplier Pakistan"
+        url={aboutUrl}
+        image={`${siteUrl}/about-og.jpg`}
+        type="website"
+        breadcrumbs={breadcrumbs}
+        schema={[aboutSchema]}
+      />
       {/* Hero-style Intro Section */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-gray-900 via-red-900/20 to-gray-900">
         <div className="absolute inset-0 bg-black/40"></div>

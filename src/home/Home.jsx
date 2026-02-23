@@ -11,8 +11,30 @@ import 'swiper/css/pagination';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { toast } from 'react-hot-toast';
+import SEO from '../components/SEO';
 
 function Home() {
+  const siteUrl = "https://www.sssafetysolutions.com";
+  
+  const breadcrumbs = [
+    { name: "Home", url: siteUrl }
+  ];
+
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SS Safety Solutions - Home",
+    "description": "Leading supplier of premium safety equipment, protective gear, fire fighting systems, and rescue equipment in Pakistan. Quality safety solutions for industrial, construction, and emergency services.",
+    "url": siteUrl,
+    "publisher": {
+      "@type": "Organization",
+      "name": "SS Safety Solutions",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/android-chrome-192x192.png`
+      }
+    }
+  };
   
  const products = [
     {
@@ -169,6 +191,16 @@ function Home() {
 
   return (
     <>
+      <SEO
+        title="SS Safety Solutions | Premium Safety Equipment & Protective Gear Pakistan"
+        description="Leading supplier of premium safety equipment, protective gear, fire fighting systems, and rescue equipment in Pakistan. Quality safety solutions for industrial, construction, and emergency services."
+        keywords="safety equipment Pakistan, protective gear, fire fighting equipment, rescue equipment, PPE, safety shoes, road safety, fire alarm systems, fall arrest systems, laboratory safety"
+        url={siteUrl}
+        image={`${siteUrl}/og-image.jpg`}
+        type="website"
+        breadcrumbs={breadcrumbs}
+        schema={[homeSchema]}
+      />
       <main>
         <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden ">
           <img 

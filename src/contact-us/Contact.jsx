@@ -1,11 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Facebook, Instagram, Twitter } from 'lucide-react';
+import SEO from '../components/SEO';
 
 function Contact() {
+  const siteUrl = "https://www.sssafetysolutions.com";
+  const contactUrl = `${siteUrl}/contact`;
+
+  const breadcrumbs = [
+    { name: "Home", url: siteUrl },
+    { name: "Contact Us", url: contactUrl }
+  ];
+
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact SS Safety Solutions",
+    "description": "Get in touch with SS Safety Solutions for premium safety equipment inquiries. Call, email, or visit us in Pakistan.",
+    "url": contactUrl,
+    "publisher": {
+      "@type": "Organization",
+      "name": "SS Safety Solutions"
+    }
+  };
+
   return (
     <>
-      {/* Hero Section - Same Intense Firefighter Background, Cleaner Design */}
+      <SEO
+        title="Contact Us | SS Safety Solutions - Safety Equipment Pakistan"
+        description="Get in touch with SS Safety Solutions for premium safety equipment inquiries. Call us at +92 334 7616779 or email info@sssafetysolutions.com. Nationwide delivery in Pakistan."
+        keywords="contact SS Safety Solutions, safety equipment Pakistan, fire fighting equipment contact, PPE supplier Pakistan, safety gear inquiry"
+        url={contactUrl}
+        image={`${siteUrl}/contact-og.jpg`}
+        type="website"
+        breadcrumbs={breadcrumbs}
+        schema={[contactSchema]}
+      />
+      {/* Hero Section */}
       <section className="relative py-24 md:py-36 overflow-hidden bg-gradient-to-br from-gray-900 via-red-900/40 to-gray-900">
         <div className="absolute inset-0 bg-black/50"></div>
         <img

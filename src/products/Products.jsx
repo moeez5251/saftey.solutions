@@ -9,9 +9,29 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { useCart } from '../context/CartContext';
 import toast from 'react-hot-toast';
+import SEO from '../components/SEO';
 
 function Products() {
     const [activeCategory, setActiveCategory] = useState(categories[0]);
+    const siteUrl = "https://www.sssafetysolutions.com";
+    const productsUrl = `${siteUrl}/products`;
+
+    const breadcrumbs = [
+        { name: "Home", url: siteUrl },
+        { name: "Products", url: productsUrl }
+    ];
+
+    const productsSchema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "All Products - SS Safety Solutions",
+        "description": "Browse our complete range of premium safety equipment including security equipment, rescue equipment, fire fighting systems, PPE, and more.",
+        "url": productsUrl,
+        "publisher": {
+            "@type": "Organization",
+            "name": "SS Safety Solutions"
+        }
+    };
 
     const categoryRefs = useRef({});
     const tabRefs = useRef({});
@@ -166,6 +186,16 @@ function Products() {
 
     return (
         <div className="min-h-screen bg-gray-50">
+            <SEO
+                title="All Safety Equipment Products | SS Safety Solutions Pakistan"
+                description="Browse our complete range of premium safety equipment including security equipment, rescue equipment, fire fighting systems, PPE, safety shoes, road safety, and more. Nationwide delivery in Pakistan."
+                keywords="safety equipment Pakistan, buy safety gear online, protective equipment, fire fighting equipment, rescue tools, security equipment, industrial safety products"
+                url={productsUrl}
+                image={`${siteUrl}/products-og.jpg`}
+                type="website"
+                breadcrumbs={breadcrumbs}
+                schema={[productsSchema]}
+            />
             {/* Sticky Category Tabs */}
             <div
                 ref={stickyRef}
