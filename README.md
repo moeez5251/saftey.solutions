@@ -37,40 +37,44 @@
 
 ### Our Product Categories
 
-| Category | Description |
-|----------|-------------|
-| 🛡️ Security Equipment | Tactical gear, body armor, helmets & protective suits |
-| 🚒 Fire Fighting Equipment | Extinguishers, hoses, nozzles & essential tools |
-| 👟 Safety Shoes | Steel-toe, anti-slip boots meeting international standards |
-| 🚧 Road Safety | Cones, reflective signs, barriers & safety signage |
-| 🪂 Fall Arrest System | Harnesses, lanyards & anchors for height safety |
-| 🚨 Fire Alarm System | Smoke detectors, sensors & early warning panels |
-| 🏥 Medical Equipment | Defibrillators, oxygen systems & emergency kits |
-| 🧪 Laboratory Safety | Goggles, lab coats, gloves & safety equipment |
-| 🛠️ Industrial Tools | Heavy-duty machinery & equipment |
-| ⚡ Power Tools | Drills, saws, grinders & electric power tools |
+| Category                   | Description                                                |
+| -------------------------- | ---------------------------------------------------------- |
+| 🛡️ Security Equipment    | Tactical gear, body armor, helmets & protective suits      |
+| 🚒 Fire Fighting Equipment | Extinguishers, hoses, nozzles & essential tools            |
+| 👟 Safety Shoes            | Steel-toe, anti-slip boots meeting international standards |
+| 🚧 Road Safety             | Cones, reflective signs, barriers & safety signage         |
+| 🪂 Fall Arrest System      | Harnesses, lanyards & anchors for height safety            |
+| 🚨 Fire Alarm System       | Smoke detectors, sensors & early warning panels            |
+| 🏥 Medical Equipment       | Defibrillators, oxygen systems & emergency kits            |
+| 🧪 Laboratory Safety       | Goggles, lab coats, gloves & safety equipment              |
+| 🛠️ Industrial Tools      | Heavy-duty machinery & equipment                           |
+| ⚡ Power Tools             | Drills, saws, grinders & electric power tools              |
 
 ---
 
 ## ✨ Features
 
 ### 🎨 User Experience
+
 - **Modern UI/UX** - Clean, professional design with smooth animations using Framer Motion
 - **Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
 - **Fast Performance** - Powered by Vite for instant HMR and optimized builds
 - **SEO Optimized** - Structured data, meta tags, and breadcrumbs for better search visibility
 
 ### 🛒 E-Commerce Functionality
+
 - **Product Catalog** - Browse extensive safety equipment categories
 - **Shopping Cart** - Add to cart functionality with persistent state management
 - **Product Details** - Detailed product pages with images and specifications
 - **Checkout System** - Streamlined checkout and order placement process
 
 ### 🔐 User Management
+
 - **Authentication** - Secure login and signup pages
 - **Protected Routes** - Role-based access control
 
 ### 📱 Additional Features
+
 - **Toast Notifications** - Real-time feedback using react-hot-toast
 - **Smooth Animations** - Beautiful transitions with Framer Motion
 - **Image Carousels** - Product sliders using Swiper.js
@@ -82,44 +86,50 @@
 ## 🛠️ Tech Stack
 
 ### Frontend
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **React** | 18.3.1 | UI Library |
-| **Vite** | 7.2.4 | Build Tool & Dev Server |
-| **Tailwind CSS** | 4.1.18 | Utility-First Styling |
-| **React Router DOM** | 7.11.0 | Client-Side Routing |
-| **Framer Motion** | 12.23.26 | Animation Library |
+
+| Technology                 | Version  | Purpose                 |
+| -------------------------- | -------- | ----------------------- |
+| **React**            | 18.3.1   | UI Library              |
+| **Vite**             | 7.2.4    | Build Tool & Dev Server |
+| **Tailwind CSS**     | 4.1.18   | Utility-First Styling   |
+| **React Router DOM** | 7.11.0   | Client-Side Routing     |
+| **Framer Motion**    | 12.23.26 | Animation Library       |
 
 ### State Management
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **Redux Toolkit** | 2.11.2 | Global State Management |
-| **React Context** | - | Local State Management (Cart) |
+
+| Technology              | Version | Purpose                       |
+| ----------------------- | ------- | ----------------------------- |
+| **Redux Toolkit** | 2.11.2  | Global State Management       |
+| **React Context** | -       | Local State Management (Cart) |
 
 ### Backend & Database
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **Appwrite** | 21.5.0 | Backend-as-a-Service |
+
+| Technology         | Version | Purpose              |
+| ------------------ | ------- | -------------------- |
+| **Appwrite** | 21.5.0  | Backend-as-a-Service |
 
 ### Forms & Validation
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **React Hook Form** | 7.69.0 | Form Handling |
+
+| Technology                | Version | Purpose       |
+| ------------------------- | ------- | ------------- |
+| **React Hook Form** | 7.69.0  | Form Handling |
 
 ### Additional Libraries
-| Library | Purpose |
-|---------|---------|
-| **Swiper** | Touch Slider/Carousel |
-| **Lucide React** | Icon Library |
+
+| Library                      | Purpose                  |
+| ---------------------------- | ------------------------ |
+| **Swiper**             | Touch Slider/Carousel    |
+| **Lucide React**       | Icon Library             |
 | **React Helmet Async** | Document Head Management |
-| **React Hot Toast** | Notification System |
-| **jsPDF** | PDF Generation |
-| **Canvas Confetti** | Celebration Animations |
+| **React Hot Toast**    | Notification System      |
+| **jsPDF**              | PDF Generation           |
+| **Canvas Confetti**    | Celebration Animations   |
 
 ### Development Tools
-| Tool | Purpose |
-|------|---------|
-| **ESLint** | Code Linting |
+
+| Tool                   | Purpose                             |
+| ---------------------- | ----------------------------------- |
+| **ESLint**       | Code Linting                        |
 | **Vite Plugins** | React Refresh, Tailwind Integration |
 
 ---
@@ -188,35 +198,36 @@ saftey.solutions/
 ### Prerequisites
 
 Ensure you have the following installed:
+
 - **Node.js** (v18 or higher)
 - **npm** or **yarn**
 
 ### Steps
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd saftey.solutions
    ```
-
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
-
 3. **Set up environment variables**
-   
+
    Create a `.env.local` file in the root directory:
+
    ```env
    VITE_APPWRITE_URL=your_appwrite_endpoint
    VITE_APPWRITE_PROJECT_ID=your_project_id
    ```
-
 4. **Start the development server**
+
    ```bash
    npm run dev
    ```
-
 5. **Open in browser**
    Navigate to `http://localhost:5173`
 
@@ -224,11 +235,11 @@ Ensure you have the following installed:
 
 ## 📜 Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server with HMR |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build locally |
+| Command             | Description                       |
+| ------------------- | --------------------------------- |
+| `npm run dev`     | Start development server with HMR |
+| `npm run build`   | Build for production              |
+| `npm run preview` | Preview production build locally  |
 
 ---
 
@@ -257,9 +268,9 @@ This project is configured for **Netlify** deployment.
 
 1. **Connect your repository** to Netlify
 2. **Build Settings:**
+
    - **Build Command:** `npm run build`
    - **Publish Directory:** `dist`
-
 3. **Set Environment Variables** in Netlify dashboard
 
 Configuration is already set in [`netlify.toml`](netlify.toml):
@@ -301,14 +312,13 @@ We welcome contributions! Please follow these steps:
 
 ### Business Information
 
-**S.S Safety Solutions**  
-📍 Location: Pakistan  
+**S.S Safety Solutions**
+📍 Location: Pakistan
 🌐 Website: [www.sssafetysolutions.com](https://www.sssafetysolutions.com)
 
 ### Leadership
 
-**CEO:** Mr. SUFYAIN ALI  
-*Founder & Chief Executive Officer*
+**CEO:** Mr. SUFYAIN ALI*Founder & Chief Executive Officer*
 
 > "At S.S SAFETY SOLUTIONS, we believe safety is the foundation of progress. We are dedicated to providing world-class, certified safety equipment that protects lives and empowers industries, workplaces, and families across the nation."
 
@@ -329,4 +339,4 @@ This project is private and proprietary. All rights reserved.
 [🔝 Back to Top](#-s-s-safety-solutions)
 
 </div>
- your project.
+ 
