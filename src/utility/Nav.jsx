@@ -71,7 +71,7 @@ function Nav() {
     setIsOpen(false); // ← FIXED: Close mobile menu so it doesn't block navigation
 
     // Navigate to products + hash for this product id
-    navigate(`/products#${product.id}`);
+    navigate(`/products/${product.id}`);
 
     // Small delay to let page settle then scroll to the item
     setTimeout(() => {
