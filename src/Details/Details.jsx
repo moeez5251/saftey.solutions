@@ -1,11 +1,11 @@
 // src/pages/ProductDetails.jsx
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 
 import "swiper/css";
-import "swiper/css/pagination";
+
 
 import {
   ShoppingCart,
@@ -26,6 +26,252 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { useCart } from "../context/CartContext";
 import toast from "react-hot-toast";
+
+// ─── Interactive Zoom Modal ───────────────────────────────────────────────────
+const ZoomModal = ({ image, alt, onClose }) => {
+  const [scale, setScale] = useState(1);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStart = useRef({ x: 0, y: 0 });
+  const lastPosition = useRef({ x: 0, y: 0 });
+  const containerRef = useRef(null);
+
+  // ── Touch pinch-to-zoom state ──
+  const lastPinchDist = useRef(null);
+  const lastTouchCenter = useRef(null);
+
+  const MIN_SCALE = 1;
+  const MAX_SCALE = 6;
+
+  const clampPosition = useCallback((pos, currentScale) => {
+    if (!containerRef.current) return pos;
+    const rect = containerRef.current.getBoundingClientRect();
+    const maxX = ((currentScale - 1) * rect.width) / 2;
+    const maxY = ((currentScale - 1) * rect.height) / 2;
+    return {
+      x: Math.max(-maxX, Math.min(maxX, pos.x)),
+      y: Math.max(-maxY, Math.min(maxY, pos.y)),
+    };
+  }, []);
+
+  // ── Scroll / wheel zoom (desktop) ──
+  const handleWheel = useCallback(
+    (e) => {
+      e.preventDefault();
+      const delta = e.deltaY > 0 ? -0.15 : 0.15;
+      setScale((prev) => {
+        const next = Math.min(MAX_SCALE, Math.max(MIN_SCALE, prev + delta));
+        setPosition((p) => clampPosition(p, next));
+        return next;
+      });
+    },
+    [clampPosition]
+  );
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    el.addEventListener("wheel", handleWheel, { passive: false });
+    return () => el.removeEventListener("wheel", handleWheel);
+  }, [handleWheel]);
+
+  // ── Mouse drag ──
+  const handleMouseDown = (e) => {
+    if (scale === 1) return;
+    setIsDragging(true);
+    dragStart.current = { x: e.clientX, y: e.clientY };
+    lastPosition.current = position;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    const dx = e.clientX - dragStart.current.x;
+    const dy = e.clientY - dragStart.current.y;
+    setPosition(
+      clampPosition(
+        { x: lastPosition.current.x + dx, y: lastPosition.current.y + dy },
+        scale
+      )
+    );
+  };
+
+  const handleMouseUp = () => setIsDragging(false);
+
+  // ── Touch: pinch + pan ──
+  const getDistance = (t1, t2) =>
+    Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+
+  const getCenter = (t1, t2) => ({
+    x: (t1.clientX + t2.clientX) / 2,
+    y: (t1.clientY + t2.clientY) / 2,
+  });
+
+  const handleTouchStart = (e) => {
+    if (e.touches.length === 2) {
+      lastPinchDist.current = getDistance(e.touches[0], e.touches[1]);
+      lastTouchCenter.current = getCenter(e.touches[0], e.touches[1]);
+    } else if (e.touches.length === 1 && scale > 1) {
+      dragStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+      lastPosition.current = position;
+    }
+  };
+
+  const handleTouchMove = (e) => {
+    e.preventDefault();
+    if (e.touches.length === 2) {
+      const dist = getDistance(e.touches[0], e.touches[1]);
+      if (lastPinchDist.current !== null) {
+        const ratio = dist / lastPinchDist.current;
+        setScale((prev) => {
+          const next = Math.min(MAX_SCALE, Math.max(MIN_SCALE, prev * ratio));
+          setPosition((p) => clampPosition(p, next));
+          return next;
+        });
+      }
+      lastPinchDist.current = dist;
+
+      // pan with two fingers while pinching
+      const center = getCenter(e.touches[0], e.touches[1]);
+      if (lastTouchCenter.current) {
+        const dx = center.x - lastTouchCenter.current.x;
+        const dy = center.y - lastTouchCenter.current.y;
+        setPosition((p) =>
+          clampPosition({ x: p.x + dx, y: p.y + dy }, scale)
+        );
+      }
+      lastTouchCenter.current = center;
+    } else if (e.touches.length === 1 && scale > 1) {
+      const dx = e.touches[0].clientX - dragStart.current.x;
+      const dy = e.touches[0].clientY - dragStart.current.y;
+      setPosition(
+        clampPosition(
+          { x: lastPosition.current.x + dx, y: lastPosition.current.y + dy },
+          scale
+        )
+      );
+    }
+  };
+
+  const handleTouchEnd = (e) => {
+    if (e.touches.length < 2) {
+      lastPinchDist.current = null;
+      lastTouchCenter.current = null;
+    }
+    if (e.touches.length === 0) {
+      lastPosition.current = position;
+    }
+  };
+
+  // Reset zoom
+  const handleReset = () => {
+    setScale(1);
+    setPosition({ x: 0, y: 0 });
+  };
+
+  return (
+    <div
+      className="fixed inset-0 z-50 bg-black/95 flex flex-col items-center justify-center"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+    >
+      {/* Top bar */}
+      <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 py-3 z-10">
+        <div className="flex items-center gap-3">
+          {/* Zoom out */}
+          <button
+            onClick={() =>
+              setScale((p) => {
+                const next = Math.max(MIN_SCALE, p - 0.5);
+                setPosition((pos) => clampPosition(pos, next));
+                return next;
+              })
+            }
+            className="bg-white/20 hover:bg-white/30 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold transition"
+            aria-label="Zoom out"
+          >
+            −
+          </button>
+
+          {/* Scale indicator + reset */}
+          <button
+            onClick={handleReset}
+            className="bg-white/20 hover:bg-white/30 text-white text-sm font-medium px-3 py-1 rounded-full transition min-w-[56px] text-center"
+            aria-label="Reset zoom"
+          >
+            {Math.round(scale * 100)}%
+          </button>
+
+          {/* Zoom in */}
+          <button
+            onClick={() =>
+              setScale((p) => {
+                const next = Math.min(MAX_SCALE, p + 0.5);
+                setPosition((pos) => clampPosition(pos, next));
+                return next;
+              })
+            }
+            className="bg-white/20 hover:bg-white/30 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold transition"
+            aria-label="Zoom in"
+          >
+            +
+          </button>
+        </div>
+
+        <span className="text-white/50 text-xs hidden sm:block select-none">
+          Scroll or pinch to zoom · Drag to pan
+        </span>
+
+        {/* Close */}
+        <button
+          onClick={onClose}
+          className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition"
+          aria-label="Close zoomed image"
+        >
+          <X size={24} className="text-white" />
+        </button>
+      </div>
+
+      {/* Image container */}
+      <div
+        ref={containerRef}
+        className="w-full h-full flex items-center justify-center overflow-hidden select-none"
+        style={{ cursor: scale > 1 ? (isDragging ? "grabbing" : "grab") : "default" }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <img
+          src={image || "https://via.placeholder.com/800"}
+          alt={alt}
+          draggable={false}
+          style={{
+            transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
+            transition: isDragging ? "none" : "transform 0.1s ease-out",
+            maxWidth: "90vw",
+            maxHeight: "85vh",
+            objectFit: "contain",
+            userSelect: "none",
+            WebkitUserSelect: "none",
+          }}
+          onError={(e) => {
+            e.target.src = "https://via.placeholder.com/800?text=Image+Not+Found";
+          }}
+        />
+      </div>
+
+      {/* Bottom hint (mobile) */}
+      <p className="absolute bottom-4 text-white/40 text-xs sm:hidden select-none">
+        Pinch to zoom · Drag to pan
+      </p>
+    </div>
+  );
+};
+// ─────────────────────────────────────────────────────────────────────────────
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -329,33 +575,13 @@ const ProductDetails = () => {
           </motion.div>
         </div>
 
-        {/* Zoom Modal (full-screen image zoom on click) */}
+        {/* Interactive Zoom Modal */}
         {showZoomModal && (
-          <div
-            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 cursor-zoom-out"
-            onClick={() => setShowZoomModal(false)}
-          >
-            <div className="relative max-w-6xl w-full max-h-full">
-              <img
-                src={product.image || "https://via.placeholder.com/800"}
-                alt={product.title}
-                className="max-w-full max-h-full object-contain"
-                onClick={(e) => e.stopPropagation()} // Prevent close when clicking image
-                onError={(e) => {
-                  e.target.src = "https://via.placeholder.com/800?text=Image+Not+Found";
-                }}
-              />
-
-              {/* Close button */}
-              <button
-                onClick={() => setShowZoomModal(false)}
-                className="absolute top-4 right-4 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
-                aria-label="Close zoomed image"
-              >
-                <X size={32} className="text-gray-800" />
-              </button>
-            </div>
-          </div>
+          <ZoomModal
+            image={product.image}
+            alt={product.title}
+            onClose={() => setShowZoomModal(false)}
+          />
         )}
 
         {/* Related Products */}
@@ -372,12 +598,7 @@ const ProductDetails = () => {
                 disableOnInteraction: false,
               }}
               loop={true}
-              pagination={{
-                clickable: true,
-                renderBullet: (index, className) => {
-                  return `<span class="${className}">${index + 1}</span>`;
-                },
-              }}
+              
               spaceBetween={20}
               slidesPerView={2}
               breakpoints={{
