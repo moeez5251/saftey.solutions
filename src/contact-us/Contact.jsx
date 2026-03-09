@@ -96,8 +96,8 @@ function Contact() {
                 </div>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   SS.SAFETY SOLUTIONS<br />
-                  123 Safety Street, Industrial Area<br />
-                  New Delhi - 110020, India
+                  gurumangat road<br />
+                  Lahore, Pakistan<br />
                 </p>
               </motion.div>
 
@@ -111,7 +111,7 @@ function Contact() {
                   className="bg-white rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition"
                 >
                   <Phone className="w-12 h-12 text-red-700 mx-auto mb-4" />
-                  <p className="text-xl font-bold text-gray-800">+91 98765 43210</p>
+                  <p className="text-xl font-bold text-gray-800">+91 334 7616779</p>
                   <p className="text-gray-600">Call us anytime</p>
                 </motion.div>
 

@@ -541,7 +541,8 @@ const ProductDetails = () => {
               </button>
 
               <a
-                href="https://wa.me/+923001234567" // Update with your number
+                              href="https://wa.me/923347616779?text=Hi%20I%20am%20MR-sufiyan%20CEO%20of%20SS.%20Safety%20Solution.%20How%20can%20I%20help%20you"
+ // Update with your number
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 text-white font-semibold text-lg py-4 rounded-xl shadow-md transition flex items-center justify-center gap-3"
