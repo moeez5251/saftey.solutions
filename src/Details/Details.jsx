@@ -6,7 +6,6 @@ import SEO from "../components/SEO";
 
 import "swiper/css";
 
-
 import {
   ShoppingCart,
   Phone,
@@ -18,6 +17,9 @@ import {
   Star,
   ZoomIn,
   X,
+  Tag,
+  CheckCircle,
+  Package,
 } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -36,7 +38,6 @@ const ZoomModal = ({ image, alt, onClose }) => {
   const lastPosition = useRef({ x: 0, y: 0 });
   const containerRef = useRef(null);
 
-  // ── Touch pinch-to-zoom state ──
   const lastPinchDist = useRef(null);
   const lastTouchCenter = useRef(null);
 
@@ -54,7 +55,6 @@ const ZoomModal = ({ image, alt, onClose }) => {
     };
   }, []);
 
-  // ── Scroll / wheel zoom (desktop) ──
   const handleWheel = useCallback(
     (e) => {
       e.preventDefault();
@@ -75,7 +75,6 @@ const ZoomModal = ({ image, alt, onClose }) => {
     return () => el.removeEventListener("wheel", handleWheel);
   }, [handleWheel]);
 
-  // ── Mouse drag ──
   const handleMouseDown = (e) => {
     if (scale === 1) return;
     setIsDragging(true);
@@ -97,7 +96,6 @@ const ZoomModal = ({ image, alt, onClose }) => {
 
   const handleMouseUp = () => setIsDragging(false);
 
-  // ── Touch: pinch + pan ──
   const getDistance = (t1, t2) =>
     Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
 
@@ -129,8 +127,6 @@ const ZoomModal = ({ image, alt, onClose }) => {
         });
       }
       lastPinchDist.current = dist;
-
-      // pan with two fingers while pinching
       const center = getCenter(e.touches[0], e.touches[1]);
       if (lastTouchCenter.current) {
         const dx = center.x - lastTouchCenter.current.x;
@@ -162,7 +158,6 @@ const ZoomModal = ({ image, alt, onClose }) => {
     }
   };
 
-  // Reset zoom
   const handleReset = () => {
     setScale(1);
     setPosition({ x: 0, y: 0 });
@@ -175,10 +170,8 @@ const ZoomModal = ({ image, alt, onClose }) => {
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      {/* Top bar */}
       <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 py-3 z-10">
         <div className="flex items-center gap-3">
-          {/* Zoom out */}
           <button
             onClick={() =>
               setScale((p) => {
@@ -192,8 +185,6 @@ const ZoomModal = ({ image, alt, onClose }) => {
           >
             −
           </button>
-
-          {/* Scale indicator + reset */}
           <button
             onClick={handleReset}
             className="bg-white/20 hover:bg-white/30 text-white text-sm font-medium px-3 py-1 rounded-full transition min-w-[56px] text-center"
@@ -201,8 +192,6 @@ const ZoomModal = ({ image, alt, onClose }) => {
           >
             {Math.round(scale * 100)}%
           </button>
-
-          {/* Zoom in */}
           <button
             onClick={() =>
               setScale((p) => {
@@ -217,12 +206,9 @@ const ZoomModal = ({ image, alt, onClose }) => {
             +
           </button>
         </div>
-
         <span className="text-white/50 text-xs hidden sm:block select-none">
           Scroll or pinch to zoom · Drag to pan
         </span>
-
-        {/* Close */}
         <button
           onClick={onClose}
           className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition"
@@ -232,7 +218,6 @@ const ZoomModal = ({ image, alt, onClose }) => {
         </button>
       </div>
 
-      {/* Image container */}
       <div
         ref={containerRef}
         className="w-full h-full flex items-center justify-center overflow-hidden select-none"
@@ -264,7 +249,6 @@ const ZoomModal = ({ image, alt, onClose }) => {
         />
       </div>
 
-      {/* Bottom hint (mobile) */}
       <p className="absolute bottom-4 text-white/40 text-xs sm:hidden select-none">
         Pinch to zoom · Drag to pan
       </p>
@@ -274,31 +258,32 @@ const ZoomModal = ({ image, alt, onClose }) => {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const ProductDetails = () => {
-  const { id } = useParams();
-  const productId = id;
+ const { id } = useParams();
+// Normalize both sides to first-2-words slug for matching
+const normalize = (str) =>
+  str?.toLowerCase().replace(/[^a-z0-9]+/g, "-").split("-").filter(Boolean).slice(0, 2).join("-");
+const productId = id;
   const { addToCart } = useCart();
 
-  // CORRECTED: handleAddToCart now uses the current quantity state
   const handleAddToCart = (e) => {
     e.preventDefault();
     e.stopPropagation();
-
     addToCart({
       id: product.id,
       title: product.title,
       price: product.price,
       image: product.image,
-      quantity: quantity, // ← This now correctly adds the selected quantity
+      quantity: quantity,
     });
-
     toast.success(`${product.title} × ${quantity} added to cart!`);
   };
 
-  // Find product across categories
   let product = null;
   let currentCategory = null;
   for (const category in productsData) {
-    const found = productsData[category].find((p) => p.id === productId);
+const found = productsData[category]?.find(
+  (p) => p?.id && normalize(p.id) === normalize(productId)
+);
     if (found) {
       product = found;
       currentCategory = category;
@@ -335,66 +320,65 @@ const ProductDetails = () => {
   const rating = product.rating || 4.8;
   const filledStars = Math.floor(rating);
 
-  // Related products
   const relatedProducts = (productsData[currentCategory] || [])
-    .filter((p) => p.id !== productId)
-    .slice(0, 15);
+  .filter((p) => p?.id && String(p.id) !== String(productId))
+  .slice(0, 15);
 
-  // SEO: Generate dynamic meta tags and structured data
+  // SEO
   const siteUrl = "https://www.sssafetysolutions.com";
   const productUrl = `${siteUrl}/products/${product.id}`;
-  const productPrice = typeof product.price === "number"
-    ? product.price
-    : 0;
-  const productPriceFormatted = typeof product.price === "number"
-    ? `Rs. ${product.price.toLocaleString("en-IN")}`
-    : product.price;
+  const productPrice = typeof product.price === "number" ? product.price : 0;
+  const productPriceFormatted =
+    typeof product.price === "number"
+      ? `Rs. ${product.price.toLocaleString("en-IN")}`
+      : product.price;
 
   const seoTitle = `${product.title} | SS Safety Solutions Pakistan`;
-  const seoDescription = product.desc || `Buy ${product.title} at SS Safety Solutions Pakistan. Premium quality ${currentCategory} with nationwide delivery. ${productPriceFormatted}. Call now!`;
+  const seoDescription =
+    product.desc ||
+    `Buy ${product.title} at SS Safety Solutions Pakistan. Premium quality ${currentCategory} with nationwide delivery. ${productPriceFormatted}. Call now!`;
   const seoKeywords = `${product.title}, ${currentCategory}, safety equipment Pakistan, protective gear, ${product.title} price, buy ${product.title} online Pakistan`;
 
   const breadcrumbs = [
     { name: "Home", url: siteUrl },
     { name: "Products", url: `${siteUrl}/products` },
-    { name: product.title, url: productUrl }
+    { name: product.title, url: productUrl },
   ];
 
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": product.title,
-    "description": product.desc || `Premium quality ${product.title} for safety and protection`,
-    "image": product.image,
-    "url": productUrl,
-    "brand": {
-      "@type": "Brand",
-      "name": "SS Safety Solutions"
-    },
-    "offers": {
+    name: product.title,
+    description:
+      product.desc || `Premium quality ${product.title} for safety and protection`,
+    image: product.image,
+    url: productUrl,
+    brand: { "@type": "Brand", name: "SS Safety Solutions" },
+    offers: {
       "@type": "Offer",
-      "url": productUrl,
-      "priceCurrency": "PKR",
-      "price": productPrice,
-      "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-      "availability": product.sold ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-      "seller": {
-        "@type": "Organization",
-        "name": "SS Safety Solutions"
-      }
+      url: productUrl,
+      priceCurrency: "PKR",
+      price: productPrice,
+      priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000)
+        .toISOString()
+        .split("T")[0],
+      availability: product.sold
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+      seller: { "@type": "Organization", name: "SS Safety Solutions" },
     },
-    "aggregateRating": {
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": product.rating || 4.8,
-      "reviewCount": product.reviews || 200
+      ratingValue: product.rating || 4.8,
+      reviewCount: product.reviews || 200,
     },
-    "category": currentCategory,
-    "sku": product.id,
-    "mpn": product.id
+    category: currentCategory,
+    sku: product.id,
+    mpn: product.id,
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-20 lg:pt-28 pb-16">
+    <div className="min-h-screen bg-[#f5f6f8] pt-20 lg:pt-28 pb-20">
       <SEO
         title={seoTitle}
         description={seoDescription}
@@ -411,172 +395,279 @@ const ProductDetails = () => {
         productRating={product.rating || 4.8}
         productReviewCount={product.reviews || 200}
       />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back Button */}
-        <Link
-          to="/products"
-          className="inline-flex items-center gap-2 text-gray-700 hover:text-orange-600 font-medium mb-10 transition"
-        >
-          <ArrowLeft size={20} />
-          Back to Products
-        </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Product Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden"
-          >
-            <div className="aspect-square relative">
-              <img
-                src={product.image || "https://via.placeholder.com/800"}
-                alt={product.title}
-                className="w-full h-full object-contain p-8 lg:p-16"
-                onError={(e) => {
-                  e.target.src = "https://via.placeholder.com/800?text=Image+Not+Found";
-                }}
-              />
+        {/* ── Breadcrumb / Back ── */}
+        <div className="flex items-center gap-2 mb-8 text-sm text-gray-500">
+          <Link to="/products" className="inline-flex items-center gap-1.5 hover:text-orange-600 font-medium transition">
+            <ArrowLeft size={16} />
+            Products
+          </Link>
+          <span>/</span>
+          <span className="text-gray-800 font-medium truncate max-w-xs">{product.title}</span>
+        </div>
 
-              {/* Zoom Icon (top-right corner) */}
+        {/* ══════════════════════════════════════════════════════
+            MAIN PRODUCT CARD
+        ══════════════════════════════════════════════════════ */}
+        <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+
+            {/* ── LEFT: Image Panel ── */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.55 }}
+              className="relative bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center min-h-[340px] lg:min-h-[560px]"
+            >
+              {/* In-Stock Badge */}
+              <div className="absolute top-5 left-5 z-10 flex items-center gap-1.5 bg-green-50 border border-green-200 text-green-700 text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
+                <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                In Stock
+              </div>
+
+              {/* Zoom button */}
               <button
                 onClick={() => setShowZoomModal(true)}
-                className="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur-sm hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
+                className="absolute top-5 right-5 z-10 bg-white hover:bg-orange-50 border border-gray-200 hover:border-orange-300 rounded-full p-2.5 shadow-md transition-all duration-200 hover:scale-110 group"
                 aria-label="Zoom in on product image"
               >
-                <ZoomIn size={28} className="text-gray-800" />
+                <ZoomIn size={22} className="text-gray-600 group-hover:text-orange-600 transition" />
               </button>
-            </div>
-          </motion.div>
 
-          {/* Product Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col justify-center space-y-8"
-          >
-            <div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                {product.title}
-              </h1>
+              <div className="p-10 lg:p-16 w-full h-full flex items-center justify-center">
+                <img
+                  src={product.image || "https://via.placeholder.com/800"}
+                  alt={product.title}
+                  className="w-full max-h-[420px] object-contain drop-shadow-lg"
+                  onError={(e) => {
+                    e.target.src = "https://via.placeholder.com/800?text=Image+Not+Found";
+                  }}
+                />
+              </div>
+            </motion.div>
 
-              {/* Rating & Reviews */}
-              <div className="flex items-center gap-6 mt-4">
-                <div className="flex items-center gap-2">
+            {/* ── RIGHT: Info Panel ── */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.55 }}
+              className="flex flex-col p-7 sm:p-10 lg:p-12 gap-6"
+            >
+
+              {/* Category pill */}
+              <div>
+                <span className="inline-block bg-orange-50 text-orange-600 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full border border-orange-100 mb-3">
+                  {currentCategory}
+                </span>
+
+                {/* Title */}
+                <h1 className="text-2xl sm:text-3xl lg:text-[2rem] font-extrabold text-gray-900 leading-tight tracking-tight">
+                  {product.title}
+                </h1>
+              </div>
+
+              {/* Rating row */}
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="flex items-center gap-1.5 bg-yellow-50 px-3 py-1.5 rounded-lg border border-yellow-100">
                   <div className="flex text-yellow-500">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        size={24}
+                        size={15}
                         fill={i < filledStars ? "currentColor" : "none"}
                         stroke="currentColor"
                       />
                     ))}
                   </div>
-                  <span className="font-semibold text-gray-800">{rating.toFixed(1)}</span>
+                  <span className="font-bold text-gray-800 text-sm">{rating.toFixed(1)}</span>
                 </div>
-                <span className="text-gray-600">
+                <span className="text-gray-500 text-sm">
                   ({product.reviews || "200+"} reviews)
                 </span>
-                <span className="text-green-600 font-medium">
-                  • {product.sold || "300+"} sold
+                <span className="flex items-center gap-1 text-green-600 text-sm font-semibold">
+                  <Package size={14} />
+                  {product.sold || "300+"} sold
                 </span>
               </div>
-            </div>
 
-            {/* Price */}
-            <div className="py-4">
-              {isContactPrice ? (
-                <p className="text-4xl font-bold text-orange-600">{product.price}</p>
-              ) : (
-                <p className="text-4xl font-bold text-gray-900">
-                  Rs. {Number(product.price).toLocaleString("en-IN")}
-                </p>
-              )}
-            </div>
+              {/* ── Price ── */}
+              <div className="flex items-end gap-4 py-3 border-y border-gray-100">
+                {isContactPrice ? (
+                  <p className="text-3xl font-extrabold text-orange-600 tracking-tight">
+                    {product.price}
+                  </p>
+                ) : (
+                  <>
+                    <p className="text-3xl font-extrabold text-gray-900 tracking-tight">
+                      Rs.&nbsp;{Number(product.price).toLocaleString("en-IN")}
+                    </p>
+                    {product.originalPrice && (
+                      <p className="text-lg text-gray-400 line-through mb-0.5">
+                        Rs.&nbsp;{Number(product.originalPrice).toLocaleString("en-IN")}
+                      </p>
+                    )}
+                  </>
+                )}
+              </div>
 
-            {/* Description */}
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Description</h3>
-              <p className="text-gray-700 leading-relaxed">
-                {product.desc ||
-                  "Premium-grade professional safety equipment built to the highest standards. Engineered for superior protection, durability, and comfort in demanding environments."}
-              </p>
-            </div>
+              {/* ── Quantity ── */}
+              <div className="flex items-center gap-5">
+                <span className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Qty</span>
+                <div className="flex items-center border-2 border-gray-200 hover:border-orange-300 rounded-xl overflow-hidden transition-colors">
+                  <button
+                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                    className="w-11 h-11 text-xl font-bold text-gray-600 hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                    aria-label="Decrease quantity"
+                  >
+                    −
+                  </button>
+                  <span className="w-12 text-center text-lg font-bold text-gray-900 select-none">
+                    {quantity}
+                  </span>
+                  <button
+                    onClick={() => setQuantity(quantity + 1)}
+                    className="w-11 h-11 text-xl font-bold text-gray-600 hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                    aria-label="Increase quantity"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
 
-            {/* Quantity Selector */}
-            <div className="flex items-center gap-6">
-              <span className="font-medium text-gray-800">Quantity:</span>
-              <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
-                <button
-                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="px-5 py-3 text-xl hover:bg-gray-100 transition"
-                  aria-label="Decrease quantity"
+              {/* ══ CTA BUTTONS ══ */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {/* Add to Cart */}
+                <motion.button
+                  whileTap={{ scale: 0.97 }}
+                  whileHover={{ scale: 1.02 }}
+                  onClick={handleAddToCart}
+                  className="relative overflow-hidden group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold text-base py-4 rounded-2xl shadow-lg shadow-orange-200 transition-all duration-200 flex items-center justify-center gap-2.5"
                 >
-                  −
-                </button>
-                <span className="px-8 py-3 text-lg font-semibold min-w-20 text-center">
-                  {quantity}
-                </span>
-                <button
-                  onClick={() => setQuantity(quantity + 1)}
-                  className="px-5 py-3 text-xl hover:bg-gray-100 transition"
-                  aria-label="Increase quantity"
+                  <ShoppingCart size={20} />
+                  <span>{isContactPrice ? "Buy Now" : "Add to Cart"}</span>
+                  {/* shine sweep */}
+                  <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                </motion.button>
+
+                {/* WhatsApp / Call */}
+                <motion.a
+                  whileTap={{ scale: 0.97 }}
+                  whileHover={{ scale: 1.02 }}
+                  href="https://wa.me/923347616779?text=Hi%20I%20am%20MR-sufiyan%20CEO%20of%20SS.%20Safety%20Solution.%20How%20can%20I%20help%20you"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative overflow-hidden group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold text-base py-4 rounded-2xl shadow-lg shadow-green-200 transition-all duration-200 flex items-center justify-center gap-2.5"
                 >
-                  +
-                </button>
+                  <MessageCircle size={20} />
+                  <span>WhatsApp / Call</span>
+                  <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                </motion.a>
               </div>
-            </div>
 
-            {/* Action Buttons - EXACTLY SAME AS YOUR ORIGINAL */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <button 
-                className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-lg py-4 rounded-xl shadow-md transition flex items-center justify-center gap-3" 
-                onClick={handleAddToCart} // ← Now correctly uses selected quantity
-              >
-                <ShoppingCart size={24} />
-                {isContactPrice ? "Buy Now" : "Add to Cart"}
-              </button>
+              {/* ── Trust Badges ── */}
+              <div className="grid grid-cols-3 gap-3 pt-2">
+                {[
+                  { icon: <Truck size={20} />, label: "Nationwide Delivery" },
+                  { icon: <ShieldCheck size={20} />, label: "100% Authentic" },
+                  { icon: <RefreshCw size={20} />, label: "Easy Returns" },
+                ].map(({ icon, label }) => (
+                  <div
+                    key={label}
+                    className="flex flex-col items-center gap-2 bg-gray-50 border border-gray-100 rounded-xl py-3 px-2 text-center"
+                  >
+                    <span className="text-orange-500">{icon}</span>
+                    <span className="text-xs font-medium text-gray-600 leading-tight">{label}</span>
+                  </div>
+                ))}
+              </div>
 
-              <a
-                              href="https://wa.me/923347616779?text=Hi%20I%20am%20MR-sufiyan%20CEO%20of%20SS.%20Safety%20Solution.%20How%20can%20I%20help%20you"
- // Update with your number
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-green-600 hover:bg-green-700 text-white font-semibold text-lg py-4 rounded-xl shadow-md transition flex items-center justify-center gap-3"
-              >
-                <MessageCircle size={24} />
-                WhatsApp / Call
-              </a>
-            </div>
+            </motion.div>
+          </div>
+        </div>
 
-            {/* Trust Badges */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
-              <div className="text-center">
-                <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Truck size={32} className="text-gray-700" />
-                </div>
-                <p className="font-medium text-gray-800">Nationwide Delivery</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <ShieldCheck size={32} className="text-gray-700" />
-                </div>
-                <p className="font-medium text-gray-800">100% Authentic</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <RefreshCw size={32} className="text-gray-700" />
-                </div>
-                <p className="font-medium text-gray-800">Easy Returns</p>
-              </div>
+        {/* ══════════════════════════════════════════════════════
+            DESCRIPTION + TAGS — BELOW THE MAIN CARD
+        ══════════════════════════════════════════════════════ */}
+        <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+          {/* ── Description (2/3 width) ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="lg:col-span-2 bg-white rounded-2xl shadow-md p-7 sm:p-9"
+          >
+            <div className="flex items-center gap-2.5 mb-5">
+              <span className="w-1 h-6 bg-orange-500 rounded-full" />
+              <h2 className="text-xl font-bold text-gray-900">Product Description</h2>
             </div>
+            <p className="text-gray-600 leading-[1.85] text-[0.95rem]">
+              {product.desc ||
+                "Premium-grade professional safety equipment built to the highest standards. Engineered for superior protection, durability, and comfort in demanding environments."}
+            </p>
+          </motion.div>
+
+          {/* ── Quick Highlights (1/3 width) ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.22 }}
+            className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl shadow-md p-7 text-white"
+          >
+            <h2 className="text-lg font-bold mb-5 flex items-center gap-2">
+              <CheckCircle size={20} />
+              Key Highlights
+            </h2>
+            <ul className="space-y-3">
+              {[
+                "Professional Grade Quality",
+                "CE & Safety Certified",
+                "Fast Nationwide Shipping",
+                "1-Year Warranty",
+                "Expert After-Sale Support",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-white/90">
+                  <span className="mt-0.5 w-4 h-4 shrink-0 bg-white/25 rounded-full flex items-center justify-center text-[10px] font-bold">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
           </motion.div>
         </div>
 
-        {/* Interactive Zoom Modal */}
+        {/* ── Tags Section ── */}
+        {product.tags && product.tags.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-6 bg-white rounded-2xl shadow-md p-7 sm:p-9"
+          >
+            <div className="flex items-center gap-2.5 mb-5">
+              <span className="w-1 h-6 bg-orange-500 rounded-full" />
+              <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                <Tag size={18} className="text-orange-500" />
+                Related Tags
+              </h2>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {product.tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="inline-flex items-center gap-1 bg-gray-50 hover:bg-orange-50 border border-gray-200 hover:border-orange-300 text-gray-600 hover:text-orange-600 text-xs font-medium px-3 py-1.5 rounded-full transition-colors cursor-default"
+                >
+                  # {tag}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
+        {/* ══════════════════════════════════════════════════════
+            ZOOM MODAL
+        ══════════════════════════════════════════════════════ */}
         {showZoomModal && (
           <ZoomModal
             image={product.image}
@@ -585,64 +676,69 @@ const ProductDetails = () => {
           />
         )}
 
-        {/* Related Products */}
+        {/* ══════════════════════════════════════════════════════
+            RELATED PRODUCTS
+        ══════════════════════════════════════════════════════ */}
         {relatedProducts.length > 0 && (
-          <div className="mt-20 lg:mt-24">
-            <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-10 lg:mb-12">
-              Related Products
-            </h2>
+          <div className="mt-16 lg:mt-20">
+            <div className="flex items-center gap-3 mb-8">
+              <span className="w-1 h-8 bg-orange-500 rounded-full" />
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
+                Related Products
+              </h2>
+            </div>
 
             <Swiper
               modules={[Autoplay, Pagination]}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-              }}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
               loop={true}
-              
-              spaceBetween={20}
+              spaceBetween={16}
               slidesPerView={2}
               breakpoints={{
-                640: { slidesPerView: 3, spaceBetween: 24 },
-                768: { slidesPerView: 4, spaceBetween: 24 },
-                1024: { slidesPerView: 5, spaceBetween: 28 },
+                640: { slidesPerView: 3, spaceBetween: 20 },
+                768: { slidesPerView: 4, spaceBetween: 20 },
+                1024: { slidesPerView: 5, spaceBetween: 24 },
               }}
-              className="related-products-swiper !pb-16"
+              className="related-products-swiper !pb-14"
             >
               {relatedProducts.map((relProduct) => (
                 <SwiperSlide key={relProduct.id}>
                   <Link to={`/products/${relProduct.id}`} className="block h-full">
                     <motion.div
-                      whileHover={{ y: -6 }}
-                      className="bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 h-full flex flex-col"
+                      whileHover={{ y: -5 }}
+                      className="bg-white rounded-2xl shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 h-full flex flex-col group"
                     >
                       <div className="aspect-square bg-gray-50 overflow-hidden">
                         <img
                           src={relProduct.image || "https://via.placeholder.com/400"}
                           alt={relProduct.title}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           loading="lazy"
                         />
                       </div>
 
-                      <div className="p-4 lg:p-5 flex flex-col flex-grow">
-                        <h3 className="font-medium text-gray-800 text-sm lg:text-base line-clamp-2 mb-3">
+                      <div className="p-3 sm:p-4 flex flex-col flex-grow">
+                        <h3 className="font-semibold text-gray-800 text-xs sm:text-sm line-clamp-2 mb-3 leading-snug">
                           {relProduct.title}
                         </h3>
 
-                        <div className="mt-auto flex items-center justify-between">
-                          <span className="text-lg lg:text-xl font-bold text-gray-900">
+                        <div className="mt-auto flex items-center justify-between gap-1">
+                          <span className="text-sm sm:text-base font-bold text-orange-600">
                             {typeof relProduct.price === "number"
                               ? `Rs. ${relProduct.price.toLocaleString("en-IN")}`
                               : relProduct.price}
                           </span>
 
-                          <div className="flex text-yellow-500">
+                          <div className="flex text-yellow-400">
                             {[...Array(5)].map((_, i) => (
                               <Star
                                 key={i}
-                                size={14}
-                                fill={i < Math.floor(relProduct.rating || 4.6) ? "currentColor" : "none"}
+                                size={11}
+                                fill={
+                                  i < Math.floor(relProduct.rating || 4.6)
+                                    ? "currentColor"
+                                    : "none"
+                                }
                                 stroke="currentColor"
                               />
                             ))}

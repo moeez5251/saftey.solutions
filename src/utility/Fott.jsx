@@ -26,7 +26,7 @@ function Fotter() {
                 />
               </div>
               <h2 className="text-4xl font-black tracking-tight">
-                <span className="text-red-600">SS.</span>Safety Solutions
+                <span className="text-red-600">S.S </span>Safety Solutions
               </h2>
             </div>
 
