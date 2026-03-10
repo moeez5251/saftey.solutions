@@ -95,7 +95,7 @@ function Contact() {
                   <h3 className="text-2xl font-bold text-red-700">Our Location</h3>
                 </div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  SS.SAFETY SOLUTIONS<br />
+                  S.S SAFETY SOLUTIONS<br />
                   gurumangat road<br />
                   Lahore, Pakistan<br />
                 </p>

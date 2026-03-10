@@ -261,7 +261,7 @@ const ProductDetails = () => {
  const { id } = useParams();
 // Normalize both sides to first-2-words slug for matching
 const normalize = (str) =>
-  str?.toLowerCase().replace(/[^a-z0-9]+/g, "-").split("-").filter(Boolean).slice(0, 2).join("-");
+  str?.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const productId = id;
   const { addToCart } = useCart();
 

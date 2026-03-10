@@ -3256,7 +3256,7 @@ export const productsData = {
       'mud terrain safety boot', 'shock absorbing ranger', 'reinforced ankle boot', 'gravel terrain boot',
       'rugged safety footwear', 'trekking safety boot', 'off-road work boot', 'outdoor professional shoes'
     ]
-  },,
+  },
   {
     id: 'safety-jogger-x1100n',
     title: 'Safety Jogger X1100N S3 Mid-Cut Leather Safety Shoe',

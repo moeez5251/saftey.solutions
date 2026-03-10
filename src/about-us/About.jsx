@@ -75,7 +75,7 @@ function About() {
             transition={{ duration: 0.1 }}
             className="text-5xl md:text-7xl font-extrabold text-white uppercase tracking-wider mb-8"
           >
-            About <span className="text-orange-500">SS.SAFETY SOLUTIONS</span>
+            About <span className="text-orange-500">S.S SAFETY SOLUTIONS</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 40 }}
@@ -263,7 +263,7 @@ function About() {
               className="order-1 lg:order-2 space-y-8"
             >
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Every product at <span className="font-bold text-orange-600">SS.SAFETY SOLUTIONS</span> undergoes rigorous testing and carries internationally recognized certifications including ISO, CE, OSHA, and EN standards.
+                Every product at <span className="font-bold text-orange-600">S.S SAFETY SOLUTIONS</span> undergoes rigorous testing and carries internationally recognized certifications including ISO, CE, OSHA, and EN standards.
               </p>
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 Our modern warehouse facilities ensure fast, reliable delivery across the nation while maintaining the highest quality control.
