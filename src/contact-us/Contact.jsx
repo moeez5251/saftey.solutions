@@ -201,7 +201,7 @@ function Contact() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
             {/* Decent WhatsApp Button */}
             <motion.a
-              href="https://wa.me/923347616779?text=Hi%20I%20am%20MR-sufiyan%20CEO%20of%20SS.%20Safety%20Solution.%20How%20can%20I%20help%20you"
+              href="https://wa.me/923347616779?text=Hi%20I%20am%20Mr.%20Sufyan%20from%20S.S%20Safety%20Solutions.%20How%20can%20I%20help%20you?"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

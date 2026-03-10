@@ -454,7 +454,7 @@ function Nav() {
         {/* ←←← OFFICIAL WHATSAPP FLOATING BUTTON →→→ */}
         <div className="fixed bottom-6 right-6 z-[1000] md:bottom-8 md:right-8">
           <a
-            href="https://wa.me/923347616779?text=Hi%20I%20am%20MR-sufiyan%20CEO%20of%20SS.%20Safety%20Solution.%20How%20can%20I%20help%20you"
+            href="https://wa.me/923347616779?text=Hi%20I%20am%20Mr.%20Sufyan%20from%20S.S%20Safety%20Solutions.%20How%20can%20I%20help%20you?"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-[#25D366] hover:bg-[#20b858] text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-110"
