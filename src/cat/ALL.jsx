@@ -337,136 +337,138 @@ export const productsData = {
         reviews: 234, 
         sold: '300+' 
     },
-    { 
-        id: 'replacement-carbon-monoxide-co-sensor', 
-        title: 'Replacement Carbon Monoxide (CO) Sensor', 
-        price: 'Contact for Price', 
-        originalPrice: null, 
-        image: 'https://www.magidglove.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/r/sr-m-mc_1.jpg', 
-        desc: 'Replacement CO Sensor for BW series gas detectors (MicroClip, Max XT II, etc.). High-precision electrochemical sensor with 2-year life. Easy plug-and-play installation. Restores full functionality to your multi-gas monitor. Factory calibrated and ready to use. Essential spare for safety compliance.', 
-        tagsLine: 'Tags: Replacement CO Sensor, Carbon Monoxide Sensor, BW Series Sensor, MicroClip Sensor, Max XT II, Electrochemical Sensor, Gas Detector Part, Safety Spare, Plug And Play',
-        tags: ["Replacement CO Sensor", "Carbon Monoxide Sensor", "BW Series Sensor", "MicroClip Sensor", "Max XT II", "Electrochemical Sensor"],
-        rating: 4.7, 
-        reviews: 80, 
-        sold: '400+' 
-    },
-    { 
-        id: 'replacement-hydrogen-sulfide-h2s-sensor', 
-        title: 'Replacement Hydrogen Sulfide (H2S) Sensor', 
-        price: 'Contact for Price', 
-        originalPrice: null, 
-        image: 'https://www.majorsafety.com/media/catalog/product/s/r/sr-h-mc_1.jpg', 
-        desc: 'Replacement H2S Sensor compatible with all BW multi-gas detectors. Long-life electrochemical cell. Quick calibration and accurate detection of hydrogen sulfide. Critical spare part for confined space and industrial monitoring. Ships with calibration certificate.', 
-        tagsLine: 'Tags: Replacement H2S Sensor, Hydrogen Sulfide Sensor, BW Gas Detector, Electrochemical Cell, Confined Space, Industrial Safety, Calibration Certificate',
-        tags: ["Replacement H2S Sensor", "Hydrogen Sulfide Sensor", "BW Gas Detector", "Electrochemical Cell", "Confined Space"],
-        rating: 4.8, 
-        reviews: 90, 
-        sold: '450+' 
-    },
-    { 
-        id: 'replacement-combustible-lel-sensor', 
-        title: 'Replacement Combustible (LEL) Sensor', 
-        price: 'Contact for Price', 
-        originalPrice: null, 
-        image: 'https://www.majorsafety.com/media/catalog/product/s/r/sr-w-mp75c_1.jpg', 
-        desc: 'Replacement LEL Combustible Gas Sensor for BW monitors. Catalytic bead technology with high stability. Detects a wide range of flammable gases. Direct replacement with no tools required. Extends life of your gas detector significantly.', 
-        tagsLine: 'Tags: Replacement LEL Sensor, Combustible Sensor, BW Monitor, Catalytic Bead, Flammable Gas, Direct Replacement, Industrial Safety',
-        tags: ["Replacement LEL Sensor", "Combustible Sensor", "BW Monitor", "Catalytic Bead", "Flammable Gas"],
-        rating: 4.7, 
-        reviews: 70, 
-        sold: '350+' 
-    },
-    { 
-        id: 'replacement-oxygen-o2-sensor', 
-        title: 'Replacement Oxygen (O2) Sensor', 
-        price: 'Contact for Price', 
-        originalPrice: null, 
-        image: 'https://m.media-amazon.com/images/I/51n9oq4uLIL._AC_SL1500_.jpg', 
-        desc: 'Replacement O2 Sensor for BW GasAlert series. Galvanic cell technology with 2-year lifespan. Accurate oxygen level monitoring for confined spaces. Easy swap installation. Comes with fresh date code and calibration sticker.', 
-        tagsLine: 'Tags: Replacement O2 Sensor, Oxygen Sensor, BW GasAlert, Galvanic Cell, Confined Space, 2 Year Life, Easy Swap',
-        tags: ["Replacement O2 Sensor", "Oxygen Sensor", "BW GasAlert", "Galvanic Cell", "Confined Space"],
-        rating: 4.6, 
-        reviews: 100, 
-        sold: '500+' 
-    },
-    { 
-        id: 'bw-clip-2-year-single-gas-detector', 
-        title: 'BW Clip 2 Year Single Gas Detector', 
-        price: 'Contact for Price', 
-        originalPrice: null, 
-        image: 'https://sps.honeywell.com/us/en/-/media/ariba/products/images/bw-clip/bw-clip-2yr-h2s.png', 
-        desc: 'Maintenance-free 2-year single gas detector for H2S, CO, O2 or SO2. No calibration or sensor replacement needed. Compact and lightweight with visual, vibrating, and audible alarms. Ideal for personal safety in oil & gas, utilities, and manufacturing. Ships ready to use.', 
-        tagsLine: 'Tags: BW Clip 2 Year, Single Gas Detector, Maintenance Free, H2S CO O2 SO2, No Calibration, Personal Safety, Oil Gas, Utilities, Audible Alarm',
-        tags: ["BW Clip 2 Year", "Single Gas Detector", "Maintenance Free", "H2S CO O2 SO2", "No Calibration"],
-        rating: 4.8, 
-        reviews: 200, 
-        sold: '1000+' 
-    },
-    { 
-        id: 'bw-clip-3-year-single-gas-detector', 
-        title: 'BW Clip 3 Year Single Gas Detector', 
-        price: 'Contact for Price', 
-        originalPrice: null, 
-        image: 'https://sps.honeywell.com/us/en/-/media/ariba/products/images/bw-clip/bw-clip-3yr-co.png', 
-        desc: 'Maintenance-free 3-year single gas detector for reliable monitoring. Longer battery life and extended warranty. Same trusted Honeywell quality with enhanced durability. Perfect for long-term deployment in fixed locations or personal use.', 
-        tagsLine: 'Tags: BW Clip 3 Year, Single Gas Detector, 3 Year Life, Maintenance Free, Honeywell Quality, Long Term Monitoring',
-        tags: ["BW Clip 3 Year", "Single Gas Detector", "3 Year Life", "Maintenance Free"],
-        rating: 4.9, 
-        reviews: 180, 
-        sold: '900+' 
-    },
-    { 
-        id: 'gasalertmax-xt-ii-multi-gas-detector', 
-        title: 'GasAlertMax XT II Multi Gas Detector', 
-        price: 'Contact for Price', 
-        originalPrice: null, 
-        image: 'https://automation.honeywell.com/content/dam/honeywellbt/en/images/products/gas-detection/portables/multi-gas/max-xt-ii/max-xt-ii-yellow-front.png', 
-        desc: '4-gas detector with integrated sampling pump for confined space entry. Monitors O2, LEL, CO, H2S with smart sensor technology. One-button operation, data logging, and IntelliFlash status indicator. Rugged design for tough environments.', 
-        tagsLine: 'Tags: GasAlertMax XT II, Multi Gas Detector, Integrated Pump, Confined Space, 4 Gas Monitor, Smart Sensor, Data Logging',
-        tags: ["GasAlertMax XT II", "Multi Gas Detector", "Integrated Pump", "Confined Space", "4 Gas Monitor"],
-        rating: 4.8, 
-        reviews: 150, 
-        sold: '700+' 
-    },
-    { 
-        id: 'bw-solo-single-gas-detector', 
-        title: 'BW Solo Single-Gas Detector', 
-        price: 'Contact for Price', 
-        originalPrice: null, 
-        image: 'https://automation.honeywell.com/content/dam/honeywellbt/en/images/products/gas-detection/portables/single-gas/bw-solo/bw-solo-yellow-front.png', 
-        desc: 'Easy-to-service single-gas detector with Bluetooth connectivity. Wireless data download and real-time alerts via Honeywell Safety Communicator app. Multiple gas options and long battery life. Perfect for personal monitoring.', 
-        tagsLine: 'Tags: BW Solo, Single Gas Detector, Bluetooth Connectivity, Wireless Data, Real Time Alerts, Honeywell App',
-        tags: ["BW Solo", "Single Gas Detector", "Bluetooth Connectivity", "Wireless Data"],
-        rating: 4.7, 
-        reviews: 120, 
-        sold: '600+' 
-    },
-    { 
-        id: 'bw-ultra-portable-multi-gas-detector-with-pump', 
-        title: 'BW Ultra Portable Multi-Gas Detector with Pump', 
-        price: 'Contact for Price', 
-        originalPrice: null, 
-        image: 'https://automation.honeywell.com/content/dam/honeywellbt/en/images/products/gas-detection/portables/multi-gas/bw-ultra/bw-ultra-yellow-front.png', 
-        desc: '5-gas detector designed for confined spaces with hole-watch mode. Large color display, advanced sensors, and wireless connectivity. Pump for remote sampling. Ideal for industrial hygiene and emergency response.', 
-        tagsLine: 'Tags: BW Ultra, 5 Gas Detector, Confined Space, Hole Watch Mode, Color Display, Wireless Connectivity',
-        tags: ["BW Ultra", "5 Gas Detector", "Confined Space", "Hole Watch Mode"],
-        rating: 4.9, 
-        reviews: 110, 
-        sold: '500+' 
-    },
-    { 
-        id: 'gasalert-extreme-single-gas-detector', 
-        title: 'GasAlert Extreme Single Gas Detector', 
-        price: 'Contact for Price', 
-        originalPrice: null, 
-        image: 'https://www.honeywellanalytics.com/~/media/honeywell-analytics/products/gasalert-extreme/images/gasalertextreme.png', 
-        desc: 'Rugged single-gas detector with datalogging for harsh environments. Multiple gas options, IP67 rating, and long battery life. Simple one-button operation with easy-to-read display. Trusted choice for utilities and manufacturing.', 
-        tagsLine: 'Tags: GasAlert Extreme, Single Gas Detector, Datalogging, Harsh Environment, IP67 Rating, Utilities Safety',
-        tags: ["GasAlert Extreme", "Single Gas Detector", "Datalogging", "Harsh Environment"],
-        rating: 4.7, 
-        reviews: 140, 
-        sold: '650+' 
-    }
+   ,
+  
+  { 
+    id: 'replacement-carbon-monoxide-co-sensor', 
+    title: 'Replacement Carbon Monoxide (CO) Sensor', 
+    price: 'Contact for Price', 
+    originalPrice: null, 
+    image: 'https://cdn11.bigcommerce.com/s-ur73dgttco/images/stencil/1280x1280/products/1778/1833/Gold-Replacement-Sensor-CO__06849.1712173850.jpg?c=1',
+    desc: 'Replacement CO Sensor for BW series gas detectors (MicroClip, Max XT II, etc.). High-precision electrochemical sensor with 2-year life. Easy plug-and-play installation. Restores full functionality to your multi-gas monitor. Factory calibrated and ready to use. Essential spare for safety compliance.', 
+    tagsLine: 'Tags: Replacement CO Sensor, Carbon Monoxide Sensor, BW Series Sensor, MicroClip Sensor, Max XT II, Electrochemical Sensor, Gas Detector Part, Safety Spare, Plug And Play',
+    tags: ["Replacement CO Sensor", "Carbon Monoxide Sensor", "BW Series Sensor", "MicroClip Sensor", "Max XT II", "Electrochemical Sensor"],
+    rating: 4.7, 
+    reviews: 80, 
+    sold: '400+' 
+  },
+  { 
+    id: 'replacement-hydrogen-sulfide-h2s-sensor', 
+    title: 'Replacement Hydrogen Sulfide (H2S) Sensor', 
+    price: 'Contact for Price', 
+    originalPrice: null, 
+    image: 'https://res.cloudinary.com/iwh/image/upload/q_auto,g_center/w_1024,h_768,c_lpad/assets/1/26/BWSR-H-MC_Main_Image.jpg',
+    desc: 'Replacement H2S Sensor compatible with all BW multi-gas detectors. Long-life electrochemical cell. Quick calibration and accurate detection of hydrogen sulfide. Critical spare part for confined space and industrial monitoring. Ships with calibration certificate.', 
+    tagsLine: 'Tags: Replacement H2S Sensor, Hydrogen Sulfide Sensor, BW Gas Detector, Electrochemical Cell, Confined Space, Industrial Safety, Calibration Certificate',
+    tags: ["Replacement H2S Sensor", "Hydrogen Sulfide Sensor", "BW Gas Detector", "Electrochemical Cell", "Confined Space"],
+    rating: 4.8, 
+    reviews: 90, 
+    sold: '450+' 
+  },
+  { 
+    id: 'replacement-combustible-lel-sensor', 
+    title: 'Replacement Combustible (LEL) Sensor', 
+    price: 'Contact for Price', 
+    originalPrice: null, 
+    image: 'https://res.cloudinary.com/iwh/image/upload/q_auto,g_center/w_1024,h_768,c_lpad/assets/1/26/BW_SR-W-MP75C_Image.jpg',
+    desc: 'Replacement LEL Combustible Gas Sensor for BW monitors. Catalytic bead technology with high stability. Detects a wide range of flammable gases. Direct replacement with no tools required. Extends life of your gas detector significantly.', 
+    tagsLine: 'Tags: Replacement LEL Sensor, Combustible Sensor, BW Monitor, Catalytic Bead, Flammable Gas, Direct Replacement, Industrial Safety',
+    tags: ["Replacement LEL Sensor", "Combustible Sensor", "BW Monitor", "Catalytic Bead", "Flammable Gas"],
+    rating: 4.7, 
+    reviews: 70, 
+    sold: '350+' 
+  },
+  { 
+    id: 'replacement-oxygen-o2-sensor', 
+    title: 'Replacement Oxygen (O2) Sensor', 
+    price: 'Contact for Price', 
+    originalPrice: null, 
+    image: 'https://m.media-amazon.com/images/I/41WUeEz4djL._AC_UF894,1000_QL80_.jpg',
+    desc: 'Replacement O2 Sensor for BW GasAlert series. Galvanic cell technology with 2-year lifespan. Accurate oxygen level monitoring for confined spaces. Easy swap installation. Comes with fresh date code and calibration sticker.', 
+    tagsLine: 'Tags: Replacement O2 Sensor, Oxygen Sensor, BW GasAlert, Galvanic Cell, Confined Space, 2 Year Life, Easy Swap',
+    tags: ["Replacement O2 Sensor", "Oxygen Sensor", "BW GasAlert", "Galvanic Cell", "Confined Space"],
+    rating: 4.6, 
+    reviews: 100, 
+    sold: '500+' 
+  },
+  { 
+    id: 'bw-clip-2-year-single-gas-detector', 
+    title: 'BW Clip 2 Year Single Gas Detector', 
+    price: 'Contact for Price', 
+    originalPrice: null, 
+    image: 'https://www.instrumart.com/assets/BWClipRTmainimage-Square.jpg?width=660&height=495&scale=upscalecanvas&bgcolor=fff',
+    desc: 'Maintenance-free 2-year single gas detector for H2S, CO, O2 or SO2. No calibration or sensor replacement needed. Compact and lightweight with visual, vibrating, and audible alarms. Ideal for personal safety in oil & gas, utilities, and manufacturing. Ships ready to use.', 
+    tagsLine: 'Tags: BW Clip 2 Year, Single Gas Detector, Maintenance Free, H2S CO O2 SO2, No Calibration, Personal Safety, Oil Gas, Utilities, Audible Alarm',
+    tags: ["BW Clip 2 Year", "Single Gas Detector", "Maintenance Free", "H2S CO O2 SO2", "No Calibration"],
+    rating: 4.8, 
+    reviews: 200, 
+    sold: '1000+' 
+  },
+  { 
+    id: 'bw-clip-3-year-single-gas-detector', 
+    title: 'BW Clip 3 Year Single Gas Detector', 
+    price: 'Contact for Price', 
+    originalPrice: null, 
+    image: 'https://www.instrumart.com/assets/BWClipRTmainimage-Square.jpg?width=660&height=495&scale=upscalecanvas&bgcolor=fff',
+    desc: 'Maintenance-free 3-year single gas detector for reliable monitoring. Longer battery life and extended warranty. Same trusted Honeywell quality with enhanced durability. Perfect for long-term deployment in fixed locations or personal use.', 
+    tagsLine: 'Tags: BW Clip 3 Year, Single Gas Detector, 3 Year Life, Maintenance Free, Honeywell Quality, Long Term Monitoring',
+    tags: ["BW Clip 3 Year", "Single Gas Detector", "3 Year Life", "Maintenance Free"],
+    rating: 4.9, 
+    reviews: 180, 
+    sold: '900+' 
+  },
+  { 
+    id: 'gasalertmax-xt-ii-multi-gas-detector', 
+    title: 'GasAlertMax XT II Multi Gas Detector', 
+    price: 'Contact for Price', 
+    originalPrice: null, 
+    image: 'https://cdn11.bigcommerce.com/s-e163lt99/images/stencil/1280x1280/products/12985/54596/MAX_XT__68053.1650563610.jpg?c=2',
+    desc: '4-gas detector with integrated sampling pump for confined space entry. Monitors O2, LEL, CO, H2S with smart sensor technology. One-button operation, data logging, and IntelliFlash status indicator. Rugged design for tough environments.', 
+    tagsLine: 'Tags: GasAlertMax XT II, Multi Gas Detector, Integrated Pump, Confined Space, 4 Gas Monitor, Smart Sensor, Data Logging',
+    tags: ["GasAlertMax XT II", "Multi Gas Detector", "Integrated Pump", "Confined Space", "4 Gas Monitor"],
+    rating: 4.8, 
+    reviews: 150, 
+    sold: '700+' 
+  },
+  { 
+    id: 'bw-solo-single-gas-detector', 
+    title: 'BW Solo Single-Gas Detector', 
+    price: 'Contact for Price', 
+    originalPrice: null, 
+    image: 'https://www.instrumart.com/assets/BW-Solo-360.jpg?width=660&height=495&scale=upscalecanvas&bgcolor=fff',
+    desc: 'Easy-to-service single-gas detector with Bluetooth connectivity. Wireless data download and real-time alerts via Honeywell Safety Communicator app. Multiple gas options and long battery life. Perfect for personal monitoring.', 
+    tagsLine: 'Tags: BW Solo, Single Gas Detector, Bluetooth Connectivity, Wireless Data, Real Time Alerts, Honeywell App',
+    tags: ["BW Solo", "Single Gas Detector", "Bluetooth Connectivity", "Wireless Data"],
+    rating: 4.7, 
+    reviews: 120, 
+    sold: '600+' 
+  },
+  { 
+    id: 'bw-ultra-portable-multi-gas-detector-with-pump', 
+    title: 'BW Ultra Portable Multi-Gas Detector with Pump', 
+    price: 'Contact for Price', 
+    originalPrice: null, 
+    image: 'https://www.instrumart.com/assets/Honeywell-BW-Ultra-Multi-Gas-Detector-360.jpg?width=660&height=495&scale=upscalecanvas&bgcolor=fff',
+    desc: '5-gas detector designed for confined spaces with hole-watch mode. Large color display, advanced sensors, and wireless connectivity. Pump for remote sampling. Ideal for industrial hygiene and emergency response.', 
+    tagsLine: 'Tags: BW Ultra, 5 Gas Detector, Confined Space, Hole Watch Mode, Color Display, Wireless Connectivity',
+    tags: ["BW Ultra", "5 Gas Detector", "Confined Space", "Hole Watch Mode"],
+    rating: 4.9, 
+    reviews: 110, 
+    sold: '500+' 
+  },
+  { 
+    id: 'gasalert-extreme-single-gas-detector', 
+    title: 'GasAlert Extreme Single Gas Detector', 
+    price: 'Contact for Price', 
+    originalPrice: null, 
+    image: 'https://www.instrumart.com/assets/bw-gaxt-360.jpg?width=660&height=495&scale=upscalecanvas&bgcolor=fff',
+    desc: 'Rugged single-gas detector with datalogging for harsh environments. Multiple gas options, IP67 rating, and long battery life. Simple one-button operation with easy-to-read display. Trusted choice for utilities and manufacturing.', 
+    tagsLine: 'Tags: GasAlert Extreme, Single Gas Detector, Datalogging, Harsh Environment, IP67 Rating, Utilities Safety',
+    tags: ["GasAlert Extreme", "Single Gas Detector", "Datalogging", "Harsh Environment"],
+    rating: 4.7, 
+    reviews: 140, 
+    sold: '650+' 
+  }
 ],
 
    'Rescue Equipment': [
@@ -2795,7 +2797,7 @@ export const productsData = {
 
 
 
-    'Safety Shoes': [
+ 'Safety Shoes': [
   {
     id: 'safety-shoes-st001',
     title: 'Safety Shoes ST001',
@@ -3254,13 +3256,13 @@ export const productsData = {
       'mud terrain safety boot', 'shock absorbing ranger', 'reinforced ankle boot', 'gravel terrain boot',
       'rugged safety footwear', 'trekking safety boot', 'off-road work boot', 'outdoor professional shoes'
     ]
-  },
+  },,
   {
     id: 'safety-jogger-x1100n',
     title: 'Safety Jogger X1100N S3 Mid-Cut Leather Safety Shoe',
-    price: 12500,
-    originalPrice: 15000,
-    image: 'https://www.hacsons.com/wp-content/uploads/2023/09/X1100N-S3-Mid-Cut-Leather-Safety-Shoe-600x600.jpg',
+    price: 'Contact for Price',
+    originalPrice: null,
+    image: 'https://m.media-amazon.com/images/I/41zvlhV96QL._AC_UF894,1000_QL80_.jpg',
     desc: 'The Safety Jogger X1100N S3 is a premium mid-cut leather safety shoe engineered for modern professionals.\n' +
           'Full-grain leather upper combines durability with a lightweight metal-free construction.\n' +
           'Composite toe cap meets S3 standards while keeping the shoe non-metallic throughout.\n' +
@@ -3285,9 +3287,9 @@ export const productsData = {
   {
     id: 'safety-shoes-aak-s1p',
     title: 'Safety Shoes AAK S1P LOW',
-    price: 9500,
+    price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://www.hacsons.com/wp-content/uploads/2023/09/AAK-S1P-LOW-Safety-Shoes-600x600.jpg',
+    image: 'https://gibadi.com/cdn/shop/files/project_20240429_0908014-01_750x810.png?v=1729525821',
     desc: 'The AAK S1P LOW is a lightweight low-cut safety shoe designed for comfort in everyday industrial use.\n' +
           'Composite toe cap provides S1P-rated impact protection without the weight of steel.\n' +
           'ESD-certified construction dissipates static electricity safely in sensitive workplaces.\n' +
@@ -3312,9 +3314,9 @@ export const productsData = {
   {
     id: 'safety-jogger-cador',
     title: 'Safety Jogger Cador S1P Sporty Low-Cut ESD Safety Shoe',
-    price: 9000,
+    price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://www.hacsons.com/wp-content/uploads/2023/09/Cador-S1P-Sporty-Low-Cut-ESD-600x600.jpg',
+    image: 'https://cdn11.bigcommerce.com/s-nhmkn80zx/images/stencil/1280x1280/products/41268/56943/safety-jogger-cador-s1p-sporty-low-cut-esd-safety-shoe-blue__67512.1720988851.jpg?c=1?imbypass=on',
     desc: 'The Safety Jogger Cador S1P is a sporty low-cut ESD safety shoe built for active work environments.\n' +
           'Athletic sneaker-style design delivers maximum comfort with certified S1P protection.\n' +
           'ESD-rated construction prevents static discharge in electronics and hazardous workplaces.\n' +
@@ -3339,9 +3341,9 @@ export const productsData = {
   {
     id: 'safety-jogger-best-boy',
     title: 'Safety Jogger Best Boy S3 All-Time Favorite Mid-Cut Safety Shoe',
-    price: 5500,
-    originalPrice: 6000,
-    image: 'https://www.hacsons.com/wp-content/uploads/2023/09/Best-Boy-S3-Mid-Cut-Safety-Shoe-600x600.jpg',
+    price: 'Contact for Price',
+    originalPrice: null,
+    image: 'https://totalfirensafety.com/wp-content/uploads/2025/03/Bestboy-3.jpg',
     desc: 'The Safety Jogger Best Boy S3 is the all-time favorite mid-cut safety shoe for industrial workers.\n' +
           'Iconic design updated with modern materials while retaining trusted S3 protection standards.\n' +
           'Steel toe cap and anti-penetration midsole deliver comprehensive certified foot safety.\n' +
@@ -3366,9 +3368,9 @@ export const productsData = {
   {
     id: 'safety-jogger-turbo',
     title: 'Safety Jogger Turbo S3 Safety Shoes',
-    price: 24500,
+    price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://www.hacsons.com/wp-content/uploads/2023/09/Turbo-S3-Safety-Shoes-600x600.jpg',
+    image: 'https://www.safetyjogger.com/picture/Brands/SAFETY/HIRES/TURBO-094-HR03.PNG?nocache=1750197600000',
     desc: 'The Safety Jogger Turbo S3 is a fashionable premium safety shoe combining style with S3 protection.\n' +
           'Modern design with premium leather and textile upper suits professional and site environments.\n' +
           'Steel toe cap and composite anti-penetration midsole provide full S3 safety certification.\n' +
@@ -3393,9 +3395,9 @@ export const productsData = {
   {
     id: 'safety-jogger-worker-plus',
     title: 'Safety Jogger Worker Plus S3 Safety Shoes',
-    price: 40000,
+    price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://www.hacsons.com/wp-content/uploads/2023/09/Worker-Plus-S3-Safety-Shoes-600x600.jpg',
+    image: 'https://i.ebayimg.com/00/s/MTA0NlgxNjAw/z/ShgAAOSweApbar-5/$_57.JPG?set_id=8800005007',
     desc: 'The Safety Jogger Worker Plus S3 is a heavy-duty safety boot engineered for extreme industrial use.\n' +
           'Robust full-grain leather upper with reinforced overlays handles the toughest job sites.\n' +
           'Steel toe cap rated for 200J impact and 15kN compression for maximum protection.\n' +
@@ -3420,9 +3422,9 @@ export const productsData = {
   {
     id: 'safety-jogger-jumper31',
     title: 'Safety Jogger Jumper31 S3 Safety Shoes',
-    price: 17500,
+    price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://www.hacsons.com/wp-content/uploads/2023/09/Jumper31-S3-Safety-Shoes-600x600.jpg',
+    image: 'https://www.safetyjogger.com/picture/Brands/SAFETY/HIRES/JUMPER31-BLK-HR01.PNG?nocache=1750197600000',
     desc: 'The Safety Jogger Jumper31 S3 is a low-cut metal-free safety shoe built for agile industrial workers.\n' +
           'Composite toe cap and composite anti-penetration midsole ensure full metal-free S3 protection.\n' +
           'Enhanced grip outsole with multi-directional tread pattern provides superior slip resistance.\n' +
@@ -3439,17 +3441,17 @@ export const productsData = {
     tags: [
       'Jumper31 S3', 'safety jogger jumper31', 'metal-free S3 shoe', 'composite S3 low-cut',
       'agile safety shoe', 'ESD S3 low-cut', 'lightweight composite shoe', 'breathable S3 low',
-      'logistics S3 shoe', 'warehouse S3 shoe', 'cleanroom S3 shoe', 'flexible S3 shoe',
-      'anti-static jumper31', 'multi-directional grip shoe', 'airport safe S3', 'hacsons jumper31',
-      'fast paced safety shoe', 'detector safe shoe', 'enhanced grip S3', 'EN ISO 20345 jumper31'
+      'logistics S3 shoe', 'electronics safety shoe', 'warehouse S3 low-cut', 'detector safe S3',
+      'airport safe S3 shoe', 'moisture management S3', 'lightweight S3 low-cut', 'hacsons jumper31',
+      'non-metallic S3 shoe', 'damp environment shoe', 'anti-static jumper31', 'professional low-cut S3'
     ]
   },
   {
     id: 'safety-jogger-mars-eh',
     title: 'Safety Jogger MARS-EH Electrical Hazard Safety Shoe',
-    price: 20000,
+    price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://www.hacsons.com/wp-content/uploads/2023/09/MARS-EH-Electrical-Hazard-Safety-Shoe-600x600.jpg',
+    image: 'https://m.media-amazon.com/images/I/51IMsASz8bL._AC_SL1050_.jpg',
     desc: 'The Safety Jogger MARS-EH is a specialized safety shoe engineered for electrical hazard protection.\n' +
           'EH-rated insulating sole provides protection against electrical shock up to 18,000 volts.\n' +
           'Composite toe cap offers certified impact resistance without conducting electricity.\n' +
@@ -3474,9 +3476,9 @@ export const productsData = {
   {
     id: 'safety-jogger-pluto-eh',
     title: 'Safety Jogger Pluto EH 18KV Electrical Hazard Safety Shoes',
-    price: 19500,
+    price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://www.hacsons.com/wp-content/uploads/2023/09/Pluto-EH-18KV-Safety-Shoes-600x600.jpg',
+    image: 'https://baoholaodongsocvang.com/wp-content/uploads/2023/07/giay-bao-ho-jogger-PLUTO-EH-soc-vang-800-500-SV2.webp',
     desc: 'The Safety Jogger Pluto EH 18KV delivers low-cut electrical hazard protection for field electricians.\n' +
           'Certified to protect against electrical shock exposure up to 18,000 volts AC safely.\n' +
           'Composite toe cap provides non-metallic certified impact and compression protection.\n' +
@@ -3501,9 +3503,9 @@ export const productsData = {
   {
     id: 'safety-jogger-x1110n',
     title: 'Safety Jogger X1110N S3 Safety Shoes',
-    price: 18000,
+    price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://www.hacsons.com/wp-content/uploads/2023/09/X1110N-S3-Safety-Shoes-600x600.jpg',
+    image: 'https://m.media-amazon.com/images/I/61CkN0vD7TL._AC_SL1000_.jpg',
     desc: 'The Safety Jogger X1110N S3 is a water-resistant low-cut metal-free safety shoe for modern workers.\n' +
           'Water-repellent leather and textile upper keeps feet dry in wet and damp environments.\n' +
           'Composite toe cap and composite midsole provide full metal-free S3 certified protection.\n' +
@@ -4315,31 +4317,7 @@ export const productsData = {
       'relay output panel', 'easy install fire panel', 'cost effective panel', 'entry level fire control', 'conventional zone panel'
     ]
   },
-  {
-    id: 'alpha-4-8-12-12-zones-fire-detection-conventional-panel',
-    title: 'ALPHA 4/8/12 – 12 zones fire detection conventional panel',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://haes-tech.com/wp-content/uploads/2023/02/Excel-12-zone.jpg',
-    desc: 'ALPHA 4/8/12 is an expandable conventional fire panel supporting up to 12 detection zones.\n' +
-          'Modular design allows easy upgrade from 4 to 8 or 12 zones as needed.\n' +
-          'Large LCD display shows detailed zone information, faults, and events.\n' +
-          'Multiple sounder circuits with adjustable delay and coincidence modes.\n' +
-          'Extensive relay options for fire, fault, and auxiliary signaling.\n' +
-          'Programmable zones for smoke, heat, beam, or manual call points.\n' +
-          'Battery monitoring and charger with deep discharge protection.\n' +
-          'Ideal for medium-sized buildings, schools, offices, hotels, and retail.\n' +
-          'Fully compliant with EN54-2/4 for certified performance.\n' +
-          'Flexible, reliable conventional solution for growing fire safety needs.',
-    rating: 4.9,
-    reviews: 78,
-    sold: '100+',
-    tags: [
-      '12 zone conventional panel', 'alpha expandable panel', 'lcd fire panel', 'modular zone panel', 'medium building alarm',
-      'school fire system', 'hotel conventional panel', 'retail fire detection', 'en54 certified panel', 'programmable zones',
-      'battery charger panel', 'sounder delay panel', 'coincidence mode panel', 'auxiliary relay panel', 'growing safety system'
-    ]
-  },
+  
   {
     id: 'avs2000-r-sound',
     title: 'AVS2000-R Sound',
@@ -4365,81 +4343,7 @@ export const productsData = {
       'evacuation sounder', 'low current sounder', 'red fire sounder', 'public building alert', 'robust alarm sounder'
     ]
   },
-  {
-    id: 'beam-detector',
-    title: 'Beam detector',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.pottersignal.com/wp-content/uploads/2023/06/F3000.jpg',
-    desc: 'Beam Detector uses optical beam technology to cover large open areas economically.\n' +
-          'Detects smoke across distances from 5m to 100m with single transmitter/receiver.\n' +
-          'Automatic gain compensation adjusts for dust, dirt, or building movement.\n' +
-          'Fire and fault relays for connection to any conventional or addressable panel.\n' +
-          'LED indicators show alignment, fire, and fault status at unit.\n' +
-          'Alignment tool and test filter simplify commissioning.\n' +
-          'Ideal for warehouses, atriums, sports halls, aircraft hangars, and churches.\n' +
-          'Reduces detector quantity compared to point-type systems.\n' +
-          'Meets EN54-12 standards for reliable beam smoke detection.\n' +
-          'Cost-effective solution for high-ceiling or wide-span fire protection.',
-    rating: 4.8,
-    reviews: 56,
-    sold: '80+',
-    tags: [
-      'beam smoke detector', 'optical beam detector', 'large area detection', 'warehouse beam detector', 'en54-12 beam',
-      'automatic gain beam', 'long range smoke detector', 'atrium fire detection', 'hangar smoke system', 'church beam detector',
-      'fault relay beam', 'alignment tool detector', 'high ceiling protection', 'cost effective beam', 'wide span fire system'
-    ]
-  },
-  {
-    id: 'conventional-smoke-detector',
-    title: 'Conventional Smoke Detector',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://honeywell.scene7.com/is/image/Honeywell65/HBT-Fire-2151-2251B-CEILING-HiRes',
-    desc: 'Conventional Smoke Detector uses photoelectric sensing for reliable smoldering fire detection.\n' +
-          'High-sensitivity chamber detects smoke particles early in fire development.\n' +
-          'Low-profile design blends seamlessly into ceilings.\n' +
-          'LED indicator flashes during normal operation and latches on alarm.\n' +
-          'Compatible with most conventional fire panels via 2-wire base.\n' +
-          'Test button and remote test capability for easy maintenance.\n' +
-          'Insect guard and dust compensation reduce false alarms.\n' +
-          'Ideal for offices, hotels, schools, apartments, and retail spaces.\n' +
-          'Meets EN54-7 or UL standards for dependable performance.\n' +
-          'Affordable, proven point-type smoke detection.',
-    rating: 4.7,
-    reviews: 234,
-    sold: '400+',
-    tags: [
-      'conventional smoke detector', 'photoelectric smoke sensor', 'smoldering fire detector', 'low profile detector', 'en54-7 smoke',
-      'office smoke detector', 'hotel fire sensor', 'school safety detector', 'remote test smoke', 'dust compensated detector',
-      'insect guard smoke', '2 wire conventional', 'affordable point detector', 'early smoke detection', 'reliable smoke unit'
-    ]
-  },
-  {
-    id: 'hephais-1600-ne',
-    title: 'HEPHAIS 1600 NE',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.hochikiamerica.com/wp-content/uploads/2023/06/FireNET-Plus.jpg',
-    desc: 'HEPHAIS 1600 NE is an advanced analog addressable fire detection panel.\n' +
-          'Supports up to 127 devices per loop with flexible loop configurations.\n' +
-          'Large graphical LCD display shows detailed event information and maps.\n' +
-          'Advanced cause-and-effect programming for complex site requirements.\n' +
-          'High-speed communication protocol reduces response time.\n' +
-          'Networkable for multi-panel systems in large buildings.\n' +
-          'Built-in power supply with battery backup and charger.\n' +
-          'Ideal for hospitals, shopping malls, high-rise buildings, and industrial plants.\n' +
-          'Meets EN54-2/4 and certified for global use.\n' +
-          'Powerful, intelligent addressable solution for demanding applications.',
-    rating: 4.9,
-    reviews: 45,
-    sold: '60+',
-    tags: [
-      'hephais 1600 ne', 'analog addressable panel', '127 device loop', 'graphical lcd panel', 'cause effect programming',
-      'high speed protocol', 'networkable fire panel', 'hospital fire system', 'mall addressable panel', 'en54 addressable',
-      'high rise fire control', 'industrial addressable', 'intelligent fire panel', 'multi panel network', 'advanced fire detection'
-    ]
-  },
+  
   {
     id: 'hephais-1600-400-l',
     title: 'HEPHAIS 1600-400-L',
@@ -7958,1582 +7862,2097 @@ export const productsData = {
       'sweeping eye protection', 'sanding dust goggles', 'woodworking basic goggles', 'adjustable strap dust', 'uv dust goggles',
       'economical particle protection', 'everyday dust eyewear', 'low risk dust goggles', 'simple dust safety', 'affordable dust ppe'
     ]
-  },
+  },{
+id: 'bls-zero-33-face-mask',
+title: 'BLS Zero 33 Face mask',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.it/wp-content/uploads/2023/02/ZERO-33-800x800-1.jpg',
+desc: 'BLS Zero 33 Full Face Mask offers panoramic vision and superior respiratory protection.\n' +
+'Wide polycarbonate visor provides excellent field of view with anti-fog coating.\n' +
+'Soft hypoallergenic silicone face seal conforms comfortably to face.\n' +
+'Twin bayonet cartridge connection for quick filter changes.\n' +
+'Speech diaphragm ensures clear communication while masked.\n' +
+'5-point adjustable head harness for secure, balanced fit.\n' +
+'Ideal for painting, chemical handling, asbestos abatement, and welding fumes.\n' +
+'Certified to EN 136 Class 2 and compatible with most standard filters.\n' +
+'Premium full-face respirator for high-hazard respiratory environments.\n' +
+'Professional-grade mask with exceptional comfort and visibility.',
+rating: 4.8,
+reviews: 140,
+sold: '600+',
+tags: [
+'bls zero 33 mask', 'full face respirator', 'panoramic visor mask', 'anti fog full face', 'en 136 class 2',
+'painting full face mask', 'chemical handling respirator', 'asbestos abatement mask', 'welding fume protection', 'speech diaphragm mask',
+'hypoallergenic silicone', 'bayonet cartridge mask', 'adjustable head harness', 'high hazard respiratory', 'premium full face ppe'
+]
+},
+{
+id: 'bls-680-next-ffp2-mask',
+title: 'BLS 680 NEXT FFP2 mask',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.it/wp-content/uploads/2024/03/680-NEXT-800x800-1.jpg',
+desc: 'BLS 680 NEXT FFP2 Mask is a premium disposable respirator with high filtration efficiency.\n' +
+'Fold-flat design with exhalation valve reduces breathing resistance.\n' +
+'Soft inner nose foam and adjustable nose clip for comfortable seal.\n' +
+'Elastic head straps with buckle for secure, easy donning.\n' +
+'High-efficiency melt-blown filter media blocks fine dust and aerosols.\n' +
+'Ideal for construction, woodworking, sanding, pharmaceutical, and general dusty work.\n' +
+'Certified to EN149 FFP2 NR standard with D (dolomite) optional.\n' +
+'Lightweight and foldable for convenient storage.\n' +
+'Comfortable, reliable disposable protection for medium-risk environments.\n' +
+'High-performance FFP2 mask from trusted BLS.',
+rating: 4.7,
+reviews: 180,
+sold: '800+',
+tags: [
+'bls 680 next ffp2', 'disposable ffp2 mask', 'valved respirator', 'fold flat ffp2', 'en149 ffp2 nr',
+'construction dust mask', 'woodworking respirator', 'sanding ffp2 mask', 'pharmaceutical protection', 'adjustable nose clip ffp2',
+'elastic head strap mask', 'high efficiency filter', 'comfortable disposable mask', 'medium risk respiratory', 'reliable bls ffp2'
+]
+},
+{
+id: 'bls-129bw-face-mask',
+title: 'BLS 129BW Face Mask',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.it/wp-content/uploads/2021/11/129-BW-800x800-1.jpg',
+desc: 'BLS 129BW Face Mask is a valved FFP2 disposable respirator with excellent comfort.\n' +
+'Exhalation valve reduces heat and moisture buildup inside mask.\n' +
+'Pre-formed nose bridge and soft inner seal for secure fit.\n' +
+'Elastic head straps with buckle for easy adjustment.\n' +
+'High-filtration melt-blown layer protects against fine dust and aerosols.\n' +
+'Ideal for construction, demolition, sanding, agriculture, and general dust.\n' +
+'Certified to EN149 FFP2 NR D (dolomite tested) standard.\n' +
+'Lightweight and foldable for convenient pocket storage.\n' +
+'Comfort-focused disposable mask for medium-risk dusty environments.\n' +
+'Trusted BLS quality at competitive price point.',
+rating: 4.6,
+reviews: 200,
+sold: '1000+',
+tags: [
+'bls 129bw mask', 'valved ffp2 respirator', 'exhalation valve mask', 'en149 ffp2 nr d', 'construction dust mask',
+'demolition ffp2', 'sanding respirator', 'agriculture dust protection', 'pre formed nose bridge', 'elastic buckle strap',
+'high filtration ffp2', 'lightweight disposable mask', 'medium risk dust ppe', 'comfortable ffp2 mask', 'trusted bls respirator'
+]
+},
+{
+id: 'bls-128bw-face-mask',
+title: 'BLS 128BW Face Mask',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.it/wp-content/uploads/2021/11/128-BW-800x800-1.jpg',
+desc: 'BLS 128BW Face Mask is a high-breathability FFP2 disposable respirator.\n' +
+'Low breathing resistance thanks to advanced filter media.\n' +
+'Soft inner nose foam and adjustable nose clip for good seal.\n' +
+'Elastic head straps with buckle for secure, comfortable fit.\n' +
+'Effective protection against fine dust, aerosols, and non-oil particles.\n' +
+'Ideal for construction, woodworking, sweeping, and general dusty tasks.\n' +
+'Certified to EN149 FFP2 NR standard.\n' +
+'Fold-flat design stores easily in pockets or tool bags.\n' +
+'Lightweight and comfortable for extended wear.\n' +
+'Excellent value disposable mask from BLS.',
+rating: 4.5,
+reviews: 220,
+sold: '1200+',
+tags: [
+'bls 128bw mask', 'high breathability ffp2', 'disposable dust mask', 'en149 ffp2 nr', 'construction ffp2 mask',
+'woodworking respirator', 'low breathing resistance', 'adjustable nose clip ffp2', 'elastic strap mask', 'fine dust protection',
+'fold flat ffp2', 'lightweight dust mask', 'extended wear ffp2', 'value respirator', 'general dusty tasks ppe'
+]
+},
+{
+id: 'aura-disposable-respirator-9332-ffp3-valved',
+title: 'Aura™ Disposable Respirator 9332+, FFP3, Valved',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://reemster.com/cdn/shop/products/3m-aura-particulate-respirator.jpg?v=1641664361&width=692',
+desc: '3M Aura 9332+ FFP3 Valved Respirator provides highest filtration efficiency.\n' +
+'Advanced 3-panel design conforms to face for excellent seal and comfort.\n' +
+'Exhalation valve reduces heat and moisture inside mask.\n' +
+'Soft nose foam and adjustable nose clip for secure fit.\n' +
+'Elastic head straps with buckle for easy donning and adjustment.\n' +
+'Protects against very fine dust, fumes, and oil-based aerosols.\n' +
+'Ideal for welding fumes, pharmaceutical, asbestos, and high-hazard dust.\n' +
+'Certified to EN149 FFP3 NR D standard.\n' +
+'Premium disposable respirator for maximum respiratory protection.\n' +
+'Trusted 3M Aura quality in high-risk environments.',
+rating: 4.9,
+reviews: 250,
+sold: '900+',
+tags: [
+'3m aura 9332', 'ffp3 valved respirator', 'highest filtration mask', 'en149 ffp3 nr d', 'welding fume protection',
+'pharmaceutical respirator', 'asbestos removal mask', '3 panel aura design', 'exhalation valve ffp3', 'adjustable nose clip aura',
+'elastic buckle strap', 'high hazard dust mask', 'premium disposable respirator', 'maximum respiratory ppe', 'trusted 3m aura'
+]
+},
+{
+id: 'particulate-respirator-p2-valved',
+title: 'Particulate Respirator P2, valved',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://hlpmedical.net/cdn/shop/files/ValveExtended3_1024x1024_2x_0d44eb63-2795-4ce3-9c3c-77a5132056c7.webp?v=1686624573&width=1946',
+desc: 'Particulate Respirator P2 Valved provides effective protection against dust and mists.\n' +
+'Valved design reduces breathing resistance and heat buildup.\n' +
+'Soft inner nose foam and adjustable nose clip for good seal.\n' +
+'Elastic head straps with buckle for secure, comfortable fit.\n' +
+'High-efficiency filter media blocks fine non-oil particulates.\n' +
+'Fold-flat design for convenient storage in pockets.\n' +
+'Ideal for construction, sanding, sweeping, agriculture, and general dust.\n' +
+'Certified to AS/NZS 1716 P2 or equivalent EN149 FFP2 standards.\n' +
+'Comfortable, reliable disposable respirator for medium-risk tasks.\n' +
+'Trusted protection for everyday dusty environments.',
+rating: 4.6,
+reviews: 150,
+sold: '700+',
+tags: [
+'p2 valved respirator', 'particulate dust mask', 'exhalation valve p2', 'construction p2 mask', 'sanding respirator p2',
+'fold flat p2 mask', 'agriculture dust protection', 'high efficiency p2', 'comfortable valved mask', 'medium risk respiratory',
+'adjustable nose clip p2', 'elastic buckle p2', 'general dust ppe', 'reliable particulate mask', 'everyday dust respirator'
+]
+},
+{
+id: 'particulate-respirator-8210-n95',
+title: 'Particulate Respirator 8210 N95',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://media.granquartz.com/pearlman-production/catalog/product/6/9/696109-BX_a_b6fecf674ffbf82810b06308f5cee113.jpg?tr=n-gq_lrg',
+desc: 'Particulate Respirator 8210 N95 is the classic disposable dust mask.\n' +
+'NIOSH-approved N95 filters ≥95% of non-oil airborne particles.\n' +
+'Molded cup shape with adjustable nose clip for secure fit.\n' +
+'Elastic head straps provide secure seal without ear pressure.\n' +
+'Lightweight and foldable for easy pocket storage.\n' +
+'Ideal for construction, sanding, sweeping, grinding, and pandemic use.\n' +
+'Meets NIOSH 42 CFR Part 84 N95 standard.\n' +
+'Trusted worldwide for reliable, no-frills respiratory protection.\n' +
+'Essential disposable mask for dusty and particulate-heavy tasks.\n' +
+'Proven performance in industrial and health environments.',
+rating: 4.7,
+reviews: 300,
+sold: '1500+',
+tags: [
+'3m 8210 n95', 'classic n95 respirator', 'niosh n95 mask', 'construction dust mask', 'sanding n95 protection',
+'molded cup n95', 'elastic head strap n95', 'pandemic n95 mask', 'lightweight disposable', 'foldable n95',
+'grinding particle mask', 'reliable dust respirator', 'industrial n95', 'health environment mask', 'proven n95 performance'
+]
+},
+{
+id: 'dust-pre-filters',
+title: 'Dust Pre-Filters',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.airpurifierfirst.com/wp-content/uploads/2021/03/Dusty-pre-filters-after-some-time-of-usage-1024x768.png',
+desc: 'Dust Pre-Filters extend the life of main respirator cartridges.\n' +
+'High-efficiency pre-filter captures large dust and particulate matter.\n' +
+'Attaches easily to compatible cartridge/filter holders.\n' +
+'Reduces loading on primary filter, improving breathability.\n' +
+'Ideal for dusty environments such as construction, woodworking, and demolition.\n' +
+'Cost-effective way to prolong cartridge life in high-dust conditions.\n' +
+'Compatible with most Honeywell, 3M, and other bayonet-style systems.\n' +
+'Simple disposable accessory for reusable respirators.\n' +
+'Essential maintenance item for half-face and full-face masks.\n' +
+'Improves overall respirator performance in dusty atmospheres.',
+rating: 4.5,
+reviews: 80,
+sold: '400+',
+tags: [
+'dust pre filters', 'respirator pre-filter', 'high efficiency pre-filter', 'cartridge extender', 'construction dust pre',
+'woodworking pre filter', 'demolition respirator accessory', 'bayonet pre filter', 'disposable dust pre', 'prolong cartridge life',
+'honeywell compatible pre', '3m compatible pre filter', 'reusable mask accessory', 'dusty atmosphere ppe', 'maintenance respirator item'
+]
+},
+{
+id: 'ammonia-cartirage-k2-bls',
+title: 'Ammonia Cartirage K2 BLS',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://stafit.ee/wp-content/uploads/2025/01/BLS_413-K2_0188.jpg',
+desc: 'Ammonia Cartridge K2 BLS protects against ammonia and ammonia derivatives.\n' +
+'High-capacity activated carbon filter for extended service life.\n' +
+'Bayonet connection for quick, secure attachment to compatible masks.\n' +
+'Low breathing resistance design improves user comfort.\n' +
+'Ideal for refrigeration, fertilizer plants, agriculture, and cleaning.\n' +
+'Compatible with BLS 2000/3000/4000/5000 series half and full face masks.\n' +
+'Certified to EN 14387 Class K2 for ammonia protection.\n' +
+'Essential filter for environments with ammonia gas hazards.\n' +
+'Reliable, high-performance cartridge from BLS.\n' +
+'Critical respiratory protection for ammonia exposure.',
+rating: 4.7,
+reviews: 60,
+sold: '250+',
+tags: [
+'ammonia cartridge k2', 'bls k2 filter', 'ammonia protection cartridge', 'en 14387 k2', 'refrigeration gas mask',
+'fertilizer plant cartridge', 'agriculture ammonia filter', 'cleaning chemical cartridge', 'bayonet ammonia filter', 'low breathing resistance',
+'bls 2000 compatible', 'full face cartridge', 'half mask ammonia filter', 'ammonia gas ppe', 'high capacity ammonia cartridge'
+]
+},
+{
+id: 'multi-purpose-cartirage-abek2-bls',
+title: 'Multi Purpose Cartirage ABEK2 BLS',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'http://arete.com.mt/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-2.35.38-PM.png',
+desc: 'Multi Purpose Cartridge ABEK2 BLS protects against multiple gas and vapor types.\n' +
+'ABEK2 rated for organic vapors, inorganic gases, acid gases, and ammonia.\n' +
+'High-capacity activated carbon and chemical absorbent media.\n' +
+'Bayonet connection for fast, secure attachment to BLS masks.\n' +
+'Low breathing resistance for improved user comfort.\n' +
+'Ideal for chemical plants, laboratories, painting, and industrial cleaning.\n' +
+'Compatible with BLS 2000/3000/4000/5000 series respirators.\n' +
+'Certified to EN 14387 Class ABEK2 for broad-spectrum gas protection.\n' +
+'Versatile cartridge for sites with mixed chemical hazards.\n' +
+'Professional-grade multi-gas filter from trusted BLS.',
+rating: 4.8,
+reviews: 70,
+sold: '300+',
+tags: [
+'abek2 cartridge', 'multi gas cartridge', 'bls abek2 filter', 'en 14387 abek2', 'organic vapor protection',
+'inorganic gas cartridge', 'acid gas filter', 'ammonia multi cartridge', 'chemical plant filter', 'laboratory gas mask',
+'bayonet multi purpose', 'low breathing abek2', 'broad spectrum protection', 'mixed hazard cartridge', 'professional multi gas ppe'
+]
+},
+{
+id: 'ffp2-disposable-mask-128bw-r-d',
+title: 'FFP2 Disposable Mask 128BW R D',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2020/12/BLS_128BW_-1547-ELASTICI-VERDI.jpg',
+desc: 'FFP2 Disposable Mask 128BW R D is reusable style with excellent breathability.\n' +
+'Valved design significantly reduces heat and moisture buildup.\n' +
+'Dolomite (D) tested for low breathing resistance in humid conditions.\n' +
+'Soft nose foam and adjustable nose clip create good facial seal.\n' +
+'Elastic head straps with buckle for secure, comfortable fit.\n' +
+'High-efficiency filter media against fine dust and non-oil aerosols.\n' +
+'Ideal for construction, demolition, agriculture, and general dusty tasks.\n' +
+'Certified to EN149 FFP2 NR D standard.\n' +
+'Reusable for multiple shifts when not heavily loaded.\n' +
+'Comfortable, high-performance disposable FFP2 from BLS.',
+rating: 4.6,
+reviews: 190,
+sold: '900+',
+tags: [
+'128bw ffp2 mask', 'reusable ffp2 valved', 'dolomite tested ffp2', 'en149 ffp2 nr d', 'construction dust mask',
+'demolition ffp2 respirator', 'agriculture dust protection', 'breathable valved mask', 'adjustable nose clip ffp2', 'elastic buckle ffp2',
+'high efficiency filter', 'fine dust respirator', 'multi shift ffp2', 'comfortable disposable mask', 'bls ffp2 performance'
+]
+},
+{
+id: 'ffp3-disposable-mask-bls-800-flickit',
+title: 'FFP3 Disposable Mask BLS 800 Flickit',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2022/03/bls_product_donninginstructions_800flickit_HEADER_DEF@05x.png',
+desc: 'FFP3 Disposable Mask BLS 800 Flickit features innovative folding design.\n' +
+'Flick-open shape maintains mask hygiene and makes donning easier.\n' +
+'Highest filtration efficiency – protects against very fine dust, fumes, and aerosols.\n' +
+'Valved version reduces breathing resistance and heat buildup.\n' +
+'Soft inner nose foam and adjustable nose clip for secure seal.\n' +
+'Elastic head straps with buckle for comfortable fit.\n' +
+'Ideal for welding fumes, pharmaceutical, asbestos, and high-hazard dust.\n' +
+'Certified to EN149 FFP3 NR standard.\n' +
+'Premium disposable FFP3 with user-friendly folding system.\n' +
+'Maximum respiratory protection with BLS quality.',
+rating: 4.8,
+reviews: 110,
+sold: '500+',
+tags: [
+'bls 800 flickit', 'ffp3 folding mask', 'highest filtration ffp3', 'en149 ffp3 nr', 'welding fume ffp3',
+'pharmaceutical respirator', 'asbestos removal mask', 'valved ffp3 mask', 'flick open design', 'adjustable nose clip ffp3',
+'elastic buckle ffp3', 'high hazard dust mask', 'premium disposable ffp3', 'user friendly ffp3', 'maximum respiratory protection'
+]
+},
+{
+id: 'ffp2-disposable-mask-bls-700',
+title: 'FFP2 Disposable Mask BLS 700',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2020/12/BLS_129_BW_1-1647-ELASTICI-VERDI.jpg',
+desc: 'FFP2 Disposable Mask BLS 700 offers high comfort and reliable filtration.\n' +
+'Molded shape with soft inner nose seal for excellent fit.\n' +
+'Low breathing resistance thanks to advanced filter media.\n' +
+'Elastic head straps with buckle for secure, comfortable wear.\n' +
+'Effective against fine dust, mists, and non-oil aerosols.\n' +
+'Ideal for construction, woodworking, sanding, and general dust work.\n' +
+'Certified to EN149 FFP2 NR standard.\n' +
+'Lightweight and foldable for easy storage.\n' +
+'Comfort-focused disposable mask for medium-risk environments.\n' +
+'High-quality BLS FFP2 at competitive price.',
+rating: 4.6,
+reviews: 130,
+sold: '600+',
+tags: [
+'bls 700 ffp2', 'comfort ffp2 mask', 'molded ffp2 respirator', 'en149 ffp2 nr', 'construction dust mask',
+'woodworking ffp2', 'low breathing ffp2', 'elastic buckle mask', 'fine dust protection', 'sanding respirator',
+'lightweight ffp2', 'medium risk dust ppe', 'foldable disposable mask', 'high quality bls', 'competitive ffp2 mask'
+]
+},
+{
+id: 'n95-non-oil-particulate-filter-7506n95-honeywell',
+title: 'N95 Non-Oil Particulate Filter 7506N95 Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://i.ebayimg.com/images/g/Zn8AAOSwrAxncyJc/s-l1200.jpg',
+desc: 'N95 Non-Oil Particulate Filter 7506N95 Honeywell filters dust and aerosols.\n' +
+'NIOSH-approved N95 filtration efficiency ≥95% for non-oil particles.\n' +
+'Compatible with Honeywell North half-face and full-face respirators.\n' +
+'Bayonet connection for quick, secure attachment.\n' +
+'Low-profile design maintains good field of vision.\n' +
+'Ideal for construction, sanding, grinding, sweeping, and woodworking.\n' +
+'Essential replacement filter for reusable respirator systems.\n' +
+'Certified to NIOSH 42 CFR Part 84 N95 standard.\n' +
+'Reliable Honeywell quality for particulate protection.\n' +
+'Critical component for maintaining respiratory safety.',
+rating: 4.7,
+reviews: 90,
+sold: '400+',
+tags: [
+'honeywell 7506n95', 'n95 filter cartridge', 'non oil particulate filter', 'niosh n95 filter', 'bayonet n95 filter',
+'construction dust filter', 'sanding respirator filter', 'grinding particulate filter', 'replacement n95 filter', 'reusable mask filter',
+'low profile filter', 'woodworking n95 filter', 'honeywell north compatible', 'reliable particulate ppe', 'essential n95 component'
+]
+},
+{
+id: 'flexible-low-profile-p100-filter-75ffp100-honeywell',
+title: 'Flexible, Low Profile P100 Filter 75FFP100 Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://static.grainger.com/rp/s/is/image/Grainger/16M237_AS01',
+desc: 'Flexible Low Profile P100 Filter 75FFP100 Honeywell offers highest filtration efficiency.\n' +
+'P100 filters ≥99.97% of oil- and non-oil particulates.\n' +
+'Flexible, low-profile design improves downward visibility.\n' +
+'Bayonet connection for quick attachment to Honeywell respirators.\n' +
+'Ideal for welding fumes, pharmaceutical dust, asbestos, and high-hazard particles.\n' +
+'Compatible with North 5500, 7700, 5400, and other series masks.\n' +
+'Essential high-efficiency replacement filter for reusable systems.\n' +
+'Certified to NIOSH 42 CFR Part 84 P100 standard.\n' +
+'Premium Honeywell filter for maximum particulate protection.\n' +
+'Critical component for high-risk dust and fume environments.',
+rating: 4.8,
+reviews: 100,
+sold: '450+',
+tags: [
+'75ffp100 filter', 'p100 honeywell filter', 'low profile p100', 'flexible particulate filter', 'niosh p100 filter',
+'welding fume p100', 'pharmaceutical dust filter', 'asbestos protection filter', 'bayonet p100 filter', 'high efficiency filter',
+'reusable mask p100', 'north series compatible', 'high hazard particulate', 'premium honeywell filter', 'maximum dust protection'
+]
+},
+{
+id: 'organic-vapor-cartridge-n75001l-honeywell',
+title: 'Organic Vapor Cartridge N75001L Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://static.grainger.com/rp/s/is/image/Grainger/16M239_AS01',
+desc: 'Organic Vapor Cartridge N75001L Honeywell protects against organic vapors.\n' +
+'Activated carbon filter removes benzene, toluene, xylene, and many solvents.\n' +
+'Bayonet connection for quick, secure attachment to Honeywell masks.\n' +
+'Low breathing resistance design improves user comfort.\n' +
+'Compatible with North 5500, 7700, 5400, and other half/full face masks.\n' +
+'Ideal for painting, spraying, degreasing, and chemical handling.\n' +
+'Certified to NIOSH for organic vapor protection.\n' +
+'Essential cartridge for environments with solvent vapors.\n' +
+'Reliable Honeywell quality for gas and vapor safety.\n' +
+'Critical respiratory protection component.',
+rating: 4.8,
+reviews: 85,
+sold: '350+',
+tags: [
+'n75001l cartridge', 'organic vapor honeywell', 'solvent vapor filter', 'niosh organic vapor', 'bayonet cartridge honeywell',
+'painting respirator cartridge', 'spraying vapor protection', 'degreasing filter', 'chemical handling cartridge', 'low breathing cartridge',
+'north mask compatible', 'activated carbon cartridge', 'gas vapor ppe', 'reliable honeywell filter', 'essential vapor protection'
+]
+},
+{
+id: 'organic-vapor-acid-gas-cartridge-n75003l-honeywell',
+title: 'Organic Vapor & Acid Gas Cartridge N75003L Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://us.evocdn.io/supplier/catalog/1252/product/original/nr-75SCL.jpg',
+desc: 'Organic Vapor & Acid Gas Cartridge N75003L Honeywell protects against multiple hazards.\n' +
+'Filters organic vapors plus chlorine, hydrogen chloride, sulfur dioxide, and chlorine dioxide.\n' +
+'Activated carbon and chemical absorbent media for broad protection.\n' +
+'Bayonet connection for fast, secure fit on Honeywell respirators.\n' +
+'Low breathing resistance for improved comfort during use.\n' +
+'Compatible with North 5500, 7700, 5400 series half and full face masks.\n' +
+'Ideal for chemical plants, laboratories, water treatment, and cleaning.\n' +
+'Certified to NIOSH for organic vapor and acid gas protection.\n' +
+'Versatile cartridge for mixed gas and vapor environments.\n' +
+'Trusted Honeywell quality for multi-hazard respiratory safety.',
+rating: 4.8,
+reviews: 80,
+sold: '300+',
+tags: [
+'n75003l cartridge', 'organic acid gas filter', 'multi gas honeywell', 'niosh organic acid', 'bayonet multi cartridge',
+'chemical plant respirator', 'laboratory gas protection', 'water treatment cartridge', 'cleaning vapor filter', 'low breathing multi',
+'north compatible cartridge', 'activated carbon acid', 'broad spectrum ppe', 'versatile gas cartridge', 'trusted honeywell multi'
+]
+},
+{
+id: 'multi-gas-vapor-cartridge-75scl-honeywell',
+title: 'Multi-Gas Vapor Cartridge 75SCL Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.grainger.com/product/16M240_AS01',
+desc: 'Multi-Gas Vapor Cartridge 75SCL Honeywell protects against wide range of gases.\n' +
+'ABEK rated for organic, inorganic, acid gases, ammonia, and derivatives.\n' +
+'High-capacity media extends service life in mixed atmospheres.\n' +
+'Bayonet connection for quick attachment to Honeywell masks.\n' +
+'Low breathing resistance improves user comfort.\n' +
+'Compatible with North 5500, 7700, 5400 series respirators.\n' +
+'Ideal for chemical plants, laboratories, emergency response, and industrial cleaning.\n' +
+'Certified to NIOSH for multi-gas and vapor protection.\n' +
+'Versatile cartridge for complex chemical environments.\n' +
+'Professional-grade Honeywell filter for broad-spectrum safety.',
+rating: 4.9,
+reviews: 75,
+sold: '280+',
+tags: [
+'75scl cartridge', 'multi gas honeywell', 'abek cartridge', 'broad spectrum filter', 'niosh multi gas',
+'chemical plant multi cartridge', 'laboratory vapor protection', 'emergency response filter', 'industrial cleaning cartridge', 'low breathing multi',
+'north compatible multi', 'high capacity abek', 'complex chemical ppe', 'versatile gas protection', 'professional honeywell cartridge'
+]
+},
+{
+id: 'ammonia-and-methylamine-respirator-cartridges-n75004l-honeywell',
+title: 'Ammonia And Methylamine Respirator Cartridges N75004L Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://static.grainger.com/rp/s/is/image/Grainger/16M238_AS01',
+desc: 'Ammonia and Methylamine Cartridge N75004L Honeywell protects against ammonia and methylamine.\n' +
+'Specialized chemical absorbent media for effective gas removal.\n' +
+'Bayonet connection for quick, secure attachment to Honeywell masks.\n' +
+'Low breathing resistance design for improved comfort.\n' +
+'Compatible with North 5500, 7700, 5400 series half/full face masks.\n' +
+'Ideal for refrigeration, fertilizer production, agriculture, and cleaning.\n' +
+'Certified to NIOSH for ammonia and methylamine protection.\n' +
+'Essential cartridge for ammonia-related gas hazards.\n' +
+'Reliable Honeywell quality for specialized respiratory needs.\n' +
+'Critical protection in ammonia-handling environments.',
+rating: 4.7,
+reviews: 65,
+sold: '250+',
+tags: [
+'n75004l cartridge', 'ammonia methylamine filter', 'specialized gas cartridge', 'niosh ammonia protection', 'bayonet ammonia cartridge',
+'refrigeration gas mask', 'fertilizer production filter', 'agriculture ammonia cartridge', 'cleaning ammonia protection', 'low breathing ammonia',
+'north compatible ammonia', 'chemical absorbent cartridge', 'ammonia hazard ppe', 'reliable honeywell filter', 'specialized respiratory cartridge'
+]
+},
+{
+id: 'acid-gases-cartridge-n75002l-honeywell',
+title: 'Acid Gases Cartridge N75002L Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://cdn11.bigcommerce.com/s-8715e/images/stencil/1280x1280/products/559/381562/381562__04666.1683663738.png?c=2?imbypass=on',
+desc: 'Acid Gases Cartridge N75002L Honeywell protects against acid gases and vapors.\n' +
+'Filters chlorine, hydrogen chloride, sulfur dioxide, chlorine dioxide, hydrogen sulfide.\n' +
+'Activated carbon and chemical absorbent media for effective gas removal.\n' +
+'Bayonet connection for quick, secure attachment to Honeywell respirators.\n' +
+'Low breathing resistance improves user comfort during extended wear.\n' +
+'Compatible with North 5500, 7700, 5400 series half and full face masks.\n' +
+'Ideal for water treatment, chemical processing, metal pickling, and cleaning.\n' +
+'Certified to NIOSH for acid gas protection.\n' +
+'Reliable Honeywell cartridge for environments with corrosive acid gases.\n' +
+'Essential respiratory filter for acid-related industrial hazards.',
+rating: 4.7,
+reviews: 70,
+sold: '260+',
+tags: [
+'n75002l cartridge', 'acid gas honeywell', 'chlorine hydrogen chloride filter', 'sulfur dioxide cartridge', 'niosh acid gas',
+'bayonet acid cartridge', 'water treatment respirator', 'chemical processing filter', 'metal pickling cartridge', 'low breathing acid',
+'north compatible acid', 'corrosive gas ppe', 'reliable honeywell acid', 'industrial acid protection', 'essential acid gas filter'
+]
+},
+{
+id: 'full-face-mask-5400-series-honeywell',
+title: 'Full Face Mask 5400 Series Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2024/03/5000en.jpg',
+desc: 'Full Face Mask 5400 Series Honeywell is an economical full-face respirator.\n' +
+'Panoramic polycarbonate visor offers wide field of view with good optics.\n' +
+'Soft silicone face seal provides secure, comfortable fit.\n' +
+'Twin bayonet cartridge connection for fast filter changes.\n' +
+'5-point adjustable head harness for balanced weight distribution.\n' +
+'Speech diaphragm allows clear communication while masked.\n' +
+'Ideal for painting, chemical handling, welding fumes, and general industrial use.\n' +
+'Certified to EN 136 Class 2 and NIOSH standards.\n' +
+'Cost-effective full-face solution from trusted Honeywell.\n' +
+'Reliable protection for medium to high hazard respiratory tasks.',
+rating: 4.8,
+reviews: 120,
+sold: '400+',
+tags: [
+'5400 series full face', 'economical full face mask', 'honeywell 5400', 'panoramic visor respirator', 'en 136 class 2',
+'painting full face', 'chemical handling mask', 'welding fume protection', 'speech diaphragm mask', 'bayonet full face',
+'adjustable head harness', 'silicone face seal', 'medium hazard respirator', 'cost effective full face', 'reliable honeywell mask'
+]
+},
+
+
+
   {
-    id: 'bls-zero-33-face-mask',
-    title: 'BLS Zero 33 Face mask',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2023/02/ZERO-33-800x800-1.jpg',
-    desc: 'BLS Zero 33 Full Face Mask offers panoramic vision and superior respiratory protection.\n' +
-          'Wide polycarbonate visor provides excellent field of view with anti-fog coating.\n' +
-          'Soft hypoallergenic silicone face seal conforms comfortably to face.\n' +
-          'Twin bayonet cartridge connection for quick filter changes.\n' +
-          'Speech diaphragm ensures clear communication while masked.\n' +
-          '5-point adjustable head harness for secure, balanced fit.\n' +
-          'Ideal for painting, chemical handling, asbestos abatement, and welding fumes.\n' +
-          'Certified to EN 136 Class 2 and compatible with most standard filters.\n' +
-          'Premium full-face respirator for high-hazard respiratory environments.\n' +
-          'Professional-grade mask with exceptional comfort and visibility.',
-    rating: 4.8,
-    reviews: 140,
-    sold: '600+',
-    tags: [
-      'bls zero 33 mask', 'full face respirator', 'panoramic visor mask', 'anti fog full face', 'en 136 class 2',
-      'painting full face mask', 'chemical handling respirator', 'asbestos abatement mask', 'welding fume protection', 'speech diaphragm mask',
-      'hypoallergenic silicone', 'bayonet cartridge mask', 'adjustable head harness', 'high hazard respiratory', 'premium full face ppe'
-    ]
-  },
-  {
-    id: 'bls-680-next-ffp2-mask',
-    title: 'BLS 680 NEXT FFP2 mask',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2024/03/680-NEXT-800x800-1.jpg',
-    desc: 'BLS 680 NEXT FFP2 Mask is a premium disposable respirator with high filtration efficiency.\n' +
-          'Fold-flat design with exhalation valve reduces breathing resistance.\n' +
-          'Soft inner nose foam and adjustable nose clip for comfortable seal.\n' +
-          'Elastic head straps with buckle for secure, easy donning.\n' +
-          'High-efficiency melt-blown filter media blocks fine dust and aerosols.\n' +
-          'Ideal for construction, woodworking, sanding, pharmaceutical, and general dusty work.\n' +
-          'Certified to EN149 FFP2 NR standard with D (dolomite) optional.\n' +
-          'Lightweight and foldable for convenient storage.\n' +
-          'Comfortable, reliable disposable protection for medium-risk environments.\n' +
-          'High-performance FFP2 mask from trusted BLS.',
-    rating: 4.7,
-    reviews: 180,
-    sold: '800+',
-    tags: [
-      'bls 680 next ffp2', 'disposable ffp2 mask', 'valved respirator', 'fold flat ffp2', 'en149 ffp2 nr',
-      'construction dust mask', 'woodworking respirator', 'sanding ffp2 mask', 'pharmaceutical protection', 'adjustable nose clip ffp2',
-      'elastic head strap mask', 'high efficiency filter', 'comfortable disposable mask', 'medium risk respiratory', 'reliable bls ffp2'
-    ]
-  },
-  {
-    id: 'bls-129bw-face-mask',
-    title: 'BLS 129BW Face Mask',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2021/11/129-BW-800x800-1.jpg',
-    desc: 'BLS 129BW Face Mask is a valved FFP2 disposable respirator with excellent comfort.\n' +
-          'Exhalation valve reduces heat and moisture buildup inside mask.\n' +
-          'Pre-formed nose bridge and soft inner seal for secure fit.\n' +
-          'Elastic head straps with buckle for easy adjustment.\n' +
-          'High-filtration melt-blown layer protects against fine dust and aerosols.\n' +
-          'Ideal for construction, demolition, sanding, agriculture, and general dust.\n' +
-          'Certified to EN149 FFP2 NR D (dolomite tested) standard.\n' +
-          'Lightweight and foldable for convenient pocket storage.\n' +
-          'Comfort-focused disposable mask for medium-risk dusty environments.\n' +
-          'Trusted BLS quality at competitive price point.',
-    rating: 4.6,
-    reviews: 200,
-    sold: '1000+',
-    tags: [
-      'bls 129bw mask', 'valved ffp2 respirator', 'exhalation valve mask', 'en149 ffp2 nr d', 'construction dust mask',
-      'demolition ffp2', 'sanding respirator', 'agriculture dust protection', 'pre formed nose bridge', 'elastic buckle strap',
-      'high filtration ffp2', 'lightweight disposable mask', 'medium risk dust ppe', 'comfortable ffp2 mask', 'trusted bls respirator'
-    ]
-  },
-  {
-    id: 'bls-128bw-face-mask',
-    title: 'BLS 128BW Face Mask',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2021/11/128-BW-800x800-1.jpg',
-    desc: 'BLS 128BW Face Mask is a high-breathability FFP2 disposable respirator.\n' +
-          'Low breathing resistance thanks to advanced filter media.\n' +
-          'Soft inner nose foam and adjustable nose clip for good seal.\n' +
-          'Elastic head straps with buckle for secure, comfortable fit.\n' +
-          'Effective protection against fine dust, aerosols, and non-oil particles.\n' +
-          'Ideal for construction, woodworking, sweeping, and general dusty tasks.\n' +
-          'Certified to EN149 FFP2 NR standard.\n' +
-          'Fold-flat design stores easily in pockets or tool bags.\n' +
-          'Lightweight and comfortable for extended wear.\n' +
-          'Excellent value disposable mask from BLS.',
-    rating: 4.5,
-    reviews: 220,
-    sold: '1200+',
-    tags: [
-      'bls 128bw mask', 'high breathability ffp2', 'disposable dust mask', 'en149 ffp2 nr', 'construction ffp2 mask',
-      'woodworking respirator', 'low breathing resistance', 'adjustable nose clip ffp2', 'elastic strap mask', 'fine dust protection',
-      'fold flat ffp2', 'lightweight dust mask', 'extended wear ffp2', 'value respirator', 'general dusty tasks ppe'
-    ]
-  },
-  {
-    id: 'aura-disposable-respirator-9332-ffp3-valved',
-    title: 'Aura™ Disposable Respirator 9332+, FFP3, Valved',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://multimedia.3m.com/mws/media/222540J/3m-aura-disposable-respirator-ffp3-valved-9332.jpg',
-    desc: '3M Aura 9332+ FFP3 Valved Respirator provides highest filtration efficiency.\n' +
-          'Advanced 3-panel design conforms to face for excellent seal and comfort.\n' +
-          'Exhalation valve reduces heat and moisture inside mask.\n' +
-          'Soft nose foam and adjustable nose clip for secure fit.\n' +
-          'Elastic head straps with buckle for easy donning and adjustment.\n' +
-          'Protects against very fine dust, fumes, and oil-based aerosols.\n' +
-          'Ideal for welding fumes, pharmaceutical, asbestos, and high-hazard dust.\n' +
-          'Certified to EN149 FFP3 NR D standard.\n' +
-          'Premium disposable respirator for maximum respiratory protection.\n' +
-          'Trusted 3M Aura quality in high-risk environments.',
-    rating: 4.9,
-    reviews: 250,
-    sold: '900+',
-    tags: [
-      '3m aura 9332', 'ffp3 valved respirator', 'highest filtration mask', 'en149 ffp3 nr d', 'welding fume protection',
-      'pharmaceutical respirator', 'asbestos removal mask', '3 panel aura design', 'exhalation valve ffp3', 'adjustable nose clip aura',
-      'elastic buckle strap', 'high hazard dust mask', 'premium disposable respirator', 'maximum respiratory ppe', 'trusted 3m aura'
-    ]
-  },
-  {
-    id: 'particulate-respirator-p2-valved',
-    title: 'Particulate Respirator P2, valved',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://multimedia.3m.com/mws/media/106858O/3m-particulate-respirator-9322-valved.jpg',
-    desc: 'Particulate Respirator P2 Valved provides effective protection against dust and mists.\n' +
-          'Valved design reduces breathing resistance and heat buildup.\n' +
-          'Soft inner nose foam and adjustable nose clip for good seal.\n' +
-          'Elastic head straps with buckle for secure, comfortable fit.\n' +
-          'High-efficiency filter media blocks fine non-oil particulates.\n' +
-          'Fold-flat design for convenient storage in pockets.\n' +
-          'Ideal for construction, sanding, sweeping, agriculture, and general dust.\n' +
-          'Certified to AS/NZS 1716 P2 or equivalent EN149 FFP2 standards.\n' +
-          'Comfortable, reliable disposable respirator for medium-risk tasks.\n' +
-          'Trusted protection for everyday dusty environments.',
-    rating: 4.6,
-    reviews: 150,
-    sold: '700+',
-    tags: [
-      'p2 valved respirator', 'particulate dust mask', 'exhalation valve p2', 'construction p2 mask', 'sanding respirator p2',
-      'fold flat p2 mask', 'agriculture dust protection', 'high efficiency p2', 'comfortable valved mask', 'medium risk respiratory',
-      'adjustable nose clip p2', 'elastic buckle p2', 'general dust ppe', 'reliable particulate mask', 'everyday dust respirator'
-    ]
-  },
-  {
-    id: 'particulate-respirator-8210-n95',
-    title: 'Particulate Respirator 8210 N95',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://multimedia.3m.com/mws/media/909111O/3m-particulate-respirator-8210-n95.jpg',
-    desc: 'Particulate Respirator 8210 N95 is the classic disposable dust mask.\n' +
-          'NIOSH-approved N95 filters ≥95% of non-oil airborne particles.\n' +
-          'Molded cup shape with adjustable nose clip for secure fit.\n' +
-          'Elastic head straps provide secure seal without ear pressure.\n' +
-          'Lightweight and foldable for easy pocket storage.\n' +
-          'Ideal for construction, sanding, sweeping, grinding, and pandemic use.\n' +
-          'Meets NIOSH 42 CFR Part 84 N95 standard.\n' +
-          'Trusted worldwide for reliable, no-frills respiratory protection.\n' +
-          'Essential disposable mask for dusty and particulate-heavy tasks.\n' +
-          'Proven performance in industrial and health environments.',
-    rating: 4.7,
-    reviews: 300,
-    sold: '1500+',
-    tags: [
-      '3m 8210 n95', 'classic n95 respirator', 'niosh n95 mask', 'construction dust mask', 'sanding n95 protection',
-      'molded cup n95', 'elastic head strap n95', 'pandemic n95 mask', 'lightweight disposable', 'foldable n95',
-      'grinding particle mask', 'reliable dust respirator', 'industrial n95', 'health environment mask', 'proven n95 performance'
-    ]
-  },
-  {
-    id: 'dust-pre-filters',
-    title: 'Dust Pre-Filters',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/cartridges-filters/75FFP100.jpg',
-    desc: 'Dust Pre-Filters extend the life of main respirator cartridges.\n' +
-          'High-efficiency pre-filter captures large dust and particulate matter.\n' +
-          'Attaches easily to compatible cartridge/filter holders.\n' +
-          'Reduces loading on primary filter, improving breathability.\n' +
-          'Ideal for dusty environments such as construction, woodworking, and demolition.\n' +
-          'Cost-effective way to prolong cartridge life in high-dust conditions.\n' +
-          'Compatible with most Honeywell, 3M, and other bayonet-style systems.\n' +
-          'Simple disposable accessory for reusable respirators.\n' +
-          'Essential maintenance item for half-face and full-face masks.\n' +
-          'Improves overall respirator performance in dusty atmospheres.',
-    rating: 4.5,
-    reviews: 80,
-    sold: '400+',
-    tags: [
-      'dust pre filters', 'respirator pre-filter', 'high efficiency pre-filter', 'cartridge extender', 'construction dust pre',
-      'woodworking pre filter', 'demolition respirator accessory', 'bayonet pre filter', 'disposable dust pre', 'prolong cartridge life',
-      'honeywell compatible pre', '3m compatible pre filter', 'reusable mask accessory', 'dusty atmosphere ppe', 'maintenance respirator item'
-    ]
-  },
-  {
-    id: 'ammonia-cartirage-k2-bls',
-    title: 'Ammonia Cartirage K2 BLS',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2021/11/214-K2-800x800-1.jpg',
-    desc: 'Ammonia Cartridge K2 BLS protects against ammonia and ammonia derivatives.\n' +
-          'High-capacity activated carbon filter for extended service life.\n' +
-          'Bayonet connection for quick, secure attachment to compatible masks.\n' +
-          'Low breathing resistance design improves user comfort.\n' +
-          'Ideal for refrigeration, fertilizer plants, agriculture, and cleaning.\n' +
-          'Compatible with BLS 2000/3000/4000/5000 series half and full face masks.\n' +
-          'Certified to EN 14387 Class K2 for ammonia protection.\n' +
-          'Essential filter for environments with ammonia gas hazards.\n' +
-          'Reliable, high-performance cartridge from BLS.\n' +
-          'Critical respiratory protection for ammonia exposure.',
-    rating: 4.7,
-    reviews: 60,
-    sold: '250+',
-    tags: [
-      'ammonia cartridge k2', 'bls k2 filter', 'ammonia protection cartridge', 'en 14387 k2', 'refrigeration gas mask',
-      'fertilizer plant cartridge', 'agriculture ammonia filter', 'cleaning chemical cartridge', 'bayonet ammonia filter', 'low breathing resistance',
-      'bls 2000 compatible', 'full face cartridge', 'half mask ammonia filter', 'ammonia gas ppe', 'high capacity ammonia cartridge'
-    ]
-  },
-  {
-    id: 'multi-purpose-cartirage-abek2-bls',
-    title: 'Multi Purpose Cartirage ABEK2 BLS',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2021/11/225-ABEK2-800x800-1.jpg',
-    desc: 'Multi Purpose Cartridge ABEK2 BLS protects against multiple gas and vapor types.\n' +
-          'ABEK2 rated for organic vapors, inorganic gases, acid gases, and ammonia.\n' +
-          'High-capacity activated carbon and chemical absorbent media.\n' +
-          'Bayonet connection for fast, secure attachment to BLS masks.\n' +
-          'Low breathing resistance for improved user comfort.\n' +
-          'Ideal for chemical plants, laboratories, painting, and industrial cleaning.\n' +
-          'Compatible with BLS 2000/3000/4000/5000 series respirators.\n' +
-          'Certified to EN 14387 Class ABEK2 for broad-spectrum gas protection.\n' +
-          'Versatile cartridge for sites with mixed chemical hazards.\n' +
-          'Professional-grade multi-gas filter from trusted BLS.',
-    rating: 4.8,
-    reviews: 70,
-    sold: '300+',
-    tags: [
-      'abek2 cartridge', 'multi gas cartridge', 'bls abek2 filter', 'en 14387 abek2', 'organic vapor protection',
-      'inorganic gas cartridge', 'acid gas filter', 'ammonia multi cartridge', 'chemical plant filter', 'laboratory gas mask',
-      'bayonet multi purpose', 'low breathing abek2', 'broad spectrum protection', 'mixed hazard cartridge', 'professional multi gas ppe'
-    ]
-  },
-  {
-    id: 'ffp2-disposable-mask-128bw-r-d',
-    title: 'FFP2 Disposable Mask 128BW R D',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2021/11/128-BW-800x800-1.jpg',
-    desc: 'FFP2 Disposable Mask 128BW R D is reusable style with excellent breathability.\n' +
-          'Valved design significantly reduces heat and moisture buildup.\n' +
-          'Dolomite (D) tested for low breathing resistance in humid conditions.\n' +
-          'Soft nose foam and adjustable nose clip create good facial seal.\n' +
-          'Elastic head straps with buckle for secure, comfortable fit.\n' +
-          'High-efficiency filter media against fine dust and non-oil aerosols.\n' +
-          'Ideal for construction, demolition, agriculture, and general dusty tasks.\n' +
-          'Certified to EN149 FFP2 NR D standard.\n' +
-          'Reusable for multiple shifts when not heavily loaded.\n' +
-          'Comfortable, high-performance disposable FFP2 from BLS.',
-    rating: 4.6,
-    reviews: 190,
-    sold: '900+',
-    tags: [
-      '128bw ffp2 mask', 'reusable ffp2 valved', 'dolomite tested ffp2', 'en149 ffp2 nr d', 'construction dust mask',
-      'demolition ffp2 respirator', 'agriculture dust protection', 'breathable valved mask', 'adjustable nose clip ffp2', 'elastic buckle ffp2',
-      'high efficiency filter', 'fine dust respirator', 'multi shift ffp2', 'comfortable disposable mask', 'bls ffp2 performance'
-    ]
-  },
-  {
-    id: 'ffp3-disposable-mask-bls-800-flickit',
-    title: 'FFP3 Disposable Mask BLS 800 Flickit',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2023/02/800-Flickit-800x800-1.jpg',
-    desc: 'FFP3 Disposable Mask BLS 800 Flickit features innovative folding design.\n' +
-          'Flick-open shape maintains mask hygiene and makes donning easier.\n' +
-          'Highest filtration efficiency – protects against very fine dust, fumes, and aerosols.\n' +
-          'Valved version reduces breathing resistance and heat buildup.\n' +
-          'Soft inner nose foam and adjustable nose clip for secure seal.\n' +
-          'Elastic head straps with buckle for comfortable fit.\n' +
-          'Ideal for welding fumes, pharmaceutical, asbestos, and high-hazard dust.\n' +
-          'Certified to EN149 FFP3 NR standard.\n' +
-          'Premium disposable FFP3 with user-friendly folding system.\n' +
-          'Maximum respiratory protection with BLS quality.',
-    rating: 4.8,
-    reviews: 110,
-    sold: '500+',
-    tags: [
-      'bls 800 flickit', 'ffp3 folding mask', 'highest filtration ffp3', 'en149 ffp3 nr', 'welding fume ffp3',
-      'pharmaceutical respirator', 'asbestos removal mask', 'valved ffp3 mask', 'flick open design', 'adjustable nose clip ffp3',
-      'elastic buckle ffp3', 'high hazard dust mask', 'premium disposable ffp3', 'user friendly ffp3', 'maximum respiratory protection'
-    ]
-  },
-  {
-    id: 'ffp2-disposable-mask-bls-700',
-    title: 'FFP2 Disposable Mask BLS 700',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2023/02/700-800x800-1.jpg',
-    desc: 'FFP2 Disposable Mask BLS 700 offers high comfort and reliable filtration.\n' +
-          'Molded shape with soft inner nose seal for excellent fit.\n' +
-          'Low breathing resistance thanks to advanced filter media.\n' +
-          'Elastic head straps with buckle for secure, comfortable wear.\n' +
-          'Effective against fine dust, mists, and non-oil aerosols.\n' +
-          'Ideal for construction, woodworking, sanding, and general dust work.\n' +
-          'Certified to EN149 FFP2 NR standard.\n' +
-          'Lightweight and foldable for easy storage.\n' +
-          'Comfort-focused disposable mask for medium-risk environments.\n' +
-          'High-quality BLS FFP2 at competitive price.',
-    rating: 4.6,
-    reviews: 130,
-    sold: '600+',
-    tags: [
-      'bls 700 ffp2', 'comfort ffp2 mask', 'molded ffp2 respirator', 'en149 ffp2 nr', 'construction dust mask',
-      'woodworking ffp2', 'low breathing ffp2', 'elastic buckle mask', 'fine dust protection', 'sanding respirator',
-      'lightweight ffp2', 'medium risk dust ppe', 'foldable disposable mask', 'high quality bls', 'competitive ffp2 mask'
-    ]
-  },
-  {
-    id: 'n95-non-oil-particulate-filter-7506n95-honeywell',
-    title: 'N95 Non-Oil Particulate Filter 7506N95 Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/cartridges-filters/7506N95.jpg',
-    desc: 'N95 Non-Oil Particulate Filter 7506N95 Honeywell filters dust and aerosols.\n' +
-          'NIOSH-approved N95 filtration efficiency ≥95% for non-oil particles.\n' +
-          'Compatible with Honeywell North half-face and full-face respirators.\n' +
-          'Bayonet connection for quick, secure attachment.\n' +
-          'Low-profile design maintains good field of vision.\n' +
-          'Ideal for construction, sanding, grinding, sweeping, and woodworking.\n' +
-          'Essential replacement filter for reusable respirator systems.\n' +
-          'Certified to NIOSH 42 CFR Part 84 N95 standard.\n' +
-          'Reliable Honeywell quality for particulate protection.\n' +
-          'Critical component for maintaining respiratory safety.',
-    rating: 4.7,
-    reviews: 90,
-    sold: '400+',
-    tags: [
-      'honeywell 7506n95', 'n95 filter cartridge', 'non oil particulate filter', 'niosh n95 filter', 'bayonet n95 filter',
-      'construction dust filter', 'sanding respirator filter', 'grinding particulate filter', 'replacement n95 filter', 'reusable mask filter',
-      'low profile filter', 'woodworking n95 filter', 'honeywell north compatible', 'reliable particulate ppe', 'essential n95 component'
-    ]
-  },
-  {
-    id: 'flexible-low-profile-p100-filter-75ffp100-honeywell',
-    title: 'Flexible, Low Profile P100 Filter 75FFP100 Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/cartridges-filters/75FFP100.jpg',
-    desc: 'Flexible Low Profile P100 Filter 75FFP100 Honeywell offers highest filtration efficiency.\n' +
-          'P100 filters ≥99.97% of oil- and non-oil particulates.\n' +
-          'Flexible, low-profile design improves downward visibility.\n' +
-          'Bayonet connection for quick attachment to Honeywell respirators.\n' +
-          'Ideal for welding fumes, pharmaceutical dust, asbestos, and high-hazard particles.\n' +
-          'Compatible with North 5500, 7700, 5400, and other series masks.\n' +
-          'Essential high-efficiency replacement filter for reusable systems.\n' +
-          'Certified to NIOSH 42 CFR Part 84 P100 standard.\n' +
-          'Premium Honeywell filter for maximum particulate protection.\n' +
-          'Critical component for high-risk dust and fume environments.',
-    rating: 4.8,
-    reviews: 100,
-    sold: '450+',
-    tags: [
-      '75ffp100 filter', 'p100 honeywell filter', 'low profile p100', 'flexible particulate filter', 'niosh p100 filter',
-      'welding fume p100', 'pharmaceutical dust filter', 'asbestos protection filter', 'bayonet p100 filter', 'high efficiency filter',
-      'reusable mask p100', 'north series compatible', 'high hazard particulate', 'premium honeywell filter', 'maximum dust protection'
-    ]
-  },
-  {
-    id: 'organic-vapor-cartridge-n75001l-honeywell',
-    title: 'Organic Vapor Cartridge N75001L Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/cartridges-filters/N75001L.jpg',
-    desc: 'Organic Vapor Cartridge N75001L Honeywell protects against organic vapors.\n' +
-          'Activated carbon filter removes benzene, toluene, xylene, and many solvents.\n' +
-          'Bayonet connection for quick, secure attachment to Honeywell masks.\n' +
-          'Low breathing resistance design improves user comfort.\n' +
-          'Compatible with North 5500, 7700, 5400, and other half/full face masks.\n' +
-          'Ideal for painting, spraying, degreasing, and chemical handling.\n' +
-          'Certified to NIOSH for organic vapor protection.\n' +
-          'Essential cartridge for environments with solvent vapors.\n' +
-          'Reliable Honeywell quality for gas and vapor safety.\n' +
-          'Critical respiratory protection component.',
-    rating: 4.8,
-    reviews: 85,
-    sold: '350+',
-    tags: [
-      'n75001l cartridge', 'organic vapor honeywell', 'solvent vapor filter', 'niosh organic vapor', 'bayonet cartridge honeywell',
-      'painting respirator cartridge', 'spraying vapor protection', 'degreasing filter', 'chemical handling cartridge', 'low breathing cartridge',
-      'north mask compatible', 'activated carbon cartridge', 'gas vapor ppe', 'reliable honeywell filter', 'essential vapor protection'
-    ]
-  },
-  {
-    id: 'organic-vapor-acid-gas-cartridge-n75003l-honeywell',
-    title: 'Organic Vapor & Acid Gas Cartridge N75003L Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/cartridges-filters/N75003L.jpg',
-    desc: 'Organic Vapor & Acid Gas Cartridge N75003L Honeywell protects against multiple hazards.\n' +
-          'Filters organic vapors plus chlorine, hydrogen chloride, sulfur dioxide, and chlorine dioxide.\n' +
-          'Activated carbon and chemical absorbent media for broad protection.\n' +
-          'Bayonet connection for fast, secure fit on Honeywell respirators.\n' +
-          'Low breathing resistance for improved comfort during use.\n' +
-          'Compatible with North 5500, 7700, 5400 series half and full face masks.\n' +
-          'Ideal for chemical plants, laboratories, water treatment, and cleaning.\n' +
-          'Certified to NIOSH for organic vapor and acid gas protection.\n' +
-          'Versatile cartridge for mixed gas and vapor environments.\n' +
-          'Trusted Honeywell quality for multi-hazard respiratory safety.',
-    rating: 4.8,
-    reviews: 80,
-    sold: '300+',
-    tags: [
-      'n75003l cartridge', 'organic acid gas filter', 'multi gas honeywell', 'niosh organic acid', 'bayonet multi cartridge',
-      'chemical plant respirator', 'laboratory gas protection', 'water treatment cartridge', 'cleaning vapor filter', 'low breathing multi',
-      'north compatible cartridge', 'activated carbon acid', 'broad spectrum ppe', 'versatile gas cartridge', 'trusted honeywell multi'
-    ]
-  },
-  {
-    id: 'multi-gas-vapor-cartridge-75scl-honeywell',
-    title: 'Multi-Gas Vapor Cartridge 75SCL Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/cartridges-filters/75SCL.jpg',
-    desc: 'Multi-Gas Vapor Cartridge 75SCL Honeywell protects against wide range of gases.\n' +
-          'ABEK rated for organic, inorganic, acid gases, ammonia, and derivatives.\n' +
-          'High-capacity media extends service life in mixed atmospheres.\n' +
-          'Bayonet connection for quick attachment to Honeywell masks.\n' +
-          'Low breathing resistance improves user comfort.\n' +
-          'Compatible with North 5500, 7700, 5400 series respirators.\n' +
-          'Ideal for chemical plants, laboratories, emergency response, and industrial cleaning.\n' +
-          'Certified to NIOSH for multi-gas and vapor protection.\n' +
-          'Versatile cartridge for complex chemical environments.\n' +
-          'Professional-grade Honeywell filter for broad-spectrum safety.',
-    rating: 4.9,
-    reviews: 75,
-    sold: '280+',
-    tags: [
-      '75scl cartridge', 'multi gas honeywell', 'abek cartridge', 'broad spectrum filter', 'niosh multi gas',
-      'chemical plant multi cartridge', 'laboratory vapor protection', 'emergency response filter', 'industrial cleaning cartridge', 'low breathing multi',
-      'north compatible multi', 'high capacity abek', 'complex chemical ppe', 'versatile gas protection', 'professional honeywell cartridge'
-    ]
-  },
-  {
-    id: 'ammonia-and-methylamine-respirator-cartridges-n75004l-honeywell',
-    title: 'Ammonia And Methylamine Respirator Cartridges N75004L Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/cartridges-filters/N75004L.jpg',
-    desc: 'Ammonia and Methylamine Cartridge N75004L Honeywell protects against ammonia and methylamine.\n' +
-          'Specialized chemical absorbent media for effective gas removal.\n' +
-          'Bayonet connection for quick, secure attachment to Honeywell masks.\n' +
-          'Low breathing resistance design for improved comfort.\n' +
-          'Compatible with North 5500, 7700, 5400 series half/full face masks.\n' +
-          'Ideal for refrigeration, fertilizer production, agriculture, and cleaning.\n' +
-          'Certified to NIOSH for ammonia and methylamine protection.\n' +
-          'Essential cartridge for ammonia-related gas hazards.\n' +
-          'Reliable Honeywell quality for specialized respiratory needs.\n' +
-          'Critical protection in ammonia-handling environments.',
-    rating: 4.7,
-    reviews: 65,
-    sold: '250+',
-    tags: [
-      'n75004l cartridge', 'ammonia methylamine filter', 'specialized gas cartridge', 'niosh ammonia protection', 'bayonet ammonia cartridge',
-      'refrigeration gas mask', 'fertilizer production filter', 'agriculture ammonia cartridge', 'cleaning ammonia protection', 'low breathing ammonia',
-      'north compatible ammonia', 'chemical absorbent cartridge', 'ammonia hazard ppe', 'reliable honeywell filter', 'specialized respiratory cartridge'
-    ]
-  },
-  {
-    id: 'acid-gases-cartridge-n75002l-honeywell',
-    title: 'Acid Gases Cartridge N75002L Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/cartridges-filters/N75002L.jpg',
-    desc: 'Acid Gases Cartridge N75002L Honeywell protects against acid gases and vapors.\n' +
-          'Filters chlorine, hydrogen chloride, sulfur dioxide, chlorine dioxide, hydrogen sulfide.\n' +
-          'Activated carbon and chemical absorbent media for effective gas removal.\n' +
-          'Bayonet connection for quick, secure attachment to Honeywell respirators.\n' +
-          'Low breathing resistance improves user comfort during extended wear.\n' +
-          'Compatible with North 5500, 7700, 5400 series half and full face masks.\n' +
-          'Ideal for water treatment, chemical processing, metal pickling, and cleaning.\n' +
-          'Certified to NIOSH for acid gas protection.\n' +
-          'Reliable Honeywell cartridge for environments with corrosive acid gases.\n' +
-          'Essential respiratory filter for acid-related industrial hazards.',
-    rating: 4.7,
-    reviews: 70,
-    sold: '260+',
-    tags: [
-      'n75002l cartridge', 'acid gas honeywell', 'chlorine hydrogen chloride filter', 'sulfur dioxide cartridge', 'niosh acid gas',
-      'bayonet acid cartridge', 'water treatment respirator', 'chemical processing filter', 'metal pickling cartridge', 'low breathing acid',
-      'north compatible acid', 'corrosive gas ppe', 'reliable honeywell acid', 'industrial acid protection', 'essential acid gas filter'
-    ]
-  },
-  {
-    id: 'full-face-mask-5400-series-honeywell',
-    title: 'Full Face Mask 5400 Series Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/full-face/5400-series.jpg',
-    desc: 'Full Face Mask 5400 Series Honeywell is an economical full-face respirator.\n' +
-          'Panoramic polycarbonate visor offers wide field of view with good optics.\n' +
-          'Soft silicone face seal provides secure, comfortable fit.\n' +
-          'Twin bayonet cartridge connection for fast filter changes.\n' +
-          '5-point adjustable head harness for balanced weight distribution.\n' +
-          'Speech diaphragm allows clear communication while masked.\n' +
-          'Ideal for painting, chemical handling, welding fumes, and general industrial use.\n' +
-          'Certified to EN 136 Class 2 and NIOSH standards.\n' +
-          'Cost-effective full-face solution from trusted Honeywell.\n' +
-          'Reliable protection for medium to high hazard respiratory tasks.',
-    rating: 4.8,
-    reviews: 120,
-    sold: '400+',
-    tags: [
-      '5400 series full face', 'economical full face mask', 'honeywell 5400', 'panoramic visor respirator', 'en 136 class 2',
-      'painting full face', 'chemical handling mask', 'welding fume protection', 'speech diaphragm mask', 'bayonet full face',
-      'adjustable head harness', 'silicone face seal', 'medium hazard respirator', 'cost effective full face', 'reliable honeywell mask'
-    ]
-  },
-  {
-    id: 'full-face-mask-5000-series-bls',
-    title: 'Full Face Mask 5000 Series BLS',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2023/02/5000-800x800-1.jpg',
-    desc: 'Full Face Mask 5000 Series BLS offers premium protection with wide visor.\n' +
-          'Large polycarbonate lens provides excellent field of vision and optics.\n' +
-          'Soft hypoallergenic silicone seal conforms comfortably to face.\n' +
-          'Twin bayonet connection for quick cartridge/filter changes.\n' +
-          '5-point adjustable head harness distributes weight evenly.\n' +
-          'Speech diaphragm ensures clear voice transmission.\n' +
-          'Ideal for chemical plants, laboratories, painting, and high-hazard dust.\n' +
-          'Certified to EN 136 Class 2 and compatible with most standard filters.\n' +
-          'High-quality BLS full-face respirator for demanding environments.\n' +
-          'Professional-grade mask with superior comfort and visibility.',
-    rating: 4.9,
-    reviews: 100,
-    sold: '350+',
-    tags: [
-      'bls 5000 full face', 'premium full face mask', 'wide visor respirator', 'en 136 class 2 bls', 'hypoallergenic silicone mask',
-      'chemical plant full face', 'laboratory respirator', 'painting full face protection', 'speech diaphragm bls', 'bayonet connection mask',
-      'adjustable head harness', 'high hazard full face', 'superior visibility mask', 'professional bls respirator', 'comfortable full face ppe'
-    ]
-  },
-  {
-    id: 'full-face-mask-3000-series-bls',
-    title: 'Full Face Mask 3000 Series BLS',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2023/02/3000-800x800-1.jpg',
-    desc: 'Full Face Mask 3000 Series BLS provides excellent vision and reliable protection.\n' +
-          'Panoramic visor offers wide, distortion-free field of view.\n' +
-          'Soft silicone face seal ensures comfortable, secure fit.\n' +
-          'Twin bayonet cartridge system for fast filter changes.\n' +
-          '5-point adjustable head harness for balanced comfort.\n' +
-          'Speech diaphragm allows clear communication.\n' +
-          'Ideal for painting, spraying, chemical handling, and welding fumes.\n' +
-          'Certified to EN 136 Class 2 for full-face respiratory protection.\n' +
-          'High-quality BLS mask for medium to high hazard tasks.\n' +
-          'Professional respirator with great visibility and comfort.',
-    rating: 4.8,
-    reviews: 110,
-    sold: '380+',
-    tags: [
-      'bls 3000 full face', 'panoramic full face mask', 'en 136 class 2 bls', 'silicone seal respirator', 'painting full face mask',
-      'chemical handling bls', 'welding fume protection', 'speech diaphragm full face', 'bayonet cartridge mask', 'adjustable harness bls',
-      'medium hazard respirator', 'wide vision full face', 'professional bls mask', 'comfortable full face ppe', 'reliable visibility mask'
-    ]
-  },
-  {
-    id: 'full-face-mask-2000-series-bls',
-    title: 'Full Face Mask 2000 Series BLS',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2023/02/2000-800x800-1.jpg',
-    desc: 'Full Face Mask 2000 Series BLS is a comfortable, reliable full-face respirator.\n' +
-          'Clear polycarbonate visor provides good field of view.\n' +
-          'Soft silicone face seal conforms well for secure fit.\n' +
-          'Twin bayonet connection for quick, secure filter attachment.\n' +
-          '5-point adjustable head harness distributes weight evenly.\n' +
-          'Speech diaphragm ensures clear voice communication.\n' +
-          'Ideal for painting, light chemical work, dust, and general industrial use.\n' +
-          'Certified to EN 136 Class 2 for full-face protection.\n' +
-          'Cost-effective BLS full-face solution for medium-risk tasks.\n' +
-          'Comfortable, durable mask for everyday respiratory hazards.',
-    rating: 4.7,
-    reviews: 130,
-    sold: '420+',
-    tags: [
-      'bls 2000 full face', 'comfortable full face mask', 'en 136 class 2 bls', 'silicone seal 2000', 'painting full face respirator',
-      'light chemical mask', 'general industrial full face', 'speech diaphragm bls', 'bayonet connection mask', 'adjustable harness full face',
-      'medium risk respirator', 'cost effective full face', 'durable bls mask', 'everyday respiratory ppe', 'reliable full face protection'
-    ]
-  },
-  {
-    id: 'full-face-mask',
-    title: 'Full Face Mask',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://multimedia.3m.com/mws/media/179678O/3m-full-facepiece-reusable-respirator-6000-series.jpg',
-    desc: 'Full Face Mask provides complete face, eye, and respiratory protection.\n' +
-          'Large polycarbonate lens offers wide, distortion-free vision.\n' +
-          'Soft silicone face seal conforms comfortably to most face shapes.\n' +
-          'Twin bayonet cartridge system for fast filter changes.\n' +
-          '5-point adjustable head harness for secure, balanced fit.\n' +
-          'Speech diaphragm allows clear communication while wearing.\n' +
-          'Ideal for chemical handling, painting, welding fumes, and asbestos.\n' +
-          'Certified to EN 136 and NIOSH standards for full-face respirators.\n' +
-          'High-quality reusable mask for high-hazard environments.\n' +
-          'Professional-grade full-face protection for serious respiratory risks.',
-    rating: 4.8,
-    reviews: 90,
-    sold: '300+',
-    tags: [
-      'full face respirator mask', 'wide vision full face', 'silicone seal full face', 'en 136 full face', 'niosh full face mask',
-      'chemical handling full face', 'painting respirator mask', 'welding fume protection', 'asbestos removal mask', 'speech diaphragm full face',
-      'bayonet cartridge system', 'adjustable head harness mask', 'high hazard respiratory', 'professional full face ppe', 'reusable full face mask'
-    ]
-  },
-  {
-    id: 'comfortable-half-face-mask-7700-series-honeywell',
-    title: 'Comfortable Half Face Mask 7700 Series Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/half-mask/7700-series.jpg',
-    desc: 'Comfortable Half Face Mask 7700 Series Honeywell is designed for all-day wear.\n' +
-          'Premium silicone facepiece provides exceptional seal and comfort.\n' +
-          'Low-profile design improves downward visibility.\n' +
-          'Twin bayonet cartridge connection for quick filter changes.\n' +
-          'Cradle suspension head harness distributes weight evenly.\n' +
-          'Ideal for painting, spraying, chemical handling, and welding fumes.\n' +
-          'Compatible with wide range of Honeywell cartridges and filters.\n' +
-          'Certified to NIOSH and EN 140 standards.\n' +
-          'Superior comfort and fit for extended shift use.\n' +
-          'Premium Honeywell half-face respirator for demanding tasks.',
-    rating: 4.7,
-    reviews: 150,
-    sold: '600+',
-    tags: [
-      '7700 series half face', 'comfortable silicone mask', 'low profile respirator', 'bayonet half face', 'cradle suspension mask',
-      'painting half face mask', 'chemical handling respirator', 'welding fume half mask', 'niosh en 140 mask', 'extended shift respirator',
-      'premium honeywell mask', 'all day comfort ppe', 'superior fit half face', 'demanding task respirator', 'high quality half mask'
-    ]
-  },
-  {
-    id: 'economical-half-face-mask-hm-500-series-honeywell',
-    title: 'Economical Half Face Mask HM 500 Series Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/half-mask/HM500.jpg',
-    desc: 'Economical Half Face Mask HM 500 Series Honeywell offers reliable protection at low cost.\n' +
-          'Soft thermoplastic elastomer facepiece provides good seal and comfort.\n' +
-          'Twin bayonet connection for fast cartridge/filter attachment.\n' +
-          'Adjustable head harness for secure fit.\n' +
-          'Low-profile design maintains good visibility.\n' +
-          'Ideal for painting, light chemical work, dust, and general industrial tasks.\n' +
-          'Compatible with Honeywell North cartridges and filters.\n' +
-          'Certified to NIOSH and EN 140 standards.\n' +
-          'Affordable, durable half-face respirator for medium-risk environments.\n' +
-          'Great value Honeywell solution for everyday respiratory needs.',
-    rating: 4.6,
-    reviews: 140,
-    sold: '550+',
-    tags: [
-      'hm 500 half face', 'economical respirator', 'thermoplastic elastomer mask', 'bayonet economical mask', 'low profile half face',
-      'painting half mask', 'light chemical respirator', 'general industrial mask', 'niosh en 140 economical', 'adjustable harness half face',
-      'value honeywell mask', 'medium risk respiratory', 'affordable half face ppe', 'durable everyday mask', 'great value respirator'
-    ]
-  },
-  {
-    id: 'half-face-mask',
-    title: 'Half Face Mask',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://multimedia.3m.com/mws/media/908462O/3m-half-facepiece-reusable-respirator-7500-series.jpg',
-    desc: 'Half Face Mask provides reusable respiratory protection with excellent comfort.\n' +
-          'Premium silicone facepiece conforms to face for secure seal.\n' +
-          'Twin bayonet cartridge connection for quick filter changes.\n' +
-          'Low-profile design improves downward and peripheral vision.\n' +
-          '4-point adjustable head harness for balanced fit.\n' +
-          'Ideal for painting, spraying, chemical handling, and welding fumes.\n' +
-          'Compatible with wide range of cartridges and filters.\n' +
-          'Certified to EN 140 and NIOSH standards.\n' +
-          'High-quality reusable half-face respirator for medium to high hazards.\n' +
-          'Professional-grade mask for extended industrial use.',
-    rating: 4.7,
-    reviews: 100,
-    sold: '400+',
-    tags: [
-      'premium half face mask', 'silicone half respirator', 'bayonet half face', 'low profile respirator', 'painting half mask',
-      'chemical handling half face', 'welding fume protection', 'en 140 niosh mask', 'adjustable harness half', 'reusable medium hazard',
-      'high quality half face', 'extended industrial use', 'comfortable half mask', 'professional respiratory ppe', 'versatile half face mask'
-    ]
-  },
-  {
-    id: 'half-face-mask',
-    title: 'Half Face Mask',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.blsgroup.it/wp-content/uploads/2023/02/4000-half-mask-800x800-1.jpg',
-    desc: 'Half Face Mask (BLS 4000 series) offers advanced comfort and protection.\n' +
-          'Soft silicone facepiece with excellent seal and durability.\n' +
-          'Bayonet connection system for fast, secure cartridge attachment.\n' +
-          'Low breathing resistance design improves user comfort.\n' +
-          'Adjustable head harness with 4-point suspension.\n' +
-          'Ideal for painting, chemical handling, dust, and welding fumes.\n' +
-          'Compatible with BLS wide range of filters and cartridges.\n' +
-          'Certified to EN 140 for half-face respiratory protection.\n' +
-          'High-quality BLS half-face mask for demanding tasks.\n' +
-          'Comfortable, reliable reusable respirator.',
-    rating: 4.8,
-    reviews: 95,
-    sold: '380+',
-    tags: [
-      'bls 4000 half face', 'advanced half mask', 'silicone half respirator', 'bayonet bls mask', 'low breathing half face',
-      'painting half mask bls', 'chemical handling respirator', 'welding fume half face', 'en 140 bls mask', 'adjustable suspension mask',
-      'high quality bls respirator', 'demanding task half face', 'comfortable reusable mask', 'reliable bls ppe', 'versatile half face protection'
-    ]
-  },
-  {
-    id: 'fenzy-aeris-mini-scba-honeywell',
-    title: 'Fenzy Aeris Mini SCBA Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/scba/aeris-mini.jpg',
-    desc: 'Fenzy Aeris Mini SCBA Honeywell is a compact self-contained breathing apparatus.\n' +
-          'Lightweight design with reduced profile for better mobility.\n' +
-          '30-minute air cylinder (or optional 15/20 min) for escape or short entry.\n' +
-          'Demand valve with positive pressure for constant airflow.\n' +
-          'Full-face mask with wide visor and speech diaphragm.\n' +
-          'Low-pressure whistle alarm signals low air supply.\n' +
-          'Ideal for confined space entry, rescue, firefighting standby, and industrial escape.\n' +
-          'Certified to EN 137 and NFPA standards for SCBA.\n' +
-          'Compact, reliable SCBA for emergency breathing protection.\n' +
-          'Trusted Honeywell Fenzy quality for life-critical situations.',
-    rating: 4.9,
-    reviews: 50,
-    sold: '150+',
-    tags: [
-      'fenzy aeris mini scba', 'compact breathing apparatus', 'lightweight scba', 'en 137 scba', 'nfpa scba honeywell',
-      'confined space escape', 'rescue breathing apparatus', 'firefighting standby scba', 'low pressure alarm', 'full face scba mask',
-      '30 minute cylinder', 'demand valve scba', 'industrial escape ppe', 'life critical breathing', 'trusted honeywell scba'
-    ]
-  },
-  {
-    id: 'bio-s-cape-with-3l-composite-air-cylinder-honeywell',
-    title: 'Bio-S-Cape with 3L Composite Air Cylinder Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/escape/bio-s-cape.jpg',
-    desc: 'Bio-S-Cape with 3L Composite Air Cylinder Honeywell is an emergency escape breathing device.\n' +
-          'Lightweight composite cylinder provides 15–20 minutes of air supply.\n' +
-          'Hood-style full-face piece with wide visor for easy donning.\n' +
-          'Constant flow regulator ensures steady breathing.\n' +
-          'Bright orange bag for quick identification in emergencies.\n' +
-          'Ideal for escape from fire, toxic gas release, or oxygen-deficient atmospheres.\n' +
-          'Certified to EN 1146 and SOLAS for emergency escape.\n' +
-          'Compact, ready-to-use EEBD for industrial and marine use.\n' +
-          'Reliable Honeywell escape solution for sudden hazards.\n' +
-          'Critical life-saving device for rapid evacuation.',
-    rating: 4.8,
-    reviews: 60,
-    sold: '200+',
-    tags: [
-      'bio s cape honeywell', 'emergency escape breathing', '3l composite cylinder', 'en 1146 escape device', 'solas eebd',
-      'fire escape hood', 'toxic gas escape', 'oxygen deficient protection', 'constant flow regulator', 'bright orange eebd',
-      'industrial escape device', 'marine emergency breathing', 'quick donning hood', 'life saving escape ppe', 'reliable honeywell eebd'
-    ]
-  },
-  {
-    id: 'aeris-scba-1823231-honeywell',
-    title: 'AERIS SCBA 1823231 Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/scba/aeris-scba.jpg',
-    desc: 'AERIS SCBA 1823231 Honeywell is a professional self-contained breathing apparatus.\n' +
-          '30-minute or 45-minute cylinder options for extended entry.\n' +
-          'Backplate with harness system distributes weight evenly.\n' +
-          'Demand valve with positive pressure and low-pressure alarm.\n' +
-          'Full-face mask with wide visor and speech diaphragm.\n' +
-          'Buddy breather connection for emergency rescue.\n' +
-          'Ideal for firefighting, confined space entry, hazmat, and industrial rescue.\n' +
-          'Certified to EN 137 and NFPA 1981 standards for structural firefighting.\n' +
-          'Rugged, reliable SCBA for life-threatening atmospheres.\n' +
-          'Trusted Honeywell Fenzy quality for professional responders.',
-    rating: 4.9,
-    reviews: 40,
-    sold: '120+',
-    tags: [
-      'aeris scba honeywell', 'professional breathing apparatus', '30 minute scba', 'en 137 scba', 'nfpa 1981 firefighting',
-      'confined space scba', 'hazmat breathing apparatus', 'demand valve scba', 'buddy breather connection', 'full face scba mask',
-      'rugged scba harness', 'low pressure alarm', 'industrial rescue scba', 'structural firefighting ppe', 'trusted honeywell scba'
-    ]
-  },
-  {
-    id: 'dust-mask-hm-102',
-    title: 'DUST MASK HM 102',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61fZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
-    desc: 'Dust Mask HM 102 is a basic, low-cost disposable mask for light dust.\n' +
-          'Cone shape with adjustable aluminum nose bridge for better fit.\n' +
-          'Elastic ear loops or head straps for secure wear.\n' +
-          'Multi-layer filtration media blocks large dust particles.\n' +
-          'Breathable design minimizes breathing resistance.\n' +
-          'Foldable for easy pocket storage between uses.\n' +
-          'Ideal for sweeping, light sanding, woodworking, and general cleaning.\n' +
-          'Meets basic NIOSH N95 or EN149 FFP1 equivalent standards.\n' +
-          'Very economical solution for occasional light dust exposure.\n' +
-          'Simple, effective entry-level dust protection.',
-    rating: 4.2,
-    reviews: 300,
-    sold: '2000+',
-    tags: [
-      'hm 102 dust mask', 'basic disposable mask', 'cone dust mask', 'light dust protection', 'niosh n95 equivalent',
-      'en149 ffp1 mask', 'sweeping dust mask', 'light sanding respirator', 'woodworking basic mask', 'breathable dust mask',
-      'elastic ear loop mask', 'adjustable nose bridge', 'foldable dust mask', 'economical dust ppe', 'occasional dust protection'
-    ]
-  },
-  {
-    id: 'surgical-face-mask-hs-1101',
-    title: 'SURGICAL FACE MASK HS-1101',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71fZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
-    desc: 'Surgical Face Mask HS-1101 provides 3-ply medical-grade protection.\n' +
-          'Fluid-resistant outer layer, melt-blown filter middle layer, soft inner layer.\n' +
-          'High filtration efficiency against droplets, dust, and bacteria.\n' +
-          'Adjustable nose strip and elastic ear loops for secure fit.\n' +
-          'Breathable design reduces heat buildup during long wear.\n' +
-          'Packaged in boxes for convenient dispensing.\n' +
-          'Ideal for medical, dental, clinical, and general hygiene use.\n' +
-          'Meets ASTM F2100 Level 1 or equivalent standards.\n' +
-          'Disposable, hygienic mask for everyday protection.\n' +
-          'Affordable, reliable barrier against respiratory droplets.',
-    rating: 4.4,
-    reviews: 500,
-    sold: '5000+',
-    tags: [
-      'surgical face mask', '3 ply medical mask', 'fluid resistant mask', 'astm f2100 level 1', 'medical protection mask',
-      'dental hygiene mask', 'clinical face mask', 'breathable surgical mask', 'adjustable nose strip', 'elastic ear loop mask',
-      'droplet barrier mask', 'disposable hygiene mask', 'high filtration mask', 'affordable medical ppe', 'reliable droplet protection'
-    ]
-  },
-  {
-    id: 'sandblast-hood-np-503',
-    title: 'Sandblast Hood NP-503',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61gZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
-    desc: 'Sandblast Hood NP-503 provides full head and face protection during abrasive blasting.\n' +
-          'Heavy-duty vinyl hood with large clear visor for good visibility.\n' +
-          'Inner cape protects neck and shoulders from rebound media.\n' +
-          'Adjustable drawstring and elastic for secure fit.\n' +
-          'Breathing tube connection for supplied-air respirator system.\n' +
-          'Reinforced seams withstand high-pressure blasting conditions.\n' +
-          'Ideal for sandblasting, shot blasting, grit blasting, and surface preparation.\n' +
-          'Certified to standards for abrasive blasting hoods.\n' +
-          'Durable hood for maximum protection in abrasive environments.\n' +
-          'Essential PPE for safe abrasive blasting operations.',
-    rating: 4.7,
-    reviews: 80,
-    sold: '300+',
-    tags: [
-      'sandblast hood', 'abrasive blasting hood', 'full head protection', 'clear visor hood', 'supplied air hood',
-      'sandblasting ppe', 'shot blasting hood', 'grit blasting protection', 'surface preparation hood', 'heavy duty vinyl hood',
-      'inner cape hood', 'adjustable drawstring hood', 'reinforced seam hood', 'high pressure blasting', 'essential abrasive ppe'
-    ]
-  },
-  {
-    id: 'chemical-hood-np-312',
-    title: 'Chemical Hood NP-312',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71kZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
-    desc: 'Chemical Hood NP-312 protects head, face, and neck from chemical splashes and vapors.\n' +
-          'Clear PVC visor with anti-fog coating for good visibility.\n' +
-          'Flexible vinyl hood with extended cape for shoulder coverage.\n' +
-          'Adjustable drawstring and elastic for secure fit.\n' +
-          'Breathing tube port for connection to supplied-air system.\n' +
-          'Resists many acids, alkalis, and liquid chemicals.\n' +
-          'Ideal for chemical handling, tank cleaning, spill response, and decontamination.\n' +
-          'Certified for chemical splash and limited gas protection.\n' +
-          'Durable hood for hazardous liquid and vapor environments.\n' +
-          'Essential PPE for safe chemical exposure work.',
-    rating: 4.6,
-    reviews: 90,
-    sold: '400+',
-    tags: [
-      'chemical hood', 'splash resistant hood', 'clear pvc visor', 'chemical cape hood', 'supplied air chemical hood',
-      'tank cleaning protection', 'spill response hood', 'decontamination ppe', 'acid alkali resistant hood', 'adjustable chemical hood',
-      'extended cape hood', 'hazardous vapor protection', 'durable chemical hood', 'essential chemical ppe', 'safe liquid exposure hood'
-    ]
-  },
-  {
-    id: 'single-respirator-half-face-mask-np-305',
-    title: 'Single Respirator Half Face Mask NP-305',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61jZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
-    desc: 'Single Respirator Half Face Mask NP-305 provides basic cartridge protection.\n' +
-          'Soft thermoplastic elastomer facepiece for comfortable seal.\n' +
-          'Single bayonet connection for one cartridge or filter.\n' +
-          'Adjustable head harness for secure fit.\n' +
-          'Low-profile design maintains good downward visibility.\n' +
-          'Ideal for light chemical handling, dust, and nuisance odors.\n' +
-          'Compatible with standard single cartridges and particulate filters.\n' +
-          'Certified to EN 140 for half-face respirators.\n' +
-          'Economical entry-level reusable half-face mask.\n' +
-          'Simple, effective respiratory protection for low-risk tasks.',
-    rating: 4.5,
-    reviews: 150,
-    sold: '800+',
-    tags: [
-      'single cartridge half face', 'basic respirator mask', 'en 140 half face', 'thermoplastic elastomer mask', 'light chemical respirator',
-      'dust protection half face', 'nuisance odor mask', 'low profile single bayonet', 'adjustable harness mask', 'economical half mask',
-      'entry level respiratory', 'low risk ppe mask', 'simple reusable mask', 'effective half face protection', 'basic cartridge mask'
-    ]
-  },
-  {
-    id: 'twin-respirator-half-face-mask-np-306',
-    title: 'Twin Respirator Half Face Mask NP-306',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71jZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
-    desc: 'Twin Respirator Half Face Mask NP-306 offers enhanced filtration with two cartridges.\n' +
-          'Soft facepiece material provides comfortable seal.\n' +
-          'Twin bayonet connections for dual cartridge or filter use.\n' +
-          'Adjustable 4-point head harness for balanced fit.\n' +
-          'Low breathing resistance due to dual filter design.\n' +
-          'Ideal for painting, spraying, light chemical work, and dust.\n' +
-          'Compatible with wide range of twin cartridges and filters.\n' +
-          'Certified to EN 140 for half-face respiratory protection.\n' +
-          'Durable, comfortable half-face mask for medium-risk tasks.\n' +
-          'Reliable twin-cartridge solution for better protection.',
-    rating: 4.7,
-    reviews: 200,
-    sold: '1000+',
-    tags: [
-      'twin cartridge half face', 'dual filter respirator', 'en 140 twin mask', 'soft facepiece mask', 'painting twin respirator',
-      'spraying half face mask', 'light chemical twin mask', 'low breathing twin', 'adjustable harness twin', 'medium risk respirator',
-      'durable twin half face', 'comfortable twin cartridge', 'reliable twin mask', 'better protection half face', 'twin bayonet mask'
-    ]
-  },
-  {
-    id: 'cartridges-filters-rc-201',
-    title: 'Cartridges & Filters, RC-201',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61kZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
-    desc: 'Cartridges & Filters RC-201 provide organic vapor and particulate protection.\n' +
-          'Activated carbon layer removes organic vapors and solvents.\n' +
-          'Particulate pre-filter captures dust and aerosols.\n' +
-          'Bayonet connection for quick attachment to compatible half/full face masks.\n' +
-          'Low breathing resistance for comfortable extended wear.\n' +
-          'Ideal for painting, degreasing, solvent handling, and light dust.\n' +
-          'Certified to EN 14387 for organic vapor and P2 particulate.\n' +
-          'Essential replacement cartridge for reusable respirators.\n' +
-          'Cost-effective multi-purpose filter for medium-risk tasks.\n' +
-          'Reliable protection against common industrial vapors and dust.',
-    rating: 4.5,
-    reviews: 120,
-    sold: '600+',
-    tags: [
-      'rc-201 cartridge', 'organic vapor filter', 'particulate pre filter', 'en 14387 rc-201', 'painting cartridge filter',
-      'solvent handling filter', 'degreasing respirator filter', 'bayonet organic vapor', 'low breathing cartridge', 'multi purpose filter',
-      'reusable mask cartridge', 'medium risk vapor dust', 'cost effective filter', 'reliable industrial cartridge', 'essential vapor protection'
-    ]
-  },
-  {
-    id: 'cartridges-filters-rc-203',
-    title: 'Cartridges & Filters, RC-203',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71lZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
-    desc: 'Cartridges & Filters RC-203 offer multi-gas protection in one unit.\n' +
-          'Filters organic vapors, inorganic gases, acid gases, and ammonia.\n' +
-          'High-capacity media for extended service life in mixed atmospheres.\n' +
-          'Bayonet connection for fast attachment to compatible masks.\n' +
-          'Low breathing resistance improves user comfort.\n' +
-          'Ideal for chemical plants, laboratories, water treatment, and cleaning.\n' +
-          'Certified to EN 14387 ABEK2 for broad-spectrum gas protection.\n' +
-          'Versatile replacement cartridge for multi-hazard environments.\n' +
-          'Reliable filter for complex chemical exposure.\n' +
-          'Essential multi-gas cartridge for professional use.',
-    rating: 4.6,
-    reviews: 100,
-    sold: '500+',
-    tags: [
-      'rc-203 cartridge', 'multi gas filter', 'abek2 cartridge', 'en 14387 multi gas', 'chemical plant filter',
-      'laboratory multi cartridge', 'water treatment gas protection', 'cleaning vapor filter', 'bayonet multi gas', 'low breathing multi gas',
-      'broad spectrum cartridge', 'mixed hazard filter', 'versatile replacement cartridge', 'professional multi gas ppe', 'complex exposure filter'
-    ]
-  },
-  {
-    id: 'cartridges-filters-rc-202',
-    title: 'Cartridges & Filters, RC-202',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61lZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
-    desc: 'Cartridges & Filters RC-202 provide high-efficiency particulate protection.\n' +
-          'P2 filter media captures fine dust, mists, and non-oil aerosols.\n' +
-          'Bayonet connection for quick, secure attachment to masks.\n' +
-          'Low-profile design maintains good visibility.\n' +
-          'Ideal for sanding, grinding, woodworking, and general dust.\n' +
-          'Compatible with most half-face and full-face respirators.\n' +
-          'Certified to EN 143 for P2 particulate filtration.\n' +
-          'Essential replacement filter for dusty environments.\n' +
-          'Reliable, cost-effective particulate cartridge.\n' +
-          'Critical component for dust and aerosol respiratory safety.',
-    rating: 4.5,
-    reviews: 110,
-    sold: '550+',
-    tags: [
-      'rc-202 cartridge', 'p2 particulate filter', 'high efficiency dust', 'en 143 p2 filter', 'sanding respirator filter',
-      'grinding dust cartridge', 'woodworking particulate', 'bayonet dust filter', 'low profile p2', 'general dust protection',
-      'reusable mask filter', 'dust aerosol cartridge', 'cost effective p2', 'reliable particulate filter', 'essential dust ppe'
-    ]
-  },
-  {
-    id: 'safety-53-helmet-mounted',
-    title: 'Safety 53 Helmet Mounted',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.greendevilsafety.com/cdn/shop/products/41_1024x1024@2x.jpg?v=1651134750',
-    desc: 'Safety 53 Helmet Mounted earmuffs attach directly to safety helmets.\n' +
-          'High noise reduction SNR 28–30 dB for loud industrial environments.\n' +
-          'Soft foam cushions provide comfort during long shifts.\n' +
-          'Universal mounting system fits most slotted hard hats.\n' +
-          'Adjustable arms allow precise positioning over ears.\n' +
-          'Foldable design for storage when not in use.\n' +
-          'Ideal for construction, manufacturing, demolition, and heavy machinery.\n' +
-          'Certified to EN 352-3 for helmet-mounted hearing protection.\n' +
-          'Reliable combination of head and hearing protection.\n' +
-          'Essential PPE for noisy helmet-required work sites.',
-    rating: 4.6,
-    reviews: 90,
-    sold: '400+',
-    tags: [
-      'helmet mounted earmuffs', 'safety 53 earmuffs', 'snr 30 helmet muff', 'en 352-3 hearing protection', 'universal mounting earmuff',
-      'construction helmet muff', 'manufacturing noise protection', 'demolition hearing ppe', 'soft foam cushions', 'adjustable arm earmuff',
-      'foldable helmet mounted', 'heavy machinery hearing', 'head hearing combination', 'noisy helmet work', 'essential combined ppe'
-    ]
-  },
-  {
-    id: 'safety-earmuffs-em92bk',
-    title: 'Safety Earmuffs EM92BK',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://blueeagle-safety.com/wp-content/uploads/2024/11/EM92BK-1.jpg',
-    desc: 'Safety Earmuffs EM92BK provide reliable over-the-head hearing protection.\n' +
-          'SNR 28–30 dB noise reduction for medium to high noise levels.\n' +
-          'Soft foam cushions and padded headband for all-day comfort.\n' +
-          'Adjustable headband with steel wire for secure fit.\n' +
-          'Lightweight ABS cups resist impact and chemicals.\n' +
-          'Foldable design for easy storage in tool bags.\n' +
-          'Ideal for construction, woodworking, mowing, and general industry.\n' +
-          'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
-          'Comfortable, durable earmuffs for daily noise exposure.\n' +
-          'Essential PPE for preventing hearing damage.',
-    rating: 4.5,
-    reviews: 110,
-    sold: '500+',
-    tags: [
-      'em92bk earmuffs', 'over the head hearing', 'snr 30 earmuffs', 'padded headband muff', 'en 352-1 hearing protection',
-      'construction ear muff', 'woodworking noise muff', 'foldable earmuff', 'lightweight hearing ppe', 'adjustable steel headband',
-      'abs cup earmuff', 'general industry hearing', 'comfortable noise muff', 'prevent hearing loss', 'daily noise protection'
-    ]
-  },
-  {
-    id: 'verishield-vs130-passive-earmuff-honeywell',
-    title: 'VeriShield™ VS130 Passive Earmuff Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://honeywell.scene7.com/is/image/Honeywell65/sps-hppe-brp900-1035108-vs',
-    desc: 'VeriShield VS130 Passive Earmuff Honeywell offers high attenuation for extreme noise.\n' +
-          'SNR 35–37 dB reduction for very loud industrial environments.\n' +
-          'Air Flow Control technology reduces breathing resistance.\n' +
-          'Large ear cups with memory foam cushions for superior comfort.\n' +
-          'Dielectric design safe around electrical hazards.\n' +
-          'Adjustable headband with telescoping arms for precise fit.\n' +
-          'Ideal for heavy machinery, shooting ranges, airports, and demolition.\n' +
-          'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
-          'Premium Honeywell earmuff for maximum noise isolation.\n' +
-          'Professional-grade hearing protection for high-decibel settings.',
-    rating: 4.8,
-    reviews: 130,
-    sold: '600+',
-    tags: [
-      'verishield vs130 earmuff', 'high attenuation muff', 'snr 35 earmuff', 'air flow control muff', 'en 352-1 honeywell',
-      'heavy machinery hearing', 'shooting range earmuff', 'airport noise protection', 'demolition earmuff', 'memory foam cushions',
-      'dielectric hearing protection', 'adjustable telescoping muff', 'premium honeywell muff', 'maximum noise isolation', 'professional hearing ppe'
-    ]
-  },
-  {
-    id: 'safety-53-earmuffs',
-    title: 'Safety 53 Earmuffs',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.decibeldefense.com/cdn/shop/products/decibel-defense-professional-safety-ear-muffs-black_1024x1024@2x.jpg?v=1640994840',
-    desc: 'Safety 53 Earmuffs provide reliable over-the-head hearing protection.\n' +
-          'SNR 28–30 dB noise reduction for medium to high noise levels.\n' +
-          'Soft foam cushions and padded headband for comfort.\n' +
-          'Adjustable headband with steel wire for secure fit.\n' +
-          'Lightweight ABS cups resist impact and chemicals.\n' +
-          'Foldable design for easy storage.\n' +
-          'Ideal for construction, manufacturing, mowing, and general industry.\n' +
-          'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
-          'Durable, comfortable earmuffs for daily noise exposure.\n' +
-          'Essential PPE for preventing hearing loss.',
-    rating: 4.6,
-    reviews: 100,
-    sold: '450+',
-    tags: [
-      'safety 53 earmuffs', 'over the head muff', 'snr 30 earmuff', 'padded headband muff', 'en 352-1 hearing protection',
-      'construction ear muff', 'manufacturing noise muff', 'foldable earmuff', 'lightweight hearing ppe', 'adjustable steel headband',
-      'abs cup earmuff', 'general industry hearing', 'comfortable noise muff', 'prevent hearing loss', 'daily noise protection'
-    ]
-  },
-  {
-    id: 'disposable-foam-earplugs-nrr-32-corded',
-    title: 'Disposable Foam Earplugs NRR 32 Corded',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71ObW-K3d2L._AC_SL1500_.jpg',
-    desc: 'Disposable Foam Earplugs NRR 32 Corded offer high noise reduction with convenience.\n' +
-          'NRR 32 dB blocks loud industrial and construction noise.\n' +
-          'Slow-recovery foam expands to fit ear canal securely.\n' +
-          'Attached cord prevents loss and allows hanging around neck.\n' +
-          'Smooth tapered shape for easy insertion and removal.\n' +
-          'Individually wrapped for hygiene and easy distribution.\n' +
-          'Ideal for construction, manufacturing, shooting ranges, and mowing.\n' +
-          'Certified to ANSI S3.19 for high noise reduction rating.\n' +
-          'Cost-effective, high-performance disposable earplugs.\n' +
-          'Essential hearing protection for loud work environments.',
-    rating: 4.5,
-    reviews: 300,
-    sold: '2000+',
-    tags: [
-      'corded foam earplugs', 'nrr 32 earplugs', 'disposable hearing protection', 'slow recovery foam', 'construction earplugs',
-      'manufacturing noise plugs', 'shooting range earplugs', 'ansi s3.19 earplugs', 'attached cord plugs', 'individually wrapped earplugs',
-      'easy insertion earplugs', 'high noise reduction', 'cost effective hearing', 'loud environment ppe', 'essential disposable earplugs'
-    ]
-  },
-  {
-    id: 'disposable-foam-uncorded-earplugs-nrr-32db',
-    title: 'Disposable Foam Uncorded Earplugs NRR 32dB',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://multimedia.3m.com/mws/media/909111O/3m-particulate-respirator-8210-n95.jpg',
-    desc: 'Disposable Foam Uncorded Earplugs NRR 32dB deliver high noise blocking.\n' +
-          'NRR 32 dB reduces loud industrial and construction sounds.\n' +
-          'Slow-recovery polyurethane foam expands for custom fit.\n' +
-          'Tapered shape allows easy insertion and removal.\n' +
-          'Soft material provides all-day comfort without pressure.\n' +
-          'Individually wrapped for hygiene and portability.\n' +
-          'Ideal for construction, manufacturing, mowing, and shooting.\n' +
-          'Certified to ANSI S3.19 for reliable noise reduction.\n' +
-          'Low-cost, high-performance disposable hearing protection.\n' +
-          'Essential uncorded earplugs for preventing hearing damage.',
-    rating: 4.4,
-    reviews: 350,
-    sold: '2500+',
-    tags: [
-      'uncorded foam earplugs', 'nrr 32 disposable', 'slow recovery earplugs', 'construction uncorded', 'manufacturing hearing plugs',
-      'mowing noise protection', 'shooting uncorded plugs', 'ansi s3.19 earplugs', 'tapered foam plugs', 'individually wrapped uncorded',
-      'all day comfort earplugs', 'high noise blocking', 'low cost hearing ppe', 'essential uncorded earplugs', 'prevent hearing damage'
-    ]
-  },
-  {
-    id: 'laser-lite-ll-30-contoured-t-shape-corded-earplugs-honeywell',
-    title: 'Laser Lite LL-30 Contoured T-Shape Corded Earplugs Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/earplugs/laser-trak.jpg',
-    desc: 'Laser Lite LL-30 Contoured T-Shape Corded Earplugs Honeywell offer high visibility and comfort.\n' +
-          'NRR 32 dB noise reduction for loud industrial environments.\n' +
-          'Self-adjusting polyurethane foam expands for custom fit.\n' +
-          'Bright multi-color swirled design makes compliance checks easy.\n' +
-          'Attached cord prevents loss and allows hanging around neck.\n' +
-          'T-shape contour improves insertion and retention.\n' +
-          'Ideal for construction, manufacturing, shooting ranges, and mowing.\n' +
-          'Certified to ANSI S3.19 for reliable hearing protection.\n' +
-          'High-visibility earplugs that workers can easily spot.\n' +
-          'Comfortable, effective corded disposable earplugs.',
-    rating: 4.7,
-    reviews: 200,
-    sold: '1000+',
-    tags: [
-      'laser lite ll-30', 'contoured t shape earplugs', 'corded high visibility', 'nrr 32 honeywell', 'self adjusting foam',
-      'construction compliance plugs', 'manufacturing earplugs', 'shooting range corded', 'multi color earplugs', 'tapered insertion plugs',
-      'individually wrapped corded', 'high noise reduction plugs', 'easy compliance earplugs', 'comfortable honeywell plugs', 'effective disposable earplugs'
-    ]
-  },
-  {
-    id: 'smart-fit-corded-earplugs-honeywell',
-    title: 'Smart Fit Corded Earplugs Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://honeywell.scene7.com/is/image/Honeywell65/sps-hppe-brp900-smf-30',
-    desc: 'Smart Fit Corded Earplugs Honeywell conform to ear canal temperature.\n' +
-          'Heat-activated material softens and shapes for personalized fit.\n' +
-          'NRR 30–33 dB noise reduction for medium to high noise levels.\n' +
-          'Attached cord prevents loss and allows hanging around neck.\n' +
-          'Smooth tapered design for easy insertion and removal.\n' +
-          'Bright colors for easy compliance checks.\n' +
-          'Ideal for construction, manufacturing, mowing, and general industry.\n' +
-          'Certified to ANSI S3.19 for reliable hearing protection.\n' +
-          'Adaptive, comfortable corded disposable earplugs.\n' +
-          'High-performance earplugs that fit better over time.',
-    rating: 4.6,
-    reviews: 180,
-    sold: '800+',
-    tags: [
-      'smart fit earplugs', 'heat activated earplugs', 'corded conforming plugs', 'nrr 30 honeywell', 'personalized fit earplugs',
-      'construction adaptive plugs', 'manufacturing hearing protection', 'mowing corded earplugs', 'smooth tapered plugs', 'bright compliance earplugs',
-      'individually wrapped smart', 'high noise reduction plugs', 'adaptive comfort earplugs', 'better fit disposable', 'high performance honeywell plugs'
-    ]
-  },
-  {
-    id: 'smartfit-tapered-tpe-corded-earplugs-honeywell',
-    title: 'SmartFit Tapered TPE Corded Earplugs Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://honeywell.scene7.com/is/image/Honeywell65/sps-hppe-brp900-smf-30bu',
-    desc: 'SmartFit Tapered TPE Corded Earplugs Honeywell offer reusable comfort.\n' +
-          'TPE material conforms to ear canal for custom fit.\n' +
-          'NRR 30–33 dB noise reduction for loud work environments.\n' +
-          'Detachable cord system allows corded or uncorded use.\n' +
-          'Tapered shape for easy insertion and secure retention.\n' +
-          'Washable and reusable for cost savings.\n' +
-          'Ideal for construction, manufacturing, shooting ranges, and mowing.\n' +
-          'Certified to ANSI S3.19 for reliable hearing protection.\n' +
-          'Durable, adaptive earplugs with versatile cord option.\n' +
-          'Comfortable Honeywell solution for repeated use.',
-    rating: 4.7,
-    reviews: 160,
-    sold: '700+',
-    tags: [
-      'smartfit tpe earplugs', 'tapered reusable earplugs', 'corded detachable plugs', 'nrr 30 honeywell', 'washable earplugs',
-      'construction reusable plugs', 'manufacturing hearing protection', 'shooting range tpe', 'adaptive fit earplugs', 'detachable cord system',
-      'tapered insertion plugs', 'high noise reduction reusable', 'durable honeywell earplugs', 'versatile corded plugs', 'comfortable repeated use'
-    ]
-  },
-  {
-    id: 'disposable-foam-earplug-uncorded-nrr-33',
-    title: 'Disposable Foam Earplug Uncorded NRR 33',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://multimedia.3m.com/mws/media/909111O/3m-particulate-respirator-8210-n95.jpg',
-    desc: 'Disposable Foam Earplug Uncorded NRR 33 delivers maximum noise blocking.\n' +
-          'NRR 33 dB reduces very loud industrial and construction noise.\n' +
-          'Slow-recovery foam expands for custom ear canal fit.\n' +
-          'Smooth tapered shape for easy insertion and removal.\n' +
-          'Soft material provides comfort during extended wear.\n' +
-          'Individually wrapped for hygiene and easy distribution.\n' +
-          'Ideal for heavy machinery, shooting ranges, demolition, and airports.\n' +
-          'Certified to ANSI S3.19 for highest noise reduction rating.\n' +
-          'High-performance, low-cost disposable earplugs.\n' +
-          'Essential hearing protection for extreme noise environments.',
-    rating: 4.5,
-    reviews: 400,
-    sold: '3000+',
-    tags: [
-      'uncorded nrr 33 earplug', 'maximum noise reduction', 'slow recovery foam', 'disposable high nrr', 'heavy machinery earplugs',
-      'shooting range uncorded', 'demolition hearing protection', 'airport noise plugs', 'tapered foam earplugs', 'individually wrapped uncorded',
-      'comfortable high nrr', 'extreme noise ppe', 'low cost high performance', 'essential extreme hearing', 'industrial nrr 33 plugs'
-    ]
-  },
-  {
-    id: 'disposable-foam-earplug-corded-nrr-33',
-    title: 'Disposable Foam Earplug Corded NRR 33',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71ObW-K3d2L._AC_SL1500_.jpg',
-    desc: 'Disposable Foam Earplug Corded NRR 33 provides highest noise reduction.\n' +
-          'NRR 33 dB blocks extreme industrial and construction noise.\n' +
-          'Slow-recovery polyurethane foam expands for custom fit.\n' +
-          'Attached cord prevents loss and allows hanging around neck.\n' +
-          'Tapered shape for easy insertion and secure retention.\n' +
-          'Individually wrapped for hygiene and portability.\n' +
-          'Ideal for heavy machinery, shooting ranges, demolition, and airports.\n' +
-          'Certified to ANSI S3.19 for maximum hearing protection.\n' +
-          'High-performance corded disposable earplugs.\n' +
-          'Essential PPE for preventing hearing damage in loud settings.',
-    rating: 4.6,
-    reviews: 380,
-    sold: '2800+',
-    tags: [
-      'corded nrr 33 earplug', 'maximum noise blocking', 'slow recovery corded', 'disposable high nrr corded', 'heavy machinery hearing',
-      'shooting range corded plugs', 'demolition nrr 33', 'airport extreme noise', 'tapered corded earplugs', 'individually wrapped corded',
-      'comfortable high nrr corded', 'extreme noise protection', 'high performance corded', 'essential loud setting ppe', 'industrial nrr 33 corded'
-    ]
-  },
-  {
-    id: 'verishield-vs120-passive-earmuff-honeywell',
-    title: 'VeriShield™ VS120 Passive Earmuff Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://honeywell.scene7.com/is/image/Honeywell65/sps-hppe-brp900-1035105-vs',
-    desc: 'VeriShield VS120 Passive Earmuff Honeywell offers reliable noise reduction.\n' +
-          'SNR 30–32 dB for medium to high noise industrial environments.\n' +
-          'Air Flow Control technology reduces heat and moisture buildup.\n' +
-          'Large ear cups with memory foam cushions for comfort.\n' +
-          'Dielectric design safe around electrical hazards.\n' +
-          'Adjustable telescoping headband for precise fit.\n' +
-          'Ideal for construction, manufacturing, mowing, and general industry.\n' +
-          'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
-          'Comfortable, high-quality earmuff from Honeywell.\n' +
-          'Professional hearing protection for daily noisy tasks.',
-    rating: 4.7,
-    reviews: 120,
-    sold: '550+',
-    tags: [
-      'verishield vs120 earmuff', 'medium noise reduction', 'snr 30 honeywell muff', 'air flow control earmuff', 'en 352-1 vs120',
-      'construction hearing muff', 'manufacturing earmuff', 'memory foam cushions', 'dielectric vs120', 'adjustable telescoping muff',
-      'general industry hearing', 'comfortable honeywell muff', 'professional noise protection', 'daily noisy tasks ppe', 'reliable vs120 earmuff'
-    ]
-  },
-  {
-    id: 'verishield-vs110-passive-earmuff-honeywell',
-    title: 'VeriShield™ VS110 Passive Earmuff Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://honeywell.scene7.com/is/image/Honeywell65/sps-hppe-brp900-1035100-vs',
-    desc: 'VeriShield VS110 Passive Earmuff Honeywell is lightweight for lower noise levels.\n' +
-          'SNR 25–28 dB reduction suitable for moderate industrial noise.\n' +
-          'Slim ear cups with soft foam cushions for comfort.\n' +
-          'Adjustable headband with telescoping arms for fit.\n' +
-          'Dielectric construction safe near electrical equipment.\n' +
-          'Foldable design for easy storage.\n' +
-          'Ideal for light manufacturing, assembly, mowing, and general tasks.\n' +
-          'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
-          'Comfortable, economical earmuff from Honeywell.\n' +
-          'Reliable hearing protection for everyday moderate noise.',
-    rating: 4.6,
-    reviews: 140,
-    sold: '600+',
-    tags: [
-      'verishield vs110 earmuff', 'lightweight earmuff', 'snr 25 honeywell', 'slim cup earmuff', 'en 352-1 vs110',
-      'light manufacturing hearing', 'assembly noise muff', 'mowing earmuff', 'dielectric light muff', 'foldable vs110',
-      'general task hearing', 'comfortable honeywell muff', 'economical noise protection', 'moderate noise ppe', 'reliable lightweight earmuff'
-    ]
-  },
-  {
-    id: 'safety-works-earmuffs-em92rd',
-    title: 'Safety Works Earmuffs EM92RD',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://blueeagle-safety.com/wp-content/uploads/2024/11/EM92RD-1.jpg',
-    desc: 'Safety Works Earmuffs EM92RD provide reliable over-the-head protection.\n' +
-          'SNR 28–30 dB noise reduction for medium to high noise levels.\n' +
-          'Soft foam cushions and padded headband for comfort.\n' +
-          'Adjustable headband with steel wire for secure fit.\n' +
-          'Lightweight ABS cups resist impact and chemicals.\n' +
-          'Foldable design for easy storage.\n' +
-          'Ideal for construction, woodworking, mowing, and general industry.\n' +
-          'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
-          'Comfortable, durable earmuffs for daily noise exposure.\n' +
-          'Essential PPE for preventing hearing damage.',
-    rating: 4.5,
-    reviews: 100,
-    sold: '450+',
-    tags: [
-      'em92rd earmuffs', 'over the head muff', 'snr 30 safety works', 'padded headband muff', 'en 352-1 earmuff',
-      'construction ear muff', 'woodworking noise protection', 'foldable earmuff', 'lightweight hearing ppe', 'adjustable steel headband',
-      'abs cup earmuff', 'general industry hearing', 'comfortable noise muff', 'prevent hearing loss', 'daily noise protection'
-    ]
-  },
-  {
-    id: 'safety-earmuffs-em62',
-    title: 'Safety Earmuffs EM62',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.decibeldefense.com/cdn/shop/products/decibel-defense-professional-safety-ear-muffs-black_1024x1024@2x.jpg?v=1640994840',
-    desc: 'Safety Earmuffs EM62 provide compact, reliable hearing protection.\n' +
-          'SNR 27–29 dB reduction for moderate to high noise levels.\n' +
-          'Soft foam cushions for comfort during long shifts.\n' +
-          'Adjustable headband for secure fit.\n' +
-          'Lightweight design reduces fatigue.\n' +
-          'Foldable for easy storage in tool bags.\n' +
-          'Ideal for construction, manufacturing, mowing, and workshops.\n' +
-          'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
-          'Durable, comfortable earmuffs for everyday noise.\n' +
-          'Essential PPE for protecting hearing on the job.',
-    rating: 4.4,
-    reviews: 110,
-    sold: '500+',
-    tags: [
-      'em62 earmuffs', 'compact hearing protection', 'snr 27 earmuff', 'soft foam muff', 'en 352-1 em62',
-      'construction compact muff', 'manufacturing ear muff', 'foldable lightweight muff', 'adjustable headband muff', 'workshop noise protection',
-      'daily hearing ppe', 'comfortable compact earmuff', 'prevent hearing loss', 'reliable moderate noise', 'essential job ear protection'
-    ]
-  },
-  {
-    id: 'safety-earmuffs-em68',
-    title: 'Safety Earmuffs EM68',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.decibeldefense.com/cdn/shop/products/decibel-defense-professional-safety-ear-muffs-black_1024x1024@2x.jpg?v=1640994840',
-    desc: 'Safety Earmuffs EM68 offer durable hearing protection with adjustable fit.\n' +
-          'SNR 29–31 dB reduction for high noise industrial environments.\n' +
-          'Soft foam cushions and padded headband for comfort.\n' +
-          'Telescoping headband allows precise adjustment.\n' +
-          'Lightweight ABS cups resist impact and chemicals.\n' +
-          'Foldable design for easy storage.\n' +
-          'Ideal for heavy machinery, construction, demolition, and manufacturing.\n' +
-          'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
-          'Reliable earmuffs for demanding noisy tasks.\n' +
-          'Essential PPE for preventing hearing damage.',
-    rating: 4.5,
-    reviews: 95,
-    sold: '400+',
-    tags: [
-      'em68 earmuffs', 'durable hearing muff', 'snr 29 earmuff', 'telescoping headband muff', 'en 352-1 em68',
-      'heavy machinery ear protection', 'construction high noise', 'demolition earmuff', 'foldable durable muff', 'soft foam cushions',
-      'padded headband muff', 'industrial noise ppe', 'reliable high noise muff', 'prevent hearing loss', 'demanding task hearing protection'
-    ]
-  },
-  {
-    id: 'best-safety-earmuffs-em66',
-    title: 'Best Safety Earmuffs EM66',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.decibeldefense.com/cdn/shop/products/decibel-defense-professional-safety-ear-muffs-black_1024x1024@2x.jpg?v=1640994840',
-    desc: 'Best Safety Earmuffs EM66 provide optimal comfort and high attenuation.\n' +
-          'SNR 30–32 dB reduction for loud industrial and construction noise.\n' +
-          'Thick memory foam cushions for superior comfort.\n' +
-          'Adjustable headband with steel wire for secure fit.\n' +
-          'Lightweight ABS cups resist impact and chemicals.\n' +
-          'Foldable design for easy storage.\n' +
-          'Ideal for heavy machinery, shooting ranges, demolition, and manufacturing.\n' +
-          'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
-          'High-quality earmuffs for maximum noise isolation.\n' +
-          'Professional hearing protection for extreme noise environments.',
-    rating: 4.6,
-    reviews: 105,
-    sold: '450+',
-    tags: [
-      'em66 earmuffs', 'optimal comfort muff', 'snr 30 best earmuff', 'memory foam cushions', 'en 352-1 best muff',
-      'heavy machinery hearing protection', 'shooting range earmuff', 'demolition high noise', 'foldable professional muff', 'adjustable steel headband',
-      'abs cup best earmuff', 'industrial extreme noise', 'maximum noise isolation', 'professional hearing ppe', 'high quality earmuff'
-    ]
-  },
-  {
-    id: 'verishield-vs110h-helmet-earmuff-honeywell',
-    title: 'VeriShield™ VS110H Helmet Earmuff Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://honeywell.scene7.com/is/image/Honeywell65/sps-hppe-brp900-1035118-vs',
-    desc: 'VeriShield VS110H Helmet Earmuff Honeywell attaches securely to hard hats.\n' +
-          'SNR 25–28 dB reduction for moderate to high noise levels.\n' +
-          'Slim ear cups with soft foam cushions for comfort.\n' +
-          'Universal mounting arms fit most slotted safety helmets.\n' +
-          'Adjustable positioning for precise ear coverage.\n' +
-          'Foldable design when not in use.\n' +
-          'Ideal for construction, manufacturing, mining, and utilities.\n' +
-          'Certified to EN 352-3 for helmet-mounted hearing protection.\n' +
-          'Comfortable, reliable combination of head and hearing safety.\n' +
-          'Essential PPE for helmet-required noisy work sites.',
-    rating: 4.7,
-    reviews: 80,
-    sold: '350+',
-    tags: [
-      'vs110h helmet earmuff', 'helmet mounted muff', 'snr 25 honeywell helmet', 'universal mounting earmuff', 'en 352-3 helmet muff',
-      'construction helmet hearing', 'manufacturing head muff', 'mining noise protection', 'foldable helmet muff', 'soft foam helmet earmuff',
-      'adjustable positioning muff', 'combined head hearing ppe', 'reliable helmet noise', 'essential noisy helmet work', 'comfortable helmet earmuff'
-    ]
-  },
-  {
-    id: 'metal-detectable-laser-trak-earplug-honeywell',
-    title: 'Metal Detectable Laser Trak Earplug Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.honeywell.com/content/dam/honeywellbt/en/images/respiratory-protection/earplugs/laser-trak.jpg',
-    desc: 'Metal Detectable Laser Trak Earplug Honeywell is designed for food & process industries.\n' +
-          'NRR 32 dB noise reduction with metal detectable cord and plug.\n' +
-          'Brightly colored for easy compliance checks and visibility.\n' +
-          'Self-adjusting foam expands for custom ear canal fit.\n' +
-          'Smooth tapered shape for easy insertion and removal.\n' +
-          'Attached detectable cord prevents loss in production areas.\n' +
-          'Ideal for food processing, pharmaceutical, and clean room environments.\n' +
-          'Certified to ANSI S3.19 for high noise reduction.\n' +
-          'Detectable earplugs that meet strict industry safety standards.\n' +
-          'Essential hearing protection for contamination-controlled areas.',
-    rating: 4.8,
-    reviews: 70,
-    sold: '300+',
-    tags: [
-      'metal detectable earplug', 'laser trak honeywell', 'nrr 32 detectable', 'food processing earplugs', 'detectable cord plugs',
-      'pharmaceutical hearing protection', 'clean room earplugs', 'ansi s3.19 detectable', 'bright compliance plugs', 'self adjusting foam',
-      'tapered detectable earplugs', 'contamination control ppe', 'essential detectable hearing', 'process industry earplugs', 'high noise detectable'
-    ]
-  },
-  {
-    id: 'foam-earplugs-corded-304l-honeywell',
-    title: 'Foam Earplugs Corded 304L Honeywell',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71ObW-K3d2L._AC_SL1500_.jpg',
-    desc: 'Foam Earplugs Corded 304L Honeywell provide reliable noise reduction.\n' +
-          'NRR 32–33 dB blocks loud industrial and construction noise.\n' +
-          'Slow-recovery foam expands for custom ear canal fit.\n' +
-          'Attached cord prevents loss and allows hanging around neck.\n' +
-          'Smooth tapered shape for easy insertion and removal.\n' +
-          'Individually wrapped for hygiene and easy distribution.\n' +
-          'Ideal for construction, manufacturing, mowing, and shooting.\n' +
-          'Certified to ANSI S3.19 for high noise reduction.\n' +
-          'Comfortable, effective corded disposable earplugs.\n' +
-          'Trusted Honeywell hearing protection for daily use.',
-    rating: 4.5,
-    reviews: 150,
-    sold: '800+',
-    tags: [
-      '304l corded earplugs', 'foam corded honeywell', 'nrr 32 corded', 'slow recovery corded', 'construction hearing plugs',
-      'manufacturing corded earplugs', 'mowing noise protection', 'shooting corded plugs', 'tapered foam corded', 'individually wrapped honeywell',
-      'high noise reduction corded', 'comfortable honeywell plugs', 'daily use hearing ppe', 'reliable corded earplugs', 'essential noise protection'
-    ]
-  },
-  {
-    id: 'earplugs-np32k',
-    title: 'Earplugs NP32K',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61fZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
-    desc: 'Earplugs NP32K are disposable foam earplugs with high noise reduction.\n' +
-          'NRR 32 dB blocks industrial and construction noise effectively.\n' +
-          'Slow-recovery foam expands to fit ear canal comfortably.\n' +
-          'Smooth tapered design for easy insertion and removal.\n' +
-          'Bright color for easy compliance checks.\n' +
-          'Individually wrapped for hygiene and portability.\n' +
-          'Ideal for construction, manufacturing, mowing, and workshops.\n' +
-          'Certified to ANSI S3.19 for reliable hearing protection.\n' +
-          'Low-cost, high-performance disposable earplugs.\n' +
-          'Essential PPE for preventing hearing damage.',
-    rating: 4.4,
-    reviews: 200,
-    sold: '1000+',
-    tags: [
-      'np32k earplugs', 'disposable foam np32k', 'nrr 32 disposable', 'slow recovery earplugs', 'construction np32k',
-      'manufacturing hearing plugs', 'mowing noise protection', 'workshop earplugs', 'tapered foam plugs', 'individually wrapped np32k',
-      'high noise reduction plugs', 'low cost disposable', 'essential hearing ppe', 'prevent hearing loss', 'reliable foam earplugs'
-    ]
-  },
-  {
-    id: 'earplugs-np35k',
-    title: 'Earplugs NP35K',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71fZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
-    desc: 'Earplugs NP35K are comfortable disposable foam earplugs for industrial use.\n' +
-          'NRR 33–35 dB provides high noise reduction in loud environments.\n' +
-          'Soft slow-recovery foam expands gently for custom fit.\n' +
-          'Tapered shape allows easy insertion and secure retention.\n' +
-          'Bright color for quick compliance checks.\n' +
-          'Individually wrapped for hygiene and easy distribution.\n' +
-          'Ideal for heavy machinery, construction, demolition, and shooting.\n' +
-          'Certified to ANSI S3.19 for superior hearing protection.\n' +
-          'High-performance, low-cost disposable earplugs.\n' +
-          'Essential PPE for extreme noise exposure.',
-    rating: 4.4,
-    reviews: 180,
-    sold: '900+',
-    tags: [
-      'np35k earplugs', 'high nrr disposable', 'nrr 33–35 foam', 'soft slow recovery', 'heavy machinery earplugs',
-      'construction np35k', 'demolition hearing protection', 'shooting range plugs', 'tapered disposable earplugs', 'individually wrapped np35k',
-      'superior noise reduction', 'low cost high performance', 'essential extreme noise ppe', 'comfortable disposable plugs', 'industrial hearing protection'
-    ]
-  },
+id: 'bls-zero-33-face-mask',
+title: 'BLS Zero 33 Face mask',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.it/wp-content/uploads/2023/02/ZERO-33-800x800-1.jpg',
+desc: 'BLS Zero 33 Full Face Mask offers panoramic vision and superior respiratory protection.\n' +
+'Wide polycarbonate visor provides excellent field of view with anti-fog coating.\n' +
+'Soft hypoallergenic silicone face seal conforms comfortably to face.\n' +
+'Twin bayonet cartridge connection for quick filter changes.\n' +
+'Speech diaphragm ensures clear communication while masked.\n' +
+'5-point adjustable head harness for secure, balanced fit.\n' +
+'Ideal for painting, chemical handling, asbestos abatement, and welding fumes.\n' +
+'Certified to EN 136 Class 2 and compatible with most standard filters.\n' +
+'Premium full-face respirator for high-hazard respiratory environments.\n' +
+'Professional-grade mask with exceptional comfort and visibility.',
+rating: 4.8,
+reviews: 140,
+sold: '600+',
+tags: [
+'bls zero 33 mask', 'full face respirator', 'panoramic visor mask', 'anti fog full face', 'en 136 class 2',
+'painting full face mask', 'chemical handling respirator', 'asbestos abatement mask', 'welding fume protection', 'speech diaphragm mask',
+'hypoallergenic silicone', 'bayonet cartridge mask', 'adjustable head harness', 'high hazard respiratory', 'premium full face ppe'
+]
+},
+{
+id: 'bls-680-next-ffp2-mask',
+title: 'BLS 680 NEXT FFP2 mask',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.it/wp-content/uploads/2024/03/680-NEXT-800x800-1.jpg',
+desc: 'BLS 680 NEXT FFP2 Mask is a premium disposable respirator with high filtration efficiency.\n' +
+'Fold-flat design with exhalation valve reduces breathing resistance.\n' +
+'Soft inner nose foam and adjustable nose clip for comfortable seal.\n' +
+'Elastic head straps with buckle for secure, easy donning.\n' +
+'High-efficiency melt-blown filter media blocks fine dust and aerosols.\n' +
+'Ideal for construction, woodworking, sanding, pharmaceutical, and general dusty work.\n' +
+'Certified to EN149 FFP2 NR standard with D (dolomite) optional.\n' +
+'Lightweight and foldable for convenient storage.\n' +
+'Comfortable, reliable disposable protection for medium-risk environments.\n' +
+'High-performance FFP2 mask from trusted BLS.',
+rating: 4.7,
+reviews: 180,
+sold: '800+',
+tags: [
+'bls 680 next ffp2', 'disposable ffp2 mask', 'valved respirator', 'fold flat ffp2', 'en149 ffp2 nr',
+'construction dust mask', 'woodworking respirator', 'sanding ffp2 mask', 'pharmaceutical protection', 'adjustable nose clip ffp2',
+'elastic head strap mask', 'high efficiency filter', 'comfortable disposable mask', 'medium risk respiratory', 'reliable bls ffp2'
+]
+},
+{
+id: 'bls-129bw-face-mask',
+title: 'BLS 129BW Face Mask',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.it/wp-content/uploads/2021/11/129-BW-800x800-1.jpg',
+desc: 'BLS 129BW Face Mask is a valved FFP2 disposable respirator with excellent comfort.\n' +
+'Exhalation valve reduces heat and moisture buildup inside mask.\n' +
+'Pre-formed nose bridge and soft inner seal for secure fit.\n' +
+'Elastic head straps with buckle for easy adjustment.\n' +
+'High-filtration melt-blown layer protects against fine dust and aerosols.\n' +
+'Ideal for construction, demolition, sanding, agriculture, and general dust.\n' +
+'Certified to EN149 FFP2 NR D (dolomite tested) standard.\n' +
+'Lightweight and foldable for convenient pocket storage.\n' +
+'Comfort-focused disposable mask for medium-risk dusty environments.\n' +
+'Trusted BLS quality at competitive price point.',
+rating: 4.6,
+reviews: 200,
+sold: '1000+',
+tags: [
+'bls 129bw mask', 'valved ffp2 respirator', 'exhalation valve mask', 'en149 ffp2 nr d', 'construction dust mask',
+'demolition ffp2', 'sanding respirator', 'agriculture dust protection', 'pre formed nose bridge', 'elastic buckle strap',
+'high filtration ffp2', 'lightweight disposable mask', 'medium risk dust ppe', 'comfortable ffp2 mask', 'trusted bls respirator'
+]
+},
+{
+id: 'bls-128bw-face-mask',
+title: 'BLS 128BW Face Mask',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.it/wp-content/uploads/2021/11/128-BW-800x800-1.jpg',
+desc: 'BLS 128BW Face Mask is a high-breathability FFP2 disposable respirator.\n' +
+'Low breathing resistance thanks to advanced filter media.\n' +
+'Soft inner nose foam and adjustable nose clip for good seal.\n' +
+'Elastic head straps with buckle for secure, comfortable fit.\n' +
+'Effective protection against fine dust, aerosols, and non-oil particles.\n' +
+'Ideal for construction, woodworking, sweeping, and general dusty tasks.\n' +
+'Certified to EN149 FFP2 NR standard.\n' +
+'Fold-flat design stores easily in pockets or tool bags.\n' +
+'Lightweight and comfortable for extended wear.\n' +
+'Excellent value disposable mask from BLS.',
+rating: 4.5,
+reviews: 220,
+sold: '1200+',
+tags: [
+'bls 128bw mask', 'high breathability ffp2', 'disposable dust mask', 'en149 ffp2 nr', 'construction ffp2 mask',
+'woodworking respirator', 'low breathing resistance', 'adjustable nose clip ffp2', 'elastic strap mask', 'fine dust protection',
+'fold flat ffp2', 'lightweight dust mask', 'extended wear ffp2', 'value respirator', 'general dusty tasks ppe'
+]
+},
+{
+id: 'aura-disposable-respirator-9332-ffp3-valved',
+title: 'Aura™ Disposable Respirator 9332+, FFP3, Valved',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://reemster.com/cdn/shop/products/3m-aura-particulate-respirator.jpg?v=1641664361&width=692',
+desc: '3M Aura 9332+ FFP3 Valved Respirator provides highest filtration efficiency.\n' +
+'Advanced 3-panel design conforms to face for excellent seal and comfort.\n' +
+'Exhalation valve reduces heat and moisture inside mask.\n' +
+'Soft nose foam and adjustable nose clip for secure fit.\n' +
+'Elastic head straps with buckle for easy donning and adjustment.\n' +
+'Protects against very fine dust, fumes, and oil-based aerosols.\n' +
+'Ideal for welding fumes, pharmaceutical, asbestos, and high-hazard dust.\n' +
+'Certified to EN149 FFP3 NR D standard.\n' +
+'Premium disposable respirator for maximum respiratory protection.\n' +
+'Trusted 3M Aura quality in high-risk environments.',
+rating: 4.9,
+reviews: 250,
+sold: '900+',
+tags: [
+'3m aura 9332', 'ffp3 valved respirator', 'highest filtration mask', 'en149 ffp3 nr d', 'welding fume protection',
+'pharmaceutical respirator', 'asbestos removal mask', '3 panel aura design', 'exhalation valve ffp3', 'adjustable nose clip aura',
+'elastic buckle strap', 'high hazard dust mask', 'premium disposable respirator', 'maximum respiratory ppe', 'trusted 3m aura'
+]
+},
+{
+id: 'particulate-respirator-p2-valved',
+title: 'Particulate Respirator P2, valved',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://hlpmedical.net/cdn/shop/files/ValveExtended3_1024x1024_2x_0d44eb63-2795-4ce3-9c3c-77a5132056c7.webp?v=1686624573&width=1946',
+desc: 'Particulate Respirator P2 Valved provides effective protection against dust and mists.\n' +
+'Valved design reduces breathing resistance and heat buildup.\n' +
+'Soft inner nose foam and adjustable nose clip for good seal.\n' +
+'Elastic head straps with buckle for secure, comfortable fit.\n' +
+'High-efficiency filter media blocks fine non-oil particulates.\n' +
+'Fold-flat design for convenient storage in pockets.\n' +
+'Ideal for construction, sanding, sweeping, agriculture, and general dust.\n' +
+'Certified to AS/NZS 1716 P2 or equivalent EN149 FFP2 standards.\n' +
+'Comfortable, reliable disposable respirator for medium-risk tasks.\n' +
+'Trusted protection for everyday dusty environments.',
+rating: 4.6,
+reviews: 150,
+sold: '700+',
+tags: [
+'p2 valved respirator', 'particulate dust mask', 'exhalation valve p2', 'construction p2 mask', 'sanding respirator p2',
+'fold flat p2 mask', 'agriculture dust protection', 'high efficiency p2', 'comfortable valved mask', 'medium risk respiratory',
+'adjustable nose clip p2', 'elastic buckle p2', 'general dust ppe', 'reliable particulate mask', 'everyday dust respirator'
+]
+},
+{
+id: 'particulate-respirator-8210-n95',
+title: 'Particulate Respirator 8210 N95',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://media.granquartz.com/pearlman-production/catalog/product/6/9/696109-BX_a_b6fecf674ffbf82810b06308f5cee113.jpg?tr=n-gq_lrg',
+desc: 'Particulate Respirator 8210 N95 is the classic disposable dust mask.\n' +
+'NIOSH-approved N95 filters ≥95% of non-oil airborne particles.\n' +
+'Molded cup shape with adjustable nose clip for secure fit.\n' +
+'Elastic head straps provide secure seal without ear pressure.\n' +
+'Lightweight and foldable for easy pocket storage.\n' +
+'Ideal for construction, sanding, sweeping, grinding, and pandemic use.\n' +
+'Meets NIOSH 42 CFR Part 84 N95 standard.\n' +
+'Trusted worldwide for reliable, no-frills respiratory protection.\n' +
+'Essential disposable mask for dusty and particulate-heavy tasks.\n' +
+'Proven performance in industrial and health environments.',
+rating: 4.7,
+reviews: 300,
+sold: '1500+',
+tags: [
+'3m 8210 n95', 'classic n95 respirator', 'niosh n95 mask', 'construction dust mask', 'sanding n95 protection',
+'molded cup n95', 'elastic head strap n95', 'pandemic n95 mask', 'lightweight disposable', 'foldable n95',
+'grinding particle mask', 'reliable dust respirator', 'industrial n95', 'health environment mask', 'proven n95 performance'
+]
+},
+{
+id: 'dust-pre-filters',
+title: 'Dust Pre-Filters',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.airpurifierfirst.com/wp-content/uploads/2021/03/Dusty-pre-filters-after-some-time-of-usage-1024x768.png',
+desc: 'Dust Pre-Filters extend the life of main respirator cartridges.\n' +
+'High-efficiency pre-filter captures large dust and particulate matter.\n' +
+'Attaches easily to compatible cartridge/filter holders.\n' +
+'Reduces loading on primary filter, improving breathability.\n' +
+'Ideal for dusty environments such as construction, woodworking, and demolition.\n' +
+'Cost-effective way to prolong cartridge life in high-dust conditions.\n' +
+'Compatible with most Honeywell, 3M, and other bayonet-style systems.\n' +
+'Simple disposable accessory for reusable respirators.\n' +
+'Essential maintenance item for half-face and full-face masks.\n' +
+'Improves overall respirator performance in dusty atmospheres.',
+rating: 4.5,
+reviews: 80,
+sold: '400+',
+tags: [
+'dust pre filters', 'respirator pre-filter', 'high efficiency pre-filter', 'cartridge extender', 'construction dust pre',
+'woodworking pre filter', 'demolition respirator accessory', 'bayonet pre filter', 'disposable dust pre', 'prolong cartridge life',
+'honeywell compatible pre', '3m compatible pre filter', 'reusable mask accessory', 'dusty atmosphere ppe', 'maintenance respirator item'
+]
+},
+{
+id: 'ammonia-cartirage-k2-bls',
+title: 'Ammonia Cartirage K2 BLS',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://stafit.ee/wp-content/uploads/2025/01/BLS_413-K2_0188.jpg',
+desc: 'Ammonia Cartridge K2 BLS protects against ammonia and ammonia derivatives.\n' +
+'High-capacity activated carbon filter for extended service life.\n' +
+'Bayonet connection for quick, secure attachment to compatible masks.\n' +
+'Low breathing resistance design improves user comfort.\n' +
+'Ideal for refrigeration, fertilizer plants, agriculture, and cleaning.\n' +
+'Compatible with BLS 2000/3000/4000/5000 series half and full face masks.\n' +
+'Certified to EN 14387 Class K2 for ammonia protection.\n' +
+'Essential filter for environments with ammonia gas hazards.\n' +
+'Reliable, high-performance cartridge from BLS.\n' +
+'Critical respiratory protection for ammonia exposure.',
+rating: 4.7,
+reviews: 60,
+sold: '250+',
+tags: [
+'ammonia cartridge k2', 'bls k2 filter', 'ammonia protection cartridge', 'en 14387 k2', 'refrigeration gas mask',
+'fertilizer plant cartridge', 'agriculture ammonia filter', 'cleaning chemical cartridge', 'bayonet ammonia filter', 'low breathing resistance',
+'bls 2000 compatible', 'full face cartridge', 'half mask ammonia filter', 'ammonia gas ppe', 'high capacity ammonia cartridge'
+]
+},
+{
+id: 'multi-purpose-cartirage-abek2-bls',
+title: 'Multi Purpose Cartirage ABEK2 BLS',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'http://arete.com.mt/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-2.35.38-PM.png',
+desc: 'Multi Purpose Cartridge ABEK2 BLS protects against multiple gas and vapor types.\n' +
+'ABEK2 rated for organic vapors, inorganic gases, acid gases, and ammonia.\n' +
+'High-capacity activated carbon and chemical absorbent media.\n' +
+'Bayonet connection for fast, secure attachment to BLS masks.\n' +
+'Low breathing resistance for improved user comfort.\n' +
+'Ideal for chemical plants, laboratories, painting, and industrial cleaning.\n' +
+'Compatible with BLS 2000/3000/4000/5000 series respirators.\n' +
+'Certified to EN 14387 Class ABEK2 for broad-spectrum gas protection.\n' +
+'Versatile cartridge for sites with mixed chemical hazards.\n' +
+'Professional-grade multi-gas filter from trusted BLS.',
+rating: 4.8,
+reviews: 70,
+sold: '300+',
+tags: [
+'abek2 cartridge', 'multi gas cartridge', 'bls abek2 filter', 'en 14387 abek2', 'organic vapor protection',
+'inorganic gas cartridge', 'acid gas filter', 'ammonia multi cartridge', 'chemical plant filter', 'laboratory gas mask',
+'bayonet multi purpose', 'low breathing abek2', 'broad spectrum protection', 'mixed hazard cartridge', 'professional multi gas ppe'
+]
+},
+{
+id: 'ffp2-disposable-mask-128bw-r-d',
+title: 'FFP2 Disposable Mask 128BW R D',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2020/12/BLS_128BW_-1547-ELASTICI-VERDI.jpg',
+desc: 'FFP2 Disposable Mask 128BW R D is reusable style with excellent breathability.\n' +
+'Valved design significantly reduces heat and moisture buildup.\n' +
+'Dolomite (D) tested for low breathing resistance in humid conditions.\n' +
+'Soft nose foam and adjustable nose clip create good facial seal.\n' +
+'Elastic head straps with buckle for secure, comfortable fit.\n' +
+'High-efficiency filter media against fine dust and non-oil aerosols.\n' +
+'Ideal for construction, demolition, agriculture, and general dusty tasks.\n' +
+'Certified to EN149 FFP2 NR D standard.\n' +
+'Reusable for multiple shifts when not heavily loaded.\n' +
+'Comfortable, high-performance disposable FFP2 from BLS.',
+rating: 4.6,
+reviews: 190,
+sold: '900+',
+tags: [
+'128bw ffp2 mask', 'reusable ffp2 valved', 'dolomite tested ffp2', 'en149 ffp2 nr d', 'construction dust mask',
+'demolition ffp2 respirator', 'agriculture dust protection', 'breathable valved mask', 'adjustable nose clip ffp2', 'elastic buckle ffp2',
+'high efficiency filter', 'fine dust respirator', 'multi shift ffp2', 'comfortable disposable mask', 'bls ffp2 performance'
+]
+},
+{
+id: 'ffp3-disposable-mask-bls-800-flickit',
+title: 'FFP3 Disposable Mask BLS 800 Flickit',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2022/03/bls_product_donninginstructions_800flickit_HEADER_DEF@05x.png',
+desc: 'FFP3 Disposable Mask BLS 800 Flickit features innovative folding design.\n' +
+'Flick-open shape maintains mask hygiene and makes donning easier.\n' +
+'Highest filtration efficiency – protects against very fine dust, fumes, and aerosols.\n' +
+'Valved version reduces breathing resistance and heat buildup.\n' +
+'Soft inner nose foam and adjustable nose clip for secure seal.\n' +
+'Elastic head straps with buckle for comfortable fit.\n' +
+'Ideal for welding fumes, pharmaceutical, asbestos, and high-hazard dust.\n' +
+'Certified to EN149 FFP3 NR standard.\n' +
+'Premium disposable FFP3 with user-friendly folding system.\n' +
+'Maximum respiratory protection with BLS quality.',
+rating: 4.8,
+reviews: 110,
+sold: '500+',
+tags: [
+'bls 800 flickit', 'ffp3 folding mask', 'highest filtration ffp3', 'en149 ffp3 nr', 'welding fume ffp3',
+'pharmaceutical respirator', 'asbestos removal mask', 'valved ffp3 mask', 'flick open design', 'adjustable nose clip ffp3',
+'elastic buckle ffp3', 'high hazard dust mask', 'premium disposable ffp3', 'user friendly ffp3', 'maximum respiratory protection'
+]
+},
+{
+id: 'ffp2-disposable-mask-bls-700',
+title: 'FFP2 Disposable Mask BLS 700',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2020/12/BLS_129_BW_1-1647-ELASTICI-VERDI.jpg',
+desc: 'FFP2 Disposable Mask BLS 700 offers high comfort and reliable filtration.\n' +
+'Molded shape with soft inner nose seal for excellent fit.\n' +
+'Low breathing resistance thanks to advanced filter media.\n' +
+'Elastic head straps with buckle for secure, comfortable wear.\n' +
+'Effective against fine dust, mists, and non-oil aerosols.\n' +
+'Ideal for construction, woodworking, sanding, and general dust work.\n' +
+'Certified to EN149 FFP2 NR standard.\n' +
+'Lightweight and foldable for easy storage.\n' +
+'Comfort-focused disposable mask for medium-risk environments.\n' +
+'High-quality BLS FFP2 at competitive price.',
+rating: 4.6,
+reviews: 130,
+sold: '600+',
+tags: [
+'bls 700 ffp2', 'comfort ffp2 mask', 'molded ffp2 respirator', 'en149 ffp2 nr', 'construction dust mask',
+'woodworking ffp2', 'low breathing ffp2', 'elastic buckle mask', 'fine dust protection', 'sanding respirator',
+'lightweight ffp2', 'medium risk dust ppe', 'foldable disposable mask', 'high quality bls', 'competitive ffp2 mask'
+]
+},
+{
+id: 'n95-non-oil-particulate-filter-7506n95-honeywell',
+title: 'N95 Non-Oil Particulate Filter 7506N95 Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://i.ebayimg.com/images/g/Zn8AAOSwrAxncyJc/s-l1200.jpg',
+desc: 'N95 Non-Oil Particulate Filter 7506N95 Honeywell filters dust and aerosols.\n' +
+'NIOSH-approved N95 filtration efficiency ≥95% for non-oil particles.\n' +
+'Compatible with Honeywell North half-face and full-face respirators.\n' +
+'Bayonet connection for quick, secure attachment.\n' +
+'Low-profile design maintains good field of vision.\n' +
+'Ideal for construction, sanding, grinding, sweeping, and woodworking.\n' +
+'Essential replacement filter for reusable respirator systems.\n' +
+'Certified to NIOSH 42 CFR Part 84 N95 standard.\n' +
+'Reliable Honeywell quality for particulate protection.\n' +
+'Critical component for maintaining respiratory safety.',
+rating: 4.7,
+reviews: 90,
+sold: '400+',
+tags: [
+'honeywell 7506n95', 'n95 filter cartridge', 'non oil particulate filter', 'niosh n95 filter', 'bayonet n95 filter',
+'construction dust filter', 'sanding respirator filter', 'grinding particulate filter', 'replacement n95 filter', 'reusable mask filter',
+'low profile filter', 'woodworking n95 filter', 'honeywell north compatible', 'reliable particulate ppe', 'essential n95 component'
+]
+},
+{
+id: 'flexible-low-profile-p100-filter-75ffp100-honeywell',
+title: 'Flexible, Low Profile P100 Filter 75FFP100 Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://static.grainger.com/rp/s/is/image/Grainger/16M237_AS01',
+desc: 'Flexible Low Profile P100 Filter 75FFP100 Honeywell offers highest filtration efficiency.\n' +
+'P100 filters ≥99.97% of oil- and non-oil particulates.\n' +
+'Flexible, low-profile design improves downward visibility.\n' +
+'Bayonet connection for quick attachment to Honeywell respirators.\n' +
+'Ideal for welding fumes, pharmaceutical dust, asbestos, and high-hazard particles.\n' +
+'Compatible with North 5500, 7700, 5400, and other series masks.\n' +
+'Essential high-efficiency replacement filter for reusable systems.\n' +
+'Certified to NIOSH 42 CFR Part 84 P100 standard.\n' +
+'Premium Honeywell filter for maximum particulate protection.\n' +
+'Critical component for high-risk dust and fume environments.',
+rating: 4.8,
+reviews: 100,
+sold: '450+',
+tags: [
+'75ffp100 filter', 'p100 honeywell filter', 'low profile p100', 'flexible particulate filter', 'niosh p100 filter',
+'welding fume p100', 'pharmaceutical dust filter', 'asbestos protection filter', 'bayonet p100 filter', 'high efficiency filter',
+'reusable mask p100', 'north series compatible', 'high hazard particulate', 'premium honeywell filter', 'maximum dust protection'
+]
+},
+{
+id: 'organic-vapor-cartridge-n75001l-honeywell',
+title: 'Organic Vapor Cartridge N75001L Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://static.grainger.com/rp/s/is/image/Grainger/16M239_AS01',
+desc: 'Organic Vapor Cartridge N75001L Honeywell protects against organic vapors.\n' +
+'Activated carbon filter removes benzene, toluene, xylene, and many solvents.\n' +
+'Bayonet connection for quick, secure attachment to Honeywell masks.\n' +
+'Low breathing resistance design improves user comfort.\n' +
+'Compatible with North 5500, 7700, 5400, and other half/full face masks.\n' +
+'Ideal for painting, spraying, degreasing, and chemical handling.\n' +
+'Certified to NIOSH for organic vapor protection.\n' +
+'Essential cartridge for environments with solvent vapors.\n' +
+'Reliable Honeywell quality for gas and vapor safety.\n' +
+'Critical respiratory protection component.',
+rating: 4.8,
+reviews: 85,
+sold: '350+',
+tags: [
+'n75001l cartridge', 'organic vapor honeywell', 'solvent vapor filter', 'niosh organic vapor', 'bayonet cartridge honeywell',
+'painting respirator cartridge', 'spraying vapor protection', 'degreasing filter', 'chemical handling cartridge', 'low breathing cartridge',
+'north mask compatible', 'activated carbon cartridge', 'gas vapor ppe', 'reliable honeywell filter', 'essential vapor protection'
+]
+},
+{
+id: 'organic-vapor-acid-gas-cartridge-n75003l-honeywell',
+title: 'Organic Vapor & Acid Gas Cartridge N75003L Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://us.evocdn.io/supplier/catalog/1252/product/original/nr-75SCL.jpg',
+desc: 'Organic Vapor & Acid Gas Cartridge N75003L Honeywell protects against multiple hazards.\n' +
+'Filters organic vapors plus chlorine, hydrogen chloride, sulfur dioxide, and chlorine dioxide.\n' +
+'Activated carbon and chemical absorbent media for broad protection.\n' +
+'Bayonet connection for fast, secure fit on Honeywell respirators.\n' +
+'Low breathing resistance for improved comfort during use.\n' +
+'Compatible with North 5500, 7700, 5400 series half and full face masks.\n' +
+'Ideal for chemical plants, laboratories, water treatment, and cleaning.\n' +
+'Certified to NIOSH for organic vapor and acid gas protection.\n' +
+'Versatile cartridge for mixed gas and vapor environments.\n' +
+'Trusted Honeywell quality for multi-hazard respiratory safety.',
+rating: 4.8,
+reviews: 80,
+sold: '300+',
+tags: [
+'n75003l cartridge', 'organic acid gas filter', 'multi gas honeywell', 'niosh organic acid', 'bayonet multi cartridge',
+'chemical plant respirator', 'laboratory gas protection', 'water treatment cartridge', 'cleaning vapor filter', 'low breathing multi',
+'north compatible cartridge', 'activated carbon acid', 'broad spectrum ppe', 'versatile gas cartridge', 'trusted honeywell multi'
+]
+},
+{
+id: 'multi-gas-vapor-cartridge-75scl-honeywell',
+title: 'Multi-Gas Vapor Cartridge 75SCL Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.grainger.com/product/16M240_AS01',
+desc: 'Multi-Gas Vapor Cartridge 75SCL Honeywell protects against wide range of gases.\n' +
+'ABEK rated for organic, inorganic, acid gases, ammonia, and derivatives.\n' +
+'High-capacity media extends service life in mixed atmospheres.\n' +
+'Bayonet connection for quick attachment to Honeywell masks.\n' +
+'Low breathing resistance improves user comfort.\n' +
+'Compatible with North 5500, 7700, 5400 series respirators.\n' +
+'Ideal for chemical plants, laboratories, emergency response, and industrial cleaning.\n' +
+'Certified to NIOSH for multi-gas and vapor protection.\n' +
+'Versatile cartridge for complex chemical environments.\n' +
+'Professional-grade Honeywell filter for broad-spectrum safety.',
+rating: 4.9,
+reviews: 75,
+sold: '280+',
+tags: [
+'75scl cartridge', 'multi gas honeywell', 'abek cartridge', 'broad spectrum filter', 'niosh multi gas',
+'chemical plant multi cartridge', 'laboratory vapor protection', 'emergency response filter', 'industrial cleaning cartridge', 'low breathing multi',
+'north compatible multi', 'high capacity abek', 'complex chemical ppe', 'versatile gas protection', 'professional honeywell cartridge'
+]
+},
+{
+id: 'ammonia-and-methylamine-respirator-cartridges-n75004l-honeywell',
+title: 'Ammonia And Methylamine Respirator Cartridges N75004L Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://static.grainger.com/rp/s/is/image/Grainger/16M238_AS01',
+desc: 'Ammonia and Methylamine Cartridge N75004L Honeywell protects against ammonia and methylamine.\n' +
+'Specialized chemical absorbent media for effective gas removal.\n' +
+'Bayonet connection for quick, secure attachment to Honeywell masks.\n' +
+'Low breathing resistance design for improved comfort.\n' +
+'Compatible with North 5500, 7700, 5400 series half/full face masks.\n' +
+'Ideal for refrigeration, fertilizer production, agriculture, and cleaning.\n' +
+'Certified to NIOSH for ammonia and methylamine protection.\n' +
+'Essential cartridge for ammonia-related gas hazards.\n' +
+'Reliable Honeywell quality for specialized respiratory needs.\n' +
+'Critical protection in ammonia-handling environments.',
+rating: 4.7,
+reviews: 65,
+sold: '250+',
+tags: [
+'n75004l cartridge', 'ammonia methylamine filter', 'specialized gas cartridge', 'niosh ammonia protection', 'bayonet ammonia cartridge',
+'refrigeration gas mask', 'fertilizer production filter', 'agriculture ammonia cartridge', 'cleaning ammonia protection', 'low breathing ammonia',
+'north compatible ammonia', 'chemical absorbent cartridge', 'ammonia hazard ppe', 'reliable honeywell filter', 'specialized respiratory cartridge'
+]
+},
+{
+id: 'acid-gases-cartridge-n75002l-honeywell',
+title: 'Acid Gases Cartridge N75002L Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://cdn11.bigcommerce.com/s-8715e/images/stencil/1280x1280/products/559/381562/381562__04666.1683663738.png?c=2?imbypass=on',
+desc: 'Acid Gases Cartridge N75002L Honeywell protects against acid gases and vapors.\n' +
+'Filters chlorine, hydrogen chloride, sulfur dioxide, chlorine dioxide, hydrogen sulfide.\n' +
+'Activated carbon and chemical absorbent media for effective gas removal.\n' +
+'Bayonet connection for quick, secure attachment to Honeywell respirators.\n' +
+'Low breathing resistance improves user comfort during extended wear.\n' +
+'Compatible with North 5500, 7700, 5400 series half and full face masks.\n' +
+'Ideal for water treatment, chemical processing, metal pickling, and cleaning.\n' +
+'Certified to NIOSH for acid gas protection.\n' +
+'Reliable Honeywell cartridge for environments with corrosive acid gases.\n' +
+'Essential respiratory filter for acid-related industrial hazards.',
+rating: 4.7,
+reviews: 70,
+sold: '260+',
+tags: [
+'n75002l cartridge', 'acid gas honeywell', 'chlorine hydrogen chloride filter', 'sulfur dioxide cartridge', 'niosh acid gas',
+'bayonet acid cartridge', 'water treatment respirator', 'chemical processing filter', 'metal pickling cartridge', 'low breathing acid',
+'north compatible acid', 'corrosive gas ppe', 'reliable honeywell acid', 'industrial acid protection', 'essential acid gas filter'
+]
+},
+{
+id: 'full-face-mask-5400-series-honeywell',
+title: 'Full Face Mask 5400 Series Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2024/03/5000en.jpg',
+desc: 'Full Face Mask 5400 Series Honeywell is an economical full-face respirator.\n' +
+'Panoramic polycarbonate visor offers wide field of view with good optics.\n' +
+'Soft silicone face seal provides secure, comfortable fit.\n' +
+'Twin bayonet cartridge connection for fast filter changes.\n' +
+'5-point adjustable head harness for balanced weight distribution.\n' +
+'Speech diaphragm allows clear communication while masked.\n' +
+'Ideal for painting, chemical handling, welding fumes, and general industrial use.\n' +
+'Certified to EN 136 Class 2 and NIOSH standards.\n' +
+'Cost-effective full-face solution from trusted Honeywell.\n' +
+'Reliable protection for medium to high hazard respiratory tasks.',
+rating: 4.8,
+reviews: 120,
+sold: '400+',
+tags: [
+'5400 series full face', 'economical full face mask', 'honeywell 5400', 'panoramic visor respirator', 'en 136 class 2',
+'painting full face', 'chemical handling mask', 'welding fume protection', 'speech diaphragm mask', 'bayonet full face',
+'adjustable head harness', 'silicone face seal', 'medium hazard respirator', 'cost effective full face', 'reliable honeywell mask'
+]
+},
+{
+id: 'full-face-mask-5000-series-bls',
+title: 'Full Face Mask 5000 Series BLS',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2020/12/BLS_3150_0076.jpg',
+desc: 'Full Face Mask 5000 Series BLS offers premium protection with wide visor.\n' +
+'Large polycarbonate lens provides excellent field of vision and optics.\n' +
+'Soft hypoallergenic silicone seal conforms comfortably to face.\n' +
+'Twin bayonet connection for quick cartridge/filter changes.\n' +
+'5-point adjustable head harness distributes weight evenly.\n' +
+'Speech diaphragm ensures clear voice9sok now good you did it most of images but as you did before try one more time and start genrating from this full-face-mask-5000-series-bls till end ok start'
+},
+{
+id: 'full-face-mask-3000-series-bls',
+title: 'Full Face Mask 3000 Series BLS',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2020/12/BLS_3150next_0497.jpg',
+desc: 'Full Face Mask 3000 Series BLS provides excellent vision and reliable protection.\n' +
+'Panoramic visor offers wide, distortion-free field of view.\n' +
+'Soft silicone face seal ensures comfortable, secure fit.\n' +
+'Twin bayonet cartridge system for fast filter changes.\n' +
+'5-point adjustable head harness for balanced comfort.\n' +
+'Speech diaphragm allows clear communication.\n' +
+'Ideal for painting, spraying, chemical handling, and welding fumes.\n' +
+'Certified to EN 136 Class 2 for full-face respiratory protection.\n' +
+'High-quality BLS mask for medium to high hazard tasks.\n' +
+'Professional respirator with great visibility and comfort.',
+rating: 4.8,
+reviews: 110,
+sold: '380+',
+tags: [
+'bls 3000 full face', 'panoramic full face mask', 'en 136 class 2 bls', 'silicone seal respirator', 'painting full face mask',
+'chemical handling bls', 'welding fume protection', 'speech diaphragm full face', 'bayonet cartridge mask', 'adjustable harness bls',
+'medium hazard respirator', 'wide vision full face', 'professional bls mask', 'comfortable full face ppe', 'reliable visibility mask'
+]
+},
+{
+id: 'full-face-mask-2000-series-bls',
+title: 'Full Face Mask 2000 Series BLS',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2023/10/BLS_2000_32_livelli_ST.jpg',
+desc: 'Full Face Mask 2000 Series BLS is a comfortable, reliable full-face respirator.\n' +
+'Clear polycarbonate visor provides good field of view.\n' +
+'Soft silicone face seal conforms well for secure fit.\n' +
+'Twin bayonet connection for quick, secure filter attachment.\n' +
+'5-point adjustable head harness distributes weight evenly.\n' +
+'Speech diaphragm ensures clear voice communication.\n' +
+'Ideal for painting, light chemical work, dust, and general industrial use.\n' +
+'Certified to EN 136 Class 2 for full-face protection.\n' +
+'Cost-effective BLS full-face solution for medium-risk tasks.\n' +
+'Comfortable, durable mask for everyday respiratory hazards.',
+rating: 4.7,
+reviews: 130,
+sold: '420+',
+tags: [
+'bls 2000 full face', 'comfortable full face mask', 'en 136 class 2 bls', 'silicone seal 2000', 'painting full face respirator',
+'light chemical mask', 'general industrial full face', 'speech diaphragm bls', 'bayonet connection mask', 'adjustable harness full face',
+'medium risk respirator', 'cost effective full face', 'durable bls mask', 'everyday respiratory ppe', 'reliable full face protection'
+]
+},
+{
+id: 'full-face-mask',
+title: 'Full Face Mask',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.sirvisual.com/Attachment/100/P8722_AutoImg_Main.jpg',
+desc: 'Full Face Mask provides complete face, eye, and respiratory protection.\n' +
+'Large polycarbonate lens offers wide, distortion-free vision.\n' +
+'Soft silicone face seal conforms comfortably to most face shapes.\n' +
+'Twin bayonet cartridge system for fast filter changes.\n' +
+'5-point adjustable head harness for secure, balanced fit.\n' +
+'Speech diaphragm allows clear communication while wearing.\n' +
+'Ideal for chemical handling, painting, welding fumes, and asbestos.\n' +
+'Certified to EN 136 and NIOSH standards for full-face respirators.\n' +
+'High-quality reusable mask for high-hazard environments.\n' +
+'Professional-grade full-face protection for serious respiratory risks.',
+rating: 4.8,
+reviews: 90,
+sold: '300+',
+tags: [
+'full face respirator mask', 'wide vision full face', 'silicone seal full face', 'en 136 full face', 'niosh full face mask',
+'chemical handling full face', 'painting respirator mask', 'welding fume protection', 'asbestos removal mask', 'speech diaphragm full face',
+'bayonet cartridge system', 'adjustable head harness mask', 'high hazard respiratory', 'professional full face ppe', 'reusable full face mask'
+]
+},
+{
+id: 'comfortable-half-face-mask-7700-series-honeywell',
+title: 'Comfortable Half Face Mask 7700 Series Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://m.media-amazon.com/images/I/41u0SylnevL._AC_UF894,1000_QL80_.jpg',
+desc: 'Comfortable Half Face Mask 7700 Series Honeywell is designed for all-day wear.\n' +
+'Premium silicone facepiece provides exceptional seal and comfort.\n' +
+'Low-profile design improves downward visibility.\n' +
+'Twin bayonet cartridge connection for quick filter changes.\n' +
+'Cradle suspension head harness distributes weight evenly.\n' +
+'Ideal for painting, spraying, chemical handling, and welding fumes.\n' +
+'Compatible with wide range of Honeywell cartridges and filters.\n' +
+'Certified to NIOSH and EN 140 standards.\n' +
+'Superior comfort and fit for extended shift use.\n' +
+'Premium Honeywell half-face respirator for demanding tasks.',
+rating: 4.7,
+reviews: 150,
+sold: '600+',
+tags: [
+'7700 series half face', 'comfortable silicone mask', 'low profile respirator', 'bayonet half face', 'cradle suspension mask',
+'painting half face mask', 'chemical handling respirator', 'welding fume half mask', 'niosh en 140 mask', 'extended shift respirator',
+'premium honeywell mask', 'all day comfort ppe', 'superior fit half face', 'demanding task respirator', 'high quality half mask'
+]
+},
+{
+id: 'economical-half-face-mask-hm-500-series-honeywell',
+title: 'Economical Half Face Mask HM 500 Series Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://assets.fishersci.com/TFS-Assets/CCG/Honeywell/product-images/HM501.jpg-650.jpg',
+desc: 'Economical Half Face Mask HM 500 Series Honeywell offers reliable protection at low cost.\n' +
+'Soft thermoplastic elastomer facepiece provides good seal and comfort.\n' +
+'Twin bayonet connection for fast cartridge/filter attachment.\n' +
+'Adjustable head harness for secure fit.\n' +
+'Low-profile design maintains good visibility.\n' +
+'Ideal for painting, light chemical work, dust, and general industrial tasks.\n' +
+'Compatible with Honeywell North cartridges and filters.\n' +
+'Certified to NIOSH and EN 140 standards.\n' +
+'Affordable, durable half-face respirator for medium-risk environments.\n' +
+'Great value Honeywell solution for everyday respiratory needs.',
+rating: 4.6,
+reviews: 140,
+sold: '550+',
+tags: [
+'hm 500 half face', 'economical respirator', 'thermoplastic elastomer mask', 'bayonet economical mask', 'low profile half face',
+'painting half mask', 'light chemical respirator', 'general industrial mask', 'niosh en 140 economical', 'adjustable harness half face',
+'value honeywell mask', 'medium risk respiratory', 'affordable half face ppe', 'durable everyday mask', 'great value respirator'
+]
+},
+{
+id: 'half-face-mask',
+title: 'Half Face Mask',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://cdn11.bigcommerce.com/s-1gtbylhith/images/stencil/1280x1280/products/31923/64080/3m-personal-safety-division-3m-half-facepiece-reusable-respirator-750137081aad__09869.1734371945.jpg?c=1',
+desc: 'Half Face Mask provides reusable respiratory protection with excellent comfort.\n' +
+'Premium silicone facepiece conforms to face for secure seal.\n' +
+'Twin bayonet cartridge connection for quick filter changes.\n' +
+'Low-profile design improves downward and peripheral vision.\n' +
+'4-point adjustable head harness for balanced fit.\n' +
+'Ideal for painting, spraying, chemical handling, and welding fumes.\n' +
+'Compatible with wide range of cartridges and filters.\n' +
+'Certified to EN 140 and NIOSH standards.\n' +
+'High-quality reusable half-face respirator for medium to high hazards.\n' +
+'Professional-grade mask for extended industrial use.',
+rating: 4.7,
+reviews: 100,
+sold: '400+',
+tags: [
+'premium half face mask', 'silicone half respirator', 'bayonet half face', 'low profile respirator', 'painting half mask',
+'chemical handling half face', 'welding fume protection', 'en 140 niosh mask', 'adjustable harness half', 'reusable medium hazard',
+'high quality half face', 'extended industrial use', 'comfortable half mask', 'professional respiratory ppe', 'versatile half face mask'
+]
+},
+{
+id: 'half-face-mask',
+title: 'Half Face Mask',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.blsgroup.com/wp-content/uploads/2020/11/BLS_4000next-S_front.jpg',
+desc: 'Half Face Mask (BLS 4000 series) offers advanced comfort and protection.\n' +
+'Soft silicone facepiece with excellent seal and durability.\n' +
+'Bayonet connection system for fast, secure cartridge attachment.\n' +
+'Low breathing resistance design improves user comfort.\n' +
+'Adjustable head harness with 4-point suspension.\n' +
+'Ideal for painting, chemical handling, dust, and welding fumes.\n' +
+'Compatible with BLS wide range of filters and cartridges.\n' +
+'Certified to EN 140 for half-face respiratory protection.\n' +
+'High-quality BLS half-face mask for demanding tasks.\n' +
+'Comfortable, reliable reusable respirator.',
+rating: 4.8,
+reviews: 95,
+sold: '380+',
+tags: [
+'bls 4000 half face', 'advanced half mask', 'silicone half respirator', 'bayonet bls mask', 'low breathing half face',
+'painting half mask bls', 'chemical handling respirator', 'welding fume half face', 'en 140 bls mask', 'adjustable suspension mask',
+'high quality bls respirator', 'demanding task half face', 'comfortable reusable mask', 'reliable bls ppe', 'versatile half face protection'
+]
+},
+{
+id: 'fenzy-aeris-mini-scba-honeywell',
+title: 'Fenzy Aeris Mini SCBA Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://cdn11.bigcommerce.com/s-48a5mdsq3u/images/stencil/1280x1280/products/1492/6624/Honeywell-Fenzy-Aeris-Confort-Type-2-SCBA-SX-P-producttype_2797__71799.1680989808.JPG?c=2?imbypass=on',
+desc: 'Fenzy Aeris Mini SCBA Honeywell is a compact self-contained breathing apparatus.\n' +
+'Lightweight design with reduced profile for better mobility.\n' +
+'30-minute air cylinder (or optional 15/20 min) for escape or short entry.\n' +
+'Demand valve with positive pressure for constant airflow.\n' +
+'Full-face mask with wide visor and speech diaphragm.\n' +
+'Low-pressure whistle alarm signals low air supply.\n' +
+'Ideal for confined space entry, rescue, firefighting standby, and industrial escape.\n' +
+'Certified to EN 137 and NFPA standards for SCBA.\n' +
+'Compact, reliable SCBA for emergency breathing protection.\n' +
+'Trusted Honeywell Fenzy quality for life-critical situations.',
+rating: 4.9,
+reviews: 50,
+sold: '150+',
+tags: [
+'fenzy aeris mini scba', 'compact breathing apparatus', 'lightweight scba', 'en 137 scba', 'nfpa scba honeywell',
+'confined space escape', 'rescue breathing apparatus', 'firefighting standby scba', 'low pressure alarm', 'full face scba mask',
+'30 minute cylinder', 'demand valve scba', 'industrial escape ppe', 'life critical breathing', 'trusted honeywell scba'
+]
+},
+{
+id: 'bio-s-cape-with-3l-composite-air-cylinder-honeywell',
+title: 'Bio-S-Cape with 3L Composite Air Cylinder Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://static.grainger.com/rp/s/is/image/Grainger/3TAV2_AS01',
+desc: 'Bio-S-Cape with 3L Composite Air Cylinder Honeywell is an emergency escape breathing device.\n' +
+'Lightweight composite cylinder provides 15–20 minutes of air supply.\n' +
+'Hood-style full-face piece with wide visor for easy donning.\n' +
+'Constant flow regulator ensures steady breathing.\n' +
+'Bright orange bag for quick identification in emergencies.\n' +
+'Ideal for escape from fire, toxic gas release, or oxygen-deficient atmospheres.\n' +
+'Certified to EN 1146 and SOLAS for emergency escape.\n' +
+'Compact, ready-to-use EEBD for industrial and marine use.\n' +
+'Reliable Honeywell escape solution for sudden hazards.\n' +
+'Critical life-saving device for rapid evacuation.',
+rating: 4.8,
+reviews: 60,
+sold: '200+',
+tags: [
+'bio s cape honeywell', 'emergency escape breathing', '3l composite cylinder', 'en 1146 escape device', 'solas eebd',
+'fire escape hood', 'toxic gas escape', 'oxygen deficient protection', 'constant flow regulator', 'bright orange eebd',
+'industrial escape device', 'marine emergency breathing', 'quick donning hood', 'life saving escape ppe', 'reliable honeywell eebd'
+]
+},
+{
+id: 'aeris-scba-1823231-honeywell',
+title: 'AERIS SCBA 1823231 Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.hacsons.com/wp-content/uploads/2022/02/Honeywell-Fenzy-Aeris-Confort-Type-2-SCBA-SX-P__23938.1634804566-1.jpg',
+desc: 'AERIS SCBA 1823231 Honeywell is a professional self-contained breathing apparatus.\n' +
+'30-minute or 45-minute cylinder options for extended entry.\n' +
+'Backplate with harness system distributes weight evenly.\n' +
+'Demand valve with positive pressure and low-pressure alarm.\n' +
+'Full-face mask with wide visor and speech diaphragm.\n' +
+'Buddy breather connection for emergency rescue.\n' +
+'Ideal for firefighting, confined space entry, hazmat, and industrial rescue.\n' +
+'Certified to EN 137 and NFPA 1981 standards for structural firefighting.\n' +
+'Rugged, reliable SCBA for life-threatening atmospheres.\n' +
+'Trusted Honeywell Fenzy quality for professional responders.',
+rating: 4.9,
+reviews: 40,
+sold: '120+',
+tags: [
+'aeris scba honeywell', 'professional breathing apparatus', '30 minute scba', 'en 137 scba', 'nfpa 1981 firefighting',
+'confined space scba', 'hazmat breathing apparatus', 'demand valve scba', 'buddy breather connection', 'full face scba mask',
+'rugged scba harness', 'low pressure alarm', 'industrial rescue scba', 'structural firefighting ppe', 'trusted honeywell scba'
+]
+},
+{
+id: 'dust-mask-hm-102',
+title: 'DUST MASK HM 102',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://m.media-amazon.com/images/I/61fZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
+desc: 'Dust Mask HM 102 is a basic, low-cost disposable mask for light dust.\n' +
+'Cone shape with adjustable aluminum nose bridge for better fit.\n' +
+'Elastic ear loops or head straps for secure wear.\n' +
+'Multi-layer filtration media blocks large dust particles.\n' +
+'Breathable design minimizes breathing resistance.\n' +
+'Foldable for easy pocket storage between uses.\n' +
+'Ideal for sweeping, light sanding, woodworking, and general cleaning.\n' +
+'Meets basic NIOSH N95 or EN149 FFP1 equivalent standards.\n' +
+'Very economical solution for occasional light dust exposure.\n' +
+'Simple, effective entry-level dust protection.',
+rating: 4.2,
+reviews: 300,
+sold: '2000+',
+tags: [
+'hm 102 dust mask', 'basic disposable mask', 'cone dust mask', 'light dust protection', 'niosh n95 equivalent',
+'en149 ffp1 mask', 'sweeping dust mask', 'light sanding respirator', 'woodworking basic mask', 'breathable dust mask',
+'elastic ear loop mask', 'adjustable nose bridge', 'foldable dust mask', 'economical dust ppe', 'occasional dust protection'
+]
+},
+{
+id: 'surgical-face-mask-hs-1101',
+title: 'SURGICAL FACE MASK HS-1101',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://m.media-amazon.com/images/I/71fZ9Z9Z9ZL._AC_UF1000,1000_QL80_.jpg',
+desc: 'Surgical Face Mask HS-1101 provides 3-ply medical-grade protection.\n' +
+'Fluid-resistant outer layer, melt-blown filter middle layer, soft inner layer.\n' +
+'High filtration efficiency against droplets, dust, and bacteria.\n' +
+'Adjustable nose strip and elastic ear loops for secure fit.\n' +
+'Breathable design reduces heat buildup during long wear.\n' +
+'Packaged in boxes for convenient dispensing.\n' +
+'Ideal for medical, dental, clinical, and general hygiene use.\n' +
+'Meets ASTM F2100 Level 1 or equivalent standards.\n' +
+'Disposable, hygienic mask for everyday protection.\n' +
+'Affordable, reliable barrier against respiratory droplets.',
+rating: 4.4,
+reviews: 500,
+sold: '5000+',
+tags: [
+'surgical face mask', '3 ply medical mask', 'fluid resistant mask', 'astm f2100 level 1', 'medical protection mask',
+'dental hygiene mask', 'clinical face mask', 'breathable surgical mask', 'adjustable nose strip', 'elastic ear loop mask',
+'droplet barrier mask', 'disposable hygiene mask', 'high filtration mask', 'affordable medical ppe', 'reliable droplet protection'
+]
+},
+{
+id: 'sandblast-hood-np-503',
+title: 'Sandblast Hood NP-503',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.duniasafety.com/wp-content/uploads/2017/12/Sanblast-Hood-NP503-1.jpg',
+desc: 'Sandblast Hood NP-503 provides full head and face protection during abrasive blasting.\n' +
+'Heavy-duty vinyl hood with large clear visor for good visibility.\n' +
+'Inner cape protects neck and shoulders from rebound media.\n' +
+'Adjustable drawstring and elastic for secure fit.\n' +
+'Breathing tube connection for supplied-air respirator system.\n' +
+'Reinforced seams withstand high-pressure blasting conditions.\n' +
+'Ideal for sandblasting, shot blasting, grit blasting, and surface preparation.\n' +
+'Certified to standards for abrasive blasting hoods.\n' +
+'Durable hood for maximum protection in abrasive environments.\n' +
+'Essential PPE for safe abrasive blasting operations.',
+rating: 4.7,
+reviews: 80,
+sold: '300+',
+tags: [
+'sandblast hood', 'abrasive blasting hood', 'full head protection', 'clear visor hood', 'supplied air hood',
+'sandblasting ppe', 'shot blasting hood', 'grit blasting protection', 'surface preparation hood', 'heavy duty vinyl hood',
+'inner cape hood', 'adjustable drawstring hood', 'reinforced seam hood', 'high pressure blasting', 'essential abrasive ppe'
+]
+},
+{
+id: 'chemical-hood-np-312',
+title: 'Chemical Hood NP-312',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.duniasafety.com/wp-content/uploads/2017/12/Sanblast-Safety-Hood-NP312.jpg',
+desc: 'Chemical Hood NP-312 protects head, face, and neck from chemical splashes and vapors.\n' +
+'Clear PVC visor with anti-fog coating for good visibility.\n' +
+'Flexible vinyl hood with extended cape for shoulder coverage.\n' +
+'Adjustable drawstring and elastic for secure fit.\n' +
+'Breathing tube port for connection to supplied-air system.\n' +
+'Resists many acids, alkalis, and liquid chemicals.\n' +
+'Ideal for chemical handling, tank cleaning, spill response, and decontamination.\n' +
+'Certified for chemical splash and limited gas protection.\n' +
+'Durable hood for hazardous liquid and vapor environments.\n' +
+'Essential PPE for safe chemical exposure work.',
+rating: 4.6,
+reviews: 90,
+sold: '400+',
+tags: [
+'chemical hood', 'splash resistant hood', 'clear pvc visor', 'chemical cape hood', 'supplied air chemical hood',
+'tank cleaning protection', 'spill response hood', 'decontamination ppe', 'acid alkali resistant hood', 'adjustable chemical hood',
+'extended cape hood', 'hazardous vapor protection', 'durable chemical hood', 'essential chemical ppe', 'safe liquid exposure hood'
+]
+},
+{
+id: 'single-respirator-half-face-mask-np-305',
+title: 'Single Respirator Half Face Mask NP-305',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://image.made-in-china.com/2f0j00FcEoyHZsLLkz/Single-Cartridge-Safety-PVC-Half-Face-Np-305-Dust-Mask-Gas-Protective-Respiratory-Mask-Quality-Respirator.webp',
+desc: 'Single Respirator Half Face Mask NP-305 provides basic cartridge protection.\n' +
+'Soft thermoplastic elastomer facepiece for comfortable seal.\n' +
+'Single bayonet connection for one cartridge or filter.\n' +
+'Adjustable head harness for secure fit.\n' +
+'Low-profile design maintains good downward visibility.\n' +
+'Ideal for light chemical handling, dust, and nuisance odors.\n' +
+'Compatible with standard single cartridges and particulate filters.\n' +
+'Certified to EN 140 for half-face respirators.\n' +
+'Economical entry-level reusable half-face mask.\n' +
+'Simple, effective respiratory protection for low-risk tasks.',
+rating: 4.5,
+reviews: 150,
+sold: '800+',
+tags: [
+'single cartridge half face', 'basic respirator mask', 'en 140 half face', 'thermoplastic elastomer mask', 'light chemical respirator',
+'dust protection half face', 'nuisance odor mask', 'low profile single bayonet', 'adjustable harness mask', 'economical half mask',
+'entry level respiratory', 'low risk ppe mask', 'simple reusable mask', 'effective half face protection', 'basic cartridge mask'
+]
+},
+{
+id: 'twin-respirator-half-face-mask-np-306',
+title: 'Twin Respirator Half Face Mask NP-306',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://urbantextiles.co.ke/wp-content/uploads/2026/01/Np306-Double-Respirator-for-sale-in-nairobi-kenya.png',
+desc: 'Twin Respirator Half Face Mask NP-306 offers enhanced filtration with two cartridges.\n' +
+'Soft facepiece material provides comfortable seal.\n' +
+'Twin bayonet connections for dual cartridge or filter use.\n' +
+'Adjustable 4-point head harness for balanced fit.\n' +
+'Low breathing resistance due to dual filter design.\n' +
+'Ideal for painting, spraying, light chemical work, and dust.\n' +
+'Compatible with wide range of twin cartridges and filters.\n' +
+'Certified to EN 140 for half-face respiratory protection.\n' +
+'Durable, comfortable half-face mask for medium-risk tasks.\n' +
+'Reliable twin-cartridge solution for better protection.',
+rating: 4.7,
+reviews: 200,
+sold: '1000+',
+tags: [
+'twin cartridge half face', 'dual filter respirator', 'en 140 twin mask', 'soft facepiece mask', 'painting twin respirator',
+'spraying half face mask', 'light chemical twin mask', 'low breathing twin', 'adjustable harness twin', 'medium risk respirator',
+'durable twin half face', 'comfortable twin cartridge', 'reliable twin mask', 'better protection half face', 'twin bayonet mask'
+]
+},
+{
+id: 'cartridges-filters-rc-201',
+title: 'Cartridges & Filters, RC-201',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://m.media-amazon.com/images/I/41tBqBNs5lL._AC_UF1000,1000_QL80_.jpg',
+desc: 'Cartridges & Filters RC-201 provide organic vapor and particulate protection.\n' +
+'Activated carbon layer removes organic vapors and solvents.\n' +
+'Particulate pre-filter captures dust and aerosols.\n' +
+'Bayonet connection for quick attachment to compatible half/full face masks.\n' +
+'Low breathing resistance for comfortable extended wear.\n' +
+'Ideal for painting, degreasing, solvent handling, and light dust.\n' +
+'Certified to EN 14387 for organic vapor and P2 particulate.\n' +
+'Essential replacement cartridge for reusable respirators.\n' +
+'Cost-effective multi-purpose filter for medium-risk tasks.\n' +
+'Reliable protection against common industrial vapors and dust.',
+rating: 4.5,
+reviews: 120,
+sold: '600+',
+tags: [
+'rc-201 cartridge', 'organic vapor filter', 'particulate pre filter', 'en 14387 rc-201', 'painting cartridge filter',
+'solvent handling filter', 'degreasing respirator filter', 'bayonet organic vapor', 'low breathing cartridge', 'multi purpose filter',
+'reusable mask cartridge', 'medium risk vapor dust', 'cost effective filter', 'reliable industrial cartridge', 'essential vapor protection'
+]
+},
+{
+id: 'cartridges-filters-rc-203',
+title: 'Cartridges & Filters, RC-203',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.proguardsafety.my/cdn/shop/products/RC-203_1200x1200.jpg?v=1553918958',
+desc: 'Cartridges & Filters RC-203 offer multi-gas protection in one unit.\n' +
+'Filters organic vapors, inorganic gases, acid gases, and ammonia.\n' +
+'High-capacity media for extended service life in mixed atmospheres.\n' +
+'Bayonet connection for fast attachment to compatible masks.\n' +
+'Low breathing resistance improves user comfort.\n' +
+'Ideal for chemical plants, laboratories, water treatment, and cleaning.\n' +
+'Certified to EN 14387 ABEK2 for broad-spectrum gas protection.\n' +
+'Versatile replacement cartridge for multi-hazard environments.\n' +
+'Reliable filter for complex chemical exposure.\n' +
+'Essential multi-gas cartridge for professional use.',
+rating: 4.6,
+reviews: 100,
+sold: '500+',
+tags: [
+'rc-203 cartridge', 'multi gas filter', 'abek2 cartridge', 'en 14387 multi gas', 'chemical plant filter',
+'laboratory multi cartridge', 'water treatment gas protection', 'cleaning vapor filter', 'bayonet multi gas', 'low breathing multi gas',
+'broad spectrum cartridge', 'mixed hazard filter', 'versatile replacement cartridge', 'professional multi gas ppe', 'complex exposure filter'
+]
+},
+{
+id: 'cartridges-filters-rc-202',
+title: 'Cartridges & Filters, RC-202',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://image.made-in-china.com/202f0j00VqZbQjYhlwko/Blue-Eagle-RC202-Organic-Vapors-Respirator-Cartridge-Filter.jpg',
+desc: 'Cartridges & Filters RC-202 provide high-efficiency particulate protection.\n' +
+'P2 filter media captures fine dust, mists, and non-oil aerosols.\n' +
+'Bayonet connection for quick, secure attachment to masks.\n' +
+'Low-profile design maintains good visibility.\n' +
+'Ideal for sanding, grinding, woodworking, and general dust.\n' +
+'Compatible with most half-face and full-face respirators.\n' +
+'Certified to EN 143 for P2 particulate filtration.\n' +
+'Essential replacement filter for dusty environments.\n' +
+'Reliable, cost-effective particulate cartridge.\n' +
+'Critical component for dust and aerosol respiratory safety.',
+rating: 4.5,
+reviews: 110,
+sold: '550+',
+tags: [
+'rc-202 cartridge', 'p2 particulate filter', 'high efficiency dust', 'en 143 p2 filter', 'sanding respirator filter',
+'grinding dust cartridge', 'woodworking particulate', 'bayonet dust filter', 'low profile p2', 'general dust protection',
+'reusable mask filter', 'dust aerosol cartridge', 'cost effective p2', 'reliable particulate filter', 'essential dust ppe'
+]
+},
+{
+id: 'safety-53-helmet-mounted',
+title: 'Safety 53 Helmet Mounted',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://cdn.shopify.com/s/files/1/0561/8696/2009/files/4f64e34c-e-e220-4ec5-bee2-98ffaedeb627.__CR0_0_970_600_PT0_SX970_V1_2048x2048.jpg?v=1669083869',
+desc: 'Safety 53 Helmet Mounted earmuffs attach directly to safety helmets.\n' +
+'High noise reduction SNR 28–30 dB for loud industrial environments.\n' +
+'Soft foam cushions provide comfort during long shifts.\n' +
+'Universal mounting system fits most slotted hard hats.\n' +
+'Adjustable arms allow precise positioning over ears.\n' +
+'Foldable design for storage when not in use.\n' +
+'Ideal for construction, manufacturing, demolition, and heavy machinery.\n' +
+'Certified to EN 352-3 for helmet-mounted hearing protection.\n' +
+'Reliable combination of head and hearing protection.\n' +
+'Essential PPE for noisy helmet-required work sites.',
+rating: 4.6,
+reviews: 90,
+sold: '400+',
+tags: [
+'helmet mounted earmuffs', 'safety 53 earmuffs', 'snr 30 helmet muff', 'en 352-3 hearing protection', 'universal mounting earmuff',
+'construction helmet muff', 'manufacturing noise protection', 'demolition hearing ppe', 'soft foam cushions', 'adjustable arm earmuff',
+'foldable helmet mounted', 'heavy machinery hearing', 'head hearing combination', 'noisy helmet work', 'essential combined ppe'
+]
+},
+{
+id: 'safety-earmuffs-em92bk',
+title: 'Safety Earmuffs EM92BK',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://blueeagle-safety.com/wp-content/uploads/2024/11/EM92BK-1.jpg',
+desc: 'Safety Earmuffs EM92BK provide reliable over-the-head hearing protection.\n' +
+'SNR 28–30 dB noise reduction for medium to high noise levels.\n' +
+'Soft foam cushions and padded headband for all-day comfort.\n' +
+'Adjustable headband with steel wire for secure fit.\n' +
+'Lightweight ABS cups resist impact and chemicals.\n' +
+'Foldable design for easy storage in tool bags.\n' +
+'Ideal for construction, woodworking, mowing, and general industry.\n' +
+'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
+'Comfortable, durable earmuffs for daily noise exposure.\n' +
+'Essential PPE for preventing hearing damage.',
+rating: 4.5,
+reviews: 110,
+sold: '500+',
+tags: [
+'em92bk earmuffs', 'over the head hearing', 'snr 30 earmuffs', 'padded headband muff', 'en 352-1 hearing protection',
+'construction ear muff', 'woodworking noise muff', 'foldable earmuff', 'lightweight hearing ppe', 'adjustable steel headband',
+'abs cup earmuff', 'general industry hearing', 'comfortable noise muff', 'prevent hearing loss', 'daily noise protection'
+]
+},
+{
+id: 'verishield-vs130-passive-earmuff-honeywell',
+title: 'VeriShield™ VS130 Passive Earmuff Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://noisyworld.org/wp-content/uploads/2023/03/Honeywell-Howard-Leight-Verishield-VS130-Review.jpg',
+desc: 'VeriShield VS130 Passive Earmuff Honeywell offers high attenuation for extreme noise.\n' +
+'SNR 35–37 dB reduction for very loud industrial environments.\n' +
+'Air Flow Control technology reduces breathing resistance.\n' +
+'Large ear cups with memory foam cushions for superior comfort.\n' +
+'Dielectric design safe around electrical hazards.\n' +
+'Adjustable headband with telescoping arms for precise fit.\n' +
+'Ideal for heavy machinery, shooting ranges, airports, and demolition.\n' +
+'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
+'Premium Honeywell earmuff for maximum noise isolation.\n' +
+'Professional-grade hearing protection for high-decibel settings.',
+rating: 4.8,
+reviews: 130,
+sold: '600+',
+tags: [
+'verishield vs130 earmuff', 'high attenuation muff', 'snr 35 earmuff', 'air flow control muff', 'en 352-1 honeywell',
+'heavy machinery hearing', 'shooting range earmuff', 'airport noise protection', 'demolition earmuff', 'memory foam cushions',
+'dielectric hearing protection', 'adjustable telescoping muff', 'premium honeywell muff', 'maximum noise isolation', 'professional hearing ppe'
+]
+},
+{
+id: 'safety-53-earmuffs',
+title: 'Safety 53 Earmuffs',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://pavetool.com/cdn/shop/products/iq_ear_muff_in_box.jpg?v=1521822175',
+desc: 'Safety 53 Earmuffs provide reliable over-the-head hearing protection.\n' +
+'SNR 28–30 dB noise reduction for medium to high noise levels.\n' +
+'Soft foam cushions and padded headband for comfort.\n' +
+'Adjustable headband with steel wire for secure fit.\n' +
+'Lightweight ABS cups resist impact and chemicals.\n' +
+'Foldable design for easy storage.\n' +
+'Ideal for construction, manufacturing, mowing, and general industry.\n' +
+'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
+'Durable, comfortable earmuffs for daily noise exposure.\n' +
+'Essential PPE for preventing hearing loss.',
+rating: 4.6,
+reviews: 100,
+sold: '450+',
+tags: [
+'safety 53 earmuffs', 'over the head muff', 'snr 30 earmuff', 'padded headband muff', 'en 352-1 hearing protection',
+'construction ear muff', 'manufacturing noise muff', 'foldable earmuff', 'lightweight hearing ppe', 'adjustable steel headband',
+'abs cup earmuff', 'general industry hearing', 'comfortable noise muff', 'prevent hearing loss', 'daily noise protection'
+]
+},
+{
+id: 'disposable-foam-earplugs-nrr-32-corded',
+title: 'Disposable Foam Earplugs NRR 32 Corded',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.powerpak.net/media/catalog/product/r/o/rockland_61524_ear-plugs.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=',
+desc: 'Disposable Foam Earplugs NRR 32 Corded offer high noise reduction with convenience.\n' +
+'NRR 32 dB blocks loud industrial and construction noise.\n' +
+'Slow-recovery foam expands to fit ear canal securely.\n' +
+'Attached cord prevents loss and allows hanging around neck.\n' +
+'Smooth tapered shape for easy insertion and removal.\n' +
+'Individually wrapped for hygiene and easy distribution.\n' +
+'Ideal for construction, manufacturing, shooting ranges, and mowing.\n' +
+'Certified to ANSI S3.19 for high noise reduction rating.\n' +
+'Cost-effective, high-performance disposable earplugs.\n' +
+'Essential hearing protection for loud work environments.',
+rating: 4.5,
+reviews: 300,
+sold: '2000+',
+tags: [
+'corded foam earplugs', 'nrr 32 earplugs', 'disposable hearing protection', 'slow recovery foam', 'construction earplugs',
+'manufacturing noise plugs', 'shooting range earplugs', 'ansi s3.19 earplugs', 'attached cord plugs', 'individually wrapped earplugs',
+'easy insertion earplugs', 'high noise reduction', 'cost effective hearing', 'loud environment ppe', 'essential disposable earplugs'
+]
+},
+{
+id: 'disposable-foam-uncorded-earplugs-nrr-32db',
+title: 'Disposable Foam Uncorded Earplugs NRR 32dB',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://m.media-amazon.com/images/I/71tjrM3KO4L._AC_SL1500_.jpg',
+desc: 'Disposable Foam Uncorded Earplugs NRR 32dB deliver high noise blocking.\n' +
+'NRR 32 dB reduces loud industrial and construction sounds.\n' +
+'Slow-recovery polyurethane foam expands for custom fit.\n' +
+'Tapered shape allows easy insertion and removal.\n' +
+'Soft material provides all-day comfort without pressure.\n' +
+'Individually wrapped for hygiene and portability.\n' +
+'Ideal for construction, manufacturing, mowing, and shooting.\n' +
+'Certified to ANSI S3.19 for reliable noise reduction.\n' +
+'Low-cost, high-performance disposable hearing protection.\n' +
+'Essential uncorded earplugs for preventing hearing damage.',
+rating: 4.4,
+reviews: 350,
+sold: '2500+',
+tags: [
+'uncorded foam earplugs', 'nrr 32 disposable', 'slow recovery earplugs', 'construction uncorded', 'manufacturing hearing plugs',
+'mowing noise protection', 'shooting uncorded plugs', 'ansi s3.19 earplugs', 'tapered foam plugs', 'individually wrapped uncorded',
+'all day comfort earplugs', 'high noise blocking', 'low cost hearing ppe', 'essential uncorded earplugs', 'prevent hearing damage'
+]
+},
+{
+id: 'laser-lite-ll-30-contoured-t-shape-corded-earplugs-honeywell',
+title: 'Laser Lite LL-30 Contoured T-Shape Corded Earplugs Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://m.media-amazon.com/images/I/718CJZlb2pL._AC_UF1000,1000_QL80_.jpg',
+desc: 'Laser Lite LL-30 Contoured T-Shape Corded Earplugs Honeywell offer high visibility and comfort.\n' +
+'NRR 32 dB noise reduction for loud industrial environments.\n' +
+'Self-adjusting polyurethane foam expands for custom fit.\n' +
+'Bright multi-color swirled design makes compliance checks easy.\n' +
+'Attached cord prevents loss and allows hanging around neck.\n' +
+'T-shape contour improves insertion and retention.\n' +
+'Ideal for construction, manufacturing, shooting ranges, and mowing.\n' +
+'Certified to ANSI S3.19 for reliable hearing protection.\n' +
+'High-visibility earplugs that workers can easily spot.\n' +
+'Comfortable, effective corded disposable earplugs.',
+rating: 4.7,
+reviews: 200,
+sold: '1000+',
+tags: [
+'laser lite ll-30', 'contoured t shape earplugs', 'corded high visibility', 'nrr 32 honeywell', 'self adjusting foam',
+'construction compliance plugs', 'manufacturing earplugs', 'shooting range corded', 'multi color earplugs', 'tapered insertion plugs',
+'individually wrapped corded', 'high noise reduction plugs', 'easy compliance earplugs', 'comfortable honeywell plugs', 'effective disposable earplugs'
+]
+},
+{
+id: 'smart-fit-corded-earplugs-honeywell',
+title: 'Smart Fit Corded Earplugs Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://cdn11.bigcommerce.com/s-bvnx6999xw/images/stencil/1280x1280/products/251/694/SMF30__18770.1558551734.jpg?c=2',
+desc: 'Smart Fit Corded Earplugs Honeywell conform to ear canal temperature.\n' +
+'Heat-activated material softens and shapes for personalized fit.\n' +
+'NRR 30–33 dB noise reduction for medium to high noise levels.\n' +
+'Attached cord prevents loss and allows hanging around neck.\n' +
+'Smooth tapered design for easy insertion and removal.\n' +
+'Bright colors for easy compliance checks.\n' +
+'Ideal for construction, manufacturing, mowing, and general industry.\n' +
+'Certified to ANSI S3.19 for reliable hearing protection.\n' +
+'Adaptive, comfortable corded disposable earplugs.\n' +
+'High-performance earplugs that fit better over time.',
+rating: 4.6,
+reviews: 180,
+sold: '800+',
+tags: [
+'smart fit earplugs', 'heat activated earplugs', 'corded conforming plugs', 'nrr 30 honeywell', 'personalized fit earplugs',
+'construction adaptive plugs', 'manufacturing hearing protection', 'mowing corded earplugs', 'smooth tapered plugs', 'bright compliance earplugs',
+'individually wrapped smart', 'high noise reduction plugs', 'adaptive comfort earplugs', 'better fit disposable', 'high performance honeywell plugs'
+]
+},
+{
+id: 'smartfit-tapered-tpe-corded-earplugs-honeywell',
+title: 'SmartFit Tapered TPE Corded Earplugs Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://static.grainger.com/rp/s/is/image/Grainger/3GYE1_1',
+desc: 'SmartFit Tapered TPE Corded Earplugs Honeywell offer reusable comfort.\n' +
+'TPE material conforms to ear canal for custom fit.\n' +
+'NRR 30–33 dB noise reduction for loud work environments.\n' +
+'Detachable cord system allows corded or uncorded use.\n' +
+'Tapered shape for easy insertion and secure retention.\n' +
+'Washable and reusable for cost savings.\n' +
+'Ideal for construction, manufacturing, shooting ranges, and mowing.\n' +
+'Certified to ANSI S3.19 for reliable hearing protection.\n' +
+'Durable, adaptive earplugs with versatile cord option.\n' +
+'Comfortable Honeywell solution for repeated use.',
+rating: 4.7,
+reviews: 160,
+sold: '700+',
+tags: [
+'smartfit tpe earplugs', 'tapered reusable earplugs', 'corded detachable plugs', 'nrr 30 honeywell', 'washable earplugs',
+'construction reusable plugs', 'manufacturing hearing protection', 'shooting range tpe', 'adaptive fit earplugs', 'detachable cord system',
+'tapered insertion plugs', 'high noise reduction reusable', 'durable honeywell earplugs', 'versatile corded plugs', 'comfortable repeated use'
+]
+},
+{
+id: 'disposable-foam-earplug-uncorded-nrr-33',
+title: 'Disposable Foam Earplug Uncorded NRR 33',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://m.media-amazon.com/images/I/21RibFGI8oL._AC_UF1000,1000_QL80_.jpg',
+desc: 'Disposable Foam Earplug Uncorded NRR 33 delivers maximum noise blocking.\n' +
+'NRR 33 dB reduces very loud industrial and construction noise.\n' +
+'Slow-recovery foam expands for custom ear canal fit.\n' +
+'Smooth tapered shape for easy insertion and removal.\n' +
+'Soft material provides comfort during extended wear.\n' +
+'Individually wrapped for hygiene and easy distribution.\n' +
+'Ideal for heavy machinery, shooting ranges, demolition, and airports.\n' +
+'Certified to ANSI S3.19 for highest noise reduction rating.\n' +
+'High-performance, low-cost disposable earplugs.\n' +
+'Essential hearing protection for extreme noise environments.',
+rating: 4.5,
+reviews: 400,
+sold: '3000+',
+tags: [
+'uncorded nrr 33 earplug', 'maximum noise reduction', 'slow recovery foam', 'disposable high nrr', 'heavy machinery earplugs',
+'shooting range uncorded', 'demolition hearing protection', 'airport noise plugs', 'tapered foam earplugs', 'individually wrapped uncorded',
+'comfortable high nrr', 'extreme noise ppe', 'low cost high performance', 'essential extreme hearing', 'industrial nrr 33 plugs'
+]
+},
+{
+id: 'disposable-foam-earplug-corded-nrr-33',
+title: 'Disposable Foam Earplug Corded NRR 33',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://cdn11.bigcommerce.com/s-82xqw/images/stencil/1280x1280/products/2386/29870/apijcmpsh__87053.1729993984.jpg?c=2',
+desc: 'Disposable Foam Earplug Corded NRR 33 provides highest noise reduction.\n' +
+'NRR 33 dB blocks extreme industrial and construction noise.\n' +
+'Slow-recovery polyurethane foam expands for custom fit.\n' +
+'Attached cord prevents loss and allows hanging around neck.\n' +
+'Tapered shape for easy insertion and secure retention.\n' +
+'Individually wrapped for hygiene and portability.\n' +
+'Ideal for heavy machinery, shooting ranges, demolition, and airports.\n' +
+'Certified to ANSI S3.19 for maximum hearing protection.\n' +
+'High-performance corded disposable earplugs.\n' +
+'Essential PPE for preventing hearing damage in loud settings.',
+rating: 4.6,
+reviews: 380,
+sold: '2800+',
+tags: [
+'corded nrr 33 earplug', 'maximum noise blocking', 'slow recovery corded', 'disposable high nrr corded', 'heavy machinery hearing',
+'shooting range corded plugs', 'demolition nrr 33', 'airport extreme noise', 'tapered corded earplugs', 'individually wrapped corded',
+'comfortable high nrr corded', 'extreme noise protection', 'high performance corded', 'essential loud setting ppe', 'industrial nrr 33 corded'
+]
+},
+{
+id: 'verishield-vs120-passive-earmuff-honeywell',
+title: 'VeriShield™ VS120 Passive Earmuff Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://trzykamido.civ.pl/img/A+/Zatyczki/Honeywell/Nauszniki/VS%20120/EN/1.jpg',
+desc: 'VeriShield VS120 Passive Earmuff Honeywell offers reliable noise reduction.\n' +
+'SNR 30–32 dB for medium to high noise industrial environments.\n' +
+'Air Flow Control technology reduces heat and moisture buildup.\n' +
+'Large ear cups with memory foam cushions for comfort.\n' +
+'Dielectric design safe around electrical hazards.\n' +
+'Adjustable telescoping headband for precise fit.\n' +
+'Ideal for construction, manufacturing, mowing, and general industry.\n' +
+'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
+'Comfortable, high-quality earmuff from Honeywell.\n' +
+'Professional hearing protection for daily noisy tasks.',
+rating: 4.7,
+reviews: 120,
+sold: '550+',
+tags: [
+'verishield vs120 earmuff', 'medium noise reduction', 'snr 30 honeywell muff', 'air flow control earmuff', 'en 352-1 vs120',
+'construction hearing muff', 'manufacturing earmuff', 'memory foam cushions', 'dielectric vs120', 'adjustable telescoping muff',
+'general industry hearing', 'comfortable honeywell muff', 'professional noise protection', 'daily noisy tasks ppe', 'reliable vs120 earmuff'
+]
+},
+{
+id: 'verishield-vs110-passive-earmuff-honeywell',
+title: 'VeriShield™ VS110 Passive Earmuff Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.gmesupply.com/media/catalog/product/h/s/hs-1035198-vs.jpg',
+desc: 'VeriShield VS110 Passive Earmuff Honeywell is lightweight for lower noise levels.\n' +
+'SNR 25–28 dB reduction suitable for moderate industrial noise.\n' +
+'Slim ear cups with soft foam cushions for comfort.\n' +
+'Adjustable headband with telescoping arms for fit.\n' +
+'Dielectric construction safe near electrical equipment.\n' +
+'Foldable design for easy storage.\n' +
+'Ideal for light manufacturing, assembly, mowing, and general tasks.\n' +
+'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
+'Comfortable, economical earmuff from Honeywell.\n' +
+'Reliable hearing protection for everyday moderate noise.',
+rating: 4.6,
+reviews: 140,
+sold: '600+',
+tags: [
+'verishield vs110 earmuff', 'lightweight earmuff', 'snr 25 honeywell', 'slim cup earmuff', 'en 352-1 vs110',
+'light manufacturing hearing', 'assembly noise muff', 'mowing earmuff', 'dielectric light muff', 'foldable vs110',
+'general task hearing', 'comfortable honeywell muff', 'economical noise protection', 'moderate noise ppe', 'reliable lightweight earmuff'
+]
+},
+{
+id: 'safety-works-earmuffs-em92rd',
+title: 'Safety Works Earmuffs EM92RD',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.muaragabe.com/wp-content/uploads/2017/12/Earmuff-EM92RD.png',
+desc: 'Safety Works Earmuffs EM92RD provide reliable over-the-head protection.\n' +
+'SNR 28–30 dB noise reduction for medium to high noise levels.\n' +
+'Soft foam cushions and padded headband for comfort.\n' +
+'Adjustable headband with steel wire for secure fit.\n' +
+'Lightweight ABS cups resist impact and chemicals.\n' +
+'Foldable design for easy storage.\n' +
+'Ideal for construction, woodworking, mowing, and general industry.\n' +
+'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
+'Comfortable, durable earmuffs for daily noise exposure.\n' +
+'Essential PPE for preventing hearing damage.',
+rating: 4.5,
+reviews: 100,
+sold: '450+',
+tags: [
+'em92rd earmuffs', 'over the head muff', 'snr 30 safety works', 'padded headband muff', 'en 352-1 earmuff',
+'construction ear muff', 'woodworking noise protection', 'foldable earmuff', 'lightweight hearing ppe', 'adjustable steel headband',
+'abs cup earmuff', 'general industry hearing', 'comfortable noise muff', 'prevent hearing loss', 'daily noise protection'
+]
+},
+{
+id: 'safety-earmuffs-em62',
+title: 'Safety Earmuffs EM62',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.echo-usa.com/getattachment/ee7422ec-e220-4ec5-bee2-22925f01d344/v2_ECHO_PersonalProtection_99988801520_StaticShot1.jpg',
+desc: 'Safety Earmuffs EM62 provide compact, reliable hearing protection.\n' +
+'SNR 27–29 dB reduction for moderate to high noise levels.\n' +
+'Soft foam cushions for comfort during long shifts.\n' +
+'Adjustable headband for secure fit.\n' +
+'Lightweight design reduces fatigue.\n' +
+'Foldable for easy storage in tool bags.\n' +
+'Ideal for construction, manufacturing, mowing, and workshops.\n' +
+'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
+'Durable, comfortable earmuffs for everyday noise.\n' +
+'Essential PPE for protecting hearing on the job.',
+rating: 4.4,
+reviews: 110,
+sold: '500+',
+tags: [
+'em62 earmuffs', 'compact hearing protection', 'snr 27 earmuff', 'soft foam muff', 'en 352-1 em62',
+'construction compact muff', 'manufacturing ear muff', 'foldable lightweight muff', 'adjustable headband muff', 'workshop noise protection',
+'daily hearing ppe', 'comfortable compact earmuff', 'prevent hearing loss', 'reliable moderate noise', 'essential job ear protection'
+]
+},
+{
+id: 'safety-earmuffs-em68',
+title: 'Safety Earmuffs EM68',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://noisyworld.org/wp-content/uploads/2019/11/Best-Bluetooth-Noise-Reduction-Earmuffs-1024x683.jpg',
+desc: 'Safety Earmuffs EM68 offer durable hearing protection with adjustable fit.\n' +
+'SNR 29–31 dB reduction for high noise industrial environments.\n' +
+'Soft foam cushions and padded headband for comfort.\n' +
+'Telescoping headband allows precise adjustment.\n' +
+'Lightweight ABS cups resist impact and chemicals.\n' +
+'Foldable design for easy storage.\n' +
+'Ideal for heavy machinery, construction, demolition, and manufacturing.\n' +
+'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
+'Reliable earmuffs for demanding noisy tasks.\n' +
+'Essential PPE for preventing hearing damage.',
+rating: 4.5,
+reviews: 95,
+sold: '400+',
+tags: [
+'em68 earmuffs', 'durable hearing muff', 'snr 29 earmuff', 'telescoping headband muff', 'en 352-1 em68',
+'heavy machinery ear protection', 'construction high noise', 'demolition earmuff', 'foldable durable muff', 'soft foam cushions',
+'padded headband muff', 'industrial noise ppe', 'reliable high noise muff', 'prevent hearing loss', 'demanding task hearing protection'
+]
+},
+{
+id: 'best-safety-earmuffs-em66',
+title: 'Best Safety Earmuffs EM66',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://trzykamido.civ.pl/img/A+/Zatyczki/Honeywell/Nauszniki/VS%20120/EN/1.jpg',
+desc: 'Best Safety Earmuffs EM66 provide optimal comfort and high attenuation.\n' +
+'SNR 30–32 dB reduction for loud industrial and construction noise.\n' +
+'Thick memory foam cushions for superior comfort.\n' +
+'Adjustable headband with steel wire for secure fit.\n' +
+'Lightweight ABS cups resist impact and chemicals.\n' +
+'Foldable design for easy storage.\n' +
+'Ideal for heavy machinery, shooting ranges, demolition, and manufacturing.\n' +
+'Certified to EN 352-1 and ANSI S3.19 standards.\n' +
+'High-quality earmuffs for maximum noise isolation.\n' +
+'Professional hearing protection for extreme noise environments.',
+rating: 4.6,
+reviews: 105,
+sold: '450+',
+tags: [
+'em66 earmuffs', 'optimal comfort muff', 'snr 30 best earmuff', 'memory foam cushions', 'en 352-1 best muff',
+'heavy machinery hearing protection', 'shooting range earmuff', 'demolition high noise', 'foldable professional muff', 'adjustable steel headband',
+'abs cup best earmuff', 'industrial extreme noise', 'maximum noise isolation', 'professional hearing ppe', 'high quality earmuff'
+]
+},
+{
+id: 'verishield-vs110h-helmet-earmuff-honeywell',
+title: 'VeriShield™ VS110H Helmet Earmuff Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/ed/ed5c01b203103d0250dad4decc80651f2209eaff.jpg',
+desc: 'VeriShield VS110H Helmet Earmuff Honeywell attaches securely to hard hats.\n' +
+'SNR 25–28 dB reduction for moderate to high noise levels.\n' +
+'Slim ear cups with soft foam cushions for comfort.\n' +
+'Universal mounting arms fit most slotted safety helmets.\n' +
+'Adjustable positioning for precise ear coverage.\n' +
+'Foldable design when not in use.\n' +
+'Ideal for construction, manufacturing, mining, and utilities.\n' +
+'Certified to EN 352-3 for helmet-mounted hearing protection.\n' +
+'Comfortable, reliable combination of head and hearing safety.\n' +
+'Essential PPE for helmet-required noisy work sites.',
+rating: 4.7,
+reviews: 80,
+sold: '350+',
+tags: [
+'vs110h helmet earmuff', 'helmet mounted muff', 'snr 25 honeywell helmet', 'universal mounting earmuff', 'en 352-3 helmet muff',
+'construction helmet hearing', 'manufacturing head muff', 'mining noise protection', 'foldable helmet muff', 'soft foam helmet earmuff',
+'adjustable positioning muff', 'combined head hearing ppe', 'reliable helmet noise', 'essential noisy helmet work', 'comfortable comfortable helmet earmuff'
+]
+},
+{
+id: 'metal-detectable-laser-trak-earplug-honeywell',
+title: 'Metal Detectable Laser Trak Earplug Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://accsafety.com/wp-content/uploads/2025/02/Ear-Plugs-LT-30.jpg',
+desc: 'Metal Detectable Laser Trak Earplug Honeywell is designed for food & process industries.\n' +
+'NRR 32 dB noise reduction with metal detectable cord and plug.\n' +
+'Brightly colored for easy compliance checks and visibility.\n' +
+'Self-adjusting foam expands for custom ear canal fit.\n' +
+'Smooth tapered shape for easy insertion and removal.\n' +
+'Attached detectable cord prevents loss in production areas.\n' +
+'Ideal for food processing, pharmaceutical, and clean room environments.\n' +
+'Certified to ANSI S3.19 for high noise reduction.\n' +
+'Detectable earplugs that meet strict industry safety standards.\n' +
+'Essential hearing protection for contamination-controlled areas.',
+rating: 4.8,
+reviews: 70,
+sold: '300+',
+tags: [
+'metal detectable earplug', 'laser trak honeywell', 'nrr 32 detectable', 'food processing earplugs', 'detectable cord plugs',
+'pharmaceutical hearing protection', 'clean room earplugs', 'ansi s3.19 detectable', 'bright compliance plugs', 'self adjusting foam',
+'tapered detectable earplugs', 'contamination control ppe', 'essential detectable hearing', 'process industry earplugs', 'high noise detectable'
+]
+},
+{
+id: 'foam-earplugs-corded-304l-honeywell',
+title: 'Foam Earplugs Corded 304L Honeywell',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://m.media-amazon.com/images/I/61O+CVXBOzL._AC_UF1000,1000_QL80_.jpg',
+desc: 'Foam Earplugs Corded 304L Honeywell provide reliable noise reduction.\n' +
+'NRR 32–33 dB blocks loud industrial and construction noise.\n' +
+'Slow-recovery foam expands for custom ear canal fit.\n' +
+'Attached cord prevents loss and allows hanging around neck.\n' +
+'Smooth tapered shape for easy insertion and removal.\n' +
+'Individually wrapped for hygiene and easy distribution.\n' +
+'Ideal for construction, manufacturing, mowing, and shooting.\n' +
+'Certified to ANSI S3.19 for high noise reduction.\n' +
+'Comfortable, effective corded disposable earplugs.\n' +
+'Trusted Honeywell hearing protection for daily use.',
+rating: 4.5,
+reviews: 150,
+sold: '800+',
+tags: [
+'304l corded earplugs', 'foam corded honeywell', 'nrr 32 corded', 'slow recovery corded', 'construction hearing plugs',
+'manufacturing corded earplugs', 'mowing noise protection', 'shooting corded plugs', 'tapered foam corded', 'individually wrapped honeywell',
+'high noise reduction corded', 'comfortable honeywell plugs', 'daily use hearing ppe', 'reliable corded earplugs', 'essential noise protection'
+]
+},
+{
+id: 'earplugs-np32k',
+title: 'Earplugs NP32K',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.mkhardware.com.my/images/thumbs/0000296_ear-protector.jpeg',
+desc: 'Earplugs NP32K are disposable foam earplugs with high noise reduction.\n' +
+'NRR 32 dB blocks industrial and construction noise effectively.\n' +
+'Slow-recovery foam expands to fit ear canal comfortably.\n' +
+'Smooth tapered design for easy insertion and removal.\n' +
+'Bright color for easy compliance checks.\n' +
+'Individually wrapped for hygiene and portability.\n' +
+'Ideal for construction, manufacturing, mowing, and workshops.\n' +
+'Certified to ANSI S3.19 for reliable hearing protection.\n' +
+'Low-cost, high-performance disposable earplugs.\n' +
+'Essential PPE for preventing hearing damage.',
+rating: 4.4,
+reviews: 200,
+sold: '1000+',
+tags: [
+'np32k earplugs', 'disposable foam np32k', 'nrr 32 disposable', 'slow recovery earplugs', 'construction np32k',
+'manufacturing hearing plugs', 'mowing noise protection', 'workshop earplugs', 'tapered foam plugs', 'individually wrapped np32k',
+'high noise reduction plugs', 'low cost disposable', 'essential hearing ppe', 'prevent hearing loss', 'reliable foam earplugs'
+]
+},
+{
+id: 'earplugs-np35k',
+title: 'Earplugs NP35K',
+price: 'Contact for Price',
+originalPrice: null,
+image: 'https://www.echo-usa.com/getattachment/ee7422ec-e220-4ec5-bee2-22925f01d344/v2_ECHO_PersonalProtection_99988801520_StaticShot1.jpg',
+desc: 'Earplugs NP35K are comfortable disposable foam earplugs for industrial use.\n' +
+'NRR 33–35 dB provides high noise reduction in loud environments.\n' +
+'Soft slow-recovery foam expands gently for custom fit.\n' +
+'Tapered shape allows easy insertion and secure retention.\n' +
+'Bright color for quick compliance checks.\n' +
+'Individually wrapped for hygiene and easy distribution.\n' +
+'Ideal for heavy machinery, construction, demolition, and shooting.\n' +
+'Certified to ANSI S3.19 for superior hearing protection.\n' +
+'High-performance, low-cost disposable earplugs.\n' +
+'Essential PPE for extreme noise exposure.',
+rating: 4.4,
+reviews: 180,
+sold: '900+',
+tags: [
+'np35k earplugs', 'high nrr disposable', 'nrr 33–35 foam', 'soft slow recovery', 'heavy machinery earplugs',
+'construction np35k', 'demolition hearing protection', 'shooting range plugs', 'tapered disposable earplugs', 'individually wrapped np35k',
+'superior noise reduction', 'low cost high performance', 'essential extreme noise ppe', 'comfortable disposable plugs', 'industrial hearing protection'
+]
+},
 ],
 
 
@@ -11962,7 +12381,7 @@ export const productsData = {
     title: 'HS-2546B Solar Terminal MC4 Crimp Red',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71gJ2V2pPZL._AC_SL1500_.jpg',
+    image: 'https://unpluggedpowersystems.ca/wp-content/uploads/2024/08/71JRnI53P4L._AC_SL1500_.jpg',
     desc: 'HS-2546B Solar Terminal MC4 Crimp Tool (Red) for photovoltaic connectors.\n' +
           'Ratchet mechanism ensures full-cycle, consistent crimping force.\n' +
           'Precision dies create secure, gas-tight MC4 terminal connections.\n' +
@@ -11987,7 +12406,7 @@ export const productsData = {
     title: 'HS-35MF Insulated and non-insulated sleeve terminal (Trapezoidal crimp)',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61K8tY8eY8L._AC_SL1500_.jpg',
+    image: 'https://image.made-in-china.com/2f0j00fMvCwPbqrukW/Trapezoid-Manual-Crimping-Tool-an-16wf-for-Wire-Ferrule-End-Sleeves-6-16mm2.webp',
     desc: 'HS-35MF Crimping Pliers produce trapezoidal crimps on sleeve terminals.\n' +
           'Ratchet mechanism ensures consistent, full-cycle crimping pressure.\n' +
           'Precision dies for both insulated and non-insulated ferrules.\n' +
@@ -12012,7 +12431,7 @@ export const productsData = {
     title: 'HS-03BC Non-pre-insulated open plug terminal',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61g8r8r8r8L._AC_SL1500_.jpg',
+    image: 'https://img.alicdn.com/imgextra/i1/6000000005432/O1CN01QrTIMm1pzu41Ou1kf_!!6000000005432-0-tbvideo.jpg',
     desc: 'HS-03BC Crimping Tool for non-pre-insulated open plug terminals.\n' +
           'Ratchet mechanism provides consistent crimping force every time.\n' +
           'Precision dies create secure, gas-tight connections on open lugs.\n' +
@@ -12037,7 +12456,7 @@ export const productsData = {
     title: 'Large Y.O Terminal Crimping Pliers',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71h8s8s8s8L._AC_SL1500_.jpg',
+    image: 'https://ae01.alicdn.com/kf/Sa72759d6deb440e5983be98e96e46a073.jpg?width=1500&height=1186&hash=2686',
     desc: 'Large Y.O Terminal Crimping Pliers handle heavy-gauge terminals.\n' +
           'High-leverage ratchet system for powerful crimping on large lugs.\n' +
           'Precision dies produce strong, gas-tight connections.\n' +
@@ -12062,7 +12481,7 @@ export const productsData = {
     title: 'HS-07/HS-02 Multi-function Wire Stripper (Stripping, Cutting, Crimping Pliers)',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61i8t8t8t8L._AC_SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/416hWAalebL._AC_UF1000,1000_QL80_.jpg',
     desc: 'HS-07/HS-02 Multi-function Wire Stripper combines stripping, cutting, and crimping.\n' +
           'Precision stripping holes for 0.5–6 mm² wires without damage.\n' +
           'Sharp cutting blades handle soft and hard wires cleanly.\n' +
@@ -12087,7 +12506,7 @@ export const productsData = {
     title: 'SN Pliers + 5 Sets of Jaw Covers',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71j8u8u8u8L._AC_SL1500_.jpg',
+    image: 'https://www.icrimptools.com/cdn/shop/files/preview_images/IWS-30J_1024x.png?v=1703834928',
     desc: 'SN Pliers with 5 Sets of Jaw Covers offer versatile gripping options.\n' +
           'Interchangeable jaw covers protect delicate surfaces from scratches.\n' +
           'High-leverage design for strong gripping and cutting.\n' +
@@ -12112,7 +12531,7 @@ export const productsData = {
     title: 'HS-16',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61k8v8v8v8L._AC_SL1500_.jpg',
+    image: 'https://ceaworld.com/static/upload/image/20240118/1705560504943216.jpg',
     desc: 'HS-16 Ratchet Crimping Tool for medium-size terminals and connectors.\n' +
           'Self-adjusting ratchet ensures full-cycle, consistent crimps.\n' +
           'Precision dies for secure connections on 0.5–6 mm² wires.\n' +
@@ -12137,7 +12556,7 @@ export const productsData = {
     title: 'HS-38',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71l8w8w8w8L._AC_SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/41bqBsIWGwL._AC_UF894,1000_QL80_.jpg',
     desc: 'HS-38 Heavy-Duty Crimping Pliers for larger terminals and lugs.\n' +
           'High-leverage ratchet system for powerful crimping force.\n' +
           'Precision dies create strong connections on 6–50 mm² wires.\n' +
@@ -12162,7 +12581,7 @@ export const productsData = {
     title: 'HS-30J Pre-insulated terminal',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61m8x8x8x8L._AC_SL1500_.jpg',
+    image: 'https://sjc-estore.com/wp-content/uploads/2023/04/HS-30J-5ed5b70c1fa63.jpg',
     desc: 'HS-30J Crimping Tool for pre-insulated terminals with color-coded dies.\n' +
           'Ratchet mechanism ensures full-cycle, uniform crimping pressure.\n' +
           'Color-coded dies for red, blue, yellow terminals (0.5–6 mm²).\n' +
@@ -12187,7 +12606,7 @@ export const productsData = {
     title: 'S016-4A Sleeve-type special pliers (hexagonal after crimping)',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71n8y8y8y8L._AC_SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/61mKc58I4YL._AC_UF1000,1000_QL80_.jpg',
     desc: 'S016-4A Sleeve-type Special Pliers create strong hexagonal crimps.\n' +
           'Self-adjusting ratchet for consistent crimping force.\n' +
           'Precision hexagonal dies for gas-tight sleeve connections.\n' +
@@ -12212,7 +12631,7 @@ export const productsData = {
     title: '16-300 BOX SET',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61o8z8z8z8L._AC_SL1500_.jpg',
+    image: 'https://i.ebayimg.com/00/s/OTYwWDEyODA=/z/Kv8AAOSwDsxoByie/$_57.JPG?set_id=880000500F',
     desc: '16-300mm² Crimping Tool Box Set includes multiple dies and case.\n' +
           'Heavy-duty ratchet crimper for large lugs and terminals.\n' +
           'Comprehensive die set covers wide range of cable sizes.\n' +
@@ -12237,7 +12656,7 @@ export const productsData = {
     title: 'Folding wire stripper (with hook blade)',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71p8080808L._AC_SL1500_.jpg',
+    image: 'https://cdn11.bigcommerce.com/s-g9mwmghvga/images/stencil/1280x1280/products/15558/15829/CONXTOOL-93082__28166.1744118898.jpg?c=1',
     desc: 'Folding Wire Stripper with Hook Blade is compact and multi-functional.\n' +
           'Folds for easy pocket or belt storage when not in use.\n' +
           'Precision stripping holes for 0.5–6 mm² wires.\n' +
@@ -12262,7 +12681,7 @@ export const productsData = {
     title: 'Multi-function crimping pliers',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61q8181818L._AC_SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/41C7Sz5wtsL._AC_UF1000,1000_QL80_.jpg',
     desc: 'Multi-function Crimping Pliers combine crimping, stripping, and cutting.\n' +
           'Ratchet mechanism for consistent crimping on various terminals.\n' +
           'Precision stripping holes and sharp cutting blades.\n' +
@@ -12287,7 +12706,7 @@ export const productsData = {
     title: 'Multi-function crimping pliers',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71r8282828L._AC_SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/51fqkqwsmIL._AC_UF1000,1000_QL80_.jpg',
     desc: 'Multi-function Crimping Pliers offer compact crimping, stripping, and cutting.\n' +
           'Ratchet system ensures full-cycle crimping on terminals.\n' +
           'Built-in stripping holes and cutting blades for versatility.\n' +
@@ -12312,7 +12731,7 @@ export const productsData = {
     title: '18-inch cable cutter',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61s8383838L._AC_SL1500_.jpg',
+    image: 'https://cdn11.bigcommerce.com/s-htnyngf/images/stencil/1280x1280/products/54/22412/High-Leverage-Cable-Cutter-VT63050__45009.1770228357.jpg?c=2',
     desc: '18-inch Cable Cutter provides long-reach cutting for thick cables.\n' +
           'High-leverage design cuts large multi-strand conductors easily.\n' +
           'Hardened blades handle copper, aluminum, and steel cables.\n' +
@@ -12337,7 +12756,7 @@ export const productsData = {
     title: '24-inch cable cutter',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71t8484848L._AC_SL1500_.jpg',
+    image: 'https://i.ebayimg.com/images/g/iEEAAOSwcNNm~GFv/s-l1200.jpg',
     desc: '24-inch Cable Cutter offers maximum leverage for very thick cables.\n' +
           'Extra-long handles provide superior cutting force.\n' +
           'Hardened cutting edges slice through large copper and aluminum conductors.\n' +
@@ -12362,7 +12781,7 @@ export const productsData = {
     title: '32-inch cable cutter',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61u8585858L._AC_SL1500_.jpg',
+    image: 'https://www.versales.com/images/products/1590/C16B-Cable-Cutter_md.jpg',
     desc: '32-inch Cable Cutter delivers extreme leverage for massive cables.\n' +
           'Ultra-long handles generate tremendous cutting power.\n' +
           'Hardened blades cut heavy multi-strand copper and aluminum.\n' +
@@ -12387,7 +12806,7 @@ export const productsData = {
     title: '36-inch cable cutter',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71E4e7pVJPL._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://i.ebayimg.com/images/g/f-kAAOSwyWlgz6he/s-l1200.jpg',
     desc: '36-inch Cable Cutter provides ultimate power for largest cables.\n' +
           'Extra-long handles deliver maximum cutting force.\n' +
           'Hardened cutting edges slice through heavy-duty conductors.\n' +
@@ -12412,7 +12831,7 @@ export const productsData = {
     title: '9-Inch Multi-Function Wire Stripper',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71f8k4n8n8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/7c33fdf6-aa51-41a7-906e-18275ecbe9c3.__CR0,0,970,600_PT0_SX970_V1___.png',
     desc: '9-inch Multi-Function Wire Stripper combines stripping, cutting, and crimping.\n' +
           'Precision stripping holes for 0.5–10 mm² wires.\n' +
           'Sharp cutting jaws handle soft and hard wires cleanly.\n' +
@@ -12437,7 +12856,7 @@ export const productsData = {
     title: 'Bee Handle Wire Stripper',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61g8l8l8l8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://www.latiendadelapicultor.com/5895/zig-zag-tighten-wired-frames-crimping-tool.jpg',
     desc: 'Bee Handle Wire Stripper features ergonomic bee-shape grip for comfort.\n' +
           'Precision stripping holes for 0.5–6 mm² wires without damage.\n' +
           'Sharp blades cut wires cleanly with minimal effort.\n' +
@@ -12462,7 +12881,7 @@ export const productsData = {
     title: '727 Ratchet 7PCS',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71h8m8m8m8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://images.performancebike.com/cdn-cgi/image/f=auto,width=950/images/large/bikes/topeak/tt2628.jpg',
     desc: '727 Ratchet 7PCS Set includes sockets, extensions, and ratchet handle.\n' +
           '72-tooth ratchet mechanism for smooth, fast operation.\n' +
           'Chrome-vanadium steel with mirror finish for durability.\n' +
@@ -12487,7 +12906,7 @@ export const productsData = {
     title: '8-inch steel wire pliers',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61i8n8n8n8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://m.media-amazon.com/images/I/512QaXhhq8L._AC_UF894,1000_QL80_.jpg',
     desc: '8-inch Steel Wire Pliers provide powerful twisting and cutting.\n' +
           'High-leverage design cuts hard steel wires with ease.\n' +
           'Induction-hardened cutting edges stay sharp.\n' +
@@ -12512,7 +12931,7 @@ export const productsData = {
     title: '8-inch pointed nose',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71j8o8o8o8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://images.tekton.com/assets/tekton-gripping-pliers-x13_in-hand.jpg?width=1536&quality=75',
     desc: '8-inch Pointed Nose Pliers offer precision gripping in tight spaces.\n' +
           'Long, thin jaws reach into confined areas easily.\n' +
           'Serrated tips provide secure hold on small components.\n' +
@@ -12537,7 +12956,7 @@ export const productsData = {
     title: '14PCS 8-24mm Cloth Bags',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61k8p8p8p8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://i.ebayimg.com/images/g/k7sAAeSwggBopnQ7/s-l1200.png',
     desc: '14PCS 8-24mm Wrench Set in Cloth Bag covers common metric sizes.\n' +
           'Chrome-vanadium steel with mirror finish for durability.\n' +
           '12-point box end and open end for versatility.\n' +
@@ -12562,7 +12981,7 @@ export const productsData = {
     title: '15*980 Transparent Waterproof Cover Steel Cable Lock',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71l8q8q8q8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://m.media-amazon.com/images/I/61E53Nmi0hL.jpg',
     desc: '15×980mm Steel Cable Lock with transparent waterproof cover for security.\n' +
           'Heavy-duty braided steel cable resists cutting and weather.\n' +
           'Transparent PVC cover protects against moisture and corrosion.\n' +
@@ -12587,7 +13006,7 @@ export const productsData = {
     title: '880#15*980 White Head Round Cable Lock',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61m8r8r8r8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://d2jpx6ncc90twu.cloudfront.net/files/product/large/589365.jpg',
     desc: '880# 15×980 mm White Head Round Cable Lock provides strong theft protection.\n' +
           'Heavy-duty braided steel cable with round profile resists cutting tools.\n' +
           'White ABS-coated lock head with 4-digit resettable combination mechanism.\n' +
@@ -12612,7 +13031,7 @@ export const productsData = {
     title: 'Tire Pressure Gauge SMALL',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71n8s8s8s8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://images.rustysoffroad.com/cdn/shop/products/ARB506-959384_1000x1000.jpg?v=1648783060',
     desc: 'Small Tire Pressure Gauge delivers quick, accurate readings in a compact size.\n' +
           'Analog dial with clear PSI and bar markings for easy interpretation.\n' +
           'Chrome-plated metal body resists corrosion and withstands daily use.\n' +
@@ -12637,7 +13056,7 @@ export const productsData = {
     title: 'Tire Pressure Gauge L',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61o8t8t8t8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://d2jpx6ncc90twu.cloudfront.net/files/product/large/589365.jpg',
     desc: 'Large Dial Tire Pressure Gauge offers easy-to-read measurements.\n' +
           'Oversized face with bold PSI and bar scale for quick reading.\n' +
           'Heavy-duty chrome-plated body with protective rubber boot.\n' +
@@ -12662,7 +13081,7 @@ export const productsData = {
     title: 'Flat small internal hex card insert',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71p8u8u8u8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://m.media-amazon.com/images/I/61Wi5rDaJdL._AC_UF894,1000_QL80_.jpg',
     desc: 'Flat Small Internal Hex Card Insert bits provide precise screwdriving.\n' +
           'High-grade S2 steel construction for long service life.\n' +
           'Precision-machined hex tips fit snugly without cam-out.\n' +
@@ -12687,7 +13106,7 @@ export const productsData = {
     title: 'Flat Phillips hex Socket Insert',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61q8v8v8v8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://m.media-amazon.com/images/I/616OH9dsDfL._AC_UF1000,1000_QL80_.jpg',
     desc: 'Flat Phillips Hex Socket Insert bits combine Phillips and hex drive.\n' +
           'Dual-function design fits both Phillips screws and hex sockets.\n' +
           'High-torque S2 steel construction resists cam-out and wear.\n' +
@@ -12712,7 +13131,7 @@ export const productsData = {
     title: 'Flat internal hex socket card',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71r8w8w8w8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://m.media-amazon.com/images/I/61Wi5rDaJdL._AC_UF894,1000_QL80_.jpg',
     desc: 'Flat Internal Hex Socket Card set offers multiple hex sizes in one pack.\n' +
           'Precision-machined hex tips fit snugly in socket-head screws.\n' +
           'High-grade S2 steel with hardened tips for long wear life.\n' +
@@ -12737,7 +13156,7 @@ export const productsData = {
     title: 'Flat small internal hex double bubble',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61s8x8x8x8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://cdn.shopify.com/s/files/1/0021/0527/8543/files/Screenshot_2025-09-15_133738_175796506868c86b0c015041536.png?v=1757965069',
     desc: 'Flat Small Internal Hex Double Bubble bits feature reinforced double-bubble shank.\n' +
           'Extra-strong design resists twisting and cam-out under high torque.\n' +
           'Precision small hex tips for delicate socket-head screws.\n' +
@@ -12762,7 +13181,7 @@ export const productsData = {
     title: 'Flat hex socket double bubble',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71t8y8y8y8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://m.media-amazon.com/images/I/51S6RVgPbYL.jpg',
     desc: 'Flat Hex Socket Double Bubble bits offer reinforced strength for socket screws.\n' +
           'Double-bubble shank design greatly increases torsion resistance.\n' +
           'Precision hex tips prevent stripping of socket-head fasteners.\n' +
@@ -12787,7 +13206,7 @@ export const productsData = {
     title: 'Flat Large Internal Hex Double Bulge',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61u8z8z8z8L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://edisonmed.com/media/magefan_blog/Internal-Hex-conn.jpg',
     desc: 'Flat Large Internal Hex Double Bulge bits handle bigger socket screws.\n' +
           'Double-bulge reinforced shank provides extreme torque resistance.\n' +
           'Large hex sizes fit heavy machinery and structural socket bolts.\n' +
@@ -12812,7 +13231,7 @@ export const productsData = {
     title: 'Hanging Card Pearl Nickel 8 Steel PLIER',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71v8080808L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://m.media-amazon.com/images/I/71oU+SV+yaL.jpg',
     desc: 'Pearl Nickel 8-inch Steel Plier on hanging card for retail display.\n' +
           'Polished pearl nickel finish provides corrosion resistance and premium look.\n' +
           'High-leverage design for powerful gripping and cutting.\n' +
@@ -12837,7 +13256,7 @@ export const productsData = {
     title: 'Hanging Card Pearl Nickel 6-ROSE PLIASS',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/61w8181818L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://m.media-amazon.com/images/I/71oU+SV+yaL.jpg',
     desc: 'Pearl Nickel 6-inch Rose Pliers on hanging card for attractive display.\n' +
           'Rose (diagonal) cutting head for flush cuts on wires and nails.\n' +
           'Polished pearl nickel plating resists corrosion and looks premium.\n' +
@@ -12862,7 +13281,7 @@ export const productsData = {
     title: 'Hanging Card Pearl Nickel 6 CUTTER',
     price: 'Contact for Price',
     originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71x8282828L._AC_UF1000,1000_QL80_.jpg',
+    image: 'https://image.made-in-china.com/2f0j00upgfEdwRZFoO/CRV-Carbon-Steel-Straight-Cutting-Aviation-Snip-with-Wire-Cutter.webp',
     desc: 'Pearl Nickel 6-inch Diagonal Cutter on hanging card for retail presentation.\n' +
           'Polished pearl nickel finish offers corrosion protection and premium appearance.\n' +
           'Sharp induction-hardened cutting edges for clean wire and cable cuts.\n' +
@@ -13386,81 +13805,7 @@ export const productsData = {
       'essential powerful wash', 'reliable thorough cleaning', 'high pressure output', 'efficient outdoor washer', 'strong cleaning tool'
     ]
   },
-  {
-    id: 'mx1403-1600w-car-washer-aluminum',
-    title: 'MX1403 1600W Car Washer (Aluminum)',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/81oX6bEhh4L._AC_SL1500_.jpg',
-    desc: 'MX1403 1600W Car Washer with aluminum pump for reliable pressure.\n' +
-          '1600W motor paired with lightweight aluminum pump assembly.\n' +
-          'Max 110 bar pressure with adjustable nozzle settings.\n' +
-          '5m hose, quick-connect system, and detergent bottle included.\n' +
-          'Ergonomic spray gun with soft-grip trigger for comfort.\n' +
-          'Perfect for vehicle washing, garden furniture, siding, and decks.\n' +
-          'Corrosion-resistant aluminum pump extends service life.\n' +
-          'Compact portable design with handle and wheels.\n' +
-          'High-performance pressure washer for fast, effective cleaning.\n' +
-          'Essential tool for home, auto, and outdoor maintenance.',
-    rating: 4.7,
-    reviews: 110,
-    sold: '450+',
-    tags: [
-      'mx1403 aluminum washer', '1600w pressure washer', '110 bar aluminum pump', 'adjustable spray gun', 'detergent included washer',
-      'vehicle garden cleaning', 'siding deck tool', 'corrosion resistant pump', 'portable compact washer', 'ergonomic trigger',
-      'essential high performance', 'reliable fast cleaning', 'lightweight durable washer', 'efficient home tool', 'powerful outdoor washer'
-    ]
-  },
-  {
-    id: 'mx1601-16inch-electric-chainsaw',
-    title: 'MX1601 16inch Electric Chainsaw',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://m.media-amazon.com/images/I/71j7kiByJIL._AC_SL1500_.jpg',
-    desc: 'MX1601 16-inch Electric Chainsaw is powerful for cutting logs and branches.\n' +
-          '1600W high-torque motor drives 16-inch Oregon bar and chain.\n' +
-          'Tool-free chain tensioning and quick bar adjustment system.\n' +
-          'Automatic chain lubrication keeps chain running smoothly.\n' +
-          'Ergonomic soft-grip handles with safety lock-off switch.\n' +
-          'Ideal for tree pruning, firewood preparation, and garden clearing.\n' +
-          'Lightweight design reduces fatigue compared to gas saws.\n' +
-          'Instant start with no fuel mixing or pull cords.\n' +
-          'Professional corded chainsaw for clean, quiet cutting.\n' +
-          'Essential tool for efficient yard and woodworking tasks.',
-    rating: 4.9,
-    reviews: 90,
-    sold: '350+',
-    tags: [
-      'mx1601 electric chainsaw', '16 inch chainsaw', '1600w high torque', 'oregon bar chain', 'tool free tensioning',
-      'automatic lubrication', 'ergonomic safety switch', 'tree pruning tool', 'firewood garden clearing', 'lightweight corded saw',
-      'instant start chainsaw', 'professional quiet cut', 'essential yard tool', 'efficient woodworking', 'reliable branch cutter'
-    ]
-  },
-  {
-    id: 'mx1701-1150w-paint-mixer',
-    title: 'MX1701 1150W Paint Mixer',
-    price: 'Contact for Price',
-    originalPrice: null,
-    image: 'https://www.dry-lining.co.uk/Graphics/Product_Detail_Images/megamixermm21mixer1150w1.jpg',
-    desc: 'MX1701 1150W Paint Mixer blends paints, mortars, and compounds quickly.\n' +
-          'Powerful 1150W motor with variable speed for different viscosities.\n' +
-          '160mm paddle included for thorough mixing of 20–50 kg batches.\n' +
-          'Ergonomic soft-grip handles and side handle for control.\n' +
-          'Ideal for paint, plaster, tile adhesive, grout, and concrete mixing.\n' +
-          'Durable gearbox and heavy-duty chuck for long runtime.\n' +
-          'Quick-release paddle system for easy cleaning.\n' +
-          'Professional tool for fast, lump-free material preparation.\n' +
-          'Essential mixer for construction, renovation, and decorating.\n' +
-          'Reliable power for efficient, consistent mixing results.',
-    rating: 4.7,
-    reviews: 120,
-    sold: '500+',
-    tags: [
-      'mx1701 paint mixer', '1150w variable mixer', '160mm paddle mixer', 'paint plaster blending', 'tile adhesive tool',
-      'ergonomic side handle', 'durable gearbox mixer', 'quick release paddle', 'professional lump free', 'essential construction mixer',
-      'renovation decorating tool', 'reliable consistent mix', 'fast material prep', 'heavy duty mixer', 'efficient batch mixing'
-    ]
-  },
+ 
   {
     id: 'mx1703-750w-electric-vibrator',
     title: 'MX1703 750W Electric Vibrator',

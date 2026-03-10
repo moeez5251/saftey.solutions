@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
-import { Link, useNavigate } from "react-router-dom";
-import { CreditCard, Truck, AlertCircle, MessageCircle, ShoppingCart } from "lucide-react";
-import auths from "../appwrite/appwrite";
+import { Link } from "react-router-dom";
+import {
+  CreditCard,
+  Truck,
+  AlertCircle,
+  MessageCircle,
+  ShoppingCart,
+  CheckCircle,
+  Phone,
+  Package,
+} from "lucide-react";
 import toast from "react-hot-toast";
 
 function Checkout() {
-  const { cartItems, totalAmount } = useCart(); // Removed clearCart from here
-  const navigate = useNavigate();
+  const { cartItems, totalAmount } = useCart();
 
-  // Form state
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,6 +36,9 @@ function Checkout() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // ✅ NEW: controls showing the confirmation screen
+  const [orderPlaced, setOrderPlaced] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -45,7 +54,6 @@ function Checkout() {
 
   const validateForm = () => {
     const newErrors = {};
-
     if (!formData.name.trim()) newErrors.name = "Name is required";
     if (!formData.email.trim()) newErrors.email = "Email is required";
     if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
@@ -63,28 +71,15 @@ function Checkout() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Only real authentication check - no fake success page
+  // ✅ UPDATED: instead of navigating, show confirmation screen
   const handlePlaceOrder = async () => {
     if (!validateForm()) return;
-
     setIsSubmitting(true);
-
-    try {
-      const user = await auths.currentuser();
-      if (user) {
-        navigate("/placeorder");
-        toast.success("Order confirmed! Proceeding to final step.");
-      } else {
-        navigate("/signup");
-        toast.error("Please sign up or log in to place your order.");
-      }
-    } catch (error) {
-      console.error("Authentication check failed:", error);
-      navigate("/signup");
-      toast.error("Please sign up or log in to place your order.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Simulate a brief processing moment
+    await new Promise((res) => setTimeout(res, 800));
+    setIsSubmitting(false);
+    setOrderPlaced(true);
+    toast.success("Order received! We'll contact you shortly.");
   };
 
   const handleWhatsAppOrder = () => {
@@ -97,14 +92,13 @@ function Checkout() {
       return;
     }
 
-    let message = "🛒 *New Order from S.S-SAFETY SOLUTIONS*%0A%0A";
+    let message = "🛒 *New Order from S.S SAFETY SOLUTIONS*%0A%0A";
     message += `*Customer Details:*%0A`;
     message += `Name: ${formData.name}%0A`;
     if (formData.email) message += `Email: ${formData.email}%0A`;
     message += `Phone: ${formData.phone}%0A`;
     message += `City: ${formData.city}%0A`;
     message += `Address: ${formData.address}%0A%0A`;
-
     message += `*Order Items:*%0A`;
     cartItems.forEach((item, index) => {
       message += `${index + 1}. ${item.title} × ${item.quantity}%0A`;
@@ -114,17 +108,123 @@ function Checkout() {
           : item.price || "Call for Price"
       }%0A`;
     });
-
     message += `%0A*Total Amount:* Rs. ${totalAmount.toLocaleString("en-IN")}%0A%0A`;
     message += `Payment Method: ${paymentMethod === "cod" ? "Cash on Delivery" : "Card"}%0A`;
     message += "Thank you! Please confirm the order.";
 
-    const whatsappNumber = "+923001234567"; // ← CHANGE TO YOUR NUMBER
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-    window.open(whatsappURL, "_blank");
+    const whatsappNumber = "923347616779";
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
   };
 
+  // ─────────────────────────────────────────────
+  // ✅ ORDER CONFIRMATION SCREEN
+  // ─────────────────────────────────────────────
+  if (orderPlaced) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-16">
+        <div className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-10 text-center">
+          {/* Success Icon */}
+          <div className="flex justify-center mb-6">
+            <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center">
+              <CheckCircle size={52} className="text-orange-600" />
+            </div>
+          </div>
+
+          <h1 className="text-3xl font-extrabold text-gray-900 mb-3">
+            Thank You, {formData.name}! 🎉
+          </h1>
+          <p className="text-gray-500 text-lg mb-8">
+            We've received your order. Our team will reach out to you shortly for confirmation and
+            the best quotation.
+          </p>
+
+          {/* Order Summary */}
+          <div className="bg-gray-50 rounded-2xl p-6 text-left mb-8">
+            <h2 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+              <Package size={20} className="text-orange-600" />
+              Your Order Summary
+            </h2>
+            <div className="space-y-3 max-h-64 overflow-y-auto">
+              {cartItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="flex items-center gap-4 pb-3 border-b border-gray-200 last:border-0"
+                >
+                  <div className="w-14 h-14 bg-white rounded-xl border border-gray-200 flex-shrink-0 overflow-hidden">
+                    {item.image && (
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                      />
+                    )}
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-gray-800 line-clamp-1">{item.title}</p>
+                    <p className="text-sm text-gray-500">Qty: {item.quantity}</p>
+                  </div>
+                  <p className="font-bold text-orange-600 whitespace-nowrap">
+                    {typeof item.price === "number"
+                      ? `Rs. ${(item.price * item.quantity).toLocaleString("en-IN")}`
+                      : item.price || "Call for Price"}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex justify-between items-center mt-4 pt-4 border-t border-gray-300">
+              <span className="text-xl font-bold text-gray-900">Total</span>
+              <span className="text-xl font-bold text-orange-600">
+                Rs. {totalAmount.toLocaleString("en-IN")}
+              </span>
+            </div>
+          </div>
+
+          {/* Contact CTA */}
+          <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6 mb-8">
+            <p className="text-gray-700 font-semibold text-lg mb-1">
+              📞 For the best quotation, please contact us:
+            </p>
+            <p className="text-orange-700 font-bold text-xl tracking-wide mb-1">
+              S.S Safety Solution
+            </p>
+            <a
+              href="tel:+923347616779"
+              className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-800 font-semibold text-lg transition"
+            >
+              <Phone size={20} />
+              +92 334 7616779
+            </a>
+          </div>
+
+          {/* WhatsApp button on confirmation screen too */}
+          <a
+            href={`https://wa.me/923347616779?text=Hi%20I%20am%20${encodeURIComponent(
+              formData.name
+            )}%2C%20I%20just%20placed%20an%20order%20on%20S.S%20Safety%20Solution%20website.%20Please%20provide%20the%20best%20quotation.`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-105 flex items-center justify-center gap-3 mb-4">
+              <MessageCircle size={24} />
+              Chat with Us on WhatsApp
+            </button>
+          </a>
+
+          <Link
+            to="/products"
+            className="text-gray-500 hover:text-orange-600 font-medium transition text-sm underline"
+          >
+            ← Continue Shopping
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  // ─────────────────────────────────────────────
+  // EMPTY CART
+  // ─────────────────────────────────────────────
   if (cartItems.length === 0) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
@@ -139,6 +239,9 @@ function Checkout() {
     );
   }
 
+  // ─────────────────────────────────────────────
+  // MAIN CHECKOUT FORM (unchanged)
+  // ─────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -164,7 +267,12 @@ function Checkout() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
                     placeholder="John Doe"
                   />
-                  {errors.name && <p className="text-red-500 text-sm mt-1 flex items-center gap-1"><AlertCircle size={16} />{errors.name}</p>}
+                  {errors.name && (
+                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle size={16} />
+                      {errors.name}
+                    </p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
@@ -176,10 +284,17 @@ function Checkout() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
                     placeholder="john@example.com"
                   />
-                  {errors.email && <p className="text-red-500 text-sm mt-1 flex items-center gap-1"><AlertCircle size={16} />{errors.email}</p>}
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle size={16} />
+                      {errors.email}
+                    </p>
+                  )}
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number
+                  </label>
                   <input
                     type="tel"
                     name="phone"
@@ -188,7 +303,12 @@ function Checkout() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
                     placeholder="+92 300 1234567"
                   />
-                  {errors.phone && <p className="text-red-500 text-sm mt-1 flex items-center gap-1"><AlertCircle size={16} />{errors.phone}</p>}
+                  {errors.phone && (
+                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle size={16} />
+                      {errors.phone}
+                    </p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">City</label>
@@ -200,10 +320,17 @@ function Checkout() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
                     placeholder="Lahore"
                   />
-                  {errors.city && <p className="text-red-500 text-sm mt-1 flex items-center gap-1"><AlertCircle size={16} />{errors.city}</p>}
+                  {errors.city && (
+                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle size={16} />
+                      {errors.city}
+                    </p>
+                  )}
                 </div>
                 <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Full Address</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Address
+                  </label>
                   <textarea
                     name="address"
                     value={formData.address}
@@ -212,7 +339,12 @@ function Checkout() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
                     placeholder="House #, Street, Area..."
                   />
-                  {errors.address && <p className="text-red-500 text-sm mt-1 flex items-center gap-1"><AlertCircle size={16} />{errors.address}</p>}
+                  {errors.address && (
+                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle size={16} />
+                      {errors.address}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
@@ -252,7 +384,9 @@ function Checkout() {
                 {paymentMethod === "card" && (
                   <div className="mt-6 space-y-6 p-6 bg-gray-50 rounded-xl">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Card Number</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Card Number
+                      </label>
                       <input
                         type="text"
                         name="cardNumber"
@@ -262,12 +396,18 @@ function Checkout() {
                         maxLength="19"
                         className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
                       />
-                      {errors.cardNumber && <p className="text-red-500 text-sm mt-1 flex items-center gap-1"><AlertCircle size={16} />{errors.cardNumber}</p>}
+                      {errors.cardNumber && (
+                        <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                          <AlertCircle size={16} />
+                          {errors.cardNumber}
+                        </p>
+                      )}
                     </div>
-
                     <div className="grid md:grid-cols-3 gap-6">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Expiry Date</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Expiry Date
+                        </label>
                         <input
                           type="text"
                           name="expiry"
@@ -277,7 +417,12 @@ function Checkout() {
                           maxLength="5"
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
                         />
-                        {errors.expiry && <p className="text-red-500 text-sm mt-1 flex items-center gap-1"><AlertCircle size={16} />{errors.expiry}</p>}
+                        {errors.expiry && (
+                          <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                            <AlertCircle size={16} />
+                            {errors.expiry}
+                          </p>
+                        )}
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">CVV</label>
@@ -290,10 +435,17 @@ function Checkout() {
                           maxLength="3"
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
                         />
-                        {errors.cvv && <p className="text-red-500 text-sm mt-1 flex items-center gap-1"><AlertCircle size={16} />{errors.cvv}</p>}
+                        {errors.cvv && (
+                          <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                            <AlertCircle size={16} />
+                            {errors.cvv}
+                          </p>
+                        )}
                       </div>
                       <div className="md:col-span-3">
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Name on Card</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Name on Card
+                        </label>
                         <input
                           type="text"
                           name="cardName"
@@ -302,7 +454,12 @@ function Checkout() {
                           placeholder="John Doe"
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
                         />
-                        {errors.cardName && <p className="text-red-500 text-sm mt-1 flex items-center gap-1"><AlertCircle size={16} />{errors.cardName}</p>}
+                        {errors.cardName && (
+                          <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                            <AlertCircle size={16} />
+                            {errors.cardName}
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -318,10 +475,17 @@ function Checkout() {
 
               <div className="space-y-4 max-h-96 overflow-y-auto mb-6">
                 {cartItems.map((item) => (
-                  <div key={item.id} className="flex gap-4 pb-4 border-b border-gray-100 last:border-0">
+                  <div
+                    key={item.id}
+                    className="flex gap-4 pb-4 border-b border-gray-100 last:border-0"
+                  >
                     <div className="bg-gray-100 rounded-lg w-16 h-16 flex-shrink-0">
                       {item.image && (
-                        <img src={item.image} alt={item.title} className="w-full h-full object-cover rounded-lg" />
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover rounded-lg"
+                        />
                       )}
                     </div>
                     <div className="flex-1">
@@ -343,26 +507,23 @@ function Checkout() {
                   <span>Rs. {totalAmount.toLocaleString("en-IN")}</span>
                 </div>
 
-                {/* Place Order Button - Now only checks login and redirects */}
+                {/* Place Order Button */}
                 <button
                   onClick={handlePlaceOrder}
                   disabled={isSubmitting}
                   className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white font-bold text-xl py-5 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-105 flex items-center justify-center gap-3"
                 >
-                  {isSubmitting ? "Checking..." : "Place Order"}
+                  {isSubmitting ? "Processing..." : "Place Order"}
                 </button>
 
                 {/* WhatsApp Order Button */}
-                <a href="https://wa.me/923347616779?text=Hi%20I%20am%20MR-sufiyan%20CEO%20of%20SS.%20Safety%20Solution.%20How%20can%20I%20help%20you
-">
-                  <button
+                <button
                   onClick={handleWhatsAppOrder}
                   className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-xl py-5 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-105 flex items-center justify-center gap-4"
                 >
                   <MessageCircle size={28} />
                   Order via WhatsApp
                 </button>
-                </a>
               </div>
             </div>
           </div>

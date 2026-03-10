@@ -233,7 +233,7 @@ function Service() {
             <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-4xl mx-auto">
               Let us know your requirements — our experts are here to provide tailored solutions.
             </p>
-            <a href='https://wa.me/923347616779?text=Hi%20I%20am%20MR-sufiyan%20CEO%20of%20SS.%20Safety%20Solution.%20How%20can%20I%20help%20you'>
+            <a href='https://wa.me/923347616779?text=Hi%20I%20am%20Mr.%20Sufyan%20from%20S.S%20Safety%20Solutions.%20How%20can%20I%20help%20you?'>
               <button className="px-12 py-6 bg-orange-600 hover:bg-orange-700 text-white font-extrabold text-2xl rounded-full shadow-2xl transition transform hover:scale-105">
                 Contact Us Today
               </button>

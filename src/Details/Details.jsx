@@ -555,7 +555,7 @@ const found = productsData[category]?.find(
                 <motion.a
                   whileTap={{ scale: 0.97 }}
                   whileHover={{ scale: 1.02 }}
-                  href="https://wa.me/923347616779?text=Hi%20I%20am%20MR-sufiyan%20CEO%20of%20SS.%20Safety%20Solution.%20How%20can%20I%20help%20you"
+                  href="https://wa.me/923347616779?text=Hi%20I%20am%20Mr.%20Sufyan%20from%20S.S%20Safety%20Solutions.%20How%20can%20I%20help%20you?"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative overflow-hidden group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold text-base py-4 rounded-2xl shadow-lg shadow-green-200 transition-all duration-200 flex items-center justify-center gap-2.5"
