@@ -398,6 +398,38 @@ const found = productsData[category]?.find(
     mpn: product.id,
   };
 
+  const productFaqs = [
+    {
+      q: `What is the price of ${product.title} in Pakistan?`,
+      a: `${product.title} is offered by S.S Safety Solutions ${productPriceFormatted ? `at ${productPriceFormatted}` : 'at the most competitive wholesale and retail price'}. We supply 100% genuine safety equipment with nationwide delivery across Lahore, Karachi, Islamabad, and all cities in Pakistan.`
+    },
+    {
+      q: `How can I place an order or get a bulk quotation?`,
+      a: `You can order directly online using the Add to Cart button, or contact our sales and corporate support team via WhatsApp or phone call at +92 334 7616779 for bulk institutional pricing and fast dispatch.`
+    },
+    {
+      q: `What quality standards and safety certifications apply?`,
+      a: `All safety, tactical, and firefighting equipment supplied by S.S Safety Solutions conforms to international benchmarks, including ISO 9001 quality management, CE European safety standards, and OSHA industrial compliance.`
+    },
+    {
+      q: `What are the delivery timelines across Pakistan?`,
+      a: `Orders within Lahore are typically delivered within 24 hours. Shipments to Karachi, Islamabad, Rawalpindi, Faisalabad, and other nationwide destinations arrive within 2 to 4 business days via registered express couriers.`
+    }
+  ];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": productFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-[#f5f6f8] pt-20 lg:pt-28 pb-20">
       <SEO
@@ -408,7 +440,7 @@ const found = productsData[category]?.find(
         image={product.image}
         type="product"
         breadcrumbs={breadcrumbs}
-        schema={[productSchema]}
+        schema={[productSchema, faqSchema]}
         productPrice={productPrice > 0 ? productPrice : undefined}
         productPriceCurrency="PKR"
         productAvailability={product.sold ? "instock" : "oos"}
@@ -716,6 +748,103 @@ const found = productsData[category]?.find(
             </div>
           </motion.div>
         )}
+
+        {/* ── Technical Specifications ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="mt-6 bg-white rounded-2xl shadow-md p-7 sm:p-9"
+        >
+          <div className="flex items-center gap-2.5 mb-5">
+            <span className="w-1 h-6 bg-orange-500 rounded-full" />
+            <h2 className="text-xl font-bold text-gray-900">Technical Specifications &amp; Details</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+            <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <span className="text-gray-400 text-xs uppercase tracking-wider block font-bold mb-1">Product SKU</span>
+              <span className="text-gray-900 font-semibold">{product.id?.toUpperCase() || 'SS-PRO-01'}</span>
+            </div>
+            <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <span className="text-gray-400 text-xs uppercase tracking-wider block font-bold mb-1">Category</span>
+              <span className="text-gray-900 font-semibold">{currentCategory}</span>
+            </div>
+            <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <span className="text-gray-400 text-xs uppercase tracking-wider block font-bold mb-1">Supplier / Brand</span>
+              <span className="text-gray-900 font-semibold">S.S Safety Solutions</span>
+            </div>
+            <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <span className="text-gray-400 text-xs uppercase tracking-wider block font-bold mb-1">Quality Certification</span>
+              <span className="text-gray-900 font-semibold">ISO 9001 / CE / EN Standards</span>
+            </div>
+            <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <span className="text-gray-400 text-xs uppercase tracking-wider block font-bold mb-1">Stock Availability</span>
+              <span className="text-green-700 font-semibold">Ready Stock · Immediate Dispatch</span>
+            </div>
+            <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <span className="text-gray-400 text-xs uppercase tracking-wider block font-bold mb-1">Nationwide Delivery</span>
+              <span className="text-gray-900 font-semibold">Lahore, Karachi, Islamabad &amp; All PK</span>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* ── Frequently Asked Questions ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-6 bg-white rounded-2xl shadow-md p-7 sm:p-9"
+        >
+          <div className="flex items-center gap-2.5 mb-6">
+            <span className="w-1 h-6 bg-orange-500 rounded-full" />
+            <h2 className="text-xl font-bold text-gray-900">Frequently Asked Questions</h2>
+          </div>
+          <div className="space-y-4">
+            {productFaqs.map((faq, i) => (
+              <div key={i} className="border border-gray-100 rounded-xl p-4 sm:p-5 bg-gray-50/60 hover:bg-orange-50/30 transition-colors">
+                <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-2 flex items-start gap-2.5">
+                  <span className="text-orange-600 font-black text-base">Q:</span>
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed pl-6">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* ── Popular Safety Searches in Pakistan ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.45 }}
+          className="mt-6 bg-white rounded-2xl shadow-md p-7 sm:p-9"
+        >
+          <div className="flex items-center gap-2.5 mb-3">
+            <span className="w-1 h-6 bg-orange-500 rounded-full" />
+            <h2 className="text-xl font-bold text-gray-900">Popular Safety Searches in Pakistan</h2>
+          </div>
+          <p className="text-xs text-gray-500 mb-4">Explore high-demand certified security, tactical gear, army store supplies, and safety equipment:</p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "tactical gear", "stun gun", "taser", "self defence gadgets", "army store",
+              "taser price in pakistan", "tactical gear pakistan", "army store near me",
+              "knife price in pakistan", "pakistan knife", "pocket knife", "stun gun pakistan",
+              "tactical gear pk", "taser gun in pakistan", "biometric attendance",
+              "biometric attendance system", "biometric attendance system punjab login",
+              "biometric attendance system login", "fire hydrant", "smoke detector"
+            ].map((kw, i) => (
+              <Link
+                key={i}
+                to={`/products?q=${encodeURIComponent(kw)}`}
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium bg-orange-50 text-orange-800 border border-orange-200 hover:bg-orange-600 hover:text-white transition-all shadow-xs"
+              >
+                <span>🔍</span> {kw}
+              </Link>
+            ))}
+          </div>
+        </motion.div>
 
         {/* ══════════════════════════════════════════════════════
             ZOOM MODAL

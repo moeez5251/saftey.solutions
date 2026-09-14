@@ -116,7 +116,7 @@ const staticPages = [
   }
 ];
 
-function generateHtml({ title, description, canonical, image, schema, mainHtml }) {
+function generateHtml({ title, description, canonical, image, schema, mainHtml, keywords }) {
   let html = template;
 
   // 1. Replace Title
@@ -124,6 +124,11 @@ function generateHtml({ title, description, canonical, image, schema, mainHtml }
 
   // 2. Replace Meta Description
   html = html.replace(/<meta name="description" content="[\s\S]*?"\s*\/?>/i, `<meta name="description" content="${escapeHtml(description)}" />`);
+
+  // 2b. Replace Meta Keywords
+  if (keywords) {
+    html = html.replace(/<meta name="keywords" content="[\s\S]*?"\s*\/?>/i, `<meta name="keywords" content="${escapeHtml(keywords)}" />`);
+  }
 
   // 3. Replace Canonical & Alternates
   const canonicalTags = `  <link rel="canonical" href="${canonical}" />\n  <link rel="alternate" hreflang="en" href="${canonical}" />\n  <link rel="alternate" hreflang="x-default" href="${canonical}" />`;
@@ -215,9 +220,31 @@ for (const [category, items] of Object.entries(productsData)) {
       ? product.desc.replace(/[\r\n]+/g, ' ').slice(0, 160)
       : `Buy ${product.title} in Pakistan at SS Safety Solutions. Certified ${category} with nationwide delivery.`;
 
+    const baseKeywords = `${product.title}, ${category}, safety equipment Pakistan, protective gear, buy ${product.title} Pakistan`;
+    const keywords = product.tags && product.tags.length > 0
+      ? `${baseKeywords}, ${product.tags.join(', ')}`
+      : baseKeywords;
+
     const imageUrl = product.image && product.image.startsWith('http')
       ? product.image
       : `${siteUrl}/android-chrome-512x512.png`;
+
+    const productPriceFormatted = typeof product.price === 'number' ? `Rs. ${product.price.toLocaleString('en-IN')}` : product.price;
+
+    const productFaqs = [
+      {
+        q: `What is the price of ${product.title} in Pakistan?`,
+        a: `${product.title} is available at S.S Safety Solutions ${productPriceFormatted ? `for ${productPriceFormatted}` : 'at competitive rates'} with nationwide cash on delivery across Lahore, Karachi, Islamabad, and all cities in Pakistan.`
+      },
+      {
+        q: `How can I buy ${product.title} or place a bulk order?`,
+        a: `You can order directly online through our website or contact our corporate support team via WhatsApp / Call at +92 334 7616779 for bulk institutional pricing.`
+      },
+      {
+        q: `What quality certifications apply to this equipment?`,
+        a: `All safety, tactical, and fire protection equipment supplied by S.S Safety Solutions conforms to international benchmarks, including ISO 9001 and CE standards.`
+      }
+    ];
 
     const productSchema = {
       '@context': 'https://schema.org',
@@ -256,7 +283,20 @@ for (const [category, items] of Object.entries(productsData)) {
       ]
     };
 
-    const combinedSchema = [productSchema, breadcrumbSchema];
+    const faqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: productFaqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: f.a
+        }
+      }))
+    };
+
+    const combinedSchema = [productSchema, breadcrumbSchema, faqSchema];
 
     const mainHtml = `      <article itemscope itemtype="https://schema.org/Product">
         <nav aria-label="Breadcrumb">
@@ -267,11 +307,18 @@ for (const [category, items] of Object.entries(productsData)) {
         </nav>
         <h1 itemprop="name">${escapeHtml(product.title)}</h1>
         <p><strong>Category:</strong> ${escapeHtml(category)}</p>
-        <p><strong>Price:</strong> <span itemprop="price">${escapeHtml(String(product.price))}</span></p>
+        <p><strong>Price in Pakistan:</strong> <span itemprop="price">${escapeHtml(String(productPriceFormatted))}</span></p>
+        <p><strong>Supplier:</strong> S.S Safety Solutions (Lahore, Pakistan - Nationwide Delivery)</p>
         <div itemprop="description">
           <p>${escapeHtml(product.desc || cleanDesc)}</p>
         </div>
-        <p><a href="/products">View all certified safety products</a></p>
+        <section>
+          <h2>Frequently Asked Questions</h2>
+          <dl>
+            ${productFaqs.map((f) => `<dt><strong>${escapeHtml(f.q)}</strong></dt><dd>${escapeHtml(f.a)}</dd>`).join('\n            ')}
+          </dl>
+        </section>
+        <p><a href="/products">View all certified safety and tactical products</a> | <a href="/contact">Contact Sales</a></p>
       </article>`;
 
     const productHtml = generateHtml({
@@ -279,6 +326,7 @@ for (const [category, items] of Object.entries(productsData)) {
       description: cleanDesc,
       canonical,
       image: imageUrl,
+      keywords,
       schema: combinedSchema,
       mainHtml
     });

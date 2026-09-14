@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { ArrowRight, ShoppingCart, Star, Shield, Award, Users, Zap, Quote, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ShoppingCart, Star, Shield, Award, Users, Zap, Quote, CheckCircle2, ChevronLeft, ChevronRight, Sparkles, Building2, Briefcase, Calendar, CheckCircle, Crosshair, Fingerprint, Flame, HelpCircle, ChevronDown, Tag } from 'lucide-react';
 import { motion, useScroll, useTransform, useInView, animate, useMotionValue, useSpring } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules';
@@ -233,13 +233,51 @@ function Home() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
   const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
 
+  const [openFaq, setOpenFaq] = useState(0);
+
+  const homeFaqs = [
+    {
+      q: 'Where can I find an authorized army store near me in Pakistan?',
+      a: 'S.S Safety Solutions operates from 47 Brandreth Road, Lahore, offering nationwide delivery across Pakistan. We supply military tactical gear, body armor vests, plate carriers, duty belts, and tactical pocket knives with fast shipping to Karachi, Islamabad, Rawalpindi, and all cities.'
+    },
+    {
+      q: 'What is the taser price in Pakistan and what self defence gadgets are available?',
+      a: 'Genuine rechargeable taser guns and police-grade stun guns at S.S Safety Solutions range between Rs. 3,800 and Rs. 5,800. Equipped with high-voltage deterrence, integrated laser sights, and LED flashlights, they are widely used for personal protection, women self-defense, and security staff.'
+    },
+    {
+      q: 'How does your biometric attendance system integrate with the Punjab login portal?',
+      a: 'Our biometric attendance systems feature high-speed optical fingerprint and RFID sensors that comply with official institutional standards. They seamlessly connect with HR software and export data compatible with the biometric attendance system Punjab login requirements.'
+    },
+    {
+      q: 'Do you supply certified outdoor fire hydrants and optical smoke detectors?',
+      a: 'Yes, S.S Safety Solutions provides BS 750 / NFPA compliant ductile iron fire hydrant pillar systems, landing valves, and EN 54-7 certified optical smoke detector sensors for industrial facilities, commercial plazas, and residential towers.'
+    },
+    {
+      q: 'What are your delivery timelines and payment options in Pakistan?',
+      a: 'We offer express 24-hour delivery in Lahore and 2 to 4 business days nationwide across Pakistan. We support Cash on Delivery (COD), direct bank transfer, and institutional corporate billing.'
+    }
+  ];
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': homeFaqs.map((faq) => ({
+      '@type': 'Question',
+      'name': faq.q,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': faq.a
+      }
+    }))
+  };
+
   const breadcrumbs = [{ name: 'Home', url: siteUrl }];
   const homeSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'SS Safety Solutions - Home',
     description:
-      'Leading supplier of premium safety equipment, protective gear, fire fighting systems, and rescue equipment in Pakistan.',
+      'Leading supplier of tactical gear, army store items, taser guns, biometric attendance systems, fire hydrants, smoke detectors, and PPE in Pakistan.',
     url: siteUrl,
     publisher: {
       '@type': 'Organization',
@@ -262,7 +300,7 @@ function Home() {
       price: 'Call for Price',
       rating: 4.9,
       badge: 'BEST SELLER',
-      image: 'https://m.media-amazon.com/images/I/71Dn8rcuo7L._AC_UY900_.jpg',
+      image: '/images/products/infographics/safety-boots-pro-x.jpg',
       description: 'Steel-toe protection with anti-slip sole. EN ISO 20345 certified for ultimate comfort in heavy-duty environments.',
     },
     {
@@ -271,17 +309,17 @@ function Home() {
       price: 'Call for Price',
       rating: 4.8,
       badge: 'NEW ARRIVAL',
-      image: 'https://acelinkarmor.com/wp-content/uploads/2024/08/helmet-category-banner.jpg',
+      image: '/images/products/infographics/tactical-ballistic-helmet.jpg',
       description: 'NIJ Level IIIA protection. Lightweight, adjustable fit for security and tactical operations.',
     },
     {
       id: 'bullet-proof-jacket',
-      name: 'High-Visibility Safety Vest',
+      name: 'Ballistic Protection Body Armor',
       price: 'Call for Price',
-      rating: 4.7,
-      badge: null,
-      image: 'https://cdn.prod.website-files.com/647888ca92d03e3fca3f1ea0/647888ca92d03e3fca3f23a6_Safety%20yellow%20and%20orange%20vests.jpg',
-      description: 'ANSI Class 2 reflective vest. Breathable mesh for all-day comfort in road and construction zones.',
+      rating: 4.9,
+      badge: 'NIJ CERTIFIED',
+      image: '/images/products/infographics/bullet-proof-jacket.jpg',
+      description: 'NIJ Level IIIA ballistic vest with ultra-lightweight UHMWPE panels and modular MOLLE system.',
     },
     {
       id: 'best-harness',
@@ -289,17 +327,17 @@ function Home() {
       price: 'Call for Price',
       rating: 5.0,
       badge: 'TOP RATED',
-      image: 'https://sbc-content.s3.amazonaws.com/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/S/a/Safety-Lanyards_1.jpg',
-      description: 'OSHA compliant full-body harness with quick-connect buckles and padded support.',
+      image: '/images/products/infographics/best-harness.jpg',
+      description: 'EN 361 & ANSI certified full-body harness with quick-connect buckles and padded lumbar support.',
     },
     {
       id: 'leather-heat-resistance-hand-gloves',
-      name: 'Fire-Resistant Gloves Pro',
+      name: 'Heat-Resistant Leather Gloves Pro',
       price: 'Call for Price',
-      rating: 4.6,
-      badge: 'LIMITED STOCK',
-      image: 'https://cdn11.bigcommerce.com/s-tumf4kk1l4/images/stencil/original/l/apikrtmf9__92534.original.jpg',
-      description: 'Heat-resistant up to 500°C. Dexterity and grip for firefighting and industrial use.',
+      rating: 4.8,
+      badge: 'TOP RATED',
+      image: '/images/products/infographics/leather-heat-resistance-hand-gloves.jpg',
+      description: 'EN 407 certified heavy-duty cowhide leather gloves with Kevlar stitching, resisting heat up to 500°C.',
     }
   ];
 
@@ -344,14 +382,14 @@ function Home() {
   return (
     <>
       <SEO
-        title="SS Safety Solutions | Safety Equipment Pakistan"
-        description="Leading supplier of premium safety equipment, PPE, fire fighting gear, and rescue equipment in Pakistan. Quality certified safety solutions."
-        keywords="safety equipment Pakistan, protective gear, fire fighting equipment, rescue equipment, PPE, safety shoes, road safety, fire alarm systems, fall arrest systems, laboratory safety"
+        title="SS Safety Solutions | Tactical Gear, Army Store & Safety Equipment Pakistan"
+        description="Pakistan's leading supplier of tactical gear, taser guns, stun guns, army store items, biometric attendance systems, fire hydrants, smoke detectors, and PPE. Certified safety solutions with nationwide delivery."
+        keywords="tactical gear, stun gun, taser, self defence gadgets, army store, taser price in pakistan, tactical gear pakistan, army store near me, knife price in pakistan, pakistan knife, pocket knife, stun gun pakistan, tactical gear pk, taser gun in pakistan, biometric attendance, biometric attendance system, biometric attendance system punjab login, biometric attendance system login, fire hydrant, smoke detector, safety equipment pakistan, protective gear, PPE, safety shoes"
         url="https://sssafetysolutions.pk/"
         image="https://sssafetysolutions.pk/android-chrome-512x512.png"
         type="website"
         breadcrumbs={breadcrumbs}
-        schema={[homeSchema]}
+        schema={[homeSchema, faqSchema]}
       />
 
       {/* ── HERO ───────────────────────────────────────────────────────────── */}
@@ -543,104 +581,563 @@ function Home() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-stone-50 via-white to-orange-50/30 relative overflow-hidden">
+      {/* ── LEADERSHIP & EXECUTIVE BOARD ───────────────────────────────────── */}
+      <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-stone-50 via-white to-orange-50/40 relative overflow-hidden">
         {/* Background ambient lighting */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-10 right-10 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-orange-200/40 via-red-100/30 to-transparent blur-3xl" />
-          <div className="absolute bottom-10 left-10 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-red-200/30 via-amber-100/40 to-transparent blur-3xl" />
+          <div className="absolute top-10 right-10 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-orange-200/35 via-red-100/25 to-transparent blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-red-200/30 via-amber-100/35 to-transparent blur-3xl" />
           <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
         </div>
 
-        <div className="max-w-6xl mx-auto relative">
-          <FadeUp className="text-center mb-16 md:mb-20">
+        <div className="max-w-6xl mx-auto relative space-y-20 md:space-y-28">
+          {/* Section Header */}
+          <FadeUp className="text-center">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-orange-100 text-orange-700 border border-orange-200/80 shadow-sm mb-4">
               <Award className="w-3.5 h-3.5 text-orange-600" />
               Leadership &amp; Vision
             </span>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
-              Message from <span className="bg-gradient-to-r from-red-700 via-orange-600 to-red-800 bg-clip-text text-transparent">Our team</span>
+              Executive <span className="bg-gradient-to-r from-red-700 via-orange-600 to-red-800 bg-clip-text text-transparent">Leadership</span>
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
-              Driving an enduring culture of workplace safety, certified protection, and human resource excellence across Pakistan.
+              Steered by visionary stewardship, rigorous corporate governance, and an absolute commitment to human life and certified industrial safety across Pakistan.
             </p>
           </FadeUp>
 
+          {/* ── 1. TOP SPOTLIGHT: FOUNDER & CEO ──────────────────────────────── */}
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-            {/* Executive Portrait Card (5 cols) */}
+            {/* CEO Portrait Card (5 cols) */}
             <FadeUp delay={0.1} className="lg:col-span-5 flex justify-center">
               <div className="relative group w-full max-w-md">
                 {/* Multi-layer ambient backdrop glow */}
-                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-red-600/20 via-orange-500/25 to-amber-400/20 blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute -inset-5 rounded-3xl bg-gradient-to-tr from-amber-500/25 via-orange-500/30 to-red-600/25 blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-700" />
 
                 {/* Portrait card */}
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/90 bg-slate-900 ring-1 ring-black/5">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/95 bg-slate-900 ring-1 ring-black/5">
                   <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-950">
                     <img
-                      src="/images/leadership/arslan-nisar.jpg"
-                      alt="Mr. Arslan Nisar – General Manager & HR, SS Safety Solutions"
+                      src="/images/leadership/founder-ceo.jpg"
+                      alt="Mr. Sufyain Ali – Founder & CEO, S.S Safety Solutions"
                       className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
                     {/* Subtle gradient vignette at bottom */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
 
                     {/* Quick identity card on bottom of photo */}
-                    <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/15 text-white">
-                      <p className="text-lg font-black tracking-wide text-white">Mr. ARSLAN NISAR</p>
-                      <p className="text-xs font-semibold text-orange-400 uppercase tracking-wider">General Manager &amp; Head of HR</p>
+                    <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-black/45 backdrop-blur-md border border-white/15 text-white">
+                      <div className="flex items-center gap-1.5 text-amber-400 text-xs font-bold uppercase tracking-wider mb-0.5">
+                        <Sparkles className="w-3.5 h-3.5" />
+                        <span>Founder &amp; Chief Executive</span>
+                      </div>
+                      <p className="text-xl font-black tracking-wide text-white">Mr. SUFYAIN ALI</p>
+                      <p className="text-xs font-semibold text-gray-300 tracking-wider">S.S Safety Solutions • Founded 2012</p>
                     </div>
                   </div>
 
-                  {/* Floating Role Badge */}
+                  {/* Floating CEO Role Badge */}
                   <motion.div
-                    animate={{ y: [0, -4, 0] }}
+                    animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                    className="absolute -top-3 -right-3 bg-gradient-to-br from-orange-500 via-red-600 to-red-700 text-white px-5 py-2.5 rounded-full shadow-xl border-2 border-white font-black text-xs tracking-wider flex items-center gap-1.5"
+                    className="absolute -top-3 -right-3 bg-gradient-to-br from-amber-500 via-orange-600 to-red-700 text-white px-5 py-2.5 rounded-full shadow-2xl border-2 border-white font-black text-xs tracking-wider flex items-center gap-1.5"
                   >
                     <Shield className="w-3.5 h-3.5 fill-white/20" />
-                    <span>GM &amp; HR</span>
+                    <span>FOUNDER &amp; CEO</span>
                   </motion.div>
                 </div>
-
-                
               </div>
             </FadeUp>
 
-            {/* Executive Message Card (7 cols) */}
+            {/* CEO Message Card (7 cols) */}
             <FadeUp delay={0.2} className="lg:col-span-7">
-              <div className="bg-white/90 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl border border-orange-100/80 relative">
+              <div className="bg-white/95 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl border border-orange-100/90 relative">
                 {/* Decorative Quote Icon */}
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-200/50 flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/15 via-orange-500/10 to-red-500/10 border border-orange-200/60 flex items-center justify-center mb-6">
                   <Quote className="w-7 h-7 text-red-700" />
                 </div>
 
                 <div className="space-y-5 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
                   <p>
-                    At <strong className="text-orange-600 font-bold">S.S SAFETY SOLUTIONS</strong>, we firmly believe that true industrial leadership begins with an absolute commitment to human life and dignity. Every worker on a construction site, every firefighter on the front lines, and every technician in a manufacturing plant is someone's family member.
+                    When we established <strong className="text-orange-600 font-bold">S.S SAFETY SOLUTIONS</strong>, our founding ethos was rooted in a non-negotiable truth: <em className="text-gray-900 font-semibold not-italic">human life and worker dignity are sacred</em>. Every worker who enters an industrial plant, a high-altitude scaffold, or a hazardous fire emergency deserves returning home safely to their families.
                   </p>
                   <p>
-                    As <strong className="text-gray-900 font-semibold">General Manager &amp; Head of HR</strong>, my mission is to align our operational excellence with our human-centric vision. We do not simply supply safety equipment; we deliver uncompromising peace of mind. Every product we provide—from certified safety footwear and fire suppression systems to tactical and rescue gear—meets rigorous international standards including ISO, CE, and OSHA.
+                    Over 12 years of steadfast dedication, we have transformed safety supply into a hallmark of certified excellence. From our headquarters in Lahore to industrial hubs across Pakistan, our equipment carries internationally accredited testing—spanning <strong className="text-gray-900 font-semibold">ISO 9001, CE, OSHA, and EN standards</strong>.
                   </p>
-                  <p className="text-gray-800 font-medium">
-                    "Our pledge is straightforward: empowering organizations with the most dependable protective solutions so every professional can work with confidence and return home safely."
+                  <p className="text-gray-900 font-medium italic border-l-4 border-orange-500 pl-4 py-1 bg-orange-50/50 rounded-r-xl">
+                    "Our commitment is unshakeable: delivering certified, life-saving protection you can trust unconditionally—every project, every industry, every single day."
                   </p>
                 </div>
 
-              
+                {/* Key Executive Highlights */}
+                <div className="grid grid-cols-3 gap-3 mt-8 pt-6 border-t border-gray-100 text-center">
+                  <div className="p-3 rounded-2xl bg-stone-50 border border-stone-200/60">
+                    <p className="text-2xl font-black text-red-800">12+</p>
+                    <p className="text-[11px] font-bold text-gray-600 uppercase tracking-wider">Years of Trust</p>
+                  </div>
+                  <div className="p-3 rounded-2xl bg-stone-50 border border-stone-200/60">
+                    <p className="text-2xl font-black text-orange-600">800+</p>
+                    <p className="text-[11px] font-bold text-gray-600 uppercase tracking-wider">Happy Clients</p>
+                  </div>
+                  <div className="p-3 rounded-2xl bg-stone-50 border border-stone-200/60">
+                    <p className="text-2xl font-black text-red-700">100%</p>
+                    <p className="text-[11px] font-bold text-gray-600 uppercase tracking-wider">Certified Gear</p>
+                  </div>
+                </div>
 
                 {/* Executive Signature & Designation */}
-                <div className="pt-4 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="mt-6 pt-4 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
                     <h3 className="text-xl md:text-2xl font-black text-red-800 tracking-tight">
-                      Mr. ARSLAN NISAR
+                      Mr. SUFYAIN ALI
                     </h3>
-                    <p className="text-orange-600 font-semibold text-sm mt-0.5">General Manager &amp; HR</p>
+                    <p className="text-orange-600 font-semibold text-sm mt-0.5">Founder &amp; Chief Executive Officer</p>
                     <p className="text-gray-400 text-xs mt-0.5">S.S SAFETY SOLUTIONS • Lahore, Pakistan</p>
                   </div>
-                 
+                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-600" />
+                    Verified Leadership
+                  </span>
                 </div>
               </div>
             </FadeUp>
+          </div>
+
+          {/* ── 2. STRATEGIC TIMELINE OF GROWTH ──────────────────────────────── */}
+          <FadeUp delay={0.15} className="relative">
+            <div className="text-center mb-10">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-red-100/80 text-red-800 mb-2">
+                <Calendar className="w-3.5 h-3.5 text-red-700" />
+                Company Milestones
+              </span>
+              <h3 className="text-2xl md:text-4xl font-black text-gray-900">
+                A Decade of Proven <span className="text-red-700">Impact &amp; Growth</span>
+              </h3>
+              <p className="text-gray-500 text-sm md:text-base mt-2 max-w-xl mx-auto">
+                How our leadership guided S.S Safety Solutions from foundational values into nationwide market leadership.
+              </p>
+            </div>
+
+            {/* Timeline Cards Grid */}
+            <div className="relative">
+              {/* Connecting line on desktop */}
+              <div className="hidden lg:block absolute top-1/2 left-4 right-4 h-0.5 bg-gradient-to-r from-red-600 via-orange-500 to-amber-500 -translate-y-1/2 z-0 opacity-25" />
+
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 relative z-10">
+                {[
+                  {
+                    year: '2012',
+                    title: 'Foundation & Vision',
+                    desc: 'Founded in Lahore with an absolute pledge to make certified PPE accessible across Pakistan.',
+                    badge: 'Inception'
+                  },
+                  {
+                    year: '2016',
+                    title: 'Global Certification',
+                    desc: 'Fully accredited with ISO 9001, CE, and OSHA compliant protective gear catalog.',
+                    badge: 'Quality Mark'
+                  },
+                  {
+                    year: '2020',
+                    title: 'Nationwide Expansion',
+                    desc: 'Scaled supply chains across Punjab, Sindh, KPK, and federal industrial zones.',
+                    badge: 'Scale'
+                  },
+                  {
+                    year: '2024',
+                    title: 'Workforce Culture',
+                    desc: 'Pioneering human-first HR and high-risk specialized protection suites.',
+                    badge: 'Excellence'
+                  },
+                  {
+                    year: '2026',
+                    title: 'Next-Gen Horizon',
+                    desc: 'Smart digital safety ecosystems, automated tracking, and international export partners.',
+                    badge: 'Future Ready'
+                  }
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    whileHover={{ y: -6 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    className="bg-white/95 backdrop-blur-sm rounded-2xl p-5 border border-orange-100 shadow-md hover:shadow-xl transition-all relative overflow-hidden group"
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-2xl font-black text-red-700 tracking-tight">{item.year}</span>
+                      <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-orange-100 text-orange-700">
+                        {item.badge}
+                      </span>
+                    </div>
+                    <h4 className="font-black text-gray-900 text-sm mb-1.5">{item.title}</h4>
+                    <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                    <div className="mt-3 h-1 w-0 group-hover:w-full bg-gradient-to-r from-orange-500 to-red-600 rounded-full transition-all duration-300" />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </FadeUp>
+
+          {/* ── 3. INTERACTIVE EXECUTIVE CAROUSEL / SWIPE DECK ─────────────────── */}
+          <FadeUp delay={0.2} className="relative">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+              <div>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-orange-100 text-orange-800 mb-2">
+                  <Briefcase className="w-3.5 h-3.5 text-orange-700" />
+                  Executive Board &amp; Team
+                </span>
+                <h3 className="text-2xl md:text-4xl font-black text-gray-900">
+                  Meet Our <span className="text-red-700">Executive Leadership</span>
+                </h3>
+                <p className="text-gray-500 text-sm md:text-base mt-1">
+                  Swipe or click to view our executive leaders guiding strategy, operations, and governance.
+                </p>
+              </div>
+
+              {/* Quick Swiper Controls */}
+              <div className="flex items-center gap-2">
+                <button
+                  id="leadership-prev"
+                  aria-label="Previous Leader"
+                  className="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-700 flex items-center justify-center shadow hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  id="leadership-next"
+                  aria-label="Next Leader"
+                  className="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-700 flex items-center justify-center shadow hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Swiper Carousel */}
+            <Swiper
+              modules={[Navigation, Pagination, A11y, Autoplay]}
+              navigation={{
+                prevEl: '#leadership-prev',
+                nextEl: '#leadership-next',
+              }}
+              pagination={{ clickable: true }}
+              spaceBetween={24}
+              breakpoints={{
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+              }}
+              className="!pb-14"
+            >
+              {[
+                {
+                  id: 'founder-ceo',
+                  name: 'Mr. SUFYAIN ALI',
+                  role: 'Founder & Chief Executive Officer',
+                  badge: 'FOUNDER & CEO',
+                  image: '/images/leadership/founder-ceo.jpg',
+                  quote: 'Safety is not a luxury; it is the fundamental prerequisite of industrial progress and human dignity.',
+                  focus: ['Enterprise Strategy', 'Strategic Vision', 'Client Partnerships'],
+                  gradient: 'from-amber-500 via-orange-600 to-red-700',
+                  badgeBg: 'bg-gradient-to-r from-amber-500 to-orange-600'
+                },
+                {
+                  id: 'gm-hr',
+                  name: 'Mr. ARSLAN NISAR',
+                  role: 'General Manager & Head of HR',
+                  badge: 'GM & HR',
+                  image: '/images/leadership/arslan-nisar.jpg',
+                  quote: 'Aligning operational execution with human-centric empathy to empower workers across the nation.',
+                  focus: ['Operations & Supply', 'Human Resources', 'ISO Quality Benchmarks'],
+                  gradient: 'from-orange-500 via-red-600 to-red-700',
+                  badgeBg: 'bg-gradient-to-r from-orange-600 to-red-700'
+                },
+                {
+                  id: 'admin-finance',
+                  name: 'Dr. SIDRA SIDDIQUI',
+                  role: 'Admin & Chief Finance Manager',
+                  badge: 'ADMIN & FINANCE',
+                  image: '/images/leadership/dr-sidra-siddiqui.jpg',
+                  quote: 'Ensuring pristine financial integrity, governance, and institutional accountability across every operation.',
+                  focus: ['Corporate Governance', 'Financial Strategy', 'Administrative Compliance'],
+                  gradient: 'from-purple-600 via-pink-600 to-red-600',
+                  badgeBg: 'bg-gradient-to-r from-rose-600 to-purple-600'
+                }
+              ].map((leader) => (
+                <SwiperSlide key={leader.id} className="h-auto">
+                  <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full group">
+                    {/* Portrait Frame */}
+                    <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-950">
+                      <img
+                        src={leader.image}
+                        alt={`${leader.name} – ${leader.role}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-106"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
+
+                      {/* Floating Badge */}
+                      <div className={`absolute top-3 right-3 text-white text-[11px] font-black px-3.5 py-1.5 rounded-full shadow-lg ${leader.badgeBg} border border-white/30 flex items-center gap-1.5`}>
+                        <Shield className="w-3 h-3 fill-white/20" />
+                        <span>{leader.badge}</span>
+                      </div>
+
+                      {/* Photo Overlay Title */}
+                      <div className="absolute bottom-3 left-4 right-4 text-white">
+                        <p className="text-lg font-black tracking-wide text-white drop-shadow">{leader.name}</p>
+                        <p className="text-xs font-semibold text-orange-300 drop-shadow">{leader.role}</p>
+                      </div>
+                    </div>
+
+                    {/* Body Content */}
+                    <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                      <p className="text-gray-600 text-sm leading-relaxed italic border-l-2 border-orange-500 pl-3">
+                        "{leader.quote}"
+                      </p>
+
+                      <div className="pt-3 border-t border-gray-100">
+                        <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">Core Leadership Focus</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {leader.focus.map((tag, i) => (
+                            <span
+                              key={i}
+                              className="text-[11px] font-semibold px-2.5 py-1 rounded-lg bg-orange-50 text-orange-800 border border-orange-200/60"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* ── SEO AUTHORITY DIVISIONS ─────────────────────────────────────────── */}
+      <section className="py-24 px-4 bg-stone-50/80 relative overflow-hidden border-t border-stone-200/60">
+        <div className="max-w-7xl mx-auto relative">
+          <FadeUp className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-red-100 text-red-800 border border-red-200/80 shadow-xs mb-4">
+              <Shield className="w-3.5 h-3.5 text-red-700" />
+              Specialized Divisions
+            </span>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight">
+              Top Ranked <span className="text-red-700">Safety &amp; Tactical Categories</span>
+            </h2>
+            <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
+              Equipping security agencies, corporate enterprises, industrial complexes, and individuals across Pakistan with certified high-performance gear.
+            </p>
+          </FadeUp>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Division 1: Tactical Gear & Army Store */}
+            <FadeUp delay={0.05} className="h-full">
+              <div className="bg-white rounded-3xl p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full group hover:-translate-y-1.5">
+                <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center justify-center mb-5 text-amber-700 group-hover:scale-110 transition-transform">
+                  <Crosshair className="w-7 h-7" />
+                </div>
+                <span className="text-[11px] font-extrabold uppercase tracking-widest text-amber-700 mb-1">Defense &amp; Field</span>
+                <h3 className="text-xl font-extrabold text-gray-900 mb-2.5 group-hover:text-red-700 transition-colors">
+                  Tactical Gear &amp; Army Store
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 grow">
+                  Certified tactical gear pakistan, MOLLE plate carriers, military vests, duty belts, and outdoor tactical accessories from the top army store near you.
+                </p>
+                <div className="space-y-2 pt-3 border-t border-gray-100 mb-5 text-xs text-gray-500">
+                  <div className="flex items-center gap-1.5 font-medium text-gray-700">
+                    <CheckCircle className="w-3.5 h-3.5 text-green-600" /> 1000D Cordura Nylon Vests
+                  </div>
+                  <div className="flex items-center gap-1.5 font-medium text-gray-700">
+                    <CheckCircle className="w-3.5 h-3.5 text-green-600" /> Level III/IV Plate Ready
+                  </div>
+                </div>
+                <Link
+                  to="/products?q=tactical+gear"
+                  className="mt-auto inline-flex items-center justify-between w-full py-2.5 px-4 rounded-xl bg-stone-50 hover:bg-red-700 text-gray-800 hover:text-white font-bold text-xs transition-colors group/btn"
+                >
+                  <span>Explore Tactical Gear</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                </Link>
+              </div>
+            </FadeUp>
+
+            {/* Division 2: Self Defence & Tasers */}
+            <FadeUp delay={0.1} className="h-full">
+              <div className="bg-white rounded-3xl p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full group hover:-translate-y-1.5">
+                <div className="w-14 h-14 rounded-2xl bg-red-50 border border-red-200/80 flex items-center justify-center mb-5 text-red-700 group-hover:scale-110 transition-transform">
+                  <Zap className="w-7 h-7" />
+                </div>
+                <span className="text-[11px] font-extrabold uppercase tracking-widest text-red-700 mb-1">Personal Security</span>
+                <h3 className="text-xl font-extrabold text-gray-900 mb-2.5 group-hover:text-red-700 transition-colors">
+                  Stun Guns, Tasers &amp; Knives
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 grow">
+                  High-voltage stun gun pakistan, laser taser gun models, self defence gadgets, and titanium EDC pocket knife collections at the best taser price in pakistan.
+                </p>
+                <div className="space-y-2 pt-3 border-t border-gray-100 mb-5 text-xs text-gray-500">
+                  <div className="flex items-center gap-1.5 font-medium text-gray-700">
+                    <CheckCircle className="w-3.5 h-3.5 text-green-600" /> Ultra-High Voltage Deterrence
+                  </div>
+                  <div className="flex items-center gap-1.5 font-medium text-gray-700">
+                    <CheckCircle className="w-3.5 h-3.5 text-green-600" /> Razor Sharp Folding EDC Knives
+                  </div>
+                </div>
+                <Link
+                  to="/products?q=taser"
+                  className="mt-auto inline-flex items-center justify-between w-full py-2.5 px-4 rounded-xl bg-stone-50 hover:bg-red-700 text-gray-800 hover:text-white font-bold text-xs transition-colors group/btn"
+                >
+                  <span>Explore Self Defence</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                </Link>
+              </div>
+            </FadeUp>
+
+            {/* Division 3: Biometric Attendance Systems */}
+            <FadeUp delay={0.15} className="h-full">
+              <div className="bg-white rounded-3xl p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full group hover:-translate-y-1.5">
+                <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-200/80 flex items-center justify-center mb-5 text-blue-700 group-hover:scale-110 transition-transform">
+                  <Fingerprint className="w-7 h-7" />
+                </div>
+                <span className="text-[11px] font-extrabold uppercase tracking-widest text-blue-700 mb-1">Workforce Management</span>
+                <h3 className="text-xl font-extrabold text-gray-900 mb-2.5 group-hover:text-red-700 transition-colors">
+                  Biometric Attendance Systems
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 grow">
+                  Advanced biometric attendance machines, RFID readers, and time-tracking hardware compliant with the biometric attendance system punjab login portal.
+                </p>
+                <div className="space-y-2 pt-3 border-t border-gray-100 mb-5 text-xs text-gray-500">
+                  <div className="flex items-center gap-1.5 font-medium text-gray-700">
+                    <CheckCircle className="w-3.5 h-3.5 text-green-600" /> High-Speed Fingerprint Verification
+                  </div>
+                  <div className="flex items-center gap-1.5 font-medium text-gray-700">
+                    <CheckCircle className="w-3.5 h-3.5 text-green-600" /> Punjab Portal Login Compatible
+                  </div>
+                </div>
+                <Link
+                  to="/products?q=biometric"
+                  className="mt-auto inline-flex items-center justify-between w-full py-2.5 px-4 rounded-xl bg-stone-50 hover:bg-red-700 text-gray-800 hover:text-white font-bold text-xs transition-colors group/btn"
+                >
+                  <span>Explore Biometrics</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                </Link>
+              </div>
+            </FadeUp>
+
+            {/* Division 4: Fire Hydrants & Smoke Detectors */}
+            <FadeUp delay={0.2} className="h-full">
+              <div className="bg-white rounded-3xl p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full group hover:-translate-y-1.5">
+                <div className="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-200/80 flex items-center justify-center mb-5 text-orange-700 group-hover:scale-110 transition-transform">
+                  <Flame className="w-7 h-7" />
+                </div>
+                <span className="text-[11px] font-extrabold uppercase tracking-widest text-orange-700 mb-1">Fire Safety &amp; Alarm</span>
+                <h3 className="text-xl font-extrabold text-gray-900 mb-2.5 group-hover:text-red-700 transition-colors">
+                  Fire Hydrants &amp; Smoke Alarms
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 grow">
+                  Heavy-duty outdoor fire hydrant pillars, landing valves, and photoelectric optical smoke detector units conforming to BS 750, NFPA, and EN 54 standards.
+                </p>
+                <div className="space-y-2 pt-3 border-t border-gray-100 mb-5 text-xs text-gray-500">
+                  <div className="flex items-center gap-1.5 font-medium text-gray-700">
+                    <CheckCircle className="w-3.5 h-3.5 text-green-600" /> 16 Bar Pressure Rated Hydrants
+                  </div>
+                  <div className="flex items-center gap-1.5 font-medium text-gray-700">
+                    <CheckCircle className="w-3.5 h-3.5 text-green-600" /> Photoelectric Dual-Beam Sensors
+                  </div>
+                </div>
+                <Link
+                  to="/products?q=fire+hydrant"
+                  className="mt-auto inline-flex items-center justify-between w-full py-2.5 px-4 rounded-xl bg-stone-50 hover:bg-red-700 text-gray-800 hover:text-white font-bold text-xs transition-colors group/btn"
+                >
+                  <span>Explore Fire Safety</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                </Link>
+              </div>
+            </FadeUp>
+          </div>
+
+          {/* Quick Search Tag Cloud */}
+          <FadeUp delay={0.25} className="mt-14 p-6 sm:p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
+            <div className="flex items-center gap-2 mb-4">
+              <Tag className="w-4 h-4 text-red-700" />
+              <h3 className="text-sm font-extrabold text-gray-900 uppercase tracking-wider">
+                Trending Security &amp; Safety Searches in Pakistan
+              </h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {[
+                "tactical gear", "stun gun", "taser", "self defence gadgets", "army store",
+                "taser price in pakistan", "tactical gear pakistan", "army store near me",
+                "knife price in pakistan", "pakistan knife", "pocket knife", "stun gun pakistan",
+                "tactical gear pk", "taser gun in pakistan", "biometric attendance",
+                "biometric attendance system", "biometric attendance system punjab login",
+                "biometric attendance system login", "fire hydrant", "smoke detector"
+              ].map((kw, i) => (
+                <Link
+                  key={i}
+                  to={`/products?q=${encodeURIComponent(kw)}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-stone-50 text-gray-700 border border-gray-200 hover:bg-red-700 hover:text-white hover:border-red-700 transition-all shadow-2xs"
+                >
+                  <span>🔍</span> {kw}
+                </Link>
+              ))}
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* ── FREQUENTLY ASKED QUESTIONS (FAQ) ────────────────────────────────── */}
+      <section className="py-24 px-4 bg-white relative overflow-hidden">
+        <div className="max-w-4xl mx-auto relative">
+          <FadeUp className="text-center mb-14">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-orange-100 text-orange-800 border border-orange-200 shadow-xs mb-4">
+              <HelpCircle className="w-3.5 h-3.5 text-orange-700" />
+              Customer Knowledge Base
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight">
+              Frequently Asked <span className="text-red-700">Questions</span>
+            </h2>
+            <p className="mt-3 text-gray-500 text-base">
+              Clear answers regarding our safety equipment, order delivery in Pakistan, certifications, and institutional bulk supply.
+            </p>
+          </FadeUp>
+
+          <div className="space-y-4">
+            {homeFaqs.map((faq, index) => {
+              const isOpen = openFaq === index;
+              return (
+                <FadeUp key={index} delay={index * 0.05}>
+                  <div className={`rounded-2xl border transition-all duration-300 ${isOpen ? 'bg-orange-50/40 border-orange-300 shadow-md' : 'bg-gray-50/70 border-gray-200/80 hover:border-orange-200'}`}>
+                    <button
+                      onClick={() => setOpenFaq(isOpen ? -1 : index)}
+                      className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 font-bold text-gray-900 text-base sm:text-lg select-none"
+                      aria-expanded={isOpen}
+                    >
+                      <span className="flex items-center gap-3">
+                        <span className="w-7 h-7 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-xs font-black shrink-0">
+                          {index + 1}
+                        </span>
+                        <span>{faq.q}</span>
+                      </span>
+                      <ChevronDown className={`w-5 h-5 text-gray-500 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-orange-600' : ''}`} />
+                    </button>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.25 }}
+                        className="px-6 pb-6 pt-1 text-gray-600 text-sm sm:text-base leading-relaxed pl-16 border-t border-orange-100/60"
+                      >
+                        {faq.a}
+                      </motion.div>
+                    )}
+                  </div>
+                </FadeUp>
+              );
+            })}
           </div>
         </div>
       </section>
