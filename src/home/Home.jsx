@@ -621,7 +621,7 @@ function Home() {
                   <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-950">
                     <img
                       src="/images/leadership/founder-ceo.jpg"
-                      alt="Mr. Sufyain Ali – Founder & CEO, S.S Safety Solutions"
+                      alt="Mr.Nisar Ahmad Founder & CEO, S.S Safety Solutions"
                       className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
@@ -634,7 +634,7 @@ function Home() {
                         <Sparkles className="w-3.5 h-3.5" />
                         <span>Founder &amp; Chief Executive</span>
                       </div>
-                      <p className="text-xl font-black tracking-wide text-white">Mr. SUFYAIN ALI</p>
+                      <p className="text-xl font-black tracking-wide text-white">Mr. NISAR AHMAD</p>
                       <p className="text-xs font-semibold text-gray-300 tracking-wider">S.S Safety Solutions • Founded 2012</p>
                     </div>
                   </div>
@@ -692,7 +692,7 @@ function Home() {
                 <div className="mt-6 pt-4 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
                     <h3 className="text-xl md:text-2xl font-black text-red-800 tracking-tight">
-                      Mr. SUFYAIN ALI
+                      Mr. NISAR AHMAD
                     </h3>
                     <p className="text-orange-600 font-semibold text-sm mt-0.5">Founder &amp; Chief Executive Officer</p>
                     <p className="text-gray-400 text-xs mt-0.5">S.S SAFETY SOLUTIONS • Lahore, Pakistan</p>
@@ -834,7 +834,7 @@ function Home() {
               {[
                 {
                   id: 'founder-ceo',
-                  name: 'Mr. SUFYAIN ALI',
+                  name: 'Mr. NISAR AHMAD',
                   role: 'Founder & Chief Executive Officer',
                   badge: 'FOUNDER & CEO',
                   image: '/images/leadership/founder-ceo.jpg',
@@ -864,6 +864,17 @@ function Home() {
                   focus: ['Corporate Governance', 'Financial Strategy', 'Administrative Compliance'],
                   gradient: 'from-purple-600 via-pink-600 to-red-600',
                   badgeBg: 'bg-gradient-to-r from-rose-600 to-purple-600'
+                },
+                {
+                  id: 'marketing-sales',
+                  name: 'Mr. SUFYAN ALI',
+                  role: 'Head of Marketing & Sales',
+                  badge: 'MARKETING & SALES',
+                  image: '/images/leadership/sufyan-ali.jpg',
+                  quote: 'Connecting industries across Pakistan with world-class protective equipment through client trust and strategic growth.',
+                  focus: ['Strategic Marketing', 'Enterprise Sales', 'Industrial Partnerships'],
+                  gradient: 'from-blue-600 via-indigo-600 to-teal-700',
+                  badgeBg: 'bg-gradient-to-r from-blue-600 to-indigo-600'
                 }
               ].map((leader) => (
                 <SwiperSlide key={leader.id} className="h-auto">
